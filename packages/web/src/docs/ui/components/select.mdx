@@ -1,0 +1,136 @@
+---
+title: Select
+path: select
+---
+
+# Select
+
+```jsx
+import Select from "@poodle/ui/Select";
+```
+
+`Select` is a component allow the user to select a menu of options.
+
+
+## Basic
+
+```jsx-live
+<Box maxWidth="500px">
+	<Box>
+		<Select
+			inputProps={{
+				"aria-label": "Choose animal",
+			}}
+		>
+			<option value="tiger">Tiger</option>
+			<option value="lion">Lion</option>
+			<option value="dog">Dog</option>
+		</Select>
+	</Box>
+
+	<Box>
+		<Select
+			mt="scale-4"
+			inputProps={{
+				"aria-label": "Choose animal",
+			}}
+			error={true}
+		>
+			<option value="tiger">Tiger</option>
+			<option value="lion">Lion</option>
+			<option value="dog">Dog</option>
+		</Select>
+	</Box>
+</Box>
+```
+
+## Adornment
+
+We can add prefix or suffix to the input
+
+
+```jsx-live
+<Box maxWidth="500px">
+	<Box>
+		<Select
+			startAdornment={<InputAdornment>$</InputAdornment>}
+			inputProps={{
+				"aria-label": "Choose currency",
+			}}
+		>
+			<option value="dollar">Dollar</option>
+			<option value="euro">Euro</option>
+			<option value="yen">Yen</option>
+		</Select>
+	</Box>
+
+	<Box>
+		<Select
+			mt="scale-4"
+			endAdornment={<InputAdornment adornmentPosition="end" isIcon={true} color="negative.base"><Error /></InputAdornment>}
+			inputProps={{
+				"aria-label": "Choose animal",
+			}}
+			error={true}
+		>
+			<option value="tiger">Tiger</option>
+			<option value="lion">Lion</option>
+			<option value="dog">Dog</option>
+		</Select>
+	</Box>
+</Box>
+```
+
+
+## Theming
+
+[//]: # (GetTheming[==SelectThemeStyles,SelectThemeConfig,Select/index.ts==])
+
+
+
+Please check theming component document [here](/theming/component).
+ 		
+```ts
+export interface SelectThemeConfig
+  extends StandardThemeConfig<SelectStyleKeys, SelectProps> {}
+
+``` 
+		
+		
+
+[//]: # (EndGetTheming)
+
+## Props
+
+[//]: # (GetProps[==LocalSelectProps,Select/Select.tsx==])
+
+
+### Local Props
+
+
+| Name           | Type              | Description                                                 |
+| -------------- | ----------------- | ----------------------------------------------------------- |
+| dividerProps   | `BoxProps`        | Custom icon props                                           |
+| endAdornment   | `React.ReactNode` | Add suffix to the input.                                    |
+| error          | `boolean`         | Change the component style to error style when set to true. |
+| iconProps      | `BoxProps`        | Custom icon props                                           |
+| selectProps    | `BoxProps`        | Custom select props                                         |
+| startAdornment | `React.ReactNode` | Add prefix to the input.                                    |
+				
+
+[//]: # (EndGetProps)
+
+[//]: # (GetPartialProps[==SelectProps,Select/Select.tsx==])
+
+
+### Full Props
+
+```ts
+export interface SelectProps
+	extends BoxProps,
+		StandardComponentProps,
+		LocalSelectProps {} 
+```
+				
+
+[//]: # (GetPartialProps)

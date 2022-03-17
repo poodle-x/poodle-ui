@@ -1,0 +1,91 @@
+---
+title: Spacing | System
+---
+
+# Spacing
+
+```ts
+import { spacingSystem } from '@poodle/system'
+```
+
+The spacing system helps us to create a spacing scaling. Any props in the spacing system can use spacing scaling.
+
+With `theme.spacing.scale` we can set it with a number, string (rem, em...). The prop send in
+can be scaling multiply.
+
+For example `theme.spacing.scale = 4` then `mt = "4"` will be equal to `marginTop = "16"`.
+
+The system chooses the value `"scale-number"` because it's easy to spot where are we using scaling for spacing when we refactor the code.
+
+We can also use `theme.spacing.sets` to predefine a list spacing we want.
+
+
+```ts
+const theme = {
+	spacing: {
+		scale: 4,
+		sets: {
+			custom: "1rem",
+			"custom-2": (props) => {
+				return props.other + 10;
+			},
+		},
+	},
+};
+
+const listSystem = compose(colorsSystem, spacingSystem);
+
+export const system = createSystem(listSystem);
+
+const styles = system({
+	theme,
+    other: 5,
+    mt: "scale-4",
+    pt: "custom",
+    pl: "custom-2",
+})
+
+// Styles result
+//  { other: 5 },
+// 	{ marginTop: "16" },
+// 	{ paddingTop: "1rem" },
+// 	{ paddingLeft: 15 },
+
+
+```
+
+
+[//]: # (GetSystemProps[==SpacingProps,spacing.ts==])
+| Prop          | Type                                                   | Description                                         |
+| ------------- | ------------------------------------------------------ | --------------------------------------------------- |
+| m             | `ResponsiveProp<CSS.Property.Margin \| number>`        | The CSS `margin` property                           |
+| margin        | `ResponsiveProp<CSS.Property.Margin \| number>`        | The CSS `margin` property                           |
+| marginBottom  | `ResponsiveProp<CSS.Property.MarginBottom \| number>`  | The CSS `margin` property                           |
+| marginLeft    | `ResponsiveProp<CSS.Property.MarginLeft \| number>`    | The CSS `margin-left` property                      |
+| marginRight   | `ResponsiveProp<CSS.Property.MarginRight \| number>`   | The CSS `margin-right` property                     |
+| marginTop     | `ResponsiveProp<CSS.Property.MarginTop \| number>`     | The CSS `margin-top` property                       |
+| marginX       | `ResponsiveProp<CSS.Property.Margin \| number>`        | The CSS `margin-top` and `margin-bottom` property   |
+| marginY       | `ResponsiveProp<CSS.Property.Margin \| number>`        | The CSS `margin-top` and `marin-bottom` property    |
+| mb            | `ResponsiveProp<CSS.Property.MarginBottom \| number>`  | The CSS `margin-bottom` property                    |
+| ml            | `ResponsiveProp<CSS.Property.MarginLeft \| number>`    | The CSS `margin-left` property                      |
+| mr            | `ResponsiveProp<CSS.Property.MarginRight \| number>`   | The CSS `margin-right` property                     |
+| mt            | `ResponsiveProp<CSS.Property.MarginTop \| number>`     | The CSS `margin-top` property                       |
+| mx            | `ResponsiveProp<CSS.Property.Margin \| number>`        | The CSS `margin-top` and `margin-bottom` property   |
+| my            | `ResponsiveProp<CSS.Property.Margin \| number>`        | The CSS `margin-top` and `marin-bottom` property    |
+| p             | `ResponsiveProp<CSS.Property.Padding \| number>`       | The CSS `padding` property                          |
+| padding       | `ResponsiveProp<CSS.Property.Padding \| number>`       | The CSS `padding` property                          |
+| paddingBottom | `ResponsiveProp<CSS.Property.PaddingBottom \| number>` | The CSS `padding-bottom` property                   |
+| paddingLeft   | `ResponsiveProp<CSS.Property.PaddingLeft \| number>`   | The CSS `padding-left` property                     |
+| paddingRight  | `ResponsiveProp<CSS.Property.PaddingRight \| number>`  | The CSS `padding-right` property                    |
+| paddingTop    | `ResponsiveProp<CSS.Property.PaddingTop \| number>`    | The CSS `padding-top` property                      |
+| paddingX      | `ResponsiveProp<CSS.Property.Padding \| number>`       | The CSS `padding-top` and `padding-bottom` property |
+| paddingY      | `ResponsiveProp<CSS.Property.Padding \| number>`       | The CSS `padding-left` and `padding-right` property |
+| pb            | `ResponsiveProp<CSS.Property.PaddingBottom \| number>` | The CSS `padding-bottom` property                   |
+| pl            | `ResponsiveProp<CSS.Property.PaddingLeft \| number>`   | The CSS `padding-left` property                     |
+| pr            | `ResponsiveProp<CSS.Property.PaddingRight \| number>`  | The CSS `padding-right` property                    |
+| pt            | `ResponsiveProp<CSS.Property.PaddingTop \| number>`    | The CSS `padding-top` property                      |
+| px            | `ResponsiveProp<CSS.Property.Padding \| number>`       | The CSS `padding-top` and `padding-bottom` property |
+| py            | `ResponsiveProp<CSS.Property.Padding \| number>`       | The CSS `padding-left` and `padding-right` property |
+				
+
+[//]: # (EndGetSystemProps)

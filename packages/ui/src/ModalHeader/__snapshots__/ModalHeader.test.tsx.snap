@@ -1,0 +1,1167 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<ModalHeader /> ref should work 1`] = `
+.c0 {
+  box-sizing: border-box;
+}
+
+.c1 {
+  padding-top: 16px;
+  padding-left: 24px;
+  padding-right: 24px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.c2 {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 1.5rem;
+  line-height: 133.33%;
+}
+
+.c4 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+<div
+  class="poodle-box c0 poodle-modal-header c1 c2"
+>
+  <h2
+    class="poodle-box c0 poodle-modal-header__content c4 c5"
+  >
+    ModalHeader
+  </h2>
+</div>
+`;
+
+exports[`<ModalHeader /> should render Box props correctly 1`] = `
+.c0 {
+  box-sizing: border-box;
+}
+
+.c1 {
+  padding-top: 16px;
+  padding-left: 24px;
+  padding-right: 24px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.c2 {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 1.5rem;
+  line-height: 133.33%;
+  margin-top: 20px;
+}
+
+.c4 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.c7 {
+  height: 2rem;
+  width: 2rem;
+  font-size: 2rem;
+  margin-right: 8px;
+}
+
+.c8 {
+  padding-left: 20px;
+}
+
+.c10 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-self: center;
+  -ms-flex-item-align: center;
+  align-self: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  border: 0;
+  padding: 8px;
+  pointer-events: initial;
+  font-size: 1.5rem;
+  color: #282828;
+  cursor: pointer;
+  background-color: transparent;
+  outline: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  appearance: none;
+  -webkit-transition: background-color 220ms ease-in,color 220ms ease-in;
+  transition: background-color 220ms ease-in,color 220ms ease-in;
+  border-radius: 50%;
+}
+
+.c10:hover,
+.c10:focus {
+  color: #282828;
+  background-color: #E0E0E0;
+}
+
+.c10:disabled {
+  color: #A6A6A6;
+  cursor: not-allowed;
+}
+
+.c11 {
+  margin-left: auto;
+}
+
+<div
+  class="poodle-box c0 poodle-modal-header c1 c2"
+  id="id"
+>
+  <h2
+    class="poodle-box c0 poodle-modal-header__content c4 c5"
+  >
+    <div
+      class="poodle-box c0 poodle-modal-header__icon c7 c8"
+    >
+      <i>
+        Icon
+      </i>
+    </div>
+    ModalHeader
+  </h2>
+  <button
+    aria-label="Close"
+    class="poodle-box c0 c10 poodle-modal-header__close c11 c8"
+  >
+    <svg
+      fill="currentColor"
+      height="1em"
+      viewBox="0 0 24 24"
+      width="1em"
+    >
+      <path
+        clip-rule="evenodd"
+        d="M8.071 6.343a1 1 0 1 0-1.414 1.414L10.899 12l-4.242 4.243a1 1 0 0 0 1.414 1.414l4.243-4.243 4.242 4.243a1 1 0 0 0 1.415-1.414L13.728 12l4.243-4.243a1 1 0 0 0-1.415-1.414l-4.242 4.243L8.07 6.343z"
+        fill-rule="evenodd"
+      />
+    </svg>
+  </button>
+</div>
+`;
+
+exports[`<ModalHeader /> should render ModalHeader correctly 1`] = `
+.c0 {
+  box-sizing: border-box;
+}
+
+.c1 {
+  padding-top: 16px;
+  padding-left: 24px;
+  padding-right: 24px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.c2 {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 1.5rem;
+  line-height: 133.33%;
+}
+
+.c4 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+<div
+  class="poodle-box c0 poodle-modal-header c1 c2"
+>
+  <h2
+    class="poodle-box c0 poodle-modal-header__content c4 c5"
+  >
+    ModalHeader
+  </h2>
+</div>
+`;
+
+exports[`<ModalHeader /> should render ModalHeader with auto id correctly 1`] = `
+.c0 {
+  box-sizing: border-box;
+}
+
+.c1 {
+  padding-top: 16px;
+  padding-left: 24px;
+  padding-right: 24px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.c2 {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 1.5rem;
+  line-height: 133.33%;
+}
+
+.c4 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+<div
+  class="poodle-box c0 poodle-modal-header c1 c2"
+  id="id"
+>
+  <h2
+    class="poodle-box c0 poodle-modal-header__content c4 c5"
+  >
+    ModalHeader
+  </h2>
+</div>
+`;
+
+exports[`<ModalHeader /> should render ModalHeader with close correctly 1`] = `
+.c0 {
+  box-sizing: border-box;
+}
+
+.c1 {
+  padding-top: 16px;
+  padding-left: 24px;
+  padding-right: 24px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.c2 {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 1.5rem;
+  line-height: 133.33%;
+}
+
+.c4 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.c7 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-self: center;
+  -ms-flex-item-align: center;
+  align-self: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  border: 0;
+  padding: 8px;
+  pointer-events: initial;
+  font-size: 1.5rem;
+  color: #282828;
+  cursor: pointer;
+  background-color: transparent;
+  outline: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  appearance: none;
+  -webkit-transition: background-color 220ms ease-in,color 220ms ease-in;
+  transition: background-color 220ms ease-in,color 220ms ease-in;
+  border-radius: 50%;
+}
+
+.c7:hover,
+.c7:focus {
+  color: #282828;
+  background-color: #E0E0E0;
+}
+
+.c7:disabled {
+  color: #A6A6A6;
+  cursor: not-allowed;
+}
+
+.c8 {
+  margin-left: auto;
+}
+
+<div
+  class="poodle-box c0 poodle-modal-header c1 c2"
+>
+  <h2
+    class="poodle-box c0 poodle-modal-header__content c4 c5"
+  >
+    ModalHeader
+  </h2>
+  <button
+    aria-label="Close"
+    class="poodle-box c0 c7 poodle-modal-header__close c8 c5"
+  >
+    <svg
+      fill="currentColor"
+      height="1em"
+      viewBox="0 0 24 24"
+      width="1em"
+    >
+      <path
+        clip-rule="evenodd"
+        d="M8.071 6.343a1 1 0 1 0-1.414 1.414L10.899 12l-4.242 4.243a1 1 0 0 0 1.414 1.414l4.243-4.243 4.242 4.243a1 1 0 0 0 1.415-1.414L13.728 12l4.243-4.243a1 1 0 0 0-1.415-1.414l-4.242 4.243L8.07 6.343z"
+        fill-rule="evenodd"
+      />
+    </svg>
+  </button>
+</div>
+`;
+
+exports[`<ModalHeader /> should render ModalHeader with icon correctly 1`] = `
+.c0 {
+  box-sizing: border-box;
+}
+
+.c1 {
+  padding-top: 16px;
+  padding-left: 24px;
+  padding-right: 24px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.c2 {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 1.5rem;
+  line-height: 133.33%;
+}
+
+.c4 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.c7 {
+  height: 2rem;
+  width: 2rem;
+  font-size: 2rem;
+  margin-right: 8px;
+}
+
+<div
+  class="poodle-box c0 poodle-modal-header c1 c2"
+>
+  <h2
+    class="poodle-box c0 poodle-modal-header__content c4 c5"
+  >
+    <div
+      class="poodle-box c0 poodle-modal-header__icon c7 c5"
+    >
+      <i>
+        Icon
+      </i>
+    </div>
+    ModalHeader
+  </h2>
+</div>
+`;
+
+exports[`<ModalHeader /> theming should disable classes 1`] = `
+.c0 {
+  box-sizing: border-box;
+}
+
+.c1 {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 1.5rem;
+  line-height: 133.33%;
+}
+
+.c3 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.c6 {
+  height: 2rem;
+  width: 2rem;
+  font-size: 2rem;
+  margin-right: 8px;
+}
+
+.c9 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-self: center;
+  -ms-flex-item-align: center;
+  align-self: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  border: 0;
+  padding: 8px;
+  pointer-events: initial;
+  font-size: 1.5rem;
+  color: #282828;
+  cursor: pointer;
+  background-color: transparent;
+  outline: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  appearance: none;
+  -webkit-transition: background-color 220ms ease-in,color 220ms ease-in;
+  transition: background-color 220ms ease-in,color 220ms ease-in;
+  border-radius: 50%;
+}
+
+.c9:hover,
+.c9:focus {
+  color: #282828;
+  background-color: #E0E0E0;
+}
+
+.c9:disabled {
+  color: #A6A6A6;
+  cursor: not-allowed;
+}
+
+.c10 {
+  margin-left: auto;
+}
+
+<div
+  class="poodle-box c0 poodle-modal-header c1"
+>
+  <h2
+    class="poodle-box c0 poodle-modal-header__content c3 c4"
+  >
+    <div
+      class="poodle-box c0 poodle-modal-header__icon c6 c4"
+    >
+      <i>
+        Icon
+      </i>
+    </div>
+    ModalHeader
+  </h2>
+  <button
+    aria-label="Close"
+    class="poodle-box c0 c9 poodle-modal-header__close c10 c4"
+  >
+    <svg
+      fill="currentColor"
+      height="1em"
+      viewBox="0 0 24 24"
+      width="1em"
+    >
+      <path
+        clip-rule="evenodd"
+        d="M8.071 6.343a1 1 0 1 0-1.414 1.414L10.899 12l-4.242 4.243a1 1 0 0 0 1.414 1.414l4.243-4.243 4.242 4.243a1 1 0 0 0 1.415-1.414L13.728 12l4.243-4.243a1 1 0 0 0-1.415-1.414l-4.242 4.243L8.07 6.343z"
+        fill-rule="evenodd"
+      />
+    </svg>
+  </button>
+</div>
+`;
+
+exports[`<ModalHeader /> theming should extend styles in global 1`] = `
+.c0 {
+  box-sizing: border-box;
+}
+
+.c1 {
+  padding-top: 16px;
+  padding-left: 24px;
+  padding-right: 24px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin-top: 10px;
+  letter-spacing: 250px;
+  top: 0;
+  text-indent: 1px;
+}
+
+.c2 {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 1.5rem;
+  line-height: 133.33%;
+}
+
+.c4 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin-top: 0;
+  margin-bottom: 0;
+  margin-top: 13px;
+  letter-spacing: 253px;
+  top: 3px;
+  text-indent: 4px;
+}
+
+.c7 {
+  height: 2rem;
+  width: 2rem;
+  font-size: 2rem;
+  margin-right: 8px;
+  margin-top: 11px;
+  letter-spacing: 251px;
+  top: 1px;
+  text-indent: 2px;
+}
+
+.c10 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-self: center;
+  -ms-flex-item-align: center;
+  align-self: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  border: 0;
+  padding: 8px;
+  pointer-events: initial;
+  font-size: 1.5rem;
+  color: #282828;
+  cursor: pointer;
+  background-color: transparent;
+  outline: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  appearance: none;
+  -webkit-transition: background-color 220ms ease-in,color 220ms ease-in;
+  transition: background-color 220ms ease-in,color 220ms ease-in;
+  border-radius: 50%;
+}
+
+.c10:hover,
+.c10:focus {
+  color: #282828;
+  background-color: #E0E0E0;
+}
+
+.c10:disabled {
+  color: #A6A6A6;
+  cursor: not-allowed;
+}
+
+.c11 {
+  margin-left: auto;
+  margin-top: 12px;
+  letter-spacing: 252px;
+  top: 2px;
+  text-indent: 3px;
+}
+
+<div
+  class="poodle-box c0 poodle-modal-header c1 c2"
+>
+  <h2
+    class="poodle-box c0 poodle-modal-header__content c4 c5"
+  >
+    <div
+      class="poodle-box c0 poodle-modal-header__icon c7 c5"
+    >
+      <i>
+        Icon
+      </i>
+    </div>
+    ModalHeader
+  </h2>
+  <button
+    aria-label="Close"
+    class="poodle-box c0 c10 poodle-modal-header__close c11 c5"
+  >
+    <svg
+      fill="currentColor"
+      height="1em"
+      viewBox="0 0 24 24"
+      width="1em"
+    >
+      <path
+        clip-rule="evenodd"
+        d="M8.071 6.343a1 1 0 1 0-1.414 1.414L10.899 12l-4.242 4.243a1 1 0 0 0 1.414 1.414l4.243-4.243 4.242 4.243a1 1 0 0 0 1.415-1.414L13.728 12l4.243-4.243a1 1 0 0 0-1.415-1.414l-4.242 4.243L8.07 6.343z"
+        fill-rule="evenodd"
+      />
+    </svg>
+  </button>
+</div>
+`;
+
+exports[`<ModalHeader /> theming should extend styles in local 1`] = `
+.c0 {
+  box-sizing: border-box;
+}
+
+.c1 {
+  padding-top: 16px;
+  padding-left: 24px;
+  padding-right: 24px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin-top: 10px;
+  letter-spacing: 250px;
+  top: 0;
+  text-indent: 1px;
+}
+
+.c2 {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 1.5rem;
+  line-height: 133.33%;
+}
+
+.c4 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin-top: 0;
+  margin-bottom: 0;
+  margin-top: 13px;
+  letter-spacing: 253px;
+  top: 3px;
+  text-indent: 4px;
+}
+
+.c7 {
+  height: 2rem;
+  width: 2rem;
+  font-size: 2rem;
+  margin-right: 8px;
+  margin-top: 11px;
+  letter-spacing: 251px;
+  top: 1px;
+  text-indent: 2px;
+}
+
+.c10 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-self: center;
+  -ms-flex-item-align: center;
+  align-self: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  border: 0;
+  padding: 8px;
+  pointer-events: initial;
+  font-size: 1.5rem;
+  color: #282828;
+  cursor: pointer;
+  background-color: transparent;
+  outline: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  appearance: none;
+  -webkit-transition: background-color 220ms ease-in,color 220ms ease-in;
+  transition: background-color 220ms ease-in,color 220ms ease-in;
+  border-radius: 50%;
+}
+
+.c10:hover,
+.c10:focus {
+  color: #282828;
+  background-color: #E0E0E0;
+}
+
+.c10:disabled {
+  color: #A6A6A6;
+  cursor: not-allowed;
+}
+
+.c11 {
+  margin-left: auto;
+  margin-top: 12px;
+  letter-spacing: 252px;
+  top: 2px;
+  text-indent: 3px;
+}
+
+<div
+  class="poodle-box c0 poodle-modal-header c1 c2"
+>
+  <h2
+    class="poodle-box c0 poodle-modal-header__content c4 c5"
+  >
+    <div
+      class="poodle-box c0 poodle-modal-header__icon c7 c5"
+    >
+      <i>
+        Icon
+      </i>
+    </div>
+    ModalHeader
+  </h2>
+  <button
+    aria-label="Close"
+    class="poodle-box c0 c10 poodle-modal-header__close c11 c5"
+  >
+    <svg
+      fill="currentColor"
+      height="1em"
+      viewBox="0 0 24 24"
+      width="1em"
+    >
+      <path
+        clip-rule="evenodd"
+        d="M8.071 6.343a1 1 0 1 0-1.414 1.414L10.899 12l-4.242 4.243a1 1 0 0 0 1.414 1.414l4.243-4.243 4.242 4.243a1 1 0 0 0 1.415-1.414L13.728 12l4.243-4.243a1 1 0 0 0-1.415-1.414l-4.242 4.243L8.07 6.343z"
+        fill-rule="evenodd"
+      />
+    </svg>
+  </button>
+</div>
+`;
+
+exports[`<ModalHeader /> theming should override classes 1`] = `
+.c0 {
+  box-sizing: border-box;
+}
+
+.c1 {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 1.5rem;
+  line-height: 133.33%;
+}
+
+.c7 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-self: center;
+  -ms-flex-item-align: center;
+  align-self: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  border: 0;
+  padding: 8px;
+  pointer-events: initial;
+  font-size: 1.5rem;
+  color: #282828;
+  cursor: pointer;
+  background-color: transparent;
+  outline: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  appearance: none;
+  -webkit-transition: background-color 220ms ease-in,color 220ms ease-in;
+  transition: background-color 220ms ease-in,color 220ms ease-in;
+  border-radius: 50%;
+}
+
+.c7:hover,
+.c7:focus {
+  color: #282828;
+  background-color: #E0E0E0;
+}
+
+.c7:disabled {
+  color: #A6A6A6;
+  cursor: not-allowed;
+}
+
+<div
+  class="poodle-box c0 poodle-modal-header morning c1"
+>
+  <h2
+    class="poodle-box c0 poodle-modal-header__content hello c3"
+  >
+    <div
+      class="poodle-box c0 poodle-modal-header__icon icon c3"
+    >
+      <i>
+        Icon
+      </i>
+    </div>
+    ModalHeader
+  </h2>
+  <button
+    aria-label="Close"
+    class="poodle-box c0 c7 poodle-modal-header__close ok c3"
+  >
+    <svg
+      fill="currentColor"
+      height="1em"
+      viewBox="0 0 24 24"
+      width="1em"
+    >
+      <path
+        clip-rule="evenodd"
+        d="M8.071 6.343a1 1 0 1 0-1.414 1.414L10.899 12l-4.242 4.243a1 1 0 0 0 1.414 1.414l4.243-4.243 4.242 4.243a1 1 0 0 0 1.415-1.414L13.728 12l4.243-4.243a1 1 0 0 0-1.415-1.414l-4.242 4.243L8.07 6.343z"
+        fill-rule="evenodd"
+      />
+    </svg>
+  </button>
+</div>
+`;
+
+exports[`<ModalHeader /> theming should override styles 1`] = `
+.c0 {
+  box-sizing: border-box;
+}
+
+.c1 {
+  margin-top: 50px;
+}
+
+.c2 {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 1.5rem;
+  line-height: 133.33%;
+}
+
+.c4 {
+  margin-top: 53px;
+}
+
+.c7 {
+  margin-top: 51px;
+}
+
+.c10 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-self: center;
+  -ms-flex-item-align: center;
+  align-self: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  border: 0;
+  padding: 8px;
+  pointer-events: initial;
+  font-size: 1.5rem;
+  color: #282828;
+  cursor: pointer;
+  background-color: transparent;
+  outline: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  appearance: none;
+  -webkit-transition: background-color 220ms ease-in,color 220ms ease-in;
+  transition: background-color 220ms ease-in,color 220ms ease-in;
+  border-radius: 50%;
+}
+
+.c10:hover,
+.c10:focus {
+  color: #282828;
+  background-color: #E0E0E0;
+}
+
+.c10:disabled {
+  color: #A6A6A6;
+  cursor: not-allowed;
+}
+
+.c11 {
+  margin-top: 52px;
+}
+
+<div
+  class="poodle-box c0 poodle-modal-header c1 c2"
+>
+  <h2
+    class="poodle-box c0 poodle-modal-header__content c4 c5"
+  >
+    <div
+      class="poodle-box c0 poodle-modal-header__icon c7 c5"
+    >
+      <i>
+        Icon
+      </i>
+    </div>
+    ModalHeader
+  </h2>
+  <button
+    aria-label="Close"
+    class="poodle-box c0 c10 poodle-modal-header__close c11 c5"
+  >
+    <svg
+      fill="currentColor"
+      height="1em"
+      viewBox="0 0 24 24"
+      width="1em"
+    >
+      <path
+        clip-rule="evenodd"
+        d="M8.071 6.343a1 1 0 1 0-1.414 1.414L10.899 12l-4.242 4.243a1 1 0 0 0 1.414 1.414l4.243-4.243 4.242 4.243a1 1 0 0 0 1.415-1.414L13.728 12l4.243-4.243a1 1 0 0 0-1.415-1.414l-4.242 4.243L8.07 6.343z"
+        fill-rule="evenodd"
+      />
+    </svg>
+  </button>
+</div>
+`;
+
+exports[`<ModalHeader /> theming should render with default props correctly 1`] = `
+.c0 {
+  box-sizing: border-box;
+}
+
+.c1 {
+  padding-top: 16px;
+  padding-left: 24px;
+  padding-right: 24px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.c2 {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 1.5rem;
+  line-height: 133.33%;
+}
+
+.c4 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.c7 {
+  height: 2rem;
+  width: 2rem;
+  font-size: 2rem;
+  margin-right: 8px;
+}
+
+.c10 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-self: center;
+  -ms-flex-item-align: center;
+  align-self: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  border: 0;
+  padding: 8px;
+  pointer-events: initial;
+  font-size: 1.5rem;
+  color: #282828;
+  cursor: pointer;
+  background-color: transparent;
+  outline: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  appearance: none;
+  -webkit-transition: background-color 220ms ease-in,color 220ms ease-in;
+  transition: background-color 220ms ease-in,color 220ms ease-in;
+  border-radius: 50%;
+}
+
+.c10:hover,
+.c10:focus {
+  color: #282828;
+  background-color: #E0E0E0;
+}
+
+.c10:disabled {
+  color: #A6A6A6;
+  cursor: not-allowed;
+}
+
+.c11 {
+  margin-left: auto;
+}
+
+<div
+  class="poodle-box c0 poodle-modal-header c1 hello c2"
+  id="id"
+>
+  <h2
+    class="poodle-box c0 poodle-modal-header__content c4 hello c5"
+  >
+    <div
+      class="poodle-box c0 poodle-modal-header__icon c7 hello c5"
+    >
+      <i>
+        Icon
+      </i>
+    </div>
+    ModalHeader
+  </h2>
+  <button
+    aria-label="Close"
+    class="poodle-box c0 c10 poodle-modal-header__close c11 hello c5"
+  >
+    <svg
+      fill="currentColor"
+      height="1em"
+      viewBox="0 0 24 24"
+      width="1em"
+    >
+      <path
+        clip-rule="evenodd"
+        d="M8.071 6.343a1 1 0 1 0-1.414 1.414L10.899 12l-4.242 4.243a1 1 0 0 0 1.414 1.414l4.243-4.243 4.242 4.243a1 1 0 0 0 1.415-1.414L13.728 12l4.243-4.243a1 1 0 0 0-1.415-1.414l-4.242 4.243L8.07 6.343z"
+        fill-rule="evenodd"
+      />
+    </svg>
+  </button>
+</div>
+`;

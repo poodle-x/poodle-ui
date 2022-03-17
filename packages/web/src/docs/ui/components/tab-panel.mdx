@@ -1,0 +1,60 @@
+---
+title: TabPanel
+---
+
+# TabPanel
+
+```tsx
+import TabPanel from "@poodle/ui/TabPanel";
+```
+Please check tabs [document](/ui/components/tabs) to see the example usage.
+
+## Theming
+
+[//]: # (GetTheming[==TabPanelThemeStyles,TabPanelThemeConfig,TabPanel/index.ts==])
+
+
+
+Please check theming component document [here](/theming/component).
+ 		
+```ts
+export interface TabPanelThemeConfig
+  extends StandardThemeConfig<TabPanelStyleKeys, TabPanelProps> {}
+
+``` 
+		
+		
+
+[//]: # (EndGetTheming)
+
+## Props
+
+[//]: # (GetProps[==LocalTabPanelProps,TabPanel/TabPanel.tsx==])
+
+
+### Local Props
+
+
+| Name              | Type              | Description                                                   |
+| ----------------- | ----------------- | ------------------------------------------------------------- |
+| **value \* **     | `TabValue`        |                                                               |
+| children          | `React.ReactNode` |                                                               |
+| keepMountChildren | `boolean`         | Does not unmount the children when the panel is not selected. |
+				
+
+[//]: # (EndGetProps)
+
+[//]: # (GetPartialProps[==TabPanelProps,TabPanel/TabPanel.tsx==])
+
+
+### Full Props
+
+```ts
+export interface TabPanelProps
+	extends Omit<BoxProps, "value">,
+		StandardComponentProps,
+		LocalTabPanelProps {} 
+```
+				
+
+[//]: # (GetPartialProps)

@@ -1,0 +1,7 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<ThemeProvider /> should extend theme correctly 1`] = `["{\\"scale\\":100,\\"sets\\":{\\"s\\":4,\\"m\\":8,\\"l\\":16}}","\\"rtl\\""]`;
+
+exports[`<ThemeProvider /> should render children correctly 1`] = `Hello`;
+
+exports[`<ThemeProvider /> should render theme correctly with noDefaultTheme option 1`] = `{"test":"abc"}`;

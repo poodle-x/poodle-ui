@@ -1,0 +1,67 @@
+---
+title: Input Adornment
+path: input-adornment
+---
+
+# Input Adornment
+
+```jsx
+import Input from "@poodle/ui/InputAdornment";
+```
+
+`InputAdornment` is a component use together with `Input` component.
+
+Please check `Input` [document](/ui/components/input) to see the example usage.
+
+
+## Theming
+
+[//]: # (GetTheming[==InputAdornmentStyleKeys,InputAdornmentThemeConfig,InputAdornment/index.ts==])
+
+
+
+Please check theming component document [here](/theming/component).
+ 		
+```ts
+export type InputAdornmentStyleKeys = "root"
+
+export interface InputAdornmentThemeConfig
+  extends StandardThemeConfig<InputAdornmentStyleKeys, InputAdornmentProps> {}
+
+``` 
+		
+		
+
+[//]: # (EndGetTheming)
+
+## Props
+
+[//]: # (GetProps[==LocalInputAdornmentProps,InputAdornment/InputAdornment.tsx==])
+
+
+### Local Props
+
+
+| Name              | Type               | Description                                                                           |
+| ----------------- | ------------------ | ------------------------------------------------------------------------------------- |
+| adornmentPosition | `"start" \| "end"` | Change position styles when the adornment is the first item<br />at the begin or end. |
+| children          | `React.ReactNode`  |                                                                                       |
+| isIcon            | `boolean`          | Change to icon styles when the adornment content is a icon.                           |
+				
+
+[//]: # (EndGetProps)
+
+[//]: # (GetPartialProps[==InputAdornmentProps,InputAdornment/InputAdornment.tsx==])
+
+
+### Full Props
+
+```ts
+export interface InputAdornmentProps
+	extends BoxProps,
+		StandardComponentProps,
+		LocalInputAdornmentProps {} 
+```
+				
+
+[//]: # (GetPartialProps)

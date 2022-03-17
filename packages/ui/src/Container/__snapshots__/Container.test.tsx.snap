@@ -1,0 +1,209 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Container /> ref should work 1`] = `
+.c0 {
+  box-sizing: border-box;
+}
+
+.c1 {
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 16px;
+  padding-right: 16px;
+}
+
+<div
+  class="poodle-box c0 poodle-container c1 c2"
+>
+  Container
+</div>
+`;
+
+exports[`<Container /> should render Box props correctly 1`] = `
+.c0 {
+  box-sizing: border-box;
+}
+
+.c1 {
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 16px;
+  padding-right: 16px;
+}
+
+.c2 {
+  margin-top: 20px;
+}
+
+<div
+  aria-expanded="true"
+  class="poodle-box c0 poodle-container c1 c2"
+  id="id"
+>
+  Container
+</div>
+`;
+
+exports[`<Container /> should render Container correctly 1`] = `
+.c0 {
+  box-sizing: border-box;
+}
+
+.c1 {
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 16px;
+  padding-right: 16px;
+}
+
+<div
+  class="poodle-box c0 poodle-container c1 c2"
+>
+  Container
+</div>
+`;
+
+exports[`<Container /> should render with fixed prop 1`] = `
+.c0 {
+  box-sizing: border-box;
+}
+
+.c1 {
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 16px;
+  padding-right: 16px;
+  max-width: 576px;
+}
+
+<div
+  class="poodle-box c0 poodle-container c1 c2"
+>
+  Container
+</div>
+`;
+
+exports[`<Container /> should render with gutter prop 1`] = `
+.c0 {
+  box-sizing: border-box;
+}
+
+.c1 {
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 40px;
+  padding-right: 40px;
+}
+
+<div
+  class="poodle-box c0 poodle-container c1 c2"
+>
+  Container
+</div>
+`;
+
+exports[`<Container /> theming should disable classes 1`] = `
+.c0 {
+  box-sizing: border-box;
+}
+
+<div
+  class="poodle-box c0 poodle-container c1"
+>
+  Container
+</div>
+`;
+
+exports[`<Container /> theming should extend styles in global 1`] = `
+.c0 {
+  box-sizing: border-box;
+}
+
+.c1 {
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 16px;
+  padding-right: 16px;
+  margin-top: 10px;
+  letter-spacing: 250px;
+  top: 0;
+  text-indent: 1px;
+}
+
+<div
+  class="poodle-box c0 poodle-container c1 c2"
+>
+  Container
+</div>
+`;
+
+exports[`<Container /> theming should extend styles in local 1`] = `
+.c0 {
+  box-sizing: border-box;
+}
+
+.c1 {
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 16px;
+  padding-right: 16px;
+  margin-top: 10px;
+  letter-spacing: 250px;
+  top: 0;
+  text-indent: 1px;
+}
+
+<div
+  class="poodle-box c0 poodle-container c1 c2"
+>
+  Container
+</div>
+`;
+
+exports[`<Container /> theming should override classes 1`] = `
+.c0 {
+  box-sizing: border-box;
+}
+
+<div
+  class="poodle-box c0 poodle-container morning c1"
+>
+  Container
+</div>
+`;
+
+exports[`<Container /> theming should override styles 1`] = `
+.c0 {
+  box-sizing: border-box;
+}
+
+.c1 {
+  margin-top: 50px;
+}
+
+<div
+  class="poodle-box c0 poodle-container c1 c2"
+>
+  Container
+</div>
+`;
+
+exports[`<Container /> theming should render with default props correctly 1`] = `
+.c0 {
+  box-sizing: border-box;
+}
+
+.c1 {
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 16px;
+  padding-right: 16px;
+}
+
+<div
+  class="poodle-box c0 poodle-container c1 hello c2"
+  id="id"
+>
+  Container
+</div>
+`;

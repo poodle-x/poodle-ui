@@ -1,0 +1,129 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Box /> box styles should always on top 1`] = `
+.c0 {
+  box-sizing: border-box;
+}
+
+.c1 {
+  padding: 20px;
+}
+
+.c2 {
+  padding: 50px;
+}
+
+<div
+  class="poodle-box c0 c1 c2"
+>
+  test
+</div>
+`;
+
+exports[`<Box /> should render correctly 1`] = `
+.c0 {
+  box-sizing: border-box;
+}
+
+<div
+  class="poodle-box c0 c1"
+/>
+`;
+
+exports[`<Box /> should render correctly 2`] = `
+.c0 {
+  box-sizing: border-box;
+}
+
+<div
+  class="poodle-box c0 c1"
+>
+  test
+</div>
+`;
+
+exports[`<Box /> should render correctly with aria* props 1`] = `
+.c0 {
+  box-sizing: border-box;
+}
+
+<div
+  aria-label="label"
+  aria-live="polite"
+  class="poodle-box c0 c1"
+/>
+`;
+
+exports[`<Box /> theming should extend theme in global 1`] = `
+.c0 {
+  box-sizing: border-box;
+  top: 0;
+  text-indent: 1px;
+  letter-spacing: 250px;
+}
+
+.c1 {
+  margin: 20px;
+  padding: 20px;
+}
+
+<div
+  class="poodle-box c0 c1"
+>
+  Button
+</div>
+`;
+
+exports[`<Box /> theming should extend theme in local 1`] = `
+.c0 {
+  box-sizing: border-box;
+  top: 0;
+  text-indent: 1px;
+  letter-spacing: 250px;
+}
+
+.c1 {
+  margin: 20px;
+  padding: 20px;
+}
+
+<div
+  class="poodle-box c0 c1"
+>
+  Button
+</div>
+`;
+
+exports[`<Box /> theming should override styles in global 1`] = `
+.c0 {
+  margin: 1px;
+}
+
+.c1 {
+  margin: 20px;
+  padding: 20px;
+}
+
+<div
+  class="poodle-box c0 c1"
+>
+  Button
+</div>
+`;
+
+exports[`<Box /> theming should override styles in local 1`] = `
+.c0 {
+  margin: 2px;
+}
+
+.c1 {
+  margin: 20px;
+  padding: 20px;
+}
+
+<div
+  class="poodle-box c0 c1"
+>
+  Button
+</div>
+`;

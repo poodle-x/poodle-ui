@@ -1,0 +1,73 @@
+---
+title: Layout | System
+---
+
+# Layout
+
+```ts
+import { layoutSystem } from "@poodle/system";
+```
+
+`Layout` system transform scaling and z-index to CSS width, height...
+
+```ts
+const theme: SystemThemeConfig = {
+	spacing: {
+					scale: "1.5rem",
+					sets: {
+						s: "1.5rem",
+						m: "2rem",
+						l: "3rem",
+					},
+				},
+				layouts: {
+					zIndices: {
+						header: "1000",
+						footer: 1200,
+					},
+				},
+};
+
+const listSystem = compose(colorsSystem, bordersSystem);
+
+export const system = createSystem(listSystem);
+
+const styles = system({
+	theme,
+	maxWidth: "scale-2",
+	height: "m",
+	zIndex: "footer",
+});
+
+// Styles result
+//  { maxWidth: "3rem" },
+//  { height: "2rem" },
+//  { zIndex: "1200" },
+```
+
+[//]: # (GetSystemProps[==LayoutProps,layout.ts==])
+| Prop       | Type                                                         | Description                           |
+| ---------- | ------------------------------------------------------------ | ------------------------------------- |
+| bottom     | `ResponsiveProp<CSS.Property.Bottom \| string \| number>`    | The CSS `bottom` property             |
+| display    | `ResponsiveProp<CSS.Property.Display>`                       | The CSS `display` property            |
+| h          | `ResponsiveProp<CSS.Property.Height \| string \| number>`    | The CSS `height` property             |
+| height     | `ResponsiveProp<CSS.Property.Height \| string \| number>`    | The CSS `height` property             |
+| left       | `ResponsiveProp<CSS.Property.Left \| string \| number>`      | The CSS `left` property               |
+| maxHeight  | `ResponsiveProp<CSS.Property.MaxHeight \| string \| number>` | The CSS `max-height` property         |
+| maxWidth   | `ResponsiveProp<CSS.Property.MaxWidth \| string \| number>`  | The CSS `max-width` property          |
+| minHeight  | `ResponsiveProp<CSS.Property.MinHeight \| string \| number>` | The CSS `min-height` property         |
+| minWidth   | `ResponsiveProp<CSS.Property.MinWidth \| string \| number>`  | The CSS `min-width` property          |
+| overflow   | `ResponsiveProp<CSS.Property.Overflow>`                      | The CSS `overflow` property           |
+| overflowX  | `ResponsiveProp<CSS.Property.OverflowX>`                     | The CSS `overflow-x` property         |
+| overflowY  | `ResponsiveProp<CSS.Property.OverflowY>`                     | The CSS `overflow-y` property         |
+| position   | `ResponsiveProp<CSS.Property.Position>`                      | The CSS `position` property           |
+| right      | `ResponsiveProp<CSS.Property.Right \| string \| number>`     | The CSS `right` property              |
+| size       | `ResponsiveProp<CSS.Property.Width \| string \| number>`     | The CSS `height` and `width` property |
+| top        | `ResponsiveProp<CSS.Property.Top \| string \| number>`       | The CSS `top` property                |
+| visibility | `ResponsiveProp<CSS.Property.Visibility>`                    | The CSS `z-index` property            |
+| w          | `ResponsiveProp<CSS.Property.Width \| string \| number>`     | The CSS `width` property              |
+| width      | `ResponsiveProp<CSS.Property.Width \| string \| number>`     | The CSS `width` property              |
+| zIndex     | `ResponsiveProp<CSS.Property.ZIndex \| string \| number>`    | The CSS `z-index` property            |
+				
+
+[//]: # (EndGetSystemProps)

@@ -1,0 +1,68 @@
+---
+title: Usage | System
+path: usage
+---
+
+# Usage
+
+
+## Quickstart
+
+The package is just a function that accepts a CSS object and returns a CSS object with spacing scales, colors, and common CSS properties.
+
+First, you must have a config
+
+The config can be composed of different systems.
+
+- colorsSystem
+- fontsSystem
+- layoutSystem
+- spacingSystem
+- bordersSystem
+- flexSystem
+- pseudosSystem
+- shadowSystem
+
+
+
+```js
+import {
+	compose,
+	spacingSystem,
+	colorsSystem,
+	createSystem,
+} from "@poodle/system";
+
+const listSystem = compose(colorsSystem, spacingSystem);
+
+export const system = createSystem(listSystem);
+
+const styles = system({
+	theme: {
+		colors: {
+			sets: {
+				primary: {
+					base: "red",
+				},
+				secondary: "yellow",
+			},
+		},
+		spacing: {
+			scale: "4px",
+			sets: {
+				custom: "1rem",
+			},
+		},
+	},
+
+	color: "primary.base",
+	pt: "scale-4",
+	mt: "custom",
+});
+
+// Styles result
+//  { color: "red" },
+// 	{ paddingTop: "16px" },
+// 	{ marginTop: "1rem" },
+
+```

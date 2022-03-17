@@ -1,0 +1,159 @@
+---
+title: IconButton
+---
+
+import IconButton from "@poodle/ui/IconButton";
+import ErrorIcon from "@poodle/icons/react/Error";
+import WarnIcon from "@poodle/icons/react/Warn";
+import CheckIcon from "@poodle/icons/react/Check";
+import ClearIcon from "@poodle/icons/react/Clear";
+
+# IconButton
+
+```jsx
+import IconButton from "@poodle/ui/IconButton";
+```
+
+`IconButton` is a component use for a single action.
+We should add `aria-label` to the component to help the screen reader understand what is it used for.
+
+## Shape
+
+By the default the `IconButton` is round. We can change to square shape by using `shapeStyle` prop.
+
+<IconButton aria-label="Clear">
+	<ClearIcon />
+</IconButton>
+
+<IconButton aria-label="Clear" shapeStyle="square">
+	<ClearIcon />
+</IconButton>
+
+
+
+
+```jsx
+import ClearIcon from "@poodle/icons/react/Clear";
+
+<IconButton aria-label="Clear">
+	<ClearIcon />
+</IconButton>
+
+<IconButton aria-label="Clear" shapeStyle="square">
+	<ClearIcon />
+</IconButton>
+```
+
+
+
+
+## Color
+
+`IconButton` support basic colors.
+
+<IconButton>
+	<ClearIcon />
+</IconButton>
+
+<IconButton disabled={true}>
+	<ClearIcon />
+</IconButton>
+
+<IconButton colorStyle="primary">
+	<CheckIcon />
+</IconButton>
+
+<IconButton colorStyle="positive">
+	<CheckIcon />
+</IconButton>
+
+<IconButton colorStyle="negative">
+	<ErrorIcon />
+</IconButton>
+
+<IconButton colorStyle="warn">
+	<WarnIcon />
+</IconButton>
+
+```jsx
+import ClearIcon from "@poodle/icons/react/Clear";
+import ErrorIcon from "@poodle/icons/react/Error";
+import WarnIcon from "@poodle/icons/react/Warn";
+import CheckIcon from "@poodle/icons/react/Check";
+
+<IconButton>
+	<ClearIcon />
+</IconButton>
+
+<IconButton disabled={true}>
+	<ClearIcon />
+</IconButton>
+
+<IconButton colorStyle="primary">
+	<CheckIcon />
+</IconButton>
+
+<IconButton colorStyle="positive">
+	<CheckIcon />
+</IconButton>
+
+<IconButton colorStyle="negative">
+	<ErrorIcon />
+</IconButton>
+
+<IconButton colorStyle="warn">
+	<WarnIcon />
+</IconButton>
+
+```
+
+
+## Theming
+
+[//]: # (GetTheming[==IconButtonStyleKeys,IconButtonThemeConfig,IconButton/index.ts==])
+
+
+
+Please check theming component document [here](/theming/component).
+ 		
+```ts
+export type IconButtonStyleKeys = "root"
+
+export interface IconButtonThemeConfig
+  extends StandardThemeConfig<IconButtonStyleKeys, IconButtonProps> {}
+
+``` 
+		
+		
+
+[//]: # (EndGetTheming)
+
+## Props
+
+[//]: # (GetProps[==LocalIconButtonProps,IconButton/IconButton.tsx==])
+
+
+### Local Props
+
+
+| Name       | Type                  | Description                                                                       |
+| ---------- | --------------------- | --------------------------------------------------------------------------------- |
+| children   | `React.ReactNode`     |                                                                                   |
+| shapeStyle | `"round" \| "square"` | Change component shape.<br /><br />Square shape is useful to create button group. |
+				
+
+[//]: # (EndGetProps)
+[//]: # (GetPartialProps[==IconButtonProps,IconButton/IconButton.tsx==])
+
+
+### Full Props
+
+```ts
+export interface IconButtonProps
+	extends BoxProps,
+		StandardComponentProps,
+		LocalIconButtonProps {} 
+```
+				
+
+[//]: # (GetPartialProps)

@@ -1,0 +1,44 @@
+---
+title: Responsive Styles | System
+---
+
+# Responsive Styles
+
+The system has build-in responsive breakpoints.
+
+It's simplify the responsive styling and save times.
+
+```ts
+const listSystem = compose(colorsSystem, spacingSystem);
+
+export const system = createSystem(listSystem);
+
+const styles = system({
+	theme: {
+		breakpoints: {
+			scale: ["sm", "md", "lg", "xl"],
+			sets: {
+				sm: 768,
+				md: 1024,
+				lg: 1280,
+				xl: "100em",
+			},
+		},
+	},
+	paddingTop: ["20px", "40px", "60px", "120px"],
+	mt: {
+		xl: "20px",
+	},
+});
+
+const result = [
+	{ paddingTop: "20px" },
+	{ "@media screen and (min-width: 768px)": { paddingTop: "40px" } },
+	{ "@media screen and (min-width: 1024px)": { paddingTop: "60px" } },
+	{ "@media screen and (min-width: 1280px)": { paddingTop: "120px" } },
+	{ "@media screen and (min-width: 100em)": { marginTop: "20px" } },
+];
+
+
+```
+

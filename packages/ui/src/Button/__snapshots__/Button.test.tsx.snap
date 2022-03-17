@@ -1,0 +1,3359 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Button /> ref should work 1`] = `
+.c0 {
+  box-sizing: border-box;
+}
+
+.c1 {
+  position: relative;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  min-width: 80px;
+  padding: 4px;
+  background-color: transparent;
+  border-radius: 4px;
+  border: 0;
+  cursor: pointer;
+  outline: 0;
+  -webkit-appearance: none;
+  -webkit-transition: background-color 220ms ease-in,border-color 110ms ease-in,color 220ms ease-in;
+  transition: background-color 220ms ease-in,border-color 110ms ease-in,color 220ms ease-in;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: 700;
+  line-height: 150%;
+  color: #282828;
+  background-color: transparent;
+  padding: 8px 16px;
+}
+
+.c1:disabled {
+  cursor: not-allowed;
+}
+
+.c1:hover,
+.c1:focus {
+  color: #282828;
+  background-color: #E0E0E0;
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+}
+
+.c1:focus::before {
+  position: absolute;
+  z-index: -1;
+  top: -4px;
+  right: -4px;
+  bottom: -4px;
+  left: -4px;
+  border: 2px dotted;
+  border-color: #282828;
+  border-radius: 4px;
+  content: '';
+}
+
+.c4 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+}
+
+<button
+  class="poodle-box c0 poodle-button c1 c2"
+>
+  <div
+    class="poodle-box c0 poodle-button__content c4 c2"
+  >
+    Button
+  </div>
+</button>
+`;
+
+exports[`<Button /> should render HTML attributes 1`] = `
+.c0 {
+  box-sizing: border-box;
+}
+
+.c1 {
+  position: relative;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  min-width: 80px;
+  padding: 4px;
+  background-color: transparent;
+  border-radius: 4px;
+  border: 0;
+  cursor: pointer;
+  outline: 0;
+  -webkit-appearance: none;
+  -webkit-transition: background-color 220ms ease-in,border-color 110ms ease-in,color 220ms ease-in;
+  transition: background-color 220ms ease-in,border-color 110ms ease-in,color 220ms ease-in;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: 700;
+  line-height: 150%;
+  color: #282828;
+  background-color: transparent;
+  padding: 8px 16px;
+}
+
+.c1:disabled {
+  cursor: not-allowed;
+}
+
+.c1:hover,
+.c1:focus {
+  color: #282828;
+  background-color: #E0E0E0;
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+}
+
+.c1:focus::before {
+  position: absolute;
+  z-index: -1;
+  top: -4px;
+  right: -4px;
+  bottom: -4px;
+  left: -4px;
+  border: 2px dotted;
+  border-color: #282828;
+  border-radius: 4px;
+  content: '';
+}
+
+.c4 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+}
+
+<button
+  aria-disabled="true"
+  class="poodle-box c0 poodle-button c1 c2"
+  id="button"
+>
+  <div
+    class="poodle-box c0 poodle-button__content c4 c2"
+  >
+    Button
+  </div>
+</button>
+`;
+
+exports[`<Button /> should render correctly 1`] = `
+.c0 {
+  box-sizing: border-box;
+}
+
+.c1 {
+  position: relative;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  min-width: 80px;
+  padding: 4px;
+  background-color: transparent;
+  border-radius: 4px;
+  border: 0;
+  cursor: pointer;
+  outline: 0;
+  -webkit-appearance: none;
+  -webkit-transition: background-color 220ms ease-in,border-color 110ms ease-in,color 220ms ease-in;
+  transition: background-color 220ms ease-in,border-color 110ms ease-in,color 220ms ease-in;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: 700;
+  line-height: 150%;
+  color: #282828;
+  background-color: transparent;
+  padding: 8px 16px;
+}
+
+.c1:disabled {
+  cursor: not-allowed;
+}
+
+.c1:hover,
+.c1:focus {
+  color: #282828;
+  background-color: #E0E0E0;
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+}
+
+.c1:focus::before {
+  position: absolute;
+  z-index: -1;
+  top: -4px;
+  right: -4px;
+  bottom: -4px;
+  left: -4px;
+  border: 2px dotted;
+  border-color: #282828;
+  border-radius: 4px;
+  content: '';
+}
+
+.c4 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+}
+
+<button
+  class="poodle-box c0 poodle-button c1 c2"
+>
+  <div
+    class="poodle-box c0 poodle-button__content c4 c2"
+  >
+    Hello
+  </div>
+</button>
+`;
+
+exports[`<Button /> should render with end icon correctly 1`] = `
+.c0 {
+  box-sizing: border-box;
+}
+
+.c1 {
+  position: relative;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  min-width: 80px;
+  padding: 4px;
+  background-color: transparent;
+  border-radius: 4px;
+  border: 0;
+  cursor: pointer;
+  outline: 0;
+  -webkit-appearance: none;
+  -webkit-transition: background-color 220ms ease-in,border-color 110ms ease-in,color 220ms ease-in;
+  transition: background-color 220ms ease-in,border-color 110ms ease-in,color 220ms ease-in;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: 700;
+  line-height: 150%;
+  color: #282828;
+  background-color: transparent;
+  padding: 8px 16px;
+}
+
+.c1:disabled {
+  cursor: not-allowed;
+}
+
+.c1:hover,
+.c1:focus {
+  color: #282828;
+  background-color: #E0E0E0;
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+}
+
+.c1:focus::before {
+  position: absolute;
+  z-index: -1;
+  top: -4px;
+  right: -4px;
+  bottom: -4px;
+  left: -4px;
+  border: 2px dotted;
+  border-color: #282828;
+  border-radius: 4px;
+  content: '';
+}
+
+.c4 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+}
+
+.c7 {
+  font-size: 1.5rem;
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.c7>svg {
+  font-size: 1.5rem;
+}
+
+.c8 {
+  margin-left: 4px;
+}
+
+<button
+  class="poodle-box c0 poodle-button c1 c2"
+>
+  <div
+    class="poodle-box c0 poodle-button__content c4 c2"
+  >
+    Button
+    <div
+      class="poodle-box c0 poodle-button__icon-end c7 c8 c2"
+    >
+      icon
+    </div>
+  </div>
+</button>
+`;
+
+exports[`<Button /> should render with start icon correctly 1`] = `
+.c0 {
+  box-sizing: border-box;
+}
+
+.c1 {
+  position: relative;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  min-width: 80px;
+  padding: 4px;
+  background-color: transparent;
+  border-radius: 4px;
+  border: 0;
+  cursor: pointer;
+  outline: 0;
+  -webkit-appearance: none;
+  -webkit-transition: background-color 220ms ease-in,border-color 110ms ease-in,color 220ms ease-in;
+  transition: background-color 220ms ease-in,border-color 110ms ease-in,color 220ms ease-in;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: 700;
+  line-height: 150%;
+  color: #282828;
+  background-color: transparent;
+  padding: 8px 16px;
+}
+
+.c1:disabled {
+  cursor: not-allowed;
+}
+
+.c1:hover,
+.c1:focus {
+  color: #282828;
+  background-color: #E0E0E0;
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+}
+
+.c1:focus::before {
+  position: absolute;
+  z-index: -1;
+  top: -4px;
+  right: -4px;
+  bottom: -4px;
+  left: -4px;
+  border: 2px dotted;
+  border-color: #282828;
+  border-radius: 4px;
+  content: '';
+}
+
+.c4 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+}
+
+.c7 {
+  font-size: 1.5rem;
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.c7>svg {
+  font-size: 1.5rem;
+}
+
+.c8 {
+  margin-right: 4px;
+}
+
+<button
+  class="poodle-box c0 poodle-button c1 c2"
+>
+  <div
+    class="poodle-box c0 poodle-button__content c4 c2"
+  >
+    <div
+      class="poodle-box c0 poodle-button__icon-start c7 c8 c2"
+    >
+      icon
+    </div>
+    Button
+  </div>
+</button>
+`;
+
+exports[`<Button /> size Should render button with size l correctly 1`] = `
+.c0 {
+  box-sizing: border-box;
+}
+
+.c1 {
+  position: relative;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  min-width: 80px;
+  padding: 4px;
+  background-color: transparent;
+  border-radius: 4px;
+  border: 0;
+  cursor: pointer;
+  outline: 0;
+  -webkit-appearance: none;
+  -webkit-transition: background-color 220ms ease-in,border-color 110ms ease-in,color 220ms ease-in;
+  transition: background-color 220ms ease-in,border-color 110ms ease-in,color 220ms ease-in;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: 700;
+  line-height: 150%;
+  color: #282828;
+  background-color: transparent;
+  padding: 12px 16px;
+}
+
+.c1:disabled {
+  cursor: not-allowed;
+}
+
+.c1:hover,
+.c1:focus {
+  color: #282828;
+  background-color: #E0E0E0;
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+}
+
+.c1:focus::before {
+  position: absolute;
+  z-index: -1;
+  top: -4px;
+  right: -4px;
+  bottom: -4px;
+  left: -4px;
+  border: 2px dotted;
+  border-color: #282828;
+  border-radius: 4px;
+  content: '';
+}
+
+.c4 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+}
+
+<button
+  class="poodle-box c0 poodle-button c1 c2"
+>
+  <div
+    class="poodle-box c0 poodle-button__content c4 c2"
+  >
+    Button
+  </div>
+</button>
+`;
+
+exports[`<Button /> size Should render button with size m correctly 1`] = `
+.c0 {
+  box-sizing: border-box;
+}
+
+.c1 {
+  position: relative;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  min-width: 80px;
+  padding: 4px;
+  background-color: transparent;
+  border-radius: 4px;
+  border: 0;
+  cursor: pointer;
+  outline: 0;
+  -webkit-appearance: none;
+  -webkit-transition: background-color 220ms ease-in,border-color 110ms ease-in,color 220ms ease-in;
+  transition: background-color 220ms ease-in,border-color 110ms ease-in,color 220ms ease-in;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: 700;
+  line-height: 150%;
+  color: #282828;
+  background-color: transparent;
+  padding: 4px 16px;
+}
+
+.c1:disabled {
+  cursor: not-allowed;
+}
+
+.c1:hover,
+.c1:focus {
+  color: #282828;
+  background-color: #E0E0E0;
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+}
+
+.c1:focus::before {
+  position: absolute;
+  z-index: -1;
+  top: -4px;
+  right: -4px;
+  bottom: -4px;
+  left: -4px;
+  border: 2px dotted;
+  border-color: #282828;
+  border-radius: 4px;
+  content: '';
+}
+
+.c4 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+}
+
+<button
+  class="poodle-box c0 poodle-button c1 c2"
+>
+  <div
+    class="poodle-box c0 poodle-button__content c4 c2"
+  >
+    Button
+  </div>
+</button>
+`;
+
+exports[`<Button /> size Should render button with size s correctly 1`] = `
+.c0 {
+  box-sizing: border-box;
+}
+
+.c1 {
+  position: relative;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  min-width: 80px;
+  padding: 4px;
+  background-color: transparent;
+  border-radius: 4px;
+  border: 0;
+  cursor: pointer;
+  outline: 0;
+  -webkit-appearance: none;
+  -webkit-transition: background-color 220ms ease-in,border-color 110ms ease-in,color 220ms ease-in;
+  transition: background-color 220ms ease-in,border-color 110ms ease-in,color 220ms ease-in;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: 700;
+  line-height: 150%;
+  color: #282828;
+  background-color: transparent;
+  padding: 4px 16px;
+}
+
+.c1:disabled {
+  cursor: not-allowed;
+}
+
+.c1:hover,
+.c1:focus {
+  color: #282828;
+  background-color: #E0E0E0;
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+}
+
+.c1:focus::before {
+  position: absolute;
+  z-index: -1;
+  top: -4px;
+  right: -4px;
+  bottom: -4px;
+  left: -4px;
+  border: 2px dotted;
+  border-color: #282828;
+  border-radius: 4px;
+  content: '';
+}
+
+.c4 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+}
+
+<button
+  class="poodle-box c0 poodle-button c1 c2"
+>
+  <div
+    class="poodle-box c0 poodle-button__content c4 c2"
+  >
+    Button
+  </div>
+</button>
+`;
+
+exports[`<Button /> theming should disable classes 1`] = `
+.c0 {
+  box-sizing: border-box;
+}
+
+<button
+  class="poodle-box c0 poodle-button c1"
+>
+  <div
+    class="poodle-box c0 poodle-button__content c1"
+  >
+    <div
+      class="poodle-box c0 poodle-button__icon-start c1"
+    >
+      p
+    </div>
+    Button
+    <div
+      class="poodle-box c0 poodle-button__icon-end c1"
+    >
+      p
+    </div>
+  </div>
+</button>
+`;
+
+exports[`<Button /> theming should extend size styles 1`] = `
+.c0 {
+  box-sizing: border-box;
+}
+
+.c1 {
+  position: relative;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  min-width: 80px;
+  padding: 4px;
+  background-color: transparent;
+  border-radius: 4px;
+  border: 0;
+  cursor: pointer;
+  outline: 0;
+  -webkit-appearance: none;
+  -webkit-transition: background-color 220ms ease-in,border-color 110ms ease-in,color 220ms ease-in;
+  transition: background-color 220ms ease-in,border-color 110ms ease-in,color 220ms ease-in;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: 700;
+  line-height: 150%;
+  color: #282828;
+  background-color: transparent;
+  height: 100px;
+}
+
+.c1:disabled {
+  cursor: not-allowed;
+}
+
+.c1:hover,
+.c1:focus {
+  color: #282828;
+  background-color: #E0E0E0;
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+}
+
+.c1:focus::before {
+  position: absolute;
+  z-index: -1;
+  top: -4px;
+  right: -4px;
+  bottom: -4px;
+  left: -4px;
+  border: 2px dotted;
+  border-color: #282828;
+  border-radius: 4px;
+  content: '';
+}
+
+.c4 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+}
+
+<button
+  class="poodle-box c0 poodle-button c1 c2"
+>
+  <div
+    class="poodle-box c0 poodle-button__content c4 c2"
+  >
+    Hello
+  </div>
+</button>
+`;
+
+exports[`<Button /> theming should extend size styles with mode 1`] = `
+.c0 {
+  box-sizing: border-box;
+}
+
+.c1 {
+  position: relative;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  min-width: 80px;
+  padding: 4px;
+  background-color: transparent;
+  border-radius: 4px;
+  border: 0;
+  cursor: pointer;
+  outline: 0;
+  -webkit-appearance: none;
+  -webkit-transition: background-color 220ms ease-in,border-color 110ms ease-in,color 220ms ease-in;
+  transition: background-color 220ms ease-in,border-color 110ms ease-in,color 220ms ease-in;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: 700;
+  line-height: 150%;
+  color: #282828;
+  background-color: transparent;
+  height: 100px;
+  height: 110px;
+}
+
+.c1:disabled {
+  cursor: not-allowed;
+}
+
+.c1:hover,
+.c1:focus {
+  color: #282828;
+  background-color: #E0E0E0;
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+}
+
+.c1:focus::before {
+  position: absolute;
+  z-index: -1;
+  top: -4px;
+  right: -4px;
+  bottom: -4px;
+  left: -4px;
+  border: 2px dotted;
+  border-color: #282828;
+  border-radius: 4px;
+  content: '';
+}
+
+.c4 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+}
+
+<button
+  class="poodle-box c0 poodle-button c1 c2"
+>
+  <div
+    class="poodle-box c0 poodle-button__content c4 c2"
+  >
+    Hello
+  </div>
+</button>
+`;
+
+exports[`<Button /> theming should extend styles in global 1`] = `
+.c0 {
+  box-sizing: border-box;
+}
+
+.c1 {
+  position: relative;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  min-width: 80px;
+  padding: 4px;
+  background-color: transparent;
+  border-radius: 4px;
+  border: 0;
+  cursor: pointer;
+  outline: 0;
+  -webkit-appearance: none;
+  -webkit-transition: background-color 220ms ease-in,border-color 110ms ease-in,color 220ms ease-in;
+  transition: background-color 220ms ease-in,border-color 110ms ease-in,color 220ms ease-in;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: 700;
+  line-height: 150%;
+  padding: 8px 16px;
+  top: 0;
+  text-indent: 1px;
+  letter-spacing: 250px;
+}
+
+.c1:disabled {
+  cursor: not-allowed;
+}
+
+.c4 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  top: 0;
+  text-indent: 2px;
+  letter-spacing: 250px;
+}
+
+.c7 {
+  font-size: 1.5rem;
+  width: 1.5rem;
+  height: 1.5rem;
+  top: 0;
+  text-indent: 3px;
+  letter-spacing: 250px;
+}
+
+.c7>svg {
+  font-size: 1.5rem;
+}
+
+.c8 {
+  margin-right: 4px;
+  top: 0;
+  text-indent: 4px;
+}
+
+.c12 {
+  margin-left: 4px;
+  top: 0;
+  text-indent: 5px;
+}
+
+<button
+  class="poodle-box c0 poodle-button c1 c2"
+>
+  <div
+    class="poodle-box c0 poodle-button__content c4 c2"
+  >
+    <div
+      class="poodle-box c0 poodle-button__icon-start c7 c8 c2"
+    >
+      icon
+    </div>
+    Button
+    <div
+      class="poodle-box c0 poodle-button__icon-end c7 c12 c2"
+    >
+      icon
+    </div>
+  </div>
+</button>
+`;
+
+exports[`<Button /> theming should extend styles in local 1`] = `
+.c0 {
+  box-sizing: border-box;
+}
+
+.c1 {
+  position: relative;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  min-width: 80px;
+  padding: 4px;
+  background-color: transparent;
+  border-radius: 4px;
+  border: 0;
+  cursor: pointer;
+  outline: 0;
+  -webkit-appearance: none;
+  -webkit-transition: background-color 220ms ease-in,border-color 110ms ease-in,color 220ms ease-in;
+  transition: background-color 220ms ease-in,border-color 110ms ease-in,color 220ms ease-in;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: 700;
+  line-height: 150%;
+  padding: 8px 16px;
+  top: 0;
+  text-indent: 1px;
+  letter-spacing: 250px;
+}
+
+.c1:disabled {
+  cursor: not-allowed;
+}
+
+.c4 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  top: 0;
+  text-indent: 2px;
+  letter-spacing: 250px;
+}
+
+.c7 {
+  font-size: 1.5rem;
+  width: 1.5rem;
+  height: 1.5rem;
+  top: 0;
+  text-indent: 3px;
+  letter-spacing: 250px;
+}
+
+.c7>svg {
+  font-size: 1.5rem;
+}
+
+.c8 {
+  margin-right: 4px;
+  top: 0;
+  text-indent: 4px;
+}
+
+.c12 {
+  margin-left: 4px;
+  top: 0;
+  text-indent: 5px;
+}
+
+<button
+  class="poodle-box c0 poodle-button c1 c2"
+>
+  <div
+    class="poodle-box c0 poodle-button__content c4 c2"
+  >
+    <div
+      class="poodle-box c0 poodle-button__icon-start c7 c8 c2"
+    >
+      icon
+    </div>
+    Button
+    <div
+      class="poodle-box c0 poodle-button__icon-end c7 c12 c2"
+    >
+      icon
+    </div>
+  </div>
+</button>
+`;
+
+exports[`<Button /> theming should override classes 1`] = `
+.c0 {
+  box-sizing: border-box;
+}
+
+<button
+  class="poodle-box c0 poodle-button root c1"
+>
+  <div
+    class="poodle-box c0 poodle-button__content content c1"
+  >
+    <div
+      class="poodle-box c0 poodle-button__icon-start icon startIcon c1"
+    >
+      p
+    </div>
+    Button
+    <div
+      class="poodle-box c0 poodle-button__icon-end icon endIcon c1"
+    >
+      p
+    </div>
+  </div>
+</button>
+`;
+
+exports[`<Button /> theming should render with default props correctly 1`] = `
+.c0 {
+  box-sizing: border-box;
+}
+
+.c1 {
+  position: relative;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  min-width: 80px;
+  padding: 4px;
+  background-color: transparent;
+  border-radius: 4px;
+  border: 0;
+  cursor: pointer;
+  outline: 0;
+  -webkit-appearance: none;
+  -webkit-transition: background-color 220ms ease-in,border-color 110ms ease-in,color 220ms ease-in;
+  transition: background-color 220ms ease-in,border-color 110ms ease-in,color 220ms ease-in;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: 700;
+  line-height: 150%;
+  color: #282828;
+  background-color: transparent;
+  padding: 8px 16px;
+}
+
+.c1:disabled {
+  cursor: not-allowed;
+}
+
+.c1:hover,
+.c1:focus {
+  color: #282828;
+  background-color: #E0E0E0;
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+}
+
+.c1:focus::before {
+  position: absolute;
+  z-index: -1;
+  top: -4px;
+  right: -4px;
+  bottom: -4px;
+  left: -4px;
+  border: 2px dotted;
+  border-color: #282828;
+  border-radius: 4px;
+  content: '';
+}
+
+.c4 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+}
+
+<button
+  class="poodle-box c0 poodle-button c1 c2"
+>
+  <div
+    class="poodle-box c0 poodle-button__content c4 c2"
+  >
+    Button
+  </div>
+</button>
+`;
+
+exports[`<Button /> variant variant default color default should render disabled with color default correctly 1`] = `
+.c0 {
+  box-sizing: border-box;
+}
+
+.c1 {
+  position: relative;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  min-width: 80px;
+  padding: 4px;
+  background-color: transparent;
+  border-radius: 4px;
+  border: 0;
+  cursor: pointer;
+  outline: 0;
+  -webkit-appearance: none;
+  -webkit-transition: background-color 220ms ease-in,border-color 110ms ease-in,color 220ms ease-in;
+  transition: background-color 220ms ease-in,border-color 110ms ease-in,color 220ms ease-in;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: 700;
+  line-height: 150%;
+  padding: 8px 16px;
+}
+
+.c1:disabled {
+  cursor: not-allowed;
+}
+
+.c1:disabled {
+  color: #A6A6A6;
+}
+
+.c4 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+}
+
+<button
+  class="poodle-box c0 poodle-button c1 c2"
+  disabled=""
+>
+  <div
+    class="poodle-box c0 poodle-button__content c4 c2"
+  >
+    Button
+  </div>
+</button>
+`;
+
+exports[`<Button /> variant variant default color default should render with color default correctly 1`] = `
+.c0 {
+  box-sizing: border-box;
+}
+
+.c1 {
+  position: relative;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  min-width: 80px;
+  padding: 4px;
+  background-color: transparent;
+  border-radius: 4px;
+  border: 0;
+  cursor: pointer;
+  outline: 0;
+  -webkit-appearance: none;
+  -webkit-transition: background-color 220ms ease-in,border-color 110ms ease-in,color 220ms ease-in;
+  transition: background-color 220ms ease-in,border-color 110ms ease-in,color 220ms ease-in;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: 700;
+  line-height: 150%;
+  color: #282828;
+  background-color: transparent;
+  padding: 8px 16px;
+}
+
+.c1:disabled {
+  cursor: not-allowed;
+}
+
+.c1:hover,
+.c1:focus {
+  color: #282828;
+  background-color: #E0E0E0;
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+}
+
+.c1:focus::before {
+  position: absolute;
+  z-index: -1;
+  top: -4px;
+  right: -4px;
+  bottom: -4px;
+  left: -4px;
+  border: 2px dotted;
+  border-color: #282828;
+  border-radius: 4px;
+  content: '';
+}
+
+.c4 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+}
+
+<button
+  class="poodle-box c0 poodle-button c1 c2"
+>
+  <div
+    class="poodle-box c0 poodle-button__content c4 c2"
+  >
+    Button
+  </div>
+</button>
+`;
+
+exports[`<Button /> variant variant default color negative should render disabled with color negative correctly 1`] = `
+.c0 {
+  box-sizing: border-box;
+}
+
+.c1 {
+  position: relative;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  min-width: 80px;
+  padding: 4px;
+  background-color: transparent;
+  border-radius: 4px;
+  border: 0;
+  cursor: pointer;
+  outline: 0;
+  -webkit-appearance: none;
+  -webkit-transition: background-color 220ms ease-in,border-color 110ms ease-in,color 220ms ease-in;
+  transition: background-color 220ms ease-in,border-color 110ms ease-in,color 220ms ease-in;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: 700;
+  line-height: 150%;
+  padding: 8px 16px;
+}
+
+.c1:disabled {
+  cursor: not-allowed;
+}
+
+.c1:disabled {
+  color: #A6A6A6;
+}
+
+.c4 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+}
+
+<button
+  class="poodle-box c0 poodle-button c1 c2"
+  disabled=""
+>
+  <div
+    class="poodle-box c0 poodle-button__content c4 c2"
+  >
+    Button
+  </div>
+</button>
+`;
+
+exports[`<Button /> variant variant default color negative should render with color negative correctly 1`] = `
+.c0 {
+  box-sizing: border-box;
+}
+
+.c1 {
+  position: relative;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  min-width: 80px;
+  padding: 4px;
+  background-color: transparent;
+  border-radius: 4px;
+  border: 0;
+  cursor: pointer;
+  outline: 0;
+  -webkit-appearance: none;
+  -webkit-transition: background-color 220ms ease-in,border-color 110ms ease-in,color 220ms ease-in;
+  transition: background-color 220ms ease-in,border-color 110ms ease-in,color 220ms ease-in;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: 700;
+  line-height: 150%;
+  color: #AF1308;
+  background-color: transparent;
+  padding: 8px 16px;
+}
+
+.c1:disabled {
+  cursor: not-allowed;
+}
+
+.c1:hover,
+.c1:focus {
+  color: #AF1308;
+  background-color: #FCF3F3;
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+}
+
+.c1:focus::before {
+  position: absolute;
+  z-index: -1;
+  top: -4px;
+  right: -4px;
+  bottom: -4px;
+  left: -4px;
+  border: 2px dotted;
+  border-color: #AF1308;
+  border-radius: 4px;
+  content: '';
+}
+
+.c4 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+}
+
+<button
+  class="poodle-box c0 poodle-button c1 c2"
+>
+  <div
+    class="poodle-box c0 poodle-button__content c4 c2"
+  >
+    Button
+  </div>
+</button>
+`;
+
+exports[`<Button /> variant variant default color positive should render disabled with color positive correctly 1`] = `
+.c0 {
+  box-sizing: border-box;
+}
+
+.c1 {
+  position: relative;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  min-width: 80px;
+  padding: 4px;
+  background-color: transparent;
+  border-radius: 4px;
+  border: 0;
+  cursor: pointer;
+  outline: 0;
+  -webkit-appearance: none;
+  -webkit-transition: background-color 220ms ease-in,border-color 110ms ease-in,color 220ms ease-in;
+  transition: background-color 220ms ease-in,border-color 110ms ease-in,color 220ms ease-in;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: 700;
+  line-height: 150%;
+  padding: 8px 16px;
+}
+
+.c1:disabled {
+  cursor: not-allowed;
+}
+
+.c1:disabled {
+  color: #A6A6A6;
+}
+
+.c4 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+}
+
+<button
+  class="poodle-box c0 poodle-button c1 c2"
+  disabled=""
+>
+  <div
+    class="poodle-box c0 poodle-button__content c4 c2"
+  >
+    Button
+  </div>
+</button>
+`;
+
+exports[`<Button /> variant variant default color positive should render with color positive correctly 1`] = `
+.c0 {
+  box-sizing: border-box;
+}
+
+.c1 {
+  position: relative;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  min-width: 80px;
+  padding: 4px;
+  background-color: transparent;
+  border-radius: 4px;
+  border: 0;
+  cursor: pointer;
+  outline: 0;
+  -webkit-appearance: none;
+  -webkit-transition: background-color 220ms ease-in,border-color 110ms ease-in,color 220ms ease-in;
+  transition: background-color 220ms ease-in,border-color 110ms ease-in,color 220ms ease-in;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: 700;
+  line-height: 150%;
+  color: #006122;
+  background-color: transparent;
+  padding: 8px 16px;
+}
+
+.c1:disabled {
+  cursor: not-allowed;
+}
+
+.c1:hover,
+.c1:focus {
+  color: #006122;
+  background-color: #E5FFEE;
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+}
+
+.c1:focus::before {
+  position: absolute;
+  z-index: -1;
+  top: -4px;
+  right: -4px;
+  bottom: -4px;
+  left: -4px;
+  border: 2px dotted;
+  border-color: #006122;
+  border-radius: 4px;
+  content: '';
+}
+
+.c4 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+}
+
+<button
+  class="poodle-box c0 poodle-button c1 c2"
+>
+  <div
+    class="poodle-box c0 poodle-button__content c4 c2"
+  >
+    Button
+  </div>
+</button>
+`;
+
+exports[`<Button /> variant variant default color primary should render disabled with color primary correctly 1`] = `
+.c0 {
+  box-sizing: border-box;
+}
+
+.c1 {
+  position: relative;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  min-width: 80px;
+  padding: 4px;
+  background-color: transparent;
+  border-radius: 4px;
+  border: 0;
+  cursor: pointer;
+  outline: 0;
+  -webkit-appearance: none;
+  -webkit-transition: background-color 220ms ease-in,border-color 110ms ease-in,color 220ms ease-in;
+  transition: background-color 220ms ease-in,border-color 110ms ease-in,color 220ms ease-in;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: 700;
+  line-height: 150%;
+  padding: 8px 16px;
+}
+
+.c1:disabled {
+  cursor: not-allowed;
+}
+
+.c1:disabled {
+  color: #A6A6A6;
+}
+
+.c4 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+}
+
+<button
+  class="poodle-box c0 poodle-button c1 c2"
+  disabled=""
+>
+  <div
+    class="poodle-box c0 poodle-button__content c4 c2"
+  >
+    Button
+  </div>
+</button>
+`;
+
+exports[`<Button /> variant variant default color primary should render with color primary correctly 1`] = `
+.c0 {
+  box-sizing: border-box;
+}
+
+.c1 {
+  position: relative;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  min-width: 80px;
+  padding: 4px;
+  background-color: transparent;
+  border-radius: 4px;
+  border: 0;
+  cursor: pointer;
+  outline: 0;
+  -webkit-appearance: none;
+  -webkit-transition: background-color 220ms ease-in,border-color 110ms ease-in,color 220ms ease-in;
+  transition: background-color 220ms ease-in,border-color 110ms ease-in,color 220ms ease-in;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: 700;
+  line-height: 150%;
+  color: #00478A;
+  background-color: transparent;
+  padding: 8px 16px;
+}
+
+.c1:disabled {
+  cursor: not-allowed;
+}
+
+.c1:hover,
+.c1:focus {
+  color: #00478A;
+  background-color: #D1EBFF;
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+}
+
+.c1:focus::before {
+  position: absolute;
+  z-index: -1;
+  top: -4px;
+  right: -4px;
+  bottom: -4px;
+  left: -4px;
+  border: 2px dotted;
+  border-color: #00478A;
+  border-radius: 4px;
+  content: '';
+}
+
+.c4 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+}
+
+<button
+  class="poodle-box c0 poodle-button c1 c2"
+>
+  <div
+    class="poodle-box c0 poodle-button__content c4 c2"
+  >
+    Button
+  </div>
+</button>
+`;
+
+exports[`<Button /> variant variant default color warn should render disabled with color warn correctly 1`] = `
+.c0 {
+  box-sizing: border-box;
+}
+
+.c1 {
+  position: relative;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  min-width: 80px;
+  padding: 4px;
+  background-color: transparent;
+  border-radius: 4px;
+  border: 0;
+  cursor: pointer;
+  outline: 0;
+  -webkit-appearance: none;
+  -webkit-transition: background-color 220ms ease-in,border-color 110ms ease-in,color 220ms ease-in;
+  transition: background-color 220ms ease-in,border-color 110ms ease-in,color 220ms ease-in;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: 700;
+  line-height: 150%;
+  padding: 8px 16px;
+}
+
+.c1:disabled {
+  cursor: not-allowed;
+}
+
+.c1:disabled {
+  color: #A6A6A6;
+}
+
+.c4 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+}
+
+<button
+  class="poodle-box c0 poodle-button c1 c2"
+  disabled=""
+>
+  <div
+    class="poodle-box c0 poodle-button__content c4 c2"
+  >
+    Button
+  </div>
+</button>
+`;
+
+exports[`<Button /> variant variant default color warn should render with color warn correctly 1`] = `
+.c0 {
+  box-sizing: border-box;
+}
+
+.c1 {
+  position: relative;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  min-width: 80px;
+  padding: 4px;
+  background-color: transparent;
+  border-radius: 4px;
+  border: 0;
+  cursor: pointer;
+  outline: 0;
+  -webkit-appearance: none;
+  -webkit-transition: background-color 220ms ease-in,border-color 110ms ease-in,color 220ms ease-in;
+  transition: background-color 220ms ease-in,border-color 110ms ease-in,color 220ms ease-in;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: 700;
+  line-height: 150%;
+  color: #FFBB33;
+  background-color: transparent;
+  padding: 8px 16px;
+}
+
+.c1:disabled {
+  cursor: not-allowed;
+}
+
+.c1:hover,
+.c1:focus {
+  color: #282828;
+  background-color: #FFF1DB;
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+}
+
+.c1:focus::before {
+  position: absolute;
+  z-index: -1;
+  top: -4px;
+  right: -4px;
+  bottom: -4px;
+  left: -4px;
+  border: 2px dotted;
+  border-color: #FFBB33;
+  border-radius: 4px;
+  content: '';
+}
+
+.c4 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+}
+
+<button
+  class="poodle-box c0 poodle-button c1 c2"
+>
+  <div
+    class="poodle-box c0 poodle-button__content c4 c2"
+  >
+    Button
+  </div>
+</button>
+`;
+
+exports[`<Button /> variant variant fill color default should render disabled with color default correctly 1`] = `
+.c0 {
+  box-sizing: border-box;
+}
+
+.c1 {
+  position: relative;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  min-width: 80px;
+  padding: 4px;
+  background-color: transparent;
+  border-radius: 4px;
+  border: 0;
+  cursor: pointer;
+  outline: 0;
+  -webkit-appearance: none;
+  -webkit-transition: background-color 220ms ease-in,border-color 110ms ease-in,color 220ms ease-in;
+  transition: background-color 220ms ease-in,border-color 110ms ease-in,color 220ms ease-in;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: 700;
+  line-height: 150%;
+  background-color: #E0E0E0;
+  color: #A6A6A6;
+  padding: 8px 16px;
+}
+
+.c1:disabled {
+  cursor: not-allowed;
+}
+
+.c4 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+}
+
+<button
+  class="poodle-box c0 poodle-button c1 c2"
+  disabled=""
+>
+  <div
+    class="poodle-box c0 poodle-button__content c4 c2"
+  >
+    Button
+  </div>
+</button>
+`;
+
+exports[`<Button /> variant variant fill color default should render with color default correctly 1`] = `
+.c0 {
+  box-sizing: border-box;
+}
+
+.c1 {
+  position: relative;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  min-width: 80px;
+  padding: 4px;
+  background-color: transparent;
+  border-radius: 4px;
+  border: 0;
+  cursor: pointer;
+  outline: 0;
+  -webkit-appearance: none;
+  -webkit-transition: background-color 220ms ease-in,border-color 110ms ease-in,color 220ms ease-in;
+  transition: background-color 220ms ease-in,border-color 110ms ease-in,color 220ms ease-in;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: 700;
+  line-height: 150%;
+  color: #282828;
+  background-color: #E0E0E0;
+  padding: 8px 16px;
+}
+
+.c1:disabled {
+  cursor: not-allowed;
+}
+
+.c1:hover,
+.c1:focus {
+  color: #282828;
+  background-color: #CCCCCC;
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+}
+
+.c1:focus::before {
+  position: absolute;
+  z-index: -1;
+  top: -4px;
+  right: -4px;
+  bottom: -4px;
+  left: -4px;
+  border: 2px dotted;
+  border-color: #282828;
+  border-radius: 4px;
+  content: '';
+}
+
+.c4 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+}
+
+<button
+  class="poodle-box c0 poodle-button c1 c2"
+>
+  <div
+    class="poodle-box c0 poodle-button__content c4 c2"
+  >
+    Button
+  </div>
+</button>
+`;
+
+exports[`<Button /> variant variant fill color negative should render disabled with color negative correctly 1`] = `
+.c0 {
+  box-sizing: border-box;
+}
+
+.c1 {
+  position: relative;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  min-width: 80px;
+  padding: 4px;
+  background-color: transparent;
+  border-radius: 4px;
+  border: 0;
+  cursor: pointer;
+  outline: 0;
+  -webkit-appearance: none;
+  -webkit-transition: background-color 220ms ease-in,border-color 110ms ease-in,color 220ms ease-in;
+  transition: background-color 220ms ease-in,border-color 110ms ease-in,color 220ms ease-in;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: 700;
+  line-height: 150%;
+  background-color: #E0E0E0;
+  color: #A6A6A6;
+  padding: 8px 16px;
+}
+
+.c1:disabled {
+  cursor: not-allowed;
+}
+
+.c4 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+}
+
+<button
+  class="poodle-box c0 poodle-button c1 c2"
+  disabled=""
+>
+  <div
+    class="poodle-box c0 poodle-button__content c4 c2"
+  >
+    Button
+  </div>
+</button>
+`;
+
+exports[`<Button /> variant variant fill color negative should render with color negative correctly 1`] = `
+.c0 {
+  box-sizing: border-box;
+}
+
+.c1 {
+  position: relative;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  min-width: 80px;
+  padding: 4px;
+  background-color: transparent;
+  border-radius: 4px;
+  border: 0;
+  cursor: pointer;
+  outline: 0;
+  -webkit-appearance: none;
+  -webkit-transition: background-color 220ms ease-in,border-color 110ms ease-in,color 220ms ease-in;
+  transition: background-color 220ms ease-in,border-color 110ms ease-in,color 220ms ease-in;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: 700;
+  line-height: 150%;
+  color: #fff;
+  background-color: #AF1308;
+  padding: 8px 16px;
+}
+
+.c1:disabled {
+  cursor: not-allowed;
+}
+
+.c1:hover,
+.c1:focus {
+  color: #fff;
+  background-color: #8D1007;
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+}
+
+.c1:focus::before {
+  position: absolute;
+  z-index: -1;
+  top: -4px;
+  right: -4px;
+  bottom: -4px;
+  left: -4px;
+  border: 2px dotted;
+  border-color: #AF1308;
+  border-radius: 4px;
+  content: '';
+}
+
+.c4 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+}
+
+<button
+  class="poodle-box c0 poodle-button c1 c2"
+>
+  <div
+    class="poodle-box c0 poodle-button__content c4 c2"
+  >
+    Button
+  </div>
+</button>
+`;
+
+exports[`<Button /> variant variant fill color positive should render disabled with color positive correctly 1`] = `
+.c0 {
+  box-sizing: border-box;
+}
+
+.c1 {
+  position: relative;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  min-width: 80px;
+  padding: 4px;
+  background-color: transparent;
+  border-radius: 4px;
+  border: 0;
+  cursor: pointer;
+  outline: 0;
+  -webkit-appearance: none;
+  -webkit-transition: background-color 220ms ease-in,border-color 110ms ease-in,color 220ms ease-in;
+  transition: background-color 220ms ease-in,border-color 110ms ease-in,color 220ms ease-in;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: 700;
+  line-height: 150%;
+  background-color: #E0E0E0;
+  color: #A6A6A6;
+  padding: 8px 16px;
+}
+
+.c1:disabled {
+  cursor: not-allowed;
+}
+
+.c4 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+}
+
+<button
+  class="poodle-box c0 poodle-button c1 c2"
+  disabled=""
+>
+  <div
+    class="poodle-box c0 poodle-button__content c4 c2"
+  >
+    Button
+  </div>
+</button>
+`;
+
+exports[`<Button /> variant variant fill color positive should render with color positive correctly 1`] = `
+.c0 {
+  box-sizing: border-box;
+}
+
+.c1 {
+  position: relative;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  min-width: 80px;
+  padding: 4px;
+  background-color: transparent;
+  border-radius: 4px;
+  border: 0;
+  cursor: pointer;
+  outline: 0;
+  -webkit-appearance: none;
+  -webkit-transition: background-color 220ms ease-in,border-color 110ms ease-in,color 220ms ease-in;
+  transition: background-color 220ms ease-in,border-color 110ms ease-in,color 220ms ease-in;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: 700;
+  line-height: 150%;
+  color: #fff;
+  background-color: #006122;
+  padding: 8px 16px;
+}
+
+.c1:disabled {
+  cursor: not-allowed;
+}
+
+.c1:hover,
+.c1:focus {
+  color: #fff;
+  background-color: #004D1B;
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+}
+
+.c1:focus::before {
+  position: absolute;
+  z-index: -1;
+  top: -4px;
+  right: -4px;
+  bottom: -4px;
+  left: -4px;
+  border: 2px dotted;
+  border-color: #006122;
+  border-radius: 4px;
+  content: '';
+}
+
+.c4 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+}
+
+<button
+  class="poodle-box c0 poodle-button c1 c2"
+>
+  <div
+    class="poodle-box c0 poodle-button__content c4 c2"
+  >
+    Button
+  </div>
+</button>
+`;
+
+exports[`<Button /> variant variant fill color primary should render disabled with color primary correctly 1`] = `
+.c0 {
+  box-sizing: border-box;
+}
+
+.c1 {
+  position: relative;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  min-width: 80px;
+  padding: 4px;
+  background-color: transparent;
+  border-radius: 4px;
+  border: 0;
+  cursor: pointer;
+  outline: 0;
+  -webkit-appearance: none;
+  -webkit-transition: background-color 220ms ease-in,border-color 110ms ease-in,color 220ms ease-in;
+  transition: background-color 220ms ease-in,border-color 110ms ease-in,color 220ms ease-in;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: 700;
+  line-height: 150%;
+  background-color: #E0E0E0;
+  color: #A6A6A6;
+  padding: 8px 16px;
+}
+
+.c1:disabled {
+  cursor: not-allowed;
+}
+
+.c4 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+}
+
+<button
+  class="poodle-box c0 poodle-button c1 c2"
+  disabled=""
+>
+  <div
+    class="poodle-box c0 poodle-button__content c4 c2"
+  >
+    Button
+  </div>
+</button>
+`;
+
+exports[`<Button /> variant variant fill color primary should render with color primary correctly 1`] = `
+.c0 {
+  box-sizing: border-box;
+}
+
+.c1 {
+  position: relative;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  min-width: 80px;
+  padding: 4px;
+  background-color: transparent;
+  border-radius: 4px;
+  border: 0;
+  cursor: pointer;
+  outline: 0;
+  -webkit-appearance: none;
+  -webkit-transition: background-color 220ms ease-in,border-color 110ms ease-in,color 220ms ease-in;
+  transition: background-color 220ms ease-in,border-color 110ms ease-in,color 220ms ease-in;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: 700;
+  line-height: 150%;
+  color: #fff;
+  background-color: #00478A;
+  padding: 8px 16px;
+}
+
+.c1:disabled {
+  cursor: not-allowed;
+}
+
+.c1:hover,
+.c1:focus {
+  color: #fff;
+  background-color: #003A70;
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+}
+
+.c1:focus::before {
+  position: absolute;
+  z-index: -1;
+  top: -4px;
+  right: -4px;
+  bottom: -4px;
+  left: -4px;
+  border: 2px dotted;
+  border-color: #00478A;
+  border-radius: 4px;
+  content: '';
+}
+
+.c4 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+}
+
+<button
+  class="poodle-box c0 poodle-button c1 c2"
+>
+  <div
+    class="poodle-box c0 poodle-button__content c4 c2"
+  >
+    Button
+  </div>
+</button>
+`;
+
+exports[`<Button /> variant variant fill color warn should render disabled with color warn correctly 1`] = `
+.c0 {
+  box-sizing: border-box;
+}
+
+.c1 {
+  position: relative;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  min-width: 80px;
+  padding: 4px;
+  background-color: transparent;
+  border-radius: 4px;
+  border: 0;
+  cursor: pointer;
+  outline: 0;
+  -webkit-appearance: none;
+  -webkit-transition: background-color 220ms ease-in,border-color 110ms ease-in,color 220ms ease-in;
+  transition: background-color 220ms ease-in,border-color 110ms ease-in,color 220ms ease-in;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: 700;
+  line-height: 150%;
+  background-color: #E0E0E0;
+  color: #A6A6A6;
+  padding: 8px 16px;
+}
+
+.c1:disabled {
+  cursor: not-allowed;
+}
+
+.c4 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+}
+
+<button
+  class="poodle-box c0 poodle-button c1 c2"
+  disabled=""
+>
+  <div
+    class="poodle-box c0 poodle-button__content c4 c2"
+  >
+    Button
+  </div>
+</button>
+`;
+
+exports[`<Button /> variant variant fill color warn should render with color warn correctly 1`] = `
+.c0 {
+  box-sizing: border-box;
+}
+
+.c1 {
+  position: relative;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  min-width: 80px;
+  padding: 4px;
+  background-color: transparent;
+  border-radius: 4px;
+  border: 0;
+  cursor: pointer;
+  outline: 0;
+  -webkit-appearance: none;
+  -webkit-transition: background-color 220ms ease-in,border-color 110ms ease-in,color 220ms ease-in;
+  transition: background-color 220ms ease-in,border-color 110ms ease-in,color 220ms ease-in;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: 700;
+  line-height: 150%;
+  color: #282828;
+  background-color: #FFBB33;
+  padding: 8px 16px;
+}
+
+.c1:disabled {
+  cursor: not-allowed;
+}
+
+.c1:hover,
+.c1:focus {
+  color: #282828;
+  background-color: #FAAB00;
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+}
+
+.c1:focus::before {
+  position: absolute;
+  z-index: -1;
+  top: -4px;
+  right: -4px;
+  bottom: -4px;
+  left: -4px;
+  border: 2px dotted;
+  border-color: #FFBB33;
+  border-radius: 4px;
+  content: '';
+}
+
+.c4 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+}
+
+<button
+  class="poodle-box c0 poodle-button c1 c2"
+>
+  <div
+    class="poodle-box c0 poodle-button__content c4 c2"
+  >
+    Button
+  </div>
+</button>
+`;
+
+exports[`<Button /> variant variant outline color default should render disabled with color default correctly 1`] = `
+.c0 {
+  box-sizing: border-box;
+}
+
+.c1 {
+  position: relative;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  min-width: 80px;
+  padding: 4px;
+  background-color: transparent;
+  border-radius: 4px;
+  border: 0;
+  cursor: pointer;
+  outline: 0;
+  -webkit-appearance: none;
+  -webkit-transition: background-color 220ms ease-in,border-color 110ms ease-in,color 220ms ease-in;
+  transition: background-color 220ms ease-in,border-color 110ms ease-in,color 220ms ease-in;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: 700;
+  line-height: 150%;
+  border: 1px solid;
+  border-color: #E0E0E0;
+  color: #A6A6A6;
+  padding: calc(8px - 1px) 16px;
+}
+
+.c1:disabled {
+  cursor: not-allowed;
+}
+
+.c4 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+}
+
+<button
+  class="poodle-box c0 poodle-button c1 c2"
+  disabled=""
+>
+  <div
+    class="poodle-box c0 poodle-button__content c4 c2"
+  >
+    Button
+  </div>
+</button>
+`;
+
+exports[`<Button /> variant variant outline color default should render with color default correctly 1`] = `
+.c0 {
+  box-sizing: border-box;
+}
+
+.c1 {
+  position: relative;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  min-width: 80px;
+  padding: 4px;
+  background-color: transparent;
+  border-radius: 4px;
+  border: 0;
+  cursor: pointer;
+  outline: 0;
+  -webkit-appearance: none;
+  -webkit-transition: background-color 220ms ease-in,border-color 110ms ease-in,color 220ms ease-in;
+  transition: background-color 220ms ease-in,border-color 110ms ease-in,color 220ms ease-in;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: 700;
+  line-height: 150%;
+  border: 1px solid;
+  border-color: #CCCCCC;
+  color: #282828;
+  padding: calc(8px - 1px) 16px;
+}
+
+.c1:disabled {
+  cursor: not-allowed;
+}
+
+.c1:hover,
+.c1:focus {
+  border-color: #CCCCCC;
+  background-color: #E0E0E0;
+  color: #282828;
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+}
+
+.c4 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+}
+
+<button
+  class="poodle-box c0 poodle-button c1 c2"
+>
+  <div
+    class="poodle-box c0 poodle-button__content c4 c2"
+  >
+    Button
+  </div>
+</button>
+`;
+
+exports[`<Button /> variant variant outline color negative should render disabled with color negative correctly 1`] = `
+.c0 {
+  box-sizing: border-box;
+}
+
+.c1 {
+  position: relative;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  min-width: 80px;
+  padding: 4px;
+  background-color: transparent;
+  border-radius: 4px;
+  border: 0;
+  cursor: pointer;
+  outline: 0;
+  -webkit-appearance: none;
+  -webkit-transition: background-color 220ms ease-in,border-color 110ms ease-in,color 220ms ease-in;
+  transition: background-color 220ms ease-in,border-color 110ms ease-in,color 220ms ease-in;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: 700;
+  line-height: 150%;
+  border: 1px solid;
+  border-color: #E0E0E0;
+  color: #A6A6A6;
+  padding: calc(8px - 1px) 16px;
+}
+
+.c1:disabled {
+  cursor: not-allowed;
+}
+
+.c4 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+}
+
+<button
+  class="poodle-box c0 poodle-button c1 c2"
+  disabled=""
+>
+  <div
+    class="poodle-box c0 poodle-button__content c4 c2"
+  >
+    Button
+  </div>
+</button>
+`;
+
+exports[`<Button /> variant variant outline color negative should render with color negative correctly 1`] = `
+.c0 {
+  box-sizing: border-box;
+}
+
+.c1 {
+  position: relative;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  min-width: 80px;
+  padding: 4px;
+  background-color: transparent;
+  border-radius: 4px;
+  border: 0;
+  cursor: pointer;
+  outline: 0;
+  -webkit-appearance: none;
+  -webkit-transition: background-color 220ms ease-in,border-color 110ms ease-in,color 220ms ease-in;
+  transition: background-color 220ms ease-in,border-color 110ms ease-in,color 220ms ease-in;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: 700;
+  line-height: 150%;
+  border: 1px solid;
+  border-color: #AF1308;
+  color: #AF1308;
+  padding: calc(8px - 1px) 16px;
+}
+
+.c1:disabled {
+  cursor: not-allowed;
+}
+
+.c1:hover,
+.c1:focus {
+  border-color: #AF1308;
+  background-color: #FCF3F3;
+  color: #AF1308;
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+}
+
+.c4 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+}
+
+<button
+  class="poodle-box c0 poodle-button c1 c2"
+>
+  <div
+    class="poodle-box c0 poodle-button__content c4 c2"
+  >
+    Button
+  </div>
+</button>
+`;
+
+exports[`<Button /> variant variant outline color positive should render disabled with color positive correctly 1`] = `
+.c0 {
+  box-sizing: border-box;
+}
+
+.c1 {
+  position: relative;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  min-width: 80px;
+  padding: 4px;
+  background-color: transparent;
+  border-radius: 4px;
+  border: 0;
+  cursor: pointer;
+  outline: 0;
+  -webkit-appearance: none;
+  -webkit-transition: background-color 220ms ease-in,border-color 110ms ease-in,color 220ms ease-in;
+  transition: background-color 220ms ease-in,border-color 110ms ease-in,color 220ms ease-in;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: 700;
+  line-height: 150%;
+  border: 1px solid;
+  border-color: #E0E0E0;
+  color: #A6A6A6;
+  padding: calc(8px - 1px) 16px;
+}
+
+.c1:disabled {
+  cursor: not-allowed;
+}
+
+.c4 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+}
+
+<button
+  class="poodle-box c0 poodle-button c1 c2"
+  disabled=""
+>
+  <div
+    class="poodle-box c0 poodle-button__content c4 c2"
+  >
+    Button
+  </div>
+</button>
+`;
+
+exports[`<Button /> variant variant outline color positive should render with color positive correctly 1`] = `
+.c0 {
+  box-sizing: border-box;
+}
+
+.c1 {
+  position: relative;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  min-width: 80px;
+  padding: 4px;
+  background-color: transparent;
+  border-radius: 4px;
+  border: 0;
+  cursor: pointer;
+  outline: 0;
+  -webkit-appearance: none;
+  -webkit-transition: background-color 220ms ease-in,border-color 110ms ease-in,color 220ms ease-in;
+  transition: background-color 220ms ease-in,border-color 110ms ease-in,color 220ms ease-in;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: 700;
+  line-height: 150%;
+  border: 1px solid;
+  border-color: #006122;
+  color: #006122;
+  padding: calc(8px - 1px) 16px;
+}
+
+.c1:disabled {
+  cursor: not-allowed;
+}
+
+.c1:hover,
+.c1:focus {
+  border-color: #006122;
+  background-color: #E5FFEE;
+  color: #006122;
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+}
+
+.c4 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+}
+
+<button
+  class="poodle-box c0 poodle-button c1 c2"
+>
+  <div
+    class="poodle-box c0 poodle-button__content c4 c2"
+  >
+    Button
+  </div>
+</button>
+`;
+
+exports[`<Button /> variant variant outline color primary should render disabled with color primary correctly 1`] = `
+.c0 {
+  box-sizing: border-box;
+}
+
+.c1 {
+  position: relative;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  min-width: 80px;
+  padding: 4px;
+  background-color: transparent;
+  border-radius: 4px;
+  border: 0;
+  cursor: pointer;
+  outline: 0;
+  -webkit-appearance: none;
+  -webkit-transition: background-color 220ms ease-in,border-color 110ms ease-in,color 220ms ease-in;
+  transition: background-color 220ms ease-in,border-color 110ms ease-in,color 220ms ease-in;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: 700;
+  line-height: 150%;
+  border: 1px solid;
+  border-color: #E0E0E0;
+  color: #A6A6A6;
+  padding: calc(8px - 1px) 16px;
+}
+
+.c1:disabled {
+  cursor: not-allowed;
+}
+
+.c4 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+}
+
+<button
+  class="poodle-box c0 poodle-button c1 c2"
+  disabled=""
+>
+  <div
+    class="poodle-box c0 poodle-button__content c4 c2"
+  >
+    Button
+  </div>
+</button>
+`;
+
+exports[`<Button /> variant variant outline color primary should render with color primary correctly 1`] = `
+.c0 {
+  box-sizing: border-box;
+}
+
+.c1 {
+  position: relative;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  min-width: 80px;
+  padding: 4px;
+  background-color: transparent;
+  border-radius: 4px;
+  border: 0;
+  cursor: pointer;
+  outline: 0;
+  -webkit-appearance: none;
+  -webkit-transition: background-color 220ms ease-in,border-color 110ms ease-in,color 220ms ease-in;
+  transition: background-color 220ms ease-in,border-color 110ms ease-in,color 220ms ease-in;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: 700;
+  line-height: 150%;
+  border: 1px solid;
+  border-color: #00478A;
+  color: #00478A;
+  padding: calc(8px - 1px) 16px;
+}
+
+.c1:disabled {
+  cursor: not-allowed;
+}
+
+.c1:hover,
+.c1:focus {
+  border-color: #00478A;
+  background-color: #D1EBFF;
+  color: #00478A;
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+}
+
+.c4 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+}
+
+<button
+  class="poodle-box c0 poodle-button c1 c2"
+>
+  <div
+    class="poodle-box c0 poodle-button__content c4 c2"
+  >
+    Button
+  </div>
+</button>
+`;
+
+exports[`<Button /> variant variant outline color warn should render disabled with color warn correctly 1`] = `
+.c0 {
+  box-sizing: border-box;
+}
+
+.c1 {
+  position: relative;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  min-width: 80px;
+  padding: 4px;
+  background-color: transparent;
+  border-radius: 4px;
+  border: 0;
+  cursor: pointer;
+  outline: 0;
+  -webkit-appearance: none;
+  -webkit-transition: background-color 220ms ease-in,border-color 110ms ease-in,color 220ms ease-in;
+  transition: background-color 220ms ease-in,border-color 110ms ease-in,color 220ms ease-in;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: 700;
+  line-height: 150%;
+  border: 1px solid;
+  border-color: #E0E0E0;
+  color: #A6A6A6;
+  padding: calc(8px - 1px) 16px;
+}
+
+.c1:disabled {
+  cursor: not-allowed;
+}
+
+.c4 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+}
+
+<button
+  class="poodle-box c0 poodle-button c1 c2"
+  disabled=""
+>
+  <div
+    class="poodle-box c0 poodle-button__content c4 c2"
+  >
+    Button
+  </div>
+</button>
+`;
+
+exports[`<Button /> variant variant outline color warn should render with color warn correctly 1`] = `
+.c0 {
+  box-sizing: border-box;
+}
+
+.c1 {
+  position: relative;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  min-width: 80px;
+  padding: 4px;
+  background-color: transparent;
+  border-radius: 4px;
+  border: 0;
+  cursor: pointer;
+  outline: 0;
+  -webkit-appearance: none;
+  -webkit-transition: background-color 220ms ease-in,border-color 110ms ease-in,color 220ms ease-in;
+  transition: background-color 220ms ease-in,border-color 110ms ease-in,color 220ms ease-in;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: 700;
+  line-height: 150%;
+  border: 1px solid;
+  border-color: #FFBB33;
+  color: #FFBB33;
+  padding: calc(8px - 1px) 16px;
+}
+
+.c1:disabled {
+  cursor: not-allowed;
+}
+
+.c1:hover,
+.c1:focus {
+  border-color: #FFBB33;
+  background-color: #FFF1DB;
+  color: #282828;
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+}
+
+.c4 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+}
+
+<button
+  class="poodle-box c0 poodle-button c1 c2"
+>
+  <div
+    class="poodle-box c0 poodle-button__content c4 c2"
+  >
+    Button
+  </div>
+</button>
+`;

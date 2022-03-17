@@ -1,0 +1,58 @@
+---
+title: TabList
+---
+
+# TabList
+
+```tsx
+import TabList from "@poodle/ui/TabList";
+```
+Please check tabs [document](/ui/components/tabs) to see the example usage.
+
+## Theming
+
+[//]: # (GetTheming[==TabListThemeStyles,TabListThemeConfig,TabList/index.ts==])
+
+
+
+Please check theming component document [here](/theming/component).
+ 		
+```ts
+export interface TabListThemeConfig
+  extends StandardThemeConfig<TabListStyleKeys, TabListProps> {}
+
+``` 
+		
+		
+
+[//]: # (EndGetTheming)
+
+## Props
+
+[//]: # (GetProps[==LocalTabListProps,TabList/TabList.tsx==])
+
+
+### Local Props
+
+
+| Name     | Type              | Description |
+| -------- | ----------------- | ----------- |
+| children | `React.ReactNode` |             |
+				
+
+[//]: # (EndGetProps)
+
+[//]: # (GetPartialProps[==TabListProps,TabList/TabList.tsx==])
+
+
+### Full Props
+
+```ts
+export interface TabListProps
+	extends BoxProps,
+		StandardComponentProps,
+		LocalTabListProps {} 
+```
+				
+
+[//]: # (GetPartialProps)

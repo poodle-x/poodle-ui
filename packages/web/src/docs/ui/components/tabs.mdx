@@ -1,0 +1,161 @@
+---
+title: Tabs
+---
+
+# Tabs
+
+```tsx
+import Tabs from "@poodle/ui/Tabs";
+```
+
+Tabs component following [WAI-ARIA](https://www.w3.org/TR/wai-aria-practices-1.1/examples/tabs/tabs-1/tabs.html) practice.
+
+Please use `Tabs` component with other tab components set to maximize the theming and efficiency.
+
+- [Tab](/ui/components/tab)
+- [TabList](/ui/components/tab-list)
+- [TableBody](/ui/components/tab-panel)
+
+## Simple
+
+Horizontal tabs can use keyboard (arrow left, arrow light, home, end) to change selected tab.
+
+```jsx-live
+<Tabs>
+	<TabList aria-label="Settings">
+		<Tab value="general">
+			General
+		</Tab>
+		<Tab value="security">Security</Tab>
+		<Tab value="account">Account</Tab>
+	</TabList>
+	<TabPanel value="general">General tab</TabPanel>
+	<TabPanel value="security" keepMountChildren={true}>
+		Security tab
+	</TabPanel>
+	<TabPanel value="account">Account tab</TabPanel>
+</Tabs >
+
+```
+
+## Vertical orientation
+
+Vertical tabs can use keyboard (arrow up, arrow down, home, end) to change selected tab.
+
+```jsx-live
+<Tabs
+	orientation={TabOrientation.VERTICAL}
+>
+	<TabList aria-label="Settings">
+		<Tab value="general">
+			General
+		</Tab>
+		<Tab value="security">Security</Tab>
+		<Tab value="account">Account</Tab>
+	</TabList>
+	<TabPanel value="general">General tab</TabPanel>
+	<TabPanel value="security" keepMountChildren={true}>
+		Security tab
+	</TabPanel>
+	<TabPanel value="account">Account tab</TabPanel>
+</Tabs >
+
+```
+
+## Controlled tab
+If you want to control the selected tab at the parent, the container component can send the selected tab to `value` props.
+
+`onChangeValue` props will fire the callback both in cases controlled and uncontrolled selected tab.
+
+```jsx-live
+() => {
+  const [value, setValue] = React.useState("general");
+
+  return (
+    <Tabs value={value} onChangeValue={setValue}>
+      <TabList aria-label="Settings">
+        <Tab value="general">General</Tab>
+        <Tab value="security">Security</Tab>
+        <Tab value="account">Account</Tab>
+      </TabList>
+      <TabPanel value="general">General tab</TabPanel>
+      <TabPanel value="security" keepMountChildren={true}>
+        Security tab
+      </TabPanel>
+      <TabPanel value="account">Account tab</TabPanel>
+    </Tabs>
+  );
+};
+```
+
+## Disable tab
+The disabled tab will be not clickable and skipped when the user uses the keyboard to navigate between tabs.
+
+```jsx-live
+<Tabs>
+	<TabList aria-label="Settings">
+		<Tab value="general">
+			General
+		</Tab>
+		<Tab value="security">Security</Tab>
+		<Tab value="account" disabled={true}>Account</Tab>
+	</TabList>
+	<TabPanel value="general">General tab</TabPanel>
+	<TabPanel value="security" keepMountChildren={true}>
+		Security tab
+	</TabPanel>
+	<TabPanel value="account">Account tab</TabPanel>
+</Tabs >
+
+```
+
+## Theming
+
+[//]: # (GetTheming[==TabsThemeStyles,TabsThemeConfig,Tabs/index.ts==])
+
+
+
+Please check theming component document [here](/theming/component).
+ 		
+```ts
+export interface TabsThemeConfig
+  extends StandardThemeConfig<TabsStyleKeys, TabsProps> {}
+
+``` 
+		
+		
+
+[//]: # (EndGetTheming)
+
+## Props
+
+[//]: # (GetProps[==LocalTabsProps,Tabs/Tabs.tsx==])
+
+
+### Local Props
+
+
+| Name          | Type                                                                      | Description                                                                                                    |
+| ------------- | ------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- |
+| children      | `React.ReactNode`                                                         |                                                                                                                |
+| onChangeValue | `(value: TabValue, event: React.SyntheticEvent \| KeyboardEvent) => void` |                                                                                                                |
+| orientation   | `TabOrientation`                                                          | Change tabs horizontal orientation or vertical orientation.<br />Default is horizontal orientation.            |
+| value         | `TabValue`                                                                | Send value to control active tab. By default <Tabs /> component<br />use internal state to control active tab. |
+				
+
+[//]: # (EndGetProps)
+
+[//]: # (GetPartialProps[==TabsProps,Tabs/Tabs.tsx==])
+
+
+### Full Props
+
+```ts
+export interface TabsProps
+	extends Omit<BoxProps, "value">,
+		StandardComponentProps,
+		LocalTabsProps {} 
+```
+				
+
+[//]: # (GetPartialProps)

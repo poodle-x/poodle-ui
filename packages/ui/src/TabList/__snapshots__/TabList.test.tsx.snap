@@ -1,0 +1,298 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<TabList /> ref should work 1`] = `
+.c0 {
+  box-sizing: border-box;
+}
+
+.c1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  -webkit-justify-content: flex-start;
+  justify-content: flex-start;
+}
+
+.c1[aria-orientation='horizontal'] {
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  border-bottom: 1px solid;
+  border-color: #CCCCCC;
+}
+
+.c1[aria-orientation='vertical'] {
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  border-right: 1px solid;
+  border-color: #CCCCCC;
+}
+
+<div
+  class="poodle-box c0 poodle-tab-list c1 c2"
+  role="tablist"
+>
+  TabList
+</div>
+`;
+
+exports[`<TabList /> should render Box props correctly 1`] = `
+.c0 {
+  box-sizing: border-box;
+}
+
+.c1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  -webkit-justify-content: flex-start;
+  justify-content: flex-start;
+}
+
+.c1[aria-orientation='horizontal'] {
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  border-bottom: 1px solid;
+  border-color: #CCCCCC;
+}
+
+.c1[aria-orientation='vertical'] {
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  border-right: 1px solid;
+  border-color: #CCCCCC;
+}
+
+.c2 {
+  margin-top: 20px;
+}
+
+<div
+  class="poodle-box c0 poodle-tab-list c1 c2"
+  id="id"
+  role="tablist"
+>
+  TabList
+</div>
+`;
+
+exports[`<TabList /> should render TabList correctly 1`] = `
+.c0 {
+  box-sizing: border-box;
+}
+
+.c1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  -webkit-justify-content: flex-start;
+  justify-content: flex-start;
+}
+
+.c1[aria-orientation='horizontal'] {
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  border-bottom: 1px solid;
+  border-color: #CCCCCC;
+}
+
+.c1[aria-orientation='vertical'] {
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  border-right: 1px solid;
+  border-color: #CCCCCC;
+}
+
+<div
+  class="poodle-box c0 poodle-tab-list c1 c2"
+  role="tablist"
+>
+  TabList
+</div>
+`;
+
+exports[`<TabList /> theming should disable classes 1`] = `
+.c0 {
+  box-sizing: border-box;
+}
+
+<div
+  class="poodle-box c0 poodle-tab-list c1"
+  role="tablist"
+>
+  TabList
+</div>
+`;
+
+exports[`<TabList /> theming should extend styles in global 1`] = `
+.c0 {
+  box-sizing: border-box;
+}
+
+.c1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  -webkit-justify-content: flex-start;
+  justify-content: flex-start;
+  margin-top: 10px;
+  letter-spacing: 250px;
+  top: 0;
+  text-indent: 1px;
+}
+
+.c1[aria-orientation='horizontal'] {
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  border-bottom: 1px solid;
+  border-color: #CCCCCC;
+}
+
+.c1[aria-orientation='vertical'] {
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  border-right: 1px solid;
+  border-color: #CCCCCC;
+}
+
+<div
+  class="poodle-box c0 poodle-tab-list c1 c2"
+  role="tablist"
+>
+  TabList
+</div>
+`;
+
+exports[`<TabList /> theming should extend styles in local 1`] = `
+.c0 {
+  box-sizing: border-box;
+}
+
+.c1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  -webkit-justify-content: flex-start;
+  justify-content: flex-start;
+  margin-top: 10px;
+  letter-spacing: 250px;
+  top: 0;
+  text-indent: 1px;
+}
+
+.c1[aria-orientation='horizontal'] {
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  border-bottom: 1px solid;
+  border-color: #CCCCCC;
+}
+
+.c1[aria-orientation='vertical'] {
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  border-right: 1px solid;
+  border-color: #CCCCCC;
+}
+
+<div
+  class="poodle-box c0 poodle-tab-list c1 c2"
+  role="tablist"
+>
+  TabList
+</div>
+`;
+
+exports[`<TabList /> theming should override classes 1`] = `
+.c0 {
+  box-sizing: border-box;
+}
+
+<div
+  class="poodle-box c0 poodle-tab-list morning c1"
+  role="tablist"
+>
+  TabList
+</div>
+`;
+
+exports[`<TabList /> theming should override styles 1`] = `
+.c0 {
+  box-sizing: border-box;
+}
+
+.c1 {
+  margin-top: 50px;
+}
+
+<div
+  class="poodle-box c0 poodle-tab-list c1 c2"
+  role="tablist"
+>
+  TabList
+</div>
+`;
+
+exports[`<TabList /> theming should render with default props correctly 1`] = `
+.c0 {
+  box-sizing: border-box;
+}
+
+.c1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  -webkit-justify-content: flex-start;
+  justify-content: flex-start;
+}
+
+.c1[aria-orientation='horizontal'] {
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  border-bottom: 1px solid;
+  border-color: #CCCCCC;
+}
+
+.c1[aria-orientation='vertical'] {
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  border-right: 1px solid;
+  border-color: #CCCCCC;
+}
+
+<div
+  class="poodle-box c0 poodle-tab-list c1 hello c2"
+  id="id"
+  role="tablist"
+>
+  TabList
+</div>
+`;

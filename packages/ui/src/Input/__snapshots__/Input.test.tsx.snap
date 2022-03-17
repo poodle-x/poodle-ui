@@ -1,0 +1,677 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Input /> ref should work 1`] = `
+.c0 {
+  box-sizing: border-box;
+}
+
+.c1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  width: 100%;
+  box-sizing: border-box;
+  border-radius: 4px;
+  border: 1px solid;
+  border-color: #CCCCCC;
+  background-color: #fff;
+  -webkit-transition: 125ms border-color ease-in;
+  transition: 125ms border-color ease-in;
+  padding-left: 8px;
+  padding-right: 8px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+}
+
+.c1:focus-within {
+  border-color: #00478A;
+}
+
+.c1:hover {
+  border-color: #00478A;
+}
+
+.c4 {
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+  outline: none;
+  resize: none;
+  box-sizing: content-box;
+  background: transparent;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 125%;
+}
+
+<div
+  class="poodle-box c0 poodle-input c1 c2"
+>
+  <input
+    class="poodle-box c0 poodle-input__input c4 c2"
+  />
+</div>
+`;
+
+exports[`<Input /> ref should work 2`] = `
+.c0 {
+  box-sizing: border-box;
+}
+
+.c1 {
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+  outline: none;
+  resize: none;
+  box-sizing: content-box;
+  background: transparent;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 125%;
+}
+
+<input
+  class="poodle-box c0 poodle-input__input c1 c2"
+/>
+`;
+
+exports[`<Input /> should render Box props correctly 1`] = `
+.c0 {
+  box-sizing: border-box;
+}
+
+.c1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  width: 100%;
+  box-sizing: border-box;
+  border-radius: 4px;
+  border: 1px solid;
+  border-color: #CCCCCC;
+  background-color: #fff;
+  -webkit-transition: 125ms border-color ease-in;
+  transition: 125ms border-color ease-in;
+  padding-left: 8px;
+  padding-right: 8px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+}
+
+.c1:focus-within {
+  border-color: #00478A;
+}
+
+.c1:hover {
+  border-color: #00478A;
+}
+
+.c2 {
+  margin-top: 20px;
+}
+
+.c4 {
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+  outline: none;
+  resize: none;
+  box-sizing: content-box;
+  background: transparent;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 125%;
+}
+
+.c5 {
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+<div
+  class="poodle-box c0 poodle-input c1 c2"
+  id="id"
+>
+  <input
+    class="poodle-box c0 poodle-input__input c4 c5"
+  />
+</div>
+`;
+
+exports[`<Input /> should render Input correctly 1`] = `
+.c0 {
+  box-sizing: border-box;
+}
+
+.c1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  width: 100%;
+  box-sizing: border-box;
+  border-radius: 4px;
+  border: 1px solid;
+  border-color: #CCCCCC;
+  background-color: #fff;
+  -webkit-transition: 125ms border-color ease-in;
+  transition: 125ms border-color ease-in;
+  padding-left: 8px;
+  padding-right: 8px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+}
+
+.c1:focus-within {
+  border-color: #00478A;
+}
+
+.c1:hover {
+  border-color: #00478A;
+}
+
+.c4 {
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+  outline: none;
+  resize: none;
+  box-sizing: content-box;
+  background: transparent;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 125%;
+}
+
+<div
+  class="poodle-box c0 poodle-input c1 c2"
+  id="id"
+>
+  <input
+    aria-label="Simple label"
+    class="poodle-box c0 poodle-input__input c4 c2"
+  />
+</div>
+`;
+
+exports[`<Input /> should render Input textarea correctly 1`] = `
+.c0 {
+  box-sizing: border-box;
+}
+
+.c1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  width: 100%;
+  box-sizing: border-box;
+  border-radius: 4px;
+  border: 1px solid;
+  border-color: #CCCCCC;
+  background-color: #fff;
+  -webkit-transition: 125ms border-color ease-in;
+  transition: 125ms border-color ease-in;
+  padding-left: 8px;
+  padding-right: 8px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+}
+
+.c1:focus-within {
+  border-color: #00478A;
+}
+
+.c1:hover {
+  border-color: #00478A;
+}
+
+.c4 {
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+  outline: none;
+  resize: none;
+  box-sizing: content-box;
+  background: transparent;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 125%;
+}
+
+<div
+  class="poodle-box c0 poodle-input c1 c2"
+>
+  <textarea
+    aria-label="Simple label"
+    class="poodle-box c0 poodle-input__input c4 c2"
+    rows="3"
+  />
+</div>
+`;
+
+exports[`<Input /> should render Input with adornment correctly 1`] = `
+.c0 {
+  box-sizing: border-box;
+}
+
+.c1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  width: 100%;
+  box-sizing: border-box;
+  border-radius: 4px;
+  border: 1px solid;
+  border-color: #CCCCCC;
+  background-color: #fff;
+  -webkit-transition: 125ms border-color ease-in;
+  transition: 125ms border-color ease-in;
+  padding-left: 8px;
+  padding-right: 8px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+}
+
+.c1:focus-within {
+  border-color: #00478A;
+}
+
+.c1:hover {
+  border-color: #00478A;
+}
+
+.c4 {
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+  outline: none;
+  resize: none;
+  box-sizing: content-box;
+  background: transparent;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 125%;
+}
+
+<div
+  class="poodle-box c0 poodle-input c1 c2"
+>
+  $
+  <input
+    aria-label="Simple label"
+    class="poodle-box c0 poodle-input__input c4 c2"
+  />
+  kg
+</div>
+`;
+
+exports[`<Input /> should render error Input correctly 1`] = `
+.c0 {
+  box-sizing: border-box;
+}
+
+.c1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  width: 100%;
+  box-sizing: border-box;
+  border-radius: 4px;
+  border: 1px solid;
+  border-color: #AF1308;
+  background-color: #fff;
+  -webkit-transition: 125ms border-color ease-in;
+  transition: 125ms border-color ease-in;
+  padding-left: 8px;
+  padding-right: 8px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+}
+
+.c1:focus-within {
+  border-color: #00478A;
+}
+
+.c1:hover {
+  border-color: #00478A;
+}
+
+.c4 {
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+  outline: none;
+  resize: none;
+  box-sizing: content-box;
+  background: transparent;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 125%;
+}
+
+<div
+  class="poodle-box c0 poodle-input c1 c2"
+  id="id"
+>
+  <input
+    aria-invalid="true"
+    aria-label="Simple label"
+    class="poodle-box c0 poodle-input__input c4 c2"
+  />
+</div>
+`;
+
+exports[`<Input /> theming should disable classes 1`] = `
+.c0 {
+  box-sizing: border-box;
+}
+
+.c3 {
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+  outline: none;
+  resize: none;
+  box-sizing: content-box;
+  background: transparent;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 125%;
+}
+
+<div
+  class="poodle-box c0 poodle-input c1"
+>
+  <input
+    class="poodle-box c0 poodle-input__input c3 c1"
+  />
+</div>
+`;
+
+exports[`<Input /> theming should extend styles in global 1`] = `
+.c0 {
+  box-sizing: border-box;
+}
+
+.c1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  width: 100%;
+  box-sizing: border-box;
+  border-radius: 4px;
+  border: 1px solid;
+  border-color: #CCCCCC;
+  background-color: #fff;
+  -webkit-transition: 125ms border-color ease-in;
+  transition: 125ms border-color ease-in;
+  padding-left: 8px;
+  padding-right: 8px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  margin-top: 10px;
+  letter-spacing: 250px;
+  top: 0;
+  text-indent: 1px;
+}
+
+.c1:focus-within {
+  border-color: #00478A;
+}
+
+.c1:hover {
+  border-color: #00478A;
+}
+
+.c4 {
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+  outline: none;
+  resize: none;
+  box-sizing: content-box;
+  background: transparent;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 125%;
+  font-size: 50px;
+  left: 100px;
+}
+
+<div
+  class="poodle-box c0 poodle-input c1 c2"
+>
+  <input
+    class="poodle-box c0 poodle-input__input c4 c2"
+  />
+</div>
+`;
+
+exports[`<Input /> theming should extend styles in local 1`] = `
+.c0 {
+  box-sizing: border-box;
+}
+
+.c1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  width: 100%;
+  box-sizing: border-box;
+  border-radius: 4px;
+  border: 1px solid;
+  border-color: #CCCCCC;
+  background-color: #fff;
+  -webkit-transition: 125ms border-color ease-in;
+  transition: 125ms border-color ease-in;
+  padding-left: 8px;
+  padding-right: 8px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  margin-top: 10px;
+  letter-spacing: 250px;
+  top: 0;
+  text-indent: 1px;
+}
+
+.c1:focus-within {
+  border-color: #00478A;
+}
+
+.c1:hover {
+  border-color: #00478A;
+}
+
+.c4 {
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+  outline: none;
+  resize: none;
+  box-sizing: content-box;
+  background: transparent;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 125%;
+  font-size: 50px;
+  left: 100px;
+}
+
+<div
+  class="poodle-box c0 poodle-input c1 c2"
+>
+  <input
+    class="poodle-box c0 poodle-input__input c4 c2"
+  />
+</div>
+`;
+
+exports[`<Input /> theming should override classes 1`] = `
+.c0 {
+  box-sizing: border-box;
+}
+
+.c3 {
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+  outline: none;
+  resize: none;
+  box-sizing: content-box;
+  background: transparent;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 125%;
+}
+
+<div
+  class="poodle-box c0 poodle-input morning c1"
+>
+  <input
+    class="poodle-box c0 poodle-input__input c3 c1"
+  />
+</div>
+`;
+
+exports[`<Input /> theming should override styles 1`] = `
+.c0 {
+  box-sizing: border-box;
+}
+
+.c1 {
+  margin-top: 50px;
+}
+
+.c4 {
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+  outline: none;
+  resize: none;
+  box-sizing: content-box;
+  background: transparent;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 125%;
+}
+
+<div
+  class="poodle-box c0 poodle-input c1 c2"
+>
+  <input
+    class="poodle-box c0 poodle-input__input c4 c2"
+  />
+</div>
+`;
+
+exports[`<Input /> theming should render with default props correctly 1`] = `
+.c0 {
+  box-sizing: border-box;
+}
+
+.c1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  width: 100%;
+  box-sizing: border-box;
+  border-radius: 4px;
+  border: 1px solid;
+  border-color: #CCCCCC;
+  background-color: #fff;
+  -webkit-transition: 125ms border-color ease-in;
+  transition: 125ms border-color ease-in;
+  padding-left: 8px;
+  padding-right: 8px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+}
+
+.c1:focus-within {
+  border-color: #00478A;
+}
+
+.c1:hover {
+  border-color: #00478A;
+}
+
+.c4 {
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+  outline: none;
+  resize: none;
+  box-sizing: content-box;
+  background: transparent;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 125%;
+}
+
+<div
+  class="poodle-box c0 poodle-input c1 hello c2"
+  id="id"
+>
+  <input
+    class="poodle-box c0 poodle-input__input c4 hello c2"
+  />
+</div>
+`;

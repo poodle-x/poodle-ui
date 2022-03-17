@@ -1,0 +1,233 @@
+---
+title: Modal
+path: modal
+---
+
+# Modal
+
+```jsx
+import Modal from "@poodle/ui/Modal";
+```
+
+Use the `<Modal />` component when we need to ask the user for an important decision or want them to focus on the information displayed.
+
+Normally, the component will block the app until it disappears, so we shouldn't overuse it.
+
+## Basic
+
+The `<Modal />` component using `focus-trap-react` to keep the user focus on the modal.
+So it will require at least one focusable element on the modal. You can turn the focus trap off with the `disableFocusTrap` prop.
+
+```jsx-live
+() => {
+	const [open, setOpen] = React.useState(false);
+
+	const handleClose = () => {
+		setOpen(false);
+	};
+
+	return (
+		<Box>
+			<Button
+				onClick={() => {
+					setOpen(true);
+				}}
+			>
+				Open modal
+			</Button>
+			<Modal
+				isOpen={open}
+				onRequestClose={handleClose}
+				modalProps={{
+					"aria-labelledby": "modalTitlte",
+					"aria-describedby": "modalBody"
+				}}
+			>
+				<ModalHeader
+					id="modalTitlte"
+					withClose={true}
+					closeProps={{
+						onClick: handleClose,
+					}}
+
+				>
+					Modal title
+				</ModalHeader>
+				<ModalBody id="modalBody">
+					The selected document <Box as="strong">“price.docx”</Box> will be
+					sent.
+				</ModalBody>
+				<ModalFooter>
+					<Button variant="fill">Send</Button>
+					<Button ml="scale-2" onClick={handleClose}>
+						Cancel
+					</Button>
+				</ModalFooter>
+			</Modal>
+		</Box>
+	);
+};
+```
+
+## Accessibility
+
+In the basic example, the code has already added `aria-labelledby`, `aria-describedby`, and title ID to support accessibility.
+
+However, by doing so it might be cumbersome. Using `withAutoId` prop will automatically insert the required attribute on
+`Modal`, `ModalHeader`, `ModalBody` components.
+
+If you don't use `ModalHeader`, `ModalBody` then you shouldn't use the `withAutoId` prop.
+
+```jsx-live
+() => {
+	const [open, setOpen] = React.useState(false);
+
+	const handleClose = () => {
+		setOpen(false);
+	};
+
+	return (
+		<Box>
+			<Button
+				onClick={() => {
+					setOpen(true);
+				}}
+			>
+				Open modal
+			</Button>
+			<Modal isOpen={open} onRequestClose={handleClose} withAutoId={true}>
+				<ModalHeader
+					withClose={true}
+					closeProps={{
+						onClick: handleClose,
+					}}
+				>
+					Modal title
+				</ModalHeader>
+				<ModalBody>
+					The selected document <Box as="strong">“price.docx”</Box> will be
+					sent.
+				</ModalBody>
+				<ModalFooter>
+					<Button variant="fill">Send</Button>
+					<Button ml="scale-2" onClick={handleClose}>
+						Cancel
+					</Button>
+				</ModalFooter>
+			</Modal>
+		</Box>
+	);
+};
+```
+
+## Color
+
+By default, some modal components support color style `primary`, `negative`, `warn`, `positive`.
+
+```jsx-live
+() => {
+	const [open, setOpen] = React.useState(false);
+
+	const handleClose = () => {
+		setOpen(false);
+	};
+
+	return (
+		<Box>
+			<Button
+				onClick={() => {
+					setOpen(true);
+				}}
+			>
+				Open modal
+			</Button>
+			<Modal colorStyle="negative" isOpen={open} onRequestClose={handleClose}>
+				<ModalHeader
+					colorStyle="negative"
+					icon={<Error />}
+					withClose={true}
+					closeProps={{
+						onClick: handleClose,
+					}}
+				>
+					Modal title
+				</ModalHeader>
+				<ModalBody>
+					The selected document <Box as="strong">“price.docx”</Box> will be sent.
+				</ModalBody>
+				<ModalFooter>
+					<Button colorStyle="negative" variant="fill">Send</Button>
+					<Button ml="scale-2" onClick={handleClose}>Cancel</Button>
+				</ModalFooter>
+			</Modal>
+		</Box>
+	);
+};
+```
+
+## Theming
+
+[//]: # (GetTheming[==ModalStyleKeys,ModalThemeConfig,Modal/index.ts==])
+
+
+
+Please check theming component document [here](/theming/component).
+ 		
+```ts
+export type ModalStyleKeys =
+  | "root"
+  | "overlay"
+  | "inner"
+  | "container"
+  | "modal"
+
+export interface ModalThemeConfig
+  extends StandardThemeConfig<ModalStyleKeys, ModalProps> {}
+
+``` 
+		
+		
+
+[//]: # (EndGetTheming)
+
+## Props
+
+[//]: # (GetProps[==LocalModalProps,Modal/Modal.tsx==])
+
+
+### Local Props
+
+
+| Name                       | Type                                  | Description                                                                                                                            |
+| -------------------------- | ------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------- |
+| children                   | `React.ReactNode`                     |                                                                                                                                        |
+| containerElementsFocusTrap | `Array<HTMLElement>`                  | The elements will be used as the boundaries for the focus-trap,<br />instead of the child.                                             |
+| containerProps             | `BoxProps`                            | Custom props for container element.                                                                                                    |
+| disableFocusTrap           | `boolean`                             | Turn off focus trap.                                                                                                                   |
+| focusTrapOptions           | `FocusTrapOptions`                    | Pass any of the options available in focus-trap's createOptions.                                                                       |
+| innerProps                 | `BoxProps`                            | Custom props for inner element.                                                                                                        |
+| isOpen                     | `boolean`                             | Open the modal when **`true`**.                                                                                                        |
+| modalProps                 | `BoxProps`                            | Custom props for modal element.                                                                                                        |
+| onRequestClose             | `(cause: "outside" \| "esc") => void` | Callback called when the user tries to close the modal.<br /><br />It can be caused by click on outside the modal or press escape key. |
+| overlayProps               | `BoxProps`                            | Custom props for overlay element.                                                                                                      |
+| pausedFocusTrap            | `boolean`                             | Pause or unpause focus trap                                                                                                            |
+| portalProps                | `Omit<PortalProps, "mount">`          | Custom props for **`<Portal />`**.                                                                                                     |
+| rootProps                  | `BoxProps`                            | Custom props for root element.                                                                                                         |
+| withAutoId                 | `boolean`                             | Add autoId                                                                                                                             |
+				
+
+[//]: # (EndGetProps)
+[//]: # (GetPartialProps[==ModalProps,Modal/Modal.tsx==])
+
+
+### Full Props
+
+```ts
+export interface ModalProps
+	extends BoxProps,
+		StandardComponentProps,
+		LocalModalProps {} 
+```
+				
+
+[//]: # (GetPartialProps)

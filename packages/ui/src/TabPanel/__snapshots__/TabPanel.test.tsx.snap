@@ -1,0 +1,312 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<TabPanel /> ref should work 1`] = `
+.c0 {
+  box-sizing: border-box;
+}
+
+.c1 {
+  padding-top: 16px;
+  padding-bottom: 16px;
+  padding-left: 16px;
+  padding-right: 16px;
+  outline: none;
+}
+
+<div
+  class="poodle-box c0 poodle-tabpanel c1 c2"
+  hidden=""
+  id="poodle-tab-panel-1"
+  role="tabpanel"
+  tabindex="0"
+/>
+`;
+
+exports[`<TabPanel /> should render Box props correctly 1`] = `
+.c0 {
+  box-sizing: border-box;
+}
+
+.c1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+.c4 {
+  padding-top: 16px;
+  padding-bottom: 16px;
+  padding-left: 16px;
+  padding-right: 16px;
+  outline: none;
+}
+
+.c5 {
+  margin-top: 20px;
+}
+
+<div
+  class="poodle-box c0 poodle-tabs c1 c2"
+>
+  <div
+    class="poodle-box c0 poodle-tabpanel c4 c5"
+    hidden=""
+    id="id"
+    role="tabpanel"
+    tabindex="0"
+  />
+</div>
+`;
+
+exports[`<TabPanel /> should render TabPanel correctly 1`] = `
+.c0 {
+  box-sizing: border-box;
+}
+
+.c1 {
+  padding-top: 16px;
+  padding-bottom: 16px;
+  padding-left: 16px;
+  padding-right: 16px;
+  outline: none;
+}
+
+<div
+  class="poodle-box c0 poodle-tabpanel c1 c2"
+  hidden=""
+  id="poodle-tab-panel-1"
+  role="tabpanel"
+  tabindex="0"
+/>
+`;
+
+exports[`<TabPanel /> should render TabPanel correctly 2`] = `
+.c0 {
+  box-sizing: border-box;
+}
+
+.c1 {
+  padding-top: 16px;
+  padding-bottom: 16px;
+  padding-left: 16px;
+  padding-right: 16px;
+  outline: none;
+}
+
+<div
+  class="poodle-box c0 poodle-tabpanel c1 c2"
+  id="poodle-tab-panel-1"
+  role="tabpanel"
+  tabindex="0"
+>
+  TabPanel
+</div>
+`;
+
+exports[`<TabPanel /> theming should disable classes 1`] = `
+.c0 {
+  box-sizing: border-box;
+}
+
+.c1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+<div
+  class="poodle-box c0 poodle-tabs c1 c2"
+>
+  <div
+    class="poodle-box c0 poodle-tabpanel c2"
+    hidden=""
+    id="poodle-tab-panel-1"
+    role="tabpanel"
+    tabindex="0"
+  />
+</div>
+`;
+
+exports[`<TabPanel /> theming should extend styles in global 1`] = `
+.c0 {
+  box-sizing: border-box;
+}
+
+.c1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+.c4 {
+  padding-top: 16px;
+  padding-bottom: 16px;
+  padding-left: 16px;
+  padding-right: 16px;
+  outline: none;
+  margin-top: 10px;
+  letter-spacing: 250px;
+  top: 0;
+  text-indent: 1px;
+}
+
+<div
+  class="poodle-box c0 poodle-tabs c1 c2"
+>
+  <div
+    class="poodle-box c0 poodle-tabpanel c4 c2"
+    hidden=""
+    id="poodle-tab-panel-1"
+    role="tabpanel"
+    tabindex="0"
+  />
+</div>
+`;
+
+exports[`<TabPanel /> theming should extend styles in local 1`] = `
+.c0 {
+  box-sizing: border-box;
+}
+
+.c1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+.c4 {
+  padding-top: 16px;
+  padding-bottom: 16px;
+  padding-left: 16px;
+  padding-right: 16px;
+  outline: none;
+  margin-top: 10px;
+  letter-spacing: 250px;
+  top: 0;
+  text-indent: 1px;
+}
+
+<div
+  class="poodle-box c0 poodle-tabs c1 c2"
+>
+  <div
+    class="poodle-box c0 poodle-tabpanel c4 c2"
+    hidden=""
+    id="poodle-tab-panel-1"
+    role="tabpanel"
+    tabindex="0"
+  />
+</div>
+`;
+
+exports[`<TabPanel /> theming should override classes 1`] = `
+.c0 {
+  box-sizing: border-box;
+}
+
+.c1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+<div
+  class="poodle-box c0 poodle-tabs c1 c2"
+>
+  <div
+    class="poodle-box c0 poodle-tabpanel morning c2"
+    hidden=""
+    id="poodle-tab-panel-1"
+    role="tabpanel"
+    tabindex="0"
+  />
+</div>
+`;
+
+exports[`<TabPanel /> theming should override styles 1`] = `
+.c0 {
+  box-sizing: border-box;
+}
+
+.c1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+.c4 {
+  margin-top: 50px;
+}
+
+<div
+  class="poodle-box c0 poodle-tabs c1 c2"
+>
+  <div
+    class="poodle-box c0 poodle-tabpanel c4 c2"
+    hidden=""
+    id="poodle-tab-panel-1"
+    role="tabpanel"
+    tabindex="0"
+  />
+</div>
+`;
+
+exports[`<TabPanel /> theming should render with default props correctly 1`] = `
+.c0 {
+  box-sizing: border-box;
+}
+
+.c1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+.c4 {
+  padding-top: 16px;
+  padding-bottom: 16px;
+  padding-left: 16px;
+  padding-right: 16px;
+  outline: none;
+}
+
+<div
+  class="poodle-box c0 poodle-tabs c1 c2"
+>
+  <div
+    class="poodle-box c0 poodle-tabpanel c4 hello c2"
+    hidden=""
+    id="id"
+    role="tabpanel"
+    tabindex="0"
+  />
+</div>
+`;

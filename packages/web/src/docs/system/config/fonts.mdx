@@ -1,0 +1,114 @@
+---
+title: Fonts | System
+---
+
+# Fonts
+
+```ts
+import { fontsSystem } from "@poodle/system";
+```
+
+```ts
+const theme: SystemThemeConfig = {
+	colors: {
+		sets: {
+			primary: "cyan",
+		},
+	},
+	fonts: {
+		sets: {
+			head: {
+				fontWeight: "head",
+				fontSize: "scale-2",
+			},
+		},
+		scale: "1rem",
+		weights: {
+			lit: 600,
+			head: 900,
+		},
+
+		families: {
+			open: "open, serif",
+		},
+		sizeSets: {
+			head: "17px",
+		},
+	},
+};
+
+const listSystem = compose(colorsSystem, fontsSystem);
+
+export const system = createSystem(listSystem);
+
+const styles1 = system({
+	theme,
+	fontSize: "scale-2",
+	fontWeight: "lit",
+	fontFamily: "open",
+});
+
+// Styles1 result
+//  { fontSize: "2rem" },
+//  { fontWeight: "lit" },
+//  { fontFamily: "open, serif" },
+
+const styles2 = system({
+	theme,
+	fontSize: "head",
+});
+
+// Styles2 result
+//  { fontSize: "17px" },
+
+const styles3 = system({
+	theme,
+	textStyle: "head",
+});
+
+// Styles3 result
+//  { fontSize: "2rem" },
+//  { fontWeight: "900" },
+```
+
+[//]: # (GetSystemProps[==BordersProps,borders.ts==])
+| Prop                    | Type                                                                                            | Description                                                                   |
+| ----------------------- | ----------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------- |
+| border                  | `ResponsiveProp<CSS.Property.Border \| string>`                                                 | The CSS `border` property                                                     |
+| borderBottom            | `ResponsiveProp<CSS.Property.BorderBottom \| string>`                                           | The CSS `border-bottom` property                                              |
+| borderBottomColor       | `ResponsiveProp<CSS.Property.BorderBottomColor \| string>`                                      | The CSS `border-bottom-color` property                                        |
+| borderBottomLeftRadius  | `ResponsiveProp<CSS.Property.BorderBottomLeftRadius>`                                           | The CSS `border-bottom-left-radius` property                                  |
+| borderBottomRadius      | `ResponsiveProp<  CSS.Property.BorderBottomRightRadius \| CSS.Property.BorderBottomLeftRadius>` | The CSS `border-bottom-left-radius` and `border-bottom-right-radius` property |
+| borderBottomRightRadius | `ResponsiveProp<CSS.Property.BorderBottomRightRadius>`                                          | The CSS `border-bottom-right-radius` property                                 |
+| borderBottomStyle       | `ResponsiveProp<CSS.Property.BorderBottomStyle>`                                                | The CSS `border-bottom-style` property                                        |
+| borderBottomWidth       | `ResponsiveProp<CSS.Property.BorderBottomWidth \| number>`                                      | The CSS `border-bottom-width` property                                        |
+| borderColor             | `ResponsiveProp<CSS.Property.BorderColor \| string>`                                            | The CSS `border-color` property                                               |
+| borderLeft              | `ResponsiveProp<CSS.Property.BorderLeft \| string>`                                             | The CSS `border-left` property                                                |
+| borderLeftColor         | `ResponsiveProp<CSS.Property.BorderLeftColor \| string>`                                        | The CSS `border-left-color` property                                          |
+| borderLeftRadius        | `ResponsiveProp<  CSS.Property.BorderTopLeftRadius \| CSS.Property.BorderBottomLeftRadius>`     | The CSS `border-top-left-radius` and `border-bottom-left-radius` property     |
+| borderLeftStyle         | `ResponsiveProp<CSS.Property.BorderLeftStyle>`                                                  | The CSS `border-left-style` property                                          |
+| borderLeftWidth         | `ResponsiveProp<CSS.Property.BorderLeftWidth \| number>`                                        | The CSS `border-left-width` property                                          |
+| borderRadius            | `ResponsiveProp<CSS.Property.BorderRadius>`                                                     | The CSS `border-radius` property                                              |
+| borderRight             | `ResponsiveProp<CSS.Property.BorderRight \| string>`                                            | The CSS `border-right` property                                               |
+| borderRightColor        | `ResponsiveProp<CSS.Property.BorderRightColor \| string>`                                       | The CSS `border-right-color` property                                         |
+| borderRightRadius       | `ResponsiveProp<  CSS.Property.BorderTopRightRadius \| CSS.Property.BorderBottomRightRadius>`   | The CSS `border-top-right-radius` and `border-bottom-right-radius` property   |
+| borderRightStyle        | `ResponsiveProp<CSS.Property.BorderRightStyle>`                                                 | The CSS `border-right-style` property                                         |
+| borderRightWidth        | `ResponsiveProp<CSS.Property.BorderRightWidth \| number>`                                       | The CSS `border-right-width` property                                         |
+| borderStyle             | `ResponsiveProp<CSS.Property.BorderStyle>`                                                      | The CSS `border-style` property                                               |
+| borderTop               | `ResponsiveProp<CSS.Property.BorderTop \| string>`                                              | The CSS `border-top` property                                                 |
+| borderTopColor          | `ResponsiveProp<CSS.Property.BorderTopColor \| string>`                                         | The CSS `border-top-color` property                                           |
+| borderTopLeftRadius     | `ResponsiveProp<CSS.Property.BorderTopLeftRadius>`                                              | The CSS `border-top-left-radius` property                                     |
+| borderTopRadius         | `ResponsiveProp<  CSS.Property.BorderTopLeftRadius \| CSS.Property.BorderTopRightRadius>`       | The CSS `border-top-left-radius` and `border-top-right-radius` property       |
+| borderTopRightRadius    | `ResponsiveProp<CSS.Property.BorderTopRightRadius>`                                             | The CSS `border-top-right-radius` property                                    |
+| borderTopStyle          | `ResponsiveProp<CSS.Property.BorderTopStyle>`                                                   | The CSS `border-top-style` property                                           |
+| borderTopWidth          | `ResponsiveProp<CSS.Property.BorderTopWidth \| number>`                                         | The CSS `border-top-width` property                                           |
+| borderWidth             | `ResponsiveProp<CSS.Property.BorderWidth \| number>`                                            | The CSS `border-width` property                                               |
+| borderX                 | `ResponsiveProp<CSS.Property.BorderLeft \| CSS.Property.BorderRight>`                           | The CSS `border-left` and `border-right` property                             |
+| borderY                 | `ResponsiveProp<CSS.Property.BorderBottom \| CSS.Property.BorderTop>`                           | The CSS `border-top` and `border-bottom` property                             |
+| outline                 | `ResponsiveProp<CSS.Property.Outline>`                                                          | The CSS `outline` property                                                    |
+| outlineColor            | `ResponsiveProp<CSS.Property.Outline>`                                                          | The CSS `outline-color` property                                              |
+| outlineStyle            | `ResponsiveProp<CSS.Property.Outline>`                                                          | The CSS `outline-style` property                                              |
+| outlineWidth            | `ResponsiveProp<CSS.Property.Outline>`                                                          | The CSS `outline-width` property                                              |
+				
+
+[//]: # (EndGetSystemProps)

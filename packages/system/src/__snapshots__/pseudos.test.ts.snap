@@ -1,0 +1,308 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`pseudos system pseudos props _active props 1`] = `
+Array [
+  Object {
+    "&:active": Array [
+      Object {
+        "color": "red",
+      },
+      Object {
+        "@media screen and (min-width: 768px)": Object {
+          "color": "yellow",
+        },
+      },
+    ],
+  },
+]
+`;
+
+exports[`pseudos system pseudos props _checked props 1`] = `
+Array [
+  Object {
+    "&:checked": Array [
+      Object {
+        "color": "red",
+      },
+      Object {
+        "@media screen and (min-width: 768px)": Object {
+          "color": "yellow",
+        },
+      },
+    ],
+  },
+]
+`;
+
+exports[`pseudos system pseudos props _default props 1`] = `
+Array [
+  Object {
+    "&:default": Array [
+      Object {
+        "color": "red",
+      },
+      Object {
+        "@media screen and (min-width: 768px)": Object {
+          "color": "yellow",
+        },
+      },
+    ],
+  },
+]
+`;
+
+exports[`pseudos system pseudos props _defined props 1`] = `
+Array [
+  Object {
+    "&:defined": Array [
+      Object {
+        "color": "red",
+      },
+      Object {
+        "@media screen and (min-width: 768px)": Object {
+          "color": "yellow",
+        },
+      },
+    ],
+  },
+]
+`;
+
+exports[`pseudos system pseudos props _disabled props 1`] = `
+Array [
+  Object {
+    "&:disabled": Array [
+      Object {
+        "color": "red",
+      },
+      Object {
+        "@media screen and (min-width: 768px)": Object {
+          "color": "yellow",
+        },
+      },
+    ],
+  },
+]
+`;
+
+exports[`pseudos system pseudos props _enabled props 1`] = `
+Array [
+  Object {
+    "&:enabled": Array [
+      Object {
+        "color": "red",
+      },
+      Object {
+        "@media screen and (min-width: 768px)": Object {
+          "color": "yellow",
+        },
+      },
+    ],
+  },
+]
+`;
+
+exports[`pseudos system pseudos props _firstChild props 1`] = `
+Array [
+  Object {
+    "&:first-child": Array [
+      Object {
+        "color": "red",
+      },
+      Object {
+        "@media screen and (min-width: 768px)": Object {
+          "color": "yellow",
+        },
+      },
+    ],
+  },
+]
+`;
+
+exports[`pseudos system pseudos props _firstOfType props 1`] = `
+Array [
+  Object {
+    "&:first-of-type": Array [
+      Object {
+        "color": "red",
+      },
+      Object {
+        "@media screen and (min-width: 768px)": Object {
+          "color": "yellow",
+        },
+      },
+    ],
+  },
+]
+`;
+
+exports[`pseudos system pseudos props _focus props 1`] = `
+Array [
+  Object {
+    "&:focus": Array [
+      Object {
+        "color": "red",
+      },
+      Object {
+        "@media screen and (min-width: 768px)": Object {
+          "color": "yellow",
+        },
+      },
+    ],
+  },
+]
+`;
+
+exports[`pseudos system pseudos props _focusWithin props 1`] = `
+Array [
+  Object {
+    "&:focus-within": Array [
+      Object {
+        "color": "red",
+      },
+      Object {
+        "@media screen and (min-width: 768px)": Object {
+          "color": "yellow",
+        },
+      },
+    ],
+  },
+]
+`;
+
+exports[`pseudos system pseudos props _hover props 1`] = `
+Array [
+  Object {
+    "&:hover": Array [
+      Object {
+        "color": "red",
+      },
+      Object {
+        "@media screen and (min-width: 768px)": Object {
+          "color": "yellow",
+        },
+      },
+    ],
+  },
+]
+`;
+
+exports[`pseudos system pseudos props _indeterminate props 1`] = `
+Array [
+  Object {
+    "&:indeterminate": Array [
+      Object {
+        "color": "red",
+      },
+      Object {
+        "@media screen and (min-width: 768px)": Object {
+          "color": "yellow",
+        },
+      },
+    ],
+  },
+]
+`;
+
+exports[`pseudos system pseudos props _invalid props 1`] = `
+Array [
+  Object {
+    "&:invalid": Array [
+      Object {
+        "color": "red",
+      },
+      Object {
+        "@media screen and (min-width: 768px)": Object {
+          "color": "yellow",
+        },
+      },
+    ],
+  },
+]
+`;
+
+exports[`pseudos system pseudos props _lang props 1`] = `
+Array [
+  Object {
+    "en": Array [
+      Object {
+        "color": "red",
+      },
+      Object {
+        "@media screen and (min-width: 768px)": Object {
+          "color": "blue",
+        },
+      },
+      Object {
+        "fontFamily": "en",
+      },
+    ],
+  },
+  Object {
+    "zh": Array [
+      Object {
+        "color": "cyan",
+      },
+      Object {
+        "@media screen and (min-width: 768px)": Object {
+          "color": "purple",
+        },
+      },
+      Object {
+        "fontFamily": "cn",
+      },
+    ],
+  },
+]
+`;
+
+exports[`pseudos system pseudos props _lastChild props 1`] = `
+Array [
+  Object {
+    "&:last-child": Array [
+      Object {
+        "color": "red",
+      },
+      Object {
+        "@media screen and (min-width: 768px)": Object {
+          "color": "yellow",
+        },
+      },
+    ],
+  },
+]
+`;
+
+exports[`pseudos system pseudos props _lastOfType props 1`] = `
+Array [
+  Object {
+    "&:last-of-type": Array [
+      Object {
+        "color": "red",
+      },
+      Object {
+        "@media screen and (min-width: 768px)": Object {
+          "color": "yellow",
+        },
+      },
+    ],
+  },
+]
+`;
+
+exports[`pseudos system pseudos props _lastOfType props 2`] = `
+Array [
+  Object {
+    "&:last-of-type": Array [
+      Object {
+        "color": "red",
+      },
+      Object {
+        "@media screen and (min-width: 768px)": Object {
+          "color": "yellow",
+        },
+      },
+    ],
+  },
+]
+`;

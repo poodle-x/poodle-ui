@@ -1,0 +1,318 @@
+---
+title: Create System | System
+---
+
+# Create system
+
+
+## System config
+
+A simple system config is an object with key string and with value `SystemConfig` type.
+
+
+```tsx
+
+interface SystemConfigList {
+	[key: string]: SystemConfig;
+}
+```
+
+A quick example to create a system config
+
+```tsx
+export type ThemeValue<T> = T | ((props: { [key: string]: any }) => T);
+
+export const transformMyCustomSystem: SystemConfigTransform = (
+	props: { [key: string]: any },
+	value: ThemeValue<string>
+) => {
+	// return something with props and value
+	return value;
+};
+
+const mySystem: { [key: string]: SystemConfig } = {
+	px: {
+		properties: [
+			"paddingLeft",
+			"paddingRight"
+		],
+		transform: transformMyCustomSystem
+	},
+};
+
+const myListSystem = compose(mySystem);
+
+export const mySystem = createSystem(myListSystem);
+
+const result = mySystem({
+	px: "10px",
+});
+
+// result = {
+// 	"paddingLeft": "10px",
+// 	"paddingRight": "10px"
+// }
+
+```
+
+### `properties`
+
+
+```ts
+const mySystem: { [key: string]: SystemConfig } = {
+	px: {
+		properties: [
+			"paddingLeft",
+			"paddingRight"
+		],
+	},
+};
+```
+
+`properties` property gets an array string will determine the return property result.
+
+for example with the example object result will return
+
+```tsx
+const result = {
+	"paddingLeft": "value",
+	"paddingRight": "value"
+}
+
+```
+
+### `transform`
+
+`transform` property gets a function that will calculate and return the value for each property.
+
+```ts
+const transformMyCustomSystem: SystemConfigTransform = (
+	props: { [key: string]: any },
+	value: ThemeValue<string>
+) => {
+	// return something with props and value
+	return "10px";
+};
+
+const mySystem: { [key: string]: SystemConfig } = {
+	px: {
+		// ...
+		transform: transformMyCustomSystem,
+	},
+};
+```
+
+With the example object result will return
+
+```tsx
+const result = {
+	"paddingLeft": "10px",
+	"paddingRight": "10px"
+}
+
+```
+
+### isMultipleValue
+
+`isMultipleValue` mark the property is a nested property.
+
+```ts
+
+const mySystem: { [key: string]: SystemConfig } = {
+	px: {
+		// ...
+	},
+	["_disabled"]: {
+		properties: ["&:disabled"],
+		isMultipleValue: true,
+	},
+};
+
+const result = mySystem({
+	"_disabled": {
+		px: "10px",
+		background: "cyan"
+	}
+});
+
+// result = {
+// 	"&:disabled": {
+// 		"paddingLeft": "10px",
+// 		"paddingRight": "10px",
+// 		"background": "cyan"
+// 	}
+// }
+
+```
+
+### customGetBreakpointsScale
+
+By default, the system has build-in [breakpoints system](/sytem/getting-started/breakpoints/). If your system does not want to get the breakpoints scaling
+from props.theme.breakpoints.scale then we can use this property to get a custom breakpoint scaling.
+
+
+```ts
+
+const mySystem: { [key: string]: SystemConfig } = {
+	px: {
+		// ...
+		customGetBreakpointsScale: (props) => {
+			return ["80px", "200em"]
+		}
+	},
+};
+```
+
+###  customMediaFn
+
+Return custom media query rather than using build-in.
+
+```ts
+interface MediaFnOptions {
+	scale: number | string;
+	value: number | string;
+	props: { [key: string]: any };
+	config: SystemConfig;
+}
+
+function myMediaFn(options: MediaFnOptions): string {
+	let media = "";
+	const { scale, props } = options;
+	const breakpoint = myCustomGetBreakpoint(scale)(props);
+
+	if (breakpoint) {
+		media = `@media screen and (min-width: ${breakpoint})`;
+	}
+	return media;
+}
+
+const mySystem: { [key: string]: SystemConfig } = {
+	px: {
+		// ...
+		customMediaFn: myMediaFn
+	},
+};
+```
+
+## Use system config with create system function
+
+
+```ts
+import {
+	compose,
+	createSystem,
+	colorsSystem,
+	spacingSystem
+} from "@poodle/system";
+
+
+const myListSystem = compose(mySystem, colorsSystem, spacingSystem);
+
+export const mySystem = createSystem(myListSystem, {
+	// Global custom return media query
+	customMediaFn,
+	// Global custom breakpoint scale
+	customGetBreakpointsScale
+});
+
+const styles = system({
+	theme: {
+		colors: {
+			sets: {
+				primary: {
+					base: "red",
+				},
+				secondary: "yellow",
+			},
+		},
+		spacing: {
+			scale: "4px",
+			sets: {
+				custom: "1rem",
+			},
+		},
+	},
+
+	color: "primary.base",
+	pt: "scale-4",
+	mt: "custom",
+	otherProp: "Hello"
+});
+
+// Styles result
+//  { color: "red" },
+// 	{ paddingTop: "16px" },
+// 	{ marginTop: "1rem" },
+// 	{ otherProp: "Hello" },
+
+```
+
+Using `compose` function to combine multiple system config.
+
+After that pass them to `createSystem` to create your style prop function.
+
+Function return from `createSystem` also can receive the second argument other than the first argument.
+
+
+### returnOnlySystemProps
+
+If set `returnOnlySystemProps` to true the style prop return from the function will remove any prop not related to system.
+
+```ts
+
+const styles = system(
+	{
+		theme: myTheme,
+		otherProps: "abc",
+		// color system
+		color: "primary.base",
+		// spacing system
+		pt: "scale-4",
+		// spacing system
+		mt: "custom",
+	},
+	{
+		returnOnlySystemProps: true,
+	}
+);
+
+// Styles result
+//  { color: "red" },
+// 	{ paddingTop: "16px" },
+// 	{ marginTop: "1rem" },
+
+```
+
+
+### sendProps
+
+We can send another props to `ThemeValue`, system config... rather than props send to system.
+
+```ts
+
+const styles = system(
+	{
+		otherProps: "abc",
+		color: "primary.base",
+		pt: "scale-4",
+		mt: (props: any) => {
+			return props.otherProps;
+		},
+	},
+	{
+		sendProps: {
+			otherProps: "xyz",
+		},
+	}
+);
+
+// Styles result
+//  {"otherProps":"abc"}
+//  { color: "red" },
+// 	{ paddingTop: "16px" },
+// 	{ marginTop: "xyz" },
+
+```
+
+
+

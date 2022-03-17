@@ -1,0 +1,74 @@
+---
+title: Colors | System
+---
+
+# Colors
+
+```ts
+import { colorsSystem } from "@poodle/system";
+```
+
+The `colors` system help us quickly apply a color code in a predefined list
+
+```ts
+const theme = {
+	colors: {
+		sets: {
+			primary: "red",
+			secondary: "yellow",
+			accent: {
+				light: "#ccc",
+				base: "#d5d5d5"
+			}
+		},
+		modes: {
+			dark: {
+				primary: "cyan",
+			},
+		},
+	},
+};
+
+const listSystem = compose(colorsSystem, spacingSystem);
+
+export const system = createSystem(listSystem);
+
+const styles = system({
+	theme,
+	bg: "primary",
+  color: "accent.light",
+  fill: "accent"
+});
+
+// Styles result
+//  { background: "red" },
+//  { color: "#ccc" },
+//  { fill: "#d5d5d5" },
+
+
+const styles2 = system({
+	theme: {
+		...theme,
+		mode: "dark"
+	},
+	bg: "primary",
+});
+
+// Styles result
+//  { background: "cyan" },
+
+```
+
+[//]: # (GetSystemProps[==ColorsProps,colors.ts==])
+| Prop            | Type                                           | Description                         |
+| --------------- | ---------------------------------------------- | ----------------------------------- |
+| background      | `ResponsiveProp<CSS.Property.Background>`      | The CSS `background` property       |
+| backGroundColor | `ResponsiveProp<CSS.Property.BackgroundColor>` | The CSS `background-color` property |
+| bg              | `ResponsiveProp<CSS.Property.Background>`      | The CSS `background` property       |
+| bgc             | `ResponsiveProp<CSS.Property.BackgroundColor>` | The CSS `background-color` property |
+| color           | `ResponsiveProp<string \| CSS.Property.Color>` | The CSS `color` property            |
+| fill            | `ResponsiveProp<CSS.Property.Fill>`            | The CSS `fill` property             |
+| opacity         | `ResponsiveProp<CSS.Property.Fill>`            | The CSS `opacity` property          |
+				
+
+[//]: # (EndGetSystemProps)

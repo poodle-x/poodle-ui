@@ -1,0 +1,303 @@
+---
+title: Theming
+path: theming
+---
+
+# Theming
+
+The `UI` is customizable for your project need.
+
+## Theme object
+
+The `theme` object also use setting for `@poodle/system`.
+
+The UI use `@poodle/system` to create abstract `Box` component. You check the `Box` [document](/ui/getting-started/box) so you can understand the box system.
+
+Theme object can use to theme the standard component.
+
+```tsx
+
+export interface SystemThemeConfig {
+	mode?: string;
+	breakpoints?: BreakpointsThemeConfig;
+	spacing?: SpacingThemeConfig;
+	colors?: ColorsThemeConfig;
+	fonts?: FontsThemeConfig;
+	borders?: BordersThemeConfig;
+	layouts?: LayoutsThemeConfig;
+	shadows?: ShadowThemeConfig;
+}
+
+
+export interface ThemeConfig extends SystemThemeConfig {
+	global?: GlobalThemeConfig;
+	baseIcons?: BaseIcons;
+	Box?: BoxThemeConfig;
+	Button?: ButtonThemeConfig;
+	Columns?: ColumnsThemeConfig;
+	Column?: ColumnThemeConfig;
+	Container?: ContainerThemeConfig;
+	Table?: TableThemeConfig;
+	TableHead?: TableHeadThemeConfig;
+	TableBody?: TableBodyThemeConfig;
+	TableRow?: TableRowThemeConfig;
+	TableCell?: TableCellThemeConfig;
+	VisuallyHidden?: VisuallyHiddenThemeConfig;
+	CheckControl?: CheckControlThemeConfig;
+	Checkbox?: CheckboxThemeConfig;
+	Radio?: RadioThemeConfig;
+	Input?: InputThemeConfig;
+	InputAdornment?: InputAdornmentThemeConfig;
+	IconButton?: IconButtonThemeConfig;
+	Modal?: ModalThemeConfig;
+	ModalHeader?: ModalHeaderThemeConfig;
+	ModalBody?: ModalBodyThemeConfig;
+	ModalFooter?: ModalFooterThemeConfig;
+	Select?: SelectThemeConfig;
+}
+
+```
+
+## Theming
+
+Using `ThemePovider` we can override all the default theme.
+
+
+```jsx-live
+<Box>
+	<Button>Default</Button>
+	<ThemeProvider
+		theme={{
+			Button: {
+				styles: {
+					root: {
+						top: 0,
+						textIndent: 1,
+						background: "cyan",
+					},
+				},
+			},
+		}}
+	>
+		<Button>Default</Button>
+	</ThemeProvider>
+</Box>
+```
+
+We can also put the theme on the component.
+
+```jsx
+
+<Button
+	// The component will use this theme rather than global theme
+	theme={{}}
+	// The component will merge default theme and this theme
+	themeExtend={{}}
+>
+	Default
+</Button>
+
+```
+
+## Global Theme Config
+
+The following properties in theme object is global them config.
+
+For `breakpoints`, `spacing`, `colors`, `fonts`, `borders`, `layouts`, `shadows` are system properties.
+Please visit `system` [document](/sytem/getting-started/installation/) to understand the usage.
+
+
+
+```tsx
+
+interface Theming {
+	mode?: string;
+	breakpoints?: BreakpointsThemeConfig;
+	spacing?: SpacingThemeConfig;
+	colors?: ColorsThemeConfig;
+	fonts?: FontsThemeConfig;
+	borders?: BordersThemeConfig;
+	layouts?: LayoutsThemeConfig;
+	shadows?: ShadowThemeConfig;
+
+	global?: GlobalThemeConfig;
+	baseIcons?: BaseIcons;
+}
+
+const theme = {
+	// Change theme mode.
+	mode: "dark",
+	// Add global css
+	global: {
+		styles: {
+			html: {
+				fontSize: "16px",
+			},
+			body: {
+				color: "text",
+			},
+		},
+	},
+  // Change base icon components use on some components like `<CheckBox />`, `<Radio />`
+	baseIcons: {}
+}
+
+```
+
+
+## Component Theme Config
+
+After global theme config, other key in theme object is component theme config.
+
+A component in the UI follow standard config (`StandardThemeConfig`).
+
+We can lookup the example `Button` theme config.
+
+```tsx
+
+export type ButtonStyleKeys =
+	| "root"
+	| "content"
+	| "icon"
+	| "startIcon"
+	| "endIcon";
+
+export interface ButtonThemeConfig
+	extends StandardThemeConfig<ButtonStyleKeys, ButtonProps> {}
+
+
+export interface StandardThemeConfig<
+	T extends string,
+	Props extends { [key: string]: any }
+> {
+	defaultProps?: Partial<Props>;
+	styles?: Partial<StylesConfig<T>>;
+	variants?: {
+		[key: string]: Partial<StylesConfig<T>>;
+	};
+	sizes?: {
+		[key: string]: Partial<StylesConfig<T>>;
+	};
+	colorStyles?: {
+		[key: string]: Partial<StylesConfig<T>>;
+	};
+	modes?: {
+		[key: string]: {
+			styles?: Partial<StylesConfig<T>>;
+			variants?: {
+				[key: string]: Partial<StylesConfig<T>>;
+			};
+			sizes?: {
+				[key: string]: Partial<StylesConfig<T>>;
+			};
+			colorStyles?: {
+				[key: string]: Partial<StylesConfig<T>>;
+			};
+		};
+	};
+	overrides?: Partial<StylesConfig<T>>;
+	overrideClasses?: Partial<
+		{
+			[K in T]: boolean | string;
+		}
+	>;
+}
+
+```
+
+A component structure will have style keys.
+
+For example `Button` have the following structure
+
+```
+
+root > content > icon & (startIcon | endIcon)
+
+```
+
+So with `ButtonStyleKeys` we can know how many styles we can theme.
+
+Also, we can inspect an element in the dev tool and check their structure.
+
+CSS classname will have something like this `component__key`.
+
+Class `.poodle-button` => key is `root`.
+
+Class `.poodle-button__content` => key is `content`.
+
+With the knowledge about style keys we can easily understand the Standard component theming
+
+```tsx
+
+const buttonTheme: ButtonThemeConfig = {
+	// default props for the component
+	defaultProps: {
+		colorStyle: "primary",
+	},
+	// Custom CSS. CSS in the property support system
+	styles: {
+		content: {
+			px: "12px",
+			py: "scale-2",
+		},
+	},
+	// Standard component support variant prop
+	// <Button variant="custom" />
+	variants: {
+		custom: {
+			root: (props: ButtonProps) => {
+				// Can use function rather than object to get access props and theme object.
+				// So we can custom style base on props
+				return {
+					background: "primary.base",
+				};
+			},
+		},
+	},
+	// Standard component support variant prop
+	// <Button sizeStyle="custom" />
+	sizes: {
+		custom: {
+			root: {
+				minHeight: "60px",
+			},
+		},
+	},
+	// Standard component support colorStyle prop
+	// <Button colorStyle="custom" />
+	colorStyles: {
+		custom: {
+			root: {
+				bg: "primary.base",
+			},
+		},
+	},
+	// Force the component following styles when theme.mode enabled.
+	modes: {
+		dark: {
+			styles: {},
+			colorStyles: {},
+			sizes: {},
+			variants: {},
+		},
+	},
+	// Remove default styling on the component
+	overrideClasses: {
+		// Remove default root styling
+		root: true,
+		// Replace default styling with class
+		content: "morning",
+	},
+	// Replace default styling on the component
+	overrides: {
+		// Replace default root styling following styles.
+		root: {
+			background: "blue",
+		},
+	},
+};
+
+
+```
+
+

@@ -1,0 +1,103 @@
+---
+title: Checkbox
+path: Checkbox
+---
+
+# Checkbox
+
+```jsx
+import Checkbox from "@poodle/ui/Checkbox";
+```
+
+`Checkbox` is a component allow the user to select a value from a list of options.
+
+## Simple
+
+Each checkbox must have a label for accessibility. We can hide the displayed label by using prop `isLabelHidden={true}`
+
+```jsx-live
+  <Box>
+    <Box>
+      <Checkbox isLabelHidden={true} label="Hidden label"  defaultChecked={true} />
+    </Box>
+    <Box mt="scale-2">
+      <Checkbox defaultChecked={true} label="With Label" />
+    </Box>
+    <Box mt="scale-2">
+      <Checkbox defaultChecked={true} isIndeterminate={true} label="Indeterminate Checkbox" />
+    </Box>
+  </Box>
+```
+
+## Sizes
+
+Change Checkbox size via prop `sizeStyle`.
+
+Default Checkbox sizes are `s`, `m`, `l`. If you do not set size, the Checkbox will use the size `m` as default.
+
+```jsx-live
+  <Box>
+    <Box mt="scale-2">
+      <Checkbox label="Small" defaultChecked={true} sizeStyle="s" />
+    </Box>
+    <Box mt="scale-2">
+      <Checkbox label="Medium" defaultChecked={true} sizeStyle="m" />
+    </Box>
+    <Box mt="scale-2">
+      <Checkbox label="Large" defaultChecked={true} sizeStyle="l" />
+    </Box>
+  </Box>
+```
+
+## Theming
+
+[//]: # (GetTheming[==CheckboxStyleKeys,CheckboxThemeConfig,Checkbox/index.ts==])
+
+
+
+Please check theming component document [here](/theming/component).
+ 		
+```ts
+export type CheckboxStyleKeys = "root" | "control" | "input" | "icon" | "label"
+
+export interface CheckboxThemeConfig
+  extends StandardThemeConfig<CheckboxStyleKeys, CheckboxProps> {}
+
+``` 
+		
+		
+
+[//]: # (EndGetTheming)
+
+[//]: # (GetProps[==LocalCheckboxProps,Checkbox/Checkbox.tsx==])
+
+
+### Local Props
+
+
+| Name            | Type      | Description                                                                                             |
+| --------------- | --------- | ------------------------------------------------------------------------------------------------------- |
+| **label \* **   | `string`  | Label of the checkbox.                                                                                  |
+| defaultChecked  | `boolean` | Change checkbox default checked.<br />Will override input props `defaultChecked`.                       |
+| isChecked       | `boolean` | Change checkbox to checked state when set to **true**.<br />Will override input props `checked`.        |
+| isDisabled      | `boolean` | Change checkbox icon to disabled state when set to **true**.<br />Will override input props `disabled`. |
+| isIndeterminate | `boolean` | Change checkbox icon to indeterminate checkbox when set to **true**.                                    |
+| isLabelHidden   | `boolean` | Hide label when set to **true**                                                                         |
+				
+
+[//]: # (EndGetProps)
+
+[//]: # (GetPartialProps[==CheckboxProps,Checkbox/Checkbox.tsx==])
+
+
+### Full Props
+
+```ts
+export interface CheckboxProps
+	extends Omit<CheckControlProps, "checkLabel" | "checkType" | "label">,
+		StandardComponentProps,
+		LocalCheckboxProps {} 
+```
+				
+
+[//]: # (GetPartialProps)

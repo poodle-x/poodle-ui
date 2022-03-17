@@ -1,0 +1,72 @@
+---
+title: Box
+path: box
+---
+
+# Box
+
+`<Box />` is the core component of the UI. All the components build based on `<Box />` component.
+
+## Utility first
+
+`<Box />` can help quickly build the UI without needed touch additional files for styles.
+
+For the full list support please check the `system` [document](/system/config/spacing).
+
+Other props will send directly to the element like `id`, `onClick`...
+
+```jsx-live
+
+<Box display="flex" alignItems="center">
+	<Box id="a" color="primary.textOnBase" bg="primary.base" px="10px" py="20px">
+		Hello
+	</Box>
+	<Box ml="scale-2" color="primary.textOnBase" bg="primary.base" px="10px" py="20px">
+		World!
+	</Box>
+</Box>
+
+```
+
+## Responsive
+
+Support responsive (min-width strategy).
+
+- sm: **576px**
+- md: **768px**
+- lg: **992px**
+- xl: **1200px**
+- xxl: **1400px**
+
+You can change the default responsive breakpoints. Check the `system` [document](/system/getting-started/responsive-styles).
+
+```jsx-live
+
+<Box
+	pt="10px"
+	py="20px"
+	color={{ _: "red", md: "purple" }}
+>
+	Text is red when screen size is less than 1024px
+</Box>
+
+```
+
+## Render as
+
+By default the `<Box />` component renders a div element.
+
+We can change the element tag by using `as` props.
+
+Also, the component can render as a React Component. It will send `className` props to the component.
+
+```jsx-live
+
+<Box
+	fontWeight="bold"
+	as="h2"
+>
+	I'm a heading element
+</Box>
+
+```

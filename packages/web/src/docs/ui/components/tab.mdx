@@ -1,0 +1,60 @@
+---
+title: Tab
+---
+
+# Tab
+
+```tsx
+import Tab from "@poodle/ui/Tab";
+```
+
+Please check tabs [document](/ui/components/tabs) to see the example usage.
+
+## Theming
+
+[//]: # (GetTheming[==TabThemeStyles,TabThemeConfig,Tab/index.ts==])
+
+
+
+Please check theming component document [here](/theming/component).
+ 		
+```ts
+export interface TabThemeConfig
+  extends StandardThemeConfig<TabStyleKeys, TabProps> {}
+
+``` 
+		
+		
+
+[//]: # (EndGetTheming)
+
+## Props
+
+[//]: # (GetProps[==LocalTabProps,Tab/Tab.tsx==])
+
+
+### Local Props
+
+
+| Name          | Type               | Description |
+| ------------- | ------------------ | ----------- |
+| **value \* ** | `string \| number` |             |
+| children      | `React.ReactNode`  |             |
+				
+
+[//]: # (EndGetProps)
+
+[//]: # (GetPartialProps[==TabProps,Tab/Tab.tsx==])
+
+
+### Full Props
+
+```ts
+export interface TabProps
+	extends Omit<BoxProps, "value">,
+		StandardComponentProps,
+		LocalTabProps {} 
+```
+				
+
+[//]: # (GetPartialProps)

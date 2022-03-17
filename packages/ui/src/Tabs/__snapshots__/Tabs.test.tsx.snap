@@ -1,0 +1,187 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Tabs /> ref should work 1`] = `
+.c0 {
+  box-sizing: border-box;
+}
+
+.c1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+<div
+  class="poodle-box c0 poodle-tabs c1 c2"
+>
+  Tabs
+</div>
+`;
+
+exports[`<Tabs /> should render Box props correctly 1`] = `
+.c0 {
+  box-sizing: border-box;
+}
+
+.c1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+.c2 {
+  margin-top: 20px;
+}
+
+<div
+  class="poodle-box c0 poodle-tabs c1 c2"
+  id="id"
+>
+  Tabs
+</div>
+`;
+
+exports[`<Tabs /> should render Tabs correctly 1`] = `
+.c0 {
+  box-sizing: border-box;
+}
+
+.c1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+<div
+  class="poodle-box c0 poodle-tabs c1 c2"
+>
+  Tabs
+</div>
+`;
+
+exports[`<Tabs /> theming should disable classes 1`] = `
+.c0 {
+  box-sizing: border-box;
+}
+
+<div
+  class="poodle-box c0 poodle-tabs c1"
+>
+  Tabs
+</div>
+`;
+
+exports[`<Tabs /> theming should extend styles in global 1`] = `
+.c0 {
+  box-sizing: border-box;
+}
+
+.c1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  margin-top: 10px;
+  letter-spacing: 250px;
+  top: 0;
+  text-indent: 1px;
+}
+
+<div
+  class="poodle-box c0 poodle-tabs c1 c2"
+>
+  Tabs
+</div>
+`;
+
+exports[`<Tabs /> theming should extend styles in local 1`] = `
+.c0 {
+  box-sizing: border-box;
+}
+
+.c1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  margin-top: 10px;
+  letter-spacing: 250px;
+  top: 0;
+  text-indent: 1px;
+}
+
+<div
+  class="poodle-box c0 poodle-tabs c1 c2"
+>
+  Tabs
+</div>
+`;
+
+exports[`<Tabs /> theming should override classes 1`] = `
+.c0 {
+  box-sizing: border-box;
+}
+
+<div
+  class="poodle-box c0 poodle-tabs morning c1"
+>
+  Tabs
+</div>
+`;
+
+exports[`<Tabs /> theming should override styles 1`] = `
+.c0 {
+  box-sizing: border-box;
+}
+
+.c1 {
+  margin-top: 50px;
+}
+
+<div
+  class="poodle-box c0 poodle-tabs c1 c2"
+>
+  Tabs
+</div>
+`;
+
+exports[`<Tabs /> theming should render with default props correctly 1`] = `
+.c0 {
+  box-sizing: border-box;
+}
+
+.c1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+<div
+  class="poodle-box c0 poodle-tabs c1 hello c2"
+  id="id"
+>
+  Tabs
+</div>
+`;

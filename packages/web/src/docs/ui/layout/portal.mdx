@@ -1,0 +1,64 @@
+---
+title: Portal
+path: portal
+---
+
+# Portal
+
+```jsx
+import Portal from "@poodle/ui/Portal";
+```
+
+The `<Portal />` component help render children into a DOM node that exists outside the current DOM hierarchy
+of the parent component.
+
+The component uses `ReactDOM.createPortal` API to do that.
+
+It's helpful to create a custom popup, modal...
+
+## Mount
+
+If you are using `ThemeProvider` then `ThemeProvider` will create a default portal in the document tree
+(a div with an attribute `data-portal="poodle-ui"`).
+It's recommend this way because everytime you create and destroy an element in document body will force the browser repaint.
+
+If you are not using `ThemeProvider`, a portal container div element with attribute `data-portal="poodle-ui"`
+will be appended to the body when mount and destroyed when unmount. You can change the element tag using
+prop `portalElementTag` and change attribute `data-portal` to another name by using `portalDataName` prop.
+
+If you want the children mount to another element you can change it by using `mountOn` prop.
+
+```jsx-live
+() => {
+	const [open, setOpen] = React.useState(false);
+	return (
+		<div>
+			<Button onClick={() => {setOpen(true)}}>Mount portal</Button>
+			<Portal mount={open}>
+				<Box zIndex={99999} bg="#cccc" maxWidth="500px" position="fixed" top="50px" left="50vw">
+					<Button onClick={() => {setOpen(false)}}>Unmount portal</Button>
+				</Box>
+			</Portal>
+		</div>
+	);
+};
+```
+
+## Props
+
+[//]: # (GetProps[==PortalProps,Portal/Portal.tsx==])
+
+
+### Local Props
+
+
+| Name             | Type              | Description                                                             |
+| ---------------- | ----------------- | ----------------------------------------------------------------------- |
+| **children \* ** | `React.ReactNode` |                                                                         |
+| mount            | `boolean`         | Mount the children to the target when equal true                        |
+| mountOn          | `HTMLElement`     | Mount the children to the custom target rather than append to the body. |
+| portalDataName   | `string`          | Change portal name in container **data-portal** attribute               |
+| portalElementTag | `string`          | Chang container tag                                                     |
+				
+
+[//]: # (EndGetProps)

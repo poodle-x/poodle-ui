@@ -1,0 +1,193 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<VisuallyHidden /> ref should work 1`] = `
+.c0 {
+  box-sizing: border-box;
+}
+
+.c1 {
+  clip: rect(0 0 0 0);
+  -webkit-clip-path: inset(50%);
+  clip-path: inset(50%);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}
+
+<div
+  class="poodle-box c0 poodle-visually-hidden c1 c2"
+>
+  VisuallyHidden
+</div>
+`;
+
+exports[`<VisuallyHidden /> should render Box props correctly 1`] = `
+.c0 {
+  box-sizing: border-box;
+}
+
+.c1 {
+  clip: rect(0 0 0 0);
+  -webkit-clip-path: inset(50%);
+  clip-path: inset(50%);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}
+
+.c2 {
+  margin-top: 20px;
+}
+
+<p
+  class="poodle-box c0 poodle-visually-hidden c1 c2"
+  id="id"
+>
+  VisuallyHidden
+</p>
+`;
+
+exports[`<VisuallyHidden /> should render VisuallyHidden correctly 1`] = `
+.c0 {
+  box-sizing: border-box;
+}
+
+.c1 {
+  clip: rect(0 0 0 0);
+  -webkit-clip-path: inset(50%);
+  clip-path: inset(50%);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}
+
+<div
+  class="poodle-box c0 poodle-visually-hidden c1 c2"
+>
+  VisuallyHidden
+</div>
+`;
+
+exports[`<VisuallyHidden /> theming should disable classes 1`] = `
+.c0 {
+  box-sizing: border-box;
+}
+
+<div
+  class="poodle-box c0 poodle-visually-hidden c1"
+>
+  VisuallyHidden
+</div>
+`;
+
+exports[`<VisuallyHidden /> theming should extend styles in global 1`] = `
+.c0 {
+  box-sizing: border-box;
+}
+
+.c1 {
+  clip: rect(0 0 0 0);
+  -webkit-clip-path: inset(50%);
+  clip-path: inset(50%);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+  margin-top: 10px;
+  letter-spacing: 250px;
+  top: 0;
+  text-indent: 1px;
+}
+
+<div
+  class="poodle-box c0 poodle-visually-hidden c1 c2"
+>
+  VisuallyHidden
+</div>
+`;
+
+exports[`<VisuallyHidden /> theming should extend styles in local 1`] = `
+.c0 {
+  box-sizing: border-box;
+}
+
+.c1 {
+  clip: rect(0 0 0 0);
+  -webkit-clip-path: inset(50%);
+  clip-path: inset(50%);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+  margin-top: 10px;
+  letter-spacing: 250px;
+  top: 0;
+  text-indent: 1px;
+}
+
+<div
+  class="poodle-box c0 poodle-visually-hidden c1 c2"
+>
+  VisuallyHidden
+</div>
+`;
+
+exports[`<VisuallyHidden /> theming should override classes 1`] = `
+.c0 {
+  box-sizing: border-box;
+}
+
+<div
+  class="poodle-box c0 poodle-visually-hidden morning c1"
+>
+  VisuallyHidden
+</div>
+`;
+
+exports[`<VisuallyHidden /> theming should override styles 1`] = `
+.c0 {
+  box-sizing: border-box;
+}
+
+.c1 {
+  margin-top: 50px;
+}
+
+<div
+  class="poodle-box c0 poodle-visually-hidden c1 c2"
+>
+  VisuallyHidden
+</div>
+`;
+
+exports[`<VisuallyHidden /> theming should render with default props correctly 1`] = `
+.c0 {
+  box-sizing: border-box;
+}
+
+.c1 {
+  clip: rect(0 0 0 0);
+  -webkit-clip-path: inset(50%);
+  clip-path: inset(50%);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}
+
+<div
+  class="poodle-box c0 poodle-visually-hidden c1 hello c2"
+  id="id"
+>
+  VisuallyHidden
+</div>
+`;

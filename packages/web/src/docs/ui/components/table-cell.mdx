@@ -1,0 +1,62 @@
+---
+title: TableCell
+path: table-cell
+---
+
+# TableCell
+
+```jsx
+import TableCell from "@poodle/ui/TableCell";
+```
+
+Please check table [document](/ui/components/table) to see the example usage.
+
+## Theming
+
+[//]: # (GetTheming[==TableCellStyleKeys,TableCellThemeConfig,TableCell/index.ts==])
+
+
+
+Please check theming component document [here](/theming/component).
+ 		
+```ts
+export type TableCellStyleKeys = "root"
+
+export interface TableCellThemeConfig
+  extends StandardThemeConfig<TableCellStyleKeys, TableCellProps> {}
+
+``` 
+		
+		
+
+[//]: # (EndGetTheming)
+
+## Props
+
+[//]: # (GetProps[==LocalTableCellProps,TableCell/TableCell.tsx==])
+
+
+### Local Props
+
+
+| Name     | Type              | Description |
+| -------- | ----------------- | ----------- |
+| children | `React.ReactNode` |             |
+				
+
+[//]: # (EndGetProps)
+
+[//]: # (GetPartialProps[==TableCellProps,TableCell/TableCell.tsx==])
+
+
+### Full Props
+
+```ts
+export interface TableCellProps
+	extends BoxProps,
+		StandardComponentProps,
+		LocalTableCellProps {} 
+```
+				
+
+[//]: # (GetPartialProps)

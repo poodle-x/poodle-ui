@@ -1,0 +1,60 @@
+---
+title: Modal Footer
+path: modal-footer
+---
+
+# ModalFooter
+
+```jsx
+import ModalFooter from "@poodle/ui/ModalFooter";
+```
+
+Please check modal [document](/ui/components/modal) to see the example usage.
+
+## Theming
+
+[//]: # (GetTheming[==ModalFooterThemeStyles,ModalFooterThemeConfig,ModalFooter/index.ts==])
+
+
+
+Please check theming component document [here](/theming/component).
+ 		
+```ts
+export interface ModalFooterThemeConfig
+  extends StandardThemeConfig<ModalFooterStyleKeys, ModalFooterProps> {}
+
+``` 
+		
+		
+
+[//]: # (EndGetTheming)
+
+## Props
+
+[//]: # (GetProps[==LocalModalFooterProps,ModalFooter/ModalFooter.tsx==])
+
+
+### Local Props
+
+
+| Name     | Type              | Description |
+| -------- | ----------------- | ----------- |
+| children | `React.ReactNode` |             |
+				
+
+[//]: # (EndGetProps)
+
+[//]: # (GetPartialProps[==ModalFooterProps,ModalFooter/ModalFooter.tsx==])
+
+
+### Full Props
+
+```ts
+export interface ModalFooterProps
+	extends BoxProps,
+		StandardComponentProps,
+		LocalModalFooterProps {} 
+```
+				
+
+[//]: # (GetPartialProps)

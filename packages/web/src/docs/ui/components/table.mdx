@@ -1,0 +1,247 @@
+---
+title: Table
+path: table
+---
+
+# Table
+
+```jsx
+import Table from "@poodle/ui/Table";
+```
+
+`Table` is a simple table component to display tabular data.
+
+Please use `Table` component with other table components set to maximize the theming and efficiency.
+
+- [TableHead](/ui/components/table-head)
+- [TableRow](/ui/components/table-row)
+- [TableBody](/ui/components/table-body)
+- [TableCell](/ui/components/table-cell)
+
+## Simple
+
+```jsx-live
+<Table>
+    <TableHead>
+      <TableRow>
+        <TableCell>ID</TableCell>
+        <TableCell>Email</TableCell>
+        <TableCell>Name</TableCell>
+      </TableRow>
+    </TableHead>
+    <TableBody>
+      <TableRow>
+        <TableCell>200</TableCell>
+        <TableCell>joe@example.com</TableCell>
+        <TableCell>Joe Kir</TableCell>
+      </TableRow>
+       <TableRow>
+       	<TableCell>201</TableCell>
+        <TableCell>lary@example.com</TableCell>
+        <TableCell>Lary Hitu</TableCell>
+      </TableRow>
+      <TableRow>
+       	<TableCell>202</TableCell>
+        <TableCell>muni@example.com</TableCell>
+        <TableCell>Munica Roll</TableCell>
+      </TableRow>
+    </TableBody>
+  </Table>
+
+```
+
+## Border
+
+We can set table outer border with prop `withBorder={true}`.
+
+```jsx-live
+<Table withBorder={true}>
+    <TableHead>
+      <TableRow>
+        <TableCell>ID</TableCell>
+        <TableCell>Email</TableCell>
+        <TableCell>Name</TableCell>
+      </TableRow>
+    </TableHead>
+    <TableBody>
+      <TableRow>
+        <TableCell>200</TableCell>
+        <TableCell>joe@example.com</TableCell>
+        <TableCell>Joe Kir</TableCell>
+      </TableRow>
+       <TableRow>
+       	<TableCell>201</TableCell>
+        <TableCell>lary@example.com</TableCell>
+        <TableCell>Lary Hitu</TableCell>
+      </TableRow>
+      <TableRow>
+       	<TableCell>202</TableCell>
+        <TableCell>muni@example.com</TableCell>
+        <TableCell>Munica Roll</TableCell>
+      </TableRow>
+    </TableBody>
+  </Table>
+
+```
+
+## Row divider and hoverable
+
+We can add row divider with prop `withDivider={true}`. Also, we can add background
+color when the user hover on the row with props `withHover={true}`.
+
+```jsx-live
+<Table withDivider={true} withHover={true}>
+    <TableHead>
+      <TableRow>
+        <TableCell>ID</TableCell>
+        <TableCell>Email</TableCell>
+        <TableCell>Name</TableCell>
+      </TableRow>
+    </TableHead>
+    <TableBody>
+      <TableRow>
+        <TableCell>200</TableCell>
+        <TableCell>joe@example.com</TableCell>
+        <TableCell>Joe Kir</TableCell>
+      </TableRow>
+       <TableRow>
+       	<TableCell>201</TableCell>
+        <TableCell>lary@example.com</TableCell>
+        <TableCell>Lary Hitu</TableCell>
+      </TableRow>
+      <TableRow>
+       	<TableCell>202</TableCell>
+        <TableCell>muni@example.com</TableCell>
+        <TableCell>Munica Roll</TableCell>
+      </TableRow>
+    </TableBody>
+  </Table>
+
+```
+
+## Row selected
+
+We can add mark a row is selected by add props `isSelected={true}` to `<TableRow />` component.
+
+The component with prop`isSelected={true}` will add attribute `data-selected="true"` to `tr` element.
+
+
+```jsx-live
+<Table withDivider={true} withHover={true}>
+    <TableHead>
+      <TableRow>
+        <TableCell>ID</TableCell>
+        <TableCell>Email</TableCell>
+        <TableCell>Name</TableCell>
+      </TableRow>
+    </TableHead>
+    <TableBody>
+      <TableRow>
+        <TableCell>200</TableCell>
+        <TableCell>joe@example.com</TableCell>
+        <TableCell>Joe Kir</TableCell>
+      </TableRow>
+       <TableRow isSelected={true}>
+       	<TableCell>201</TableCell>
+        <TableCell>lary@example.com</TableCell>
+        <TableCell>Lary Hitu</TableCell>
+      </TableRow>
+      <TableRow>
+       	<TableCell>202</TableCell>
+        <TableCell>muni@example.com</TableCell>
+        <TableCell>Munica Roll</TableCell>
+      </TableRow>
+    </TableBody>
+  </Table>
+
+```
+
+## Sizes
+
+Change table size via prop `sizeStyle`.
+
+Default table sizes are `s`, `m`, `l`. If you do not set size, the button will use the size `m` as default.
+
+```jsx-live
+<Table sizeStyle="s" withHover={true}>
+  <TableHead>
+    <TableRow>
+      <TableCell>ID</TableCell>
+      <TableCell>Email</TableCell>
+      <TableCell>Name</TableCell>
+    </TableRow>
+  </TableHead>
+  <TableBody>
+    <TableRow>
+      <TableCell>200</TableCell>
+      <TableCell>joe@example.com</TableCell>
+      <TableCell>Joe Kir</TableCell>
+    </TableRow>
+    <TableRow>
+      <TableCell>201</TableCell>
+      <TableCell>lary@example.com</TableCell>
+      <TableCell>Lary Hitu</TableCell>
+    </TableRow>
+    <TableRow>
+      <TableCell>202</TableCell>
+      <TableCell>muni@example.com</TableCell>
+      <TableCell>Munica Roll</TableCell>
+    </TableRow>
+  </TableBody>
+</Table>
+```
+
+## Theming
+
+[//]: # (GetTheming[==TableStyleKeys,TableThemeConfig,Table/index.ts==])
+
+
+
+Please check theming component document [here](/theming/component).
+ 		
+```ts
+export type TableStyleKeys = "root" | "table"
+
+export interface TableThemeConfig
+  extends StandardThemeConfig<TableStyleKeys, TableProps> {}
+
+``` 
+		
+		
+
+[//]: # (EndGetTheming)
+
+## Props
+
+[//]: # (GetProps[==LocalTableProps,Table/Table.tsx==])
+
+
+### Local Props
+
+
+| Name        | Type                          | Description                                                                                   |
+| ----------- | ----------------------------- | --------------------------------------------------------------------------------------------- |
+| children    | `React.ReactNode`             |                                                                                               |
+| sizeStyle   | `"s" \| "m" \| "l" \| string` | Change table size. Built-in options are **"s" \| "m" \| "l"**.<br /><br />Default is **"m"**. |
+| tableProps  | `BoxProps`                    | Customize inner table props.                                                                  |
+| withBorder  | `boolean`                     | Apply root border.                                                                            |
+| withDivider | `boolean`                     | Add divider for each row.                                                                     |
+| withHover   | `boolean`                     | Apply hover style on table row.                                                               |
+				
+
+[//]: # (EndGetProps)
+
+[//]: # (GetPartialProps[==TableProps,Table/Table.tsx==])
+
+
+### Full Props
+
+```ts
+export interface TableProps
+	extends BoxProps,
+		StandardComponentProps,
+		LocalTableProps {} 
+```
+				
+
+[//]: # (GetPartialProps)

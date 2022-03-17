@@ -1,0 +1,43 @@
+{
+	"name": "root",
+	"private": true,
+	"scripts": {
+		"lint": "lerna run lint",
+		"test": "lerna run test",
+		"test:ci": "lerna run test:ci",
+		"build": "lerna run build",
+		"prettier:check": "prettier -c \"./packages/**/*.{ts,tsx,css,json}\"",
+		"prettier:fix": "prettier --write \"./packages/**/*.{ts,tsx,css,json}\"",
+		"dev:web": "lerna run start --stream --scope=@poodle/ui-web",
+		"postinstall": "husky install"
+	},
+	"workspaces": {
+		"packages": [
+			"packages/*"
+		]
+	},
+	"devDependencies": {
+		"@typescript-eslint/eslint-plugin": "4.15.2",
+		"@typescript-eslint/parser": "4.15.2",
+		"babel-eslint": "10.1.0",
+		"concurrently": "^6.0.0",
+		"eslint": "^7.20.0",
+		"eslint-config-prettier": "^8.1.0",
+		"eslint-config-react-app": "^6.0.0",
+		"eslint-plugin-flowtype": "5.3.1",
+		"eslint-plugin-import": "2.x",
+		"eslint-plugin-jsx-a11y": "^6.2.3",
+		"eslint-plugin-react": "^7.20.0",
+		"eslint-plugin-react-hooks": "^4.2.0",
+		"husky": "^5.1.1",
+		"lerna": "^3.22.1",
+		"prettier": "^2.0.5",
+		"pretty-quick": "^3.1.0",
+		"stylelint": "^13.0.0",
+		"stylelint-config-standard": "^20.0.0",
+		"stylelint-prettier": "^1.1.2",
+		"typescript": "^4.0.3",
+		"zuzu": "^0.0.1-beta.9"
+	},
+	"dependencies": {}
+}

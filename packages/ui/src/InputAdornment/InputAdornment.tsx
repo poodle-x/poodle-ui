@@ -1,0 +1,65 @@
+import React from "react";
+import Box, { BoxProps } from "../Box";
+import { StandardComponentProps, ThemeConfig } from "../theme";
+import useDefaultProps from "../utils/useDefaultProps";
+import { useClassNames } from "../styled";
+import * as styles from "./styles";
+
+export interface LocalInputAdornmentProps {
+	children?: React.ReactNode;
+	/**
+	 * Change position styles when the adornment is the first item
+	 * at the begin or end.
+	 */
+	adornmentPosition?: "start" | "end";
+	/**
+	 * Change to icon styles when the adornment content is a icon.
+	 */
+	isIcon?: boolean;
+}
+
+export interface InputAdornmentProps
+	extends BoxProps,
+		StandardComponentProps,
+		LocalInputAdornmentProps {}
+
+function getDefaultProps(theme?: ThemeConfig) {
+	return theme?.InputAdornment?.defaultProps;
+}
+
+export const InputAdornment: React.ForwardRefExoticComponent<
+	React.PropsWithoutRef<InputAdornmentProps> & React.RefAttributes<HTMLElement>
+> = React.forwardRef<HTMLElement, InputAdornmentProps>((_props, ref) => {
+	const props = useDefaultProps<InputAdornmentProps>(_props, {
+		themeDefaultProps: getDefaultProps,
+	});
+
+	const {
+		children,
+		className,
+		adornmentPosition,
+		isIcon,
+		...otherProps
+	} = props;
+
+	const classes = useClassNames({
+		props,
+		lists: {
+			root: {
+				classNames: ["poodle-input-adornment", styles.Root, className],
+			},
+		},
+	});
+
+	return (
+		<Box {...otherProps} className={classes.root} ref={ref}>
+			{children}
+		</Box>
+	);
+});
+
+InputAdornment.defaultProps = {
+	adornmentPosition: "start",
+};
+
+InputAdornment.displayName = "PoodleInputAdornment";

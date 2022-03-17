@@ -1,0 +1,65 @@
+---
+title: Modal Header
+path: modal-header
+---
+
+# ModalHeader
+
+```jsx
+import ModalHeader from "@poodle/ui/ModalHeader";
+```
+
+Please check modal [document](/ui/components/modal) to see the example usage.
+
+## Theming
+
+[//]: # (GetTheming[==ModalHeaderThemeStyles,ModalHeaderThemeConfig,ModalHeader/index.ts==])
+
+
+
+Please check theming component document [here](/theming/component).
+ 		
+```ts
+export interface ModalHeaderThemeConfig
+  extends StandardThemeConfig<ModalHeaderStyleKeys, ModalHeaderProps> {}
+
+``` 
+		
+		
+
+[//]: # (EndGetTheming)
+
+## Props
+
+[//]: # (GetProps[==LocalModalHeaderProps,ModalHeader/ModalHeader.tsx==])
+
+
+### Local Props
+
+
+| Name         | Type              | Description                        |
+| ------------ | ----------------- | ---------------------------------- |
+| children     | `React.ReactNode` |                                    |
+| closeProps   | `BoxProps`        | Custom props for close icon button |
+| contentProps | `BoxProps`        | Custom props for content element   |
+| icon         | `React.ReactNode` | Add icon to the header             |
+| iconProps    | `BoxProps`        | Custom props for icon element      |
+| withClose    | `boolean`         | Add close icon button              |
+				
+
+[//]: # (EndGetProps)
+
+[//]: # (GetPartialProps[==ModalHeaderProps,ModalHeader/ModalHeader.tsx==])
+
+
+### Full Props
+
+```ts
+export interface ModalHeaderProps
+	extends BoxProps,
+		StandardComponentProps,
+		LocalModalHeaderProps {} 
+```
+				
+
+[//]: # (GetPartialProps)

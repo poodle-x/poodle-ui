@@ -1,0 +1,63 @@
+---
+title: Column
+path: column
+---
+
+# Column
+
+```jsx
+import Column from "@poodle/ui/Column";
+```
+
+Please check columns [document](/ui/layout/columns) to see the example usage.
+
+## Theming
+
+[//]: # (GetTheming[==ColumnStyleKeys,ColumnThemeConfig,Column/index.ts==])
+
+
+
+Please check theming component document [here](/theming/component).
+ 		
+```ts
+export type ColumnStyleKeys = "root"
+
+export interface ColumnThemeConfig
+  extends StandardThemeConfig<ColumnStyleKeys, ColumnProps> {}
+
+``` 
+		
+		
+
+[//]: # (EndGetTheming)
+
+## Props
+
+[//]: # (GetProps[==LocalColumnProps,Column/Column.tsx==])
+
+
+### Local Props
+
+
+| Name     | Type                               | Description                                                                             |
+| -------- | ---------------------------------- | --------------------------------------------------------------------------------------- |
+| children | `React.ReactNode`                  |                                                                                         |
+| colWidth | `ResponsiveProp<string \| number>` | Set column width. If we want the column width equal to content set `colWidth="content"` |
+				
+
+[//]: # (EndGetProps)
+
+[//]: # (GetPartialProps[==ColumnProps,Column/Column.tsx==])
+
+
+### Full Props
+
+```ts
+export interface ColumnProps
+	extends BoxProps,
+		StandardComponentProps,
+		LocalColumnProps {} 
+```
+				
+
+[//]: # (GetPartialProps)

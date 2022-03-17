@@ -1,0 +1,97 @@
+---
+title: Container
+path: container
+---
+
+# Container
+
+```jsx
+import Container from "@poodle/ui/Container";
+```
+
+Container is a simple layout to center and horizontally padding the content inside it.
+
+## Basic usage
+
+Use `fixed` prop to control container max width. It should work just like `maxWith` system props.
+
+However, `fixed` prop will get break point width first before spacing width.
+
+`gutter` props work the same with `px` system prop to horizontally padding the content.
+
+```jsx-live
+<Container fixed="sm" gutter="scale-4" bg="cadetblue">
+  <Box pt="scale-4" height="150px">Content</Box>
+</Container>
+```
+
+## Responsive
+
+`fixed` prop and `gutter` prop are support responsive values.
+
+```jsx-live
+<Container
+  fixed={{
+    sm: "200px",
+    md: "sm",
+  }}
+  gutter={["scale-1", "scale-4"]}
+  bg="cadetblue"
+>
+  <Box pt="scale-4" height="150px">
+    Content
+  </Box>
+</Container>
+```
+
+## Theming
+
+[//]: # (GetTheming[==ContainerStyleKeys,ContainerThemeConfig,Container/index.ts==])
+
+
+
+Please check theming component document [here](/theming/component).
+ 		
+```ts
+export type ContainerStyleKeys = "root"
+
+export interface ContainerThemeConfig
+  extends StandardThemeConfig<ContainerStyleKeys, ContainerProps> {}
+
+``` 
+		
+		
+
+[//]: # (EndGetTheming)
+
+## Props
+
+[//]: # (GetProps[==LocalContainerProps,Container/Container.tsx==])
+
+
+### Local Props
+
+
+| Name     | Type                               | Description                         |
+| -------- | ---------------------------------- | ----------------------------------- |
+| children | `React.ReactNode`                  |                                     |
+| fixed    | `ResponsiveProp<string \| number>` | Set the max-width of the container. |
+| gutter   | `ResponsiveProp<number \| string>` | Set padding left and padding right. |
+				
+
+[//]: # (EndGetProps)
+
+[//]: # (GetPartialProps[==ContainerProps,Container/Container.tsx==])
+
+
+### Full Props
+
+```ts
+export interface ContainerProps
+	extends BoxProps,
+		StandardComponentProps,
+		LocalContainerProps {} 
+```
+				
+
+[//]: # (GetPartialProps)

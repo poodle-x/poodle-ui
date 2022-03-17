@@ -1,0 +1,48 @@
+---
+title: Flex | System
+---
+
+# Borders
+
+```ts
+import { flexSystem } from "@poodle/system";
+```
+
+`flex` system support CSS Flexbox.
+
+```ts
+
+const listSystem = compose(flexSystem);
+
+export const system = createSystem(listSystem);
+
+const styles = system({
+	alignItems: "flex-start",
+	justifySelf: "center",
+});
+
+// Styles result
+//  { alignItems: "flex-start" },
+//  { justifySelf: "center" },
+```
+
+[//]: # (GetSystemProps[==FlexProps,flex.ts==])
+| Prop           | Type                                                         | Description                        |
+| -------------- | ------------------------------------------------------------ | ---------------------------------- |
+| alignContent   | `ResponsiveProp<CSS.Property.AlignContent>`                  | The CSS `align-content` property   |
+| alignItems     | `ResponsiveProp<CSS.Property.AlignItems>`                    | The CSS `align-items` property     |
+| alignSelf      | `ResponsiveProp<CSS.Property.AlignSelf>`                     | The CSS `align-self` property      |
+| flex           | `ResponsiveProp<CSS.Property.Flex>`                          | The CSS `flex` property            |
+| flexBasis      | `ResponsiveProp<CSS.Property.FlexBasis \| number \| string>` | The CSS `flex-basis` property      |
+| flexDir        | `ResponsiveProp<CSS.Property.FlexDirection>`                 | The CSS `flex-direction` property  |
+| flexDirection  | `ResponsiveProp<CSS.Property.FlexDirection>`                 | The CSS `flex-direction` property  |
+| flexGrow       | `ResponsiveProp<CSS.Property.FlexGrow>`                      | The CSS `flex-grow` property       |
+| flexShrink     | `ResponsiveProp<CSS.Property.FlexShrink>`                    | The CSS `flex-shrink` property     |
+| flexWrap       | `ResponsiveProp<CSS.Property.FlexWrap>`                      | The CSS `flex-wrap` property       |
+| justifyContent | `ResponsiveProp<CSS.Property.JustifyContent>`                | The CSS `justify-content` property |
+| justifyItems   | `ResponsiveProp<CSS.Property.JustifyItems>`                  | The CSS `justify-items` property   |
+| justifySelf    | `ResponsiveProp<CSS.Property.JustifySelf>`                   | The CSS `justify-self` property    |
+| order          | `ResponsiveProp<CSS.Property.Order>`                         | The CSS `order` property           |
+				
+
+[//]: # (EndGetSystemProps)

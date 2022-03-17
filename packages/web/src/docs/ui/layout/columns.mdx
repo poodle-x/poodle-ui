@@ -1,0 +1,173 @@
+---
+title: Columns
+path: columns
+---
+
+# Columns
+
+```jsx
+import Columns from "@poodle/ui/Columns";
+```
+
+The `Columns` component is a simple grid layout. It's aim for the easy to use and support responsive.
+
+The component should be used together with [`Column`  component](/ui/layout/column).
+
+## Basic usage
+
+Columns do not follow any grid system like 12 columns or 16 columns. Instead, you can add many columns you want,
+as long as there is enough space.
+
+Use `gutter` prop we can control space between columns. Also, they can accept responsive value.
+
+```jsx-live
+<Columns gutter="20px">
+  <Column>
+    <Box p="scale-2" height="150px" color="primary.textOnLight" bg="primary.light">
+      Content 1
+    </Box>
+  </Column>
+  <Column>
+    <Box p="scale-2" height="150px"  color="primary.textOnLight" bg="primary.light">
+      Content 2
+    </Box>
+  </Column>
+  <Column>
+    <Box p="scale-2" height="150px"  color="primary.textOnLight" bg="primary.light">
+      Content 3
+    </Box>
+  </Column>
+</Columns>
+```
+
+## Column width
+
+We can use `colWidth` prop in `Column` component to change the column width. They can accept responsive value too.
+
+```jsx-live
+<Columns gutter="20px">
+  <Column colWidth="150px">
+    <Box p="scale-2" height="150px" color="primary.textOnLight" bg="primary.light">
+      Content 1
+    </Box>
+  </Column>
+  <Column colWidth="25%">
+    <Box p="scale-2" height="150px"  color="primary.textOnLight" bg="primary.light">
+      Content 2
+    </Box>
+  </Column>
+  <Column>
+    <Box p="scale-2" height="150px"  color="primary.textOnLight" bg="primary.light">
+      Content 3
+    </Box>
+  </Column>
+</Columns>
+```
+
+## Wrap mode
+
+If we have too many columns with specific width, and the space is limited, the content will
+be overflow. We can use `wrapMode` props to force the columns wrap to another row.
+
+Use `wrapGutter` props to control horizontal spacing between columns.
+
+```jsx-live
+<Columns gutter="20px" wrapGutter="20px" wrapMode={true}>
+  <Column colWidth="50%">
+    <Box p="scale-2" height="150px" color="primary.textOnLight" bg="primary.light">
+      Content 1
+    </Box>
+  </Column>
+  <Column colWidth="50%">
+    <Box p="scale-2" height="150px"  color="primary.textOnLight" bg="primary.light">
+      Content 2
+    </Box>
+  </Column>
+  <Column colWidth="50%">
+    <Box p="scale-2" height="150px"  color="primary.textOnLight" bg="primary.light">
+      Content 3
+    </Box>
+  </Column>
+</Columns>
+```
+
+## Collapse
+
+Use prop `collapse` we can force the column collapse to a row in lower screen resolution.
+
+`collapse` use the breakpoint system, so make sure you add them and pass the correct breakpoint value.
+
+
+```jsx-live
+<Columns  wrapGutter="20px" gutter="20px" collapse="md">
+  <Column>
+    <Box p="scale-2" height="150px" color="primary.textOnLight" bg="primary.light">
+      Content 1
+    </Box>
+  </Column>
+  <Column>
+    <Box p="scale-2" height="150px"  color="primary.textOnLight" bg="primary.light">
+      Content 2
+    </Box>
+  </Column>
+  <Column>
+    <Box p="scale-2" height="150px"  color="primary.textOnLight" bg="primary.light">
+      Content 3
+    </Box>
+  </Column>
+</Columns>
+```
+
+## Theming
+
+[//]: # (GetTheming[==ColumnsStyleKeys,ColumnsThemeConfig,Columns/index.ts==])
+
+
+
+Please check theming component document [here](/theming/component).
+ 		
+```ts
+export type ColumnsStyleKeys = "root"
+
+export interface ColumnsThemeConfig
+  extends StandardThemeConfig<ColumnsStyleKeys, ColumnsProps> {}
+
+``` 
+		
+		
+
+[//]: # (EndGetTheming)
+
+## Props
+
+[//]: # (GetProps[==LocalColumnsProps,Columns/Columns.tsx==])
+
+
+### Local Props
+
+
+| Name       | Type                               | Description                                                                         |
+| ---------- | ---------------------------------- | ----------------------------------------------------------------------------------- |
+| children   | `React.ReactNode`                  |                                                                                     |
+| collapse   | `string`                           | Force columns wrap below breakpoint.                                                |
+| gutter     | `ResponsiveProp<number \| string>` | Gutter horizontal between each column when not collapsed                            |
+| wrapGutter | `ResponsiveProp<number \| string>` | Gutter vertical between each column when collapsed or between each row in wrap mode |
+| wrapMode   | `boolean`                          | Wrap overflows column                                                               |
+				
+
+[//]: # (EndGetProps)
+
+[//]: # (GetPartialProps[==ColumnsProps,Columns/Columns.tsx==])
+
+
+### Full Props
+
+```ts
+export interface ColumnsProps
+	extends BoxProps,
+		StandardComponentProps,
+		LocalColumnsProps {} 
+```
+				
+
+[//]: # (GetPartialProps)

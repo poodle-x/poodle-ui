@@ -1,0 +1,452 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Table /> ref should work 1`] = `
+.c0 {
+  box-sizing: border-box;
+}
+
+.c4 {
+  width: 100%;
+  border-spacing: 0;
+  border-collapse: collapse;
+  text-align: left;
+}
+
+<div
+  class="poodle-box c0 poodle-table c1 c2"
+>
+  <table
+    class="poodle-box c0 poodle-table__table c4 c2"
+  >
+    <tbody>
+      <tr>
+        <td>
+          Table
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+`;
+
+exports[`<Table /> should render Box props correctly 1`] = `
+.c0 {
+  box-sizing: border-box;
+}
+
+.c2 {
+  margin-top: 20px;
+}
+
+.c4 {
+  width: 100%;
+  border-spacing: 0;
+  border-collapse: collapse;
+  text-align: left;
+}
+
+.c5 {
+  padding: 50px;
+}
+
+<div
+  class="poodle-box c0 poodle-table c1 c2"
+  id="id"
+>
+  <table
+    class="poodle-box c0 poodle-table__table c4 c5"
+  >
+    <tbody>
+      <tr>
+        <td>
+          Table
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+`;
+
+exports[`<Table /> should render Table correctly 1`] = `
+.c0 {
+  box-sizing: border-box;
+}
+
+.c4 {
+  width: 100%;
+  border-spacing: 0;
+  border-collapse: collapse;
+  text-align: left;
+}
+
+<div
+  class="poodle-box c0 poodle-table c1 c2"
+>
+  <table
+    class="poodle-box c0 poodle-table__table c4 c2"
+  >
+    <tbody>
+      <tr>
+        <td>
+          Table
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+`;
+
+exports[`<Table /> should render table with withBorder, withDivider, withHover prop 1`] = `
+.c0 {
+  box-sizing: border-box;
+}
+
+.c1 {
+  border-radius: 4px;
+  border: 1px solid;
+  border-color: #CCCCCC;
+}
+
+.c1 tr:last-child>td {
+  border-bottom: 0;
+}
+
+.c1 tbody>tr:hover {
+  background: #E0E0E0;
+  color: #282828;
+}
+
+.c1 tbody>tr[data-selected='true'] {
+  background: #D1EBFF;
+  color: #00478A;
+}
+
+.c4 {
+  width: 100%;
+  border-spacing: 0;
+  border-collapse: collapse;
+  text-align: left;
+}
+
+<div
+  class="poodle-box c0 poodle-table c1 c2"
+>
+  <table
+    class="poodle-box c0 poodle-table__table c4 c2"
+  >
+    <tbody>
+      <tr>
+        <td>
+          Table
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+`;
+
+exports[`<Table /> should send context with withBorder, withDivider, withHover prop 1`] = `
+.c0 {
+  box-sizing: border-box;
+}
+
+.c1 {
+  border-radius: 4px;
+  border: 1px solid;
+  border-color: #CCCCCC;
+}
+
+.c1 tr:last-child>td {
+  border-bottom: 0;
+}
+
+.c1 tbody>tr:hover {
+  background: #E0E0E0;
+  color: #282828;
+}
+
+.c1 tbody>tr[data-selected='true'] {
+  background: #D1EBFF;
+  color: #00478A;
+}
+
+.c4 {
+  width: 100%;
+  border-spacing: 0;
+  border-collapse: collapse;
+  text-align: left;
+}
+
+<div
+  class="poodle-box c0 poodle-table c1 c2"
+>
+  <table
+    class="poodle-box c0 poodle-table__table c4 c2"
+  >
+    <tbody>
+      <tr>
+        <td>
+          <div>
+            {"sizeStyle":"m","withBorder":true,"withDivider":true,"withHover":true}
+          </div>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+`;
+
+exports[`<Table /> theming should disable classes 1`] = `
+.c0 {
+  box-sizing: border-box;
+}
+
+<div
+  class="poodle-box c0 poodle-table c1"
+>
+  <table
+    class="poodle-box c0 poodle-table__table c1"
+  >
+    <tbody>
+      <tr>
+        <td>
+          Table
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+`;
+
+exports[`<Table /> theming should extend size styles 1`] = `
+.c0 {
+  box-sizing: border-box;
+}
+
+.c1 {
+  height: 100px;
+}
+
+.c4 {
+  width: 100%;
+  border-spacing: 0;
+  border-collapse: collapse;
+  text-align: left;
+  height: 200px;
+}
+
+<div
+  class="poodle-box c0 poodle-table c1 c2"
+>
+  <table
+    class="poodle-box c0 poodle-table__table c4 c2"
+  >
+    <tbody>
+      <tr>
+        <td>
+          Table
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+`;
+
+exports[`<Table /> theming should extend size styles with mode 1`] = `
+.c0 {
+  box-sizing: border-box;
+}
+
+.c1 {
+  height: 100px;
+  height: 110px;
+}
+
+.c4 {
+  width: 100%;
+  border-spacing: 0;
+  border-collapse: collapse;
+  text-align: left;
+  height: 200px;
+  height: 210px;
+}
+
+<div
+  class="poodle-box c0 poodle-table c1 c2"
+>
+  <table
+    class="poodle-box c0 poodle-table__table c4 c2"
+  >
+    <tbody>
+      <tr>
+        <td>
+          Table
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+`;
+
+exports[`<Table /> theming should extend styles in global 1`] = `
+.c0 {
+  box-sizing: border-box;
+}
+
+.c1 {
+  margin-top: 10px;
+  letter-spacing: 250px;
+  top: 0;
+  text-indent: 1px;
+}
+
+.c4 {
+  width: 100%;
+  border-spacing: 0;
+  border-collapse: collapse;
+  text-align: left;
+  padding: 10px;
+  letter-spacing: 350px;
+  top: 1px;
+  text-indent: 2px;
+}
+
+<div
+  class="poodle-box c0 poodle-table c1 c2"
+>
+  <table
+    class="poodle-box c0 poodle-table__table c4 c2"
+  >
+    <tbody>
+      <tr>
+        <td>
+          Table
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+`;
+
+exports[`<Table /> theming should extend styles in local 1`] = `
+.c0 {
+  box-sizing: border-box;
+}
+
+.c1 {
+  margin-top: 10px;
+  letter-spacing: 250px;
+  top: 0;
+  text-indent: 1px;
+}
+
+.c4 {
+  width: 100%;
+  border-spacing: 0;
+  border-collapse: collapse;
+  text-align: left;
+  padding: 10px;
+  letter-spacing: 350px;
+  top: 1px;
+  text-indent: 2px;
+}
+
+<div
+  class="poodle-box c0 poodle-table c1 c2"
+>
+  <table
+    class="poodle-box c0 poodle-table__table c4 c2"
+  >
+    <tbody>
+      <tr>
+        <td>
+          Table
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+`;
+
+exports[`<Table /> theming should override classes 1`] = `
+.c0 {
+  box-sizing: border-box;
+}
+
+<div
+  class="poodle-box c0 poodle-table morning c1"
+>
+  <table
+    class="poodle-box c0 poodle-table__table yeah c1"
+  >
+    <tbody>
+      <tr>
+        <td>
+          Table
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+`;
+
+exports[`<Table /> theming should override styles 1`] = `
+.c0 {
+  box-sizing: border-box;
+}
+
+.c1 {
+  margin-top: 50px;
+}
+
+.c4 {
+  padding: 20px;
+}
+
+<div
+  class="poodle-box c0 poodle-table c1 c2"
+>
+  <table
+    class="poodle-box c0 poodle-table__table c4 c2"
+  >
+    <tbody>
+      <tr>
+        <td>
+          Table
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+`;
+
+exports[`<Table /> theming should render with default props correctly 1`] = `
+.c0 {
+  box-sizing: border-box;
+}
+
+.c4 {
+  width: 100%;
+  border-spacing: 0;
+  border-collapse: collapse;
+  text-align: left;
+}
+
+<div
+  class="poodle-box c0 poodle-table c1 hello c2"
+  id="id"
+>
+  <table
+    aria-disabled="true"
+    class="poodle-box c0 poodle-table__table c4 c2"
+  >
+    <tbody>
+      <tr>
+        <td>
+          Table
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+`;

@@ -1,0 +1,31 @@
+{
+	"name": "@poodle/system",
+	"version": "0.1.0-alpha.4",
+	"author": "Giang Nguyen <giang.nguyen.dev@gmail.com>",
+	"license": "MIT",
+	"main": "lib/index.js",
+	"module": "mjs/index.js",
+	"files": [
+		"lib",
+		"mjs"
+	],
+	"scripts": {
+		"clean": "node scriptsBuild/cleanBuild.js",
+		"lint": "eslint src --ext .ts,.tsx",
+		"build": "yarn run scripts:compile && yarn run clean && yarn run build:compile",
+		"build:compile": "tsc -d && tsc -d --project tsconfig.mjs.json",
+		"build:watch": "tsc -d -w",
+		"test": "jest",
+		"test:ci": "CI=true jest --coverage",
+		"dev:watch": "yarn run build && concurrently \"yarn run build:watch\"",
+		"scripts:watch": "tsc -w --p tsconfig.scripts.json",
+		"scripts:compile": "tsc -d --p tsconfig.scripts.json"
+	},
+	"dependencies": {
+		"csstype": "^3.0.3",
+		"polished": "^4.0.3"
+	},
+	"publishConfig": {
+		"access": "public"
+	}
+}

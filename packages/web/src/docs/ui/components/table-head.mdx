@@ -1,0 +1,62 @@
+---
+title: Table
+path: table-head
+---
+
+# TableHead
+
+```jsx
+import TableHead from "@poodle/ui/TableHead";
+```
+
+Please check table [document](/ui/components/table) to see the example usage.
+
+## Theming
+
+[//]: # (GetTheming[==TableHeadStyleKeys,TableHeadThemeConfig,TableHead/index.ts==])
+
+
+
+Please check theming component document [here](/theming/component).
+ 		
+```ts
+export type TableHeadStyleKeys = "root"
+
+export interface TableHeadThemeConfig
+  extends StandardThemeConfig<TableHeadStyleKeys, TableHeadProps> {}
+
+``` 
+		
+		
+
+[//]: # (EndGetTheming)
+
+## Props
+
+[//]: # (GetProps[==LocalTableHeadProps,TableHead/TableHead.tsx==])
+
+
+### Local Props
+
+
+| Name     | Type              | Description |
+| -------- | ----------------- | ----------- |
+| children | `React.ReactNode` |             |
+				
+
+[//]: # (EndGetProps)
+
+[//]: # (GetPartialProps[==TableHeadProps,TableHead/TableHead.tsx==])
+
+
+### Full Props
+
+```ts
+export interface TableHeadProps
+	extends BoxProps,
+		StandardComponentProps,
+		LocalTableHeadProps {} 
+```
+				
+
+[//]: # (GetPartialProps)

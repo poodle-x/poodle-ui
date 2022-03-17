@@ -1,0 +1,60 @@
+---
+title: Modal Body
+path: modal-body
+---
+
+# ModalBody
+
+```jsx
+import ModalBody from "@poodle/ui/ModalBody";
+```
+
+Please check modal [document](/ui/components/modal) to see the example usage.
+
+## Theming
+
+[//]: # (GetTheming[==ModalBodyThemeStyles,ModalBodyThemeConfig,ModalBody/index.ts==])
+
+
+
+Please check theming component document [here](/theming/component).
+ 		
+```ts
+export interface ModalBodyThemeConfig
+  extends StandardThemeConfig<ModalBodyStyleKeys, ModalBodyProps> {}
+
+``` 
+		
+		
+
+[//]: # (EndGetTheming)
+
+## Props
+
+[//]: # (GetProps[==LocalModalBodyProps,ModalBody/ModalBody.tsx==])
+
+
+### Local Props
+
+
+| Name     | Type              | Description |
+| -------- | ----------------- | ----------- |
+| children | `React.ReactNode` |             |
+				
+
+[//]: # (EndGetProps)
+
+[//]: # (GetPartialProps[==ModalBodyProps,ModalBody/ModalBody.tsx==])
+
+
+### Full Props
+
+```ts
+export interface ModalBodyProps
+	extends BoxProps,
+		StandardComponentProps,
+		LocalModalBodyProps {} 
+```
+				
+
+[//]: # (GetPartialProps)

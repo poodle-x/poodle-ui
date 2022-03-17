@@ -1,0 +1,75 @@
+---
+title: Layout | System
+---
+
+# Pseudos
+
+```ts
+import { pseudosSystem } from "@poodle/system";
+```
+
+```ts
+const theme: SystemThemeConfig = {
+	// ....
+};
+
+const listSystem = compose(pseudosSystem, ...);
+
+export const system = createSystem(listSystem);
+
+const styles = system({
+	theme,
+	_hover: {
+		mt: "10px",
+		color: "primary"
+	},
+});
+
+// Styles result
+//  { "&:hover": {marginTop: "10px", color: "cyan"} },
+```
+
+[//]: # (GetSystemProps[==PseudosProps,pseudos.ts==])
+| Prop              | Type | Description                          |
+| ----------------- | ---- | ------------------------------------ |
+| _active           | `T`  | CSS pseudo-class :active             |
+| _after            | `T`  | CSS pseudo-element :after            |
+| _backdrop         | `T`  | CSS pseudo-element ::backdrop        |
+| _before           | `T`  | CSS pseudo-element ::before          |
+| _checked          | `T`  | CSS pseudo-class :checked            |
+| _default          | `T`  | CSS pseudo-class :default            |
+| _defined          | `T`  | CSS pseudo-class :defined            |
+| _disabled         | `T`  | CSS pseudo-class :disabled           |
+| _enabled          | `T`  | CSS pseudo-class :enabled            |
+| _firstChild       | `T`  | CSS pseudo-class :first-child        |
+| _firstLetter      | `T`  | CSS pseudo-element ::first-letter    |
+| _firstOfType      | `T`  | CSS pseudo-class :first-of-type      |
+| _focus            | `T`  | CSS pseudo-class :focus              |
+| _focusWithin      | `T`  | CSS pseudo-class :focus-within       |
+| _hover            | `T`  | CSS pseudo-class :hover              |
+| _indeterminate    | `T`  | CSS pseudo-class :indeterminate      |
+| _invalid          | `T`  | CSS pseudo-class :invalid            |
+| _lang             | `T`  | CSS pseudo-class :lang()             |
+| _lastChild        | `T`  | CSS pseudo-class :last-child         |
+| _lastOfType       | `T`  | CSS pseudo-class :last-of-type       |
+| _link             | `T`  | CSS pseudo-class :link               |
+| _not              | `T`  | CSS pseudo-class :not()              |
+| _nthChild         | `T`  | CSS pseudo-class :nth-child()        |
+| _nthLastChild     | `T`  | CSS pseudo-class :nth-last-child()   |
+| _nthLastOfType    | `T`  | CSS pseudo-class :nth-last-of-type() |
+| _nthOfType        | `T`  | CSS pseudo-class :nth-of-type()      |
+| _onlyChild        | `T`  | CSS pseudo-class :only-child         |
+| _onlyOfType       | `T`  | CSS pseudo-class :only-of-type       |
+| _optional         | `T`  | CSS pseudo-class :optional           |
+| _placeholder      | `T`  | CSS pseudo-element ::placeholder     |
+| _placeholderShown | `T`  | CSS pseudo-class :placeholder-shown  |
+| _readonly         | `T`  | CSS pseudo-class :readonly           |
+| _readwrite        | `T`  | CSS pseudo-class :read-write         |
+| _required         | `T`  | CSS pseudo-class :required           |
+| _selection        | `T`  | CSS pseudo-element ::selection       |
+| _target           | `T`  | CSS pseudo-class :target             |
+| _valid            | `T`  | CSS pseudo-class :valid              |
+| _visited          | `T`  | CSS pseudo-class :visited            |
+				
+
+[//]: # (EndGetSystemProps)

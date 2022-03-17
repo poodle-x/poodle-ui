@@ -1,0 +1,165 @@
+---
+title: Input
+path: input
+---
+
+import Input from "@poodle/ui/Input";
+import Box from "@poodle/ui/Box";
+import InputAdornment from "@poodle/ui/InputAdornment";
+import ErrorIcon from "@poodle/icons/react/Error";
+
+# Input
+
+```jsx
+import Input from "@poodle/ui/Input";
+```
+
+`Input` is a component allow the user to enter the data.
+
+By default, the component will render as input. If set prop `multiline` to true the component will render as textarea.
+
+## Simple
+
+```jsx-live
+<Box maxWidth="600px">
+	<Input
+		inputProps={{
+			"aria-label": "Simple label",
+		}}
+	/>
+	<Box mt="scale-2">
+		<Input
+			error={true}
+			inputProps={{
+				placeholder: "Error state",
+				"aria-label": "Simple label",
+			}}
+		/>
+	</Box>
+	<Box mt="scale-2">
+		<Input
+			multiline={true}
+			inputProps={{
+				rows: 5,
+				"aria-label": "Simple label",
+			}}
+		/>
+	</Box>
+</Box>
+```
+
+## Adornments
+
+We can add prefix or suffix to the input
+
+```jsx-live
+<Box maxWidth="600px">
+	<Input
+		startAdornment={<InputAdornment>$</InputAdornment>}
+		inputProps={{
+			"aria-label": "Simple label",
+		}}
+	/>
+	<Box mt="scale-2">
+		<Input
+			endAdornment={<InputAdornment adornmentPosition="end">kg</InputAdornment>}
+			aria-label="Simple label"
+		/>
+	</Box>
+</Box>
+```
+
+The component support adds SVG icon to prefix or suffix.
+Icon with rectangle size (ideal is 24) and with, height is `1em` can work out the box.
+
+You can use `@poodle/icons` or `@material-ui/icons` or any Icon set that support the same specs.
+The UI is in beta so the `@poodle/icons` are in the development.
+
+```jsx
+import InputAdornment from "@poodle/ui/InputAdornment";
+import ErrorIcon from "@poodle/icons/react/Error";
+
+<Box maxWidth="600px">
+	<Input
+		startAdornment={
+			<InputAdornment
+				adornmentPosition="start"
+				color="negative.base"
+				isIcon={true}
+			>
+				<ErrorIcon />
+			</InputAdornment>
+		}
+		inputProps={{
+			"aria-label": "Simple label",
+		}}
+	/>
+</Box>;
+```
+
+<Box maxWidth="600px">
+	<Input
+		endAdornment={
+			<InputAdornment adornmentPosition="end" color="negative.base" isIcon={true}>
+				<ErrorIcon />
+			</InputAdornment>
+		}
+		inputProps={{
+			"aria-label": "Simple label",
+		}}
+	/>
+</Box>
+
+## Theming
+
+[//]: # (GetTheming[==InputStyleKeys,InputThemeConfig,Input/index.ts==])
+
+
+
+Please check theming component document [here](/theming/component).
+ 		
+```ts
+export type InputStyleKeys = "root" | "input"
+
+export interface InputThemeConfig
+  extends StandardThemeConfig<InputStyleKeys, InputProps> {}
+
+``` 
+		
+		
+
+[//]: # (EndGetTheming)
+
+
+## Props
+
+[//]: # (GetProps[==LocalInputProps,Input/Input.tsx==])
+
+
+### Local Props
+
+
+| Name           | Type              | Description                                                 |
+| -------------- | ----------------- | ----------------------------------------------------------- |
+| endAdornment   | `React.ReactNode` | Add suffix to the input.                                    |
+| error          | `boolean`         | Change the component style to error style when set to true. |
+| inputProps     | `BoxProps`        | Input props                                                 |
+| multiline      | `boolean`         | Change input to textarea element.                           |
+| startAdornment | `React.ReactNode` | Add prefix to the input.                                    |
+				
+
+[//]: # (EndGetProps)
+[//]: # (GetPartialProps[==InputProps,Input/Input.tsx==])
+
+
+### Full Props
+
+```ts
+export interface InputProps
+	extends BoxProps,
+		StandardComponentProps,
+		LocalInputProps {} 
+```
+				
+
+[//]: # (GetPartialProps)

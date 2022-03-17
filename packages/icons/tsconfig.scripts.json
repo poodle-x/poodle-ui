@@ -1,0 +1,13 @@
+{
+	"compilerOptions": {
+		"skipLibCheck": true,
+		"allowJs": true,
+		"module": "commonjs",
+		"esModuleInterop": true,
+		"lib": ["es5", "es6", "esnext"],
+		"target": "es5",
+		"strict": true,
+		"outDir": "scriptsBuild"
+	},
+	"include": ["scripts/**/*.ts"]
+}

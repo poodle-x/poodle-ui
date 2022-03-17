@@ -1,0 +1,62 @@
+---
+title: TableBody
+path: table-body
+---
+
+# TableBody
+
+```jsx
+import TableBody from "@poodle/ui/TableBody";
+```
+
+Please check table [document](/ui/components/table) to see the example usage.
+
+## Theming
+
+[//]: # (GetTheming[==TableBodyStyleKeys,TableBodyThemeConfig,TableBody/index.ts==])
+
+
+
+Please check theming component document [here](/theming/component).
+ 		
+```ts
+export type TableBodyStyleKeys = "root"
+
+export interface TableBodyThemeConfig
+  extends StandardThemeConfig<TableBodyStyleKeys, TableBodyProps> {}
+
+``` 
+		
+		
+
+[//]: # (EndGetTheming)
+
+## Props
+
+[//]: # (GetProps[==LocalTableBodyProps,TableBody/TableBody.tsx==])
+
+
+### Local Props
+
+
+| Name     | Type              | Description |
+| -------- | ----------------- | ----------- |
+| children | `React.ReactNode` |             |
+				
+
+[//]: # (EndGetProps)
+
+[//]: # (GetPartialProps[==TableBodyProps,TableBody/TableBody.tsx==])
+
+
+### Full Props
+
+```ts
+export interface TableBodyProps
+	extends BoxProps,
+		StandardComponentProps,
+		LocalTableBodyProps {} 
+```
+				
+
+[//]: # (GetPartialProps)

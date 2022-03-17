@@ -1,0 +1,59 @@
+---
+title: Grid | System
+---
+
+# Grid
+
+```ts
+import { girdSystem } from "@poodle/system";
+```
+
+`grid` system support CSS Grid.
+
+```ts
+
+const listSystem = compose(flexSystem);
+
+export const system = createSystem(listSystem);
+
+const styles = system({
+	theme: {
+		spacing: {
+			scale: "1.5rem",
+		},
+	},
+	gridTemplateRows: "50px 20px",
+	gridRowGap: "scale-2"
+});
+
+// Styles result
+//  { gridTemplateRows: "50px 20px" },
+//  { gridRowGap: "3rem" },
+```
+
+[//]: # (GetSystemProps[==GridProps,grid.ts==])
+| Prop                | Type                                               | Description                                                   |
+| ------------------- | -------------------------------------------------- | ------------------------------------------------------------- |
+| alignContent        | `ResponsiveProp<CSS.Property.AlignContent>`        | The CSS `align-content` property                              |
+| alignSelf           | `ResponsiveProp<CSS.Property.AlignSelf>`           | The CSS `align-self` property                                 |
+| gridArea            | `ResponsiveProp<CSS.Property.GridArea>`            | The CSS `grid-area` property                                  |
+| gridAutoColumns     | `ResponsiveProp<CSS.Property.GridAutoColumns>`     | The CSS `grid-auto-columns` property                          |
+| gridAutoFlow        | `ResponsiveProp<CSS.Property.GridAutoFlow>`        | The CSS `grid-auto-flow` property                             |
+| gridAutoRows        | `ResponsiveProp<CSS.Property.GridAutoRows>`        | The CSS `grid-auto-rows` property                             |
+| gridColumn          | `ResponsiveProp<CSS.Property.GridColumn>`          | The CSS `grid-row` property                                   |
+| gridColumnEnd       | `ResponsiveProp<CSS.Property.GridColumnEnd>`       | The CSS `grid-column-end` property                            |
+| gridColumnGap       | `ResponsiveProp<CSS.Property.GridColumnGap>`       | The CSS `grid-column-gap` property<br /><br />Support spacing |
+| gridColumnStart     | `ResponsiveProp<CSS.Property.GridColumnStart>`     | The CSS `grid-column-start` property                          |
+| gridGap             | `ResponsiveProp<CSS.Property.GridGap>`             | The CSS `grid-gap` property<br /><br />Support spacing        |
+| gridRow             | `ResponsiveProp<CSS.Property.GridRow>`             | The CSS `grid-row` property                                   |
+| gridRowEnd          | `ResponsiveProp<CSS.Property.GridRowEnd>`          | The CSS `grid-row-end` property                               |
+| gridRowGap          | `ResponsiveProp<CSS.Property.GridRowGap>`          | The CSS `grid-row-gap` property<br /><br />Support spacing    |
+| gridRowStart        | `ResponsiveProp<CSS.Property.GridRowStart>`        | The CSS `grid-row-start` property                             |
+| gridTemplateAreas   | `ResponsiveProp<CSS.Property.GridTemplateAreas>`   | The CSS `grid-template-areas` property                        |
+| gridTemplateColumns | `ResponsiveProp<CSS.Property.GridTemplateColumns>` | The CSS `grid-template-columns` property                      |
+| gridTemplateRows    | `ResponsiveProp<CSS.Property.GridTemplateRows>`    | The CSS `grid-template-rows` property                         |
+| justifyContent      | `ResponsiveProp<CSS.Property.JustifyContent>`      | The CSS `justify-content` property                            |
+| justifySelf         | `ResponsiveProp<CSS.Property.JustifySelf>`         | The CSS `justify-self` property                               |
+				
+
+[//]: # (EndGetSystemProps)

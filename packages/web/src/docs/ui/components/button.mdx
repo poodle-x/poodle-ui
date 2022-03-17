@@ -1,0 +1,255 @@
+---
+title: Button
+path: button
+---
+
+import Button from "@poodle/ui/Button";
+
+# Button
+
+```jsx
+import Button from "@poodle/ui/Button";
+```
+## Variant
+
+The button can change to a defined style via props `variant`.
+
+Built in styles are `default`, `fill`, `outline`. If you do not set variant, the button will use the variant `default` as default.
+
+The button also find the variant style in `theme.Button.variants` object.
+
+### Default
+
+The default button is text button.
+
+Typically, use it with unimportant actions.
+
+```jsx-live
+<Columns wrapGutter="scale-4" gutter="scale-2" collapse="sm">
+  <Column colWidth="content">
+    <Button>Default</Button>
+  </Column>
+  <Column colWidth="content">
+    <Button disabled={true}>Disabled</Button>
+  </Column>
+  <Column colWidth="content">
+    <Button colorStyle="primary">Primary</Button>
+  </Column>
+  <Column colWidth="content">
+    <Button colorStyle="positive">Positive</Button>
+  </Column>
+  <Column colWidth="content">
+    <Button colorStyle="negative">Negative</Button>
+  </Column>
+  <Column colWidth="content">
+    <Button colorStyle="warn">Warn</Button>
+  </Column>
+</Columns>
+```
+
+### Filled
+
+Filled buttons normally are primary buttons for your app.
+
+```jsx-live
+<Columns wrapGutter="scale-4" gutter="scale-2" collapse="sm">
+  <Column colWidth="content">
+    <Button variant="fill">Default</Button>
+  </Column>
+  <Column colWidth="content">
+    <Button variant="fill" disabled={true}>
+      Disabled
+    </Button>
+  </Column>
+  <Column colWidth="content">
+    <Button variant="fill" colorStyle="primary">
+      Primary
+    </Button>
+  </Column>
+  <Column colWidth="content">
+    <Button variant="fill" colorStyle="positive">
+      Positive
+    </Button>
+  </Column>
+  <Column colWidth="content">
+    <Button variant="fill" colorStyle="negative">
+      Negative
+    </Button>
+  </Column>
+  <Column colWidth="content">
+    <Button variant="fill" colorStyle="warn">
+      Warn
+    </Button>
+  </Column>
+</Columns>
+```
+
+### Outline
+
+Outline buttons have more interactive than text buttons, but they are less important than a primary button.
+
+```jsx-live
+<Columns wrapGutter="scale-4" gutter="scale-2" collapse="sm">
+  <Column colWidth="content">
+    <Button variant="outline">Default</Button>
+  </Column>
+  <Column colWidth="content">
+    <Button variant="outline" disabled={true}>
+      Disabled
+    </Button>
+  </Column>
+  <Column colWidth="content">
+    <Button variant="outline" colorStyle="primary">
+      Primary
+    </Button>
+  </Column>
+  <Column colWidth="content">
+    <Button variant="outline" colorStyle="positive">
+      Positive
+    </Button>
+  </Column>
+  <Column colWidth="content">
+    <Button variant="outline" colorStyle="negative">
+      Negative
+    </Button>
+  </Column>
+  <Column colWidth="content">
+    <Button variant="outline" colorStyle="warn">
+      Warn
+    </Button>
+  </Column>
+</Columns>
+```
+
+### Button with icon
+
+Add icon to the button using `endIcon` and `startIcon` prop.
+
+```jsx-live
+<Columns wrapGutter="scale-4" gutter="scale-2" collapse="sm">
+  <Column colWidth="content">
+  	<Button colorStyle="negative" startIcon="$" variant="outline">
+    	Delete
+		</Button>
+  </Column>
+	<Column colWidth="content">
+		<Button colorStyle="negative" endIcon="$" variant="outline">
+			Delete
+		</Button>
+  </Column>
+</Columns>
+```
+
+## Sizes
+
+Change button size via prop `sizeStyle`.
+
+Default button sizes are `s`, `m`, `l`. If you do not set size, the button will use the size `m` as default.
+
+```jsx-live
+<Columns wrapGutter="scale-4" gutter="scale-2" collapse="sm" alignItems="center">
+  <Column colWidth="content">
+  	<Button variant="outline" sizeStyle="s">
+			Size small
+		</Button>
+  </Column>
+	<Column colWidth="content">
+		<Button variant="fill" sizeStyle="m">Size medium</Button>
+  </Column>
+  <Column colWidth="content">
+		<Button variant="fill" sizeStyle="l">
+			Size large
+		</Button>
+  </Column>
+</Columns>
+```
+
+## Render as link
+
+Button will change to `<a>` tag if prop `href` is set.
+
+If the button `disabled` prop set to true, the button will render as `<button>` tag. `<a>` tag does not support disable.
+
+```jsx-live
+<Columns wrapGutter="scale-4" gutter="scale-2" collapse="sm">
+  <Column colWidth="content">
+  	<Button variant="outline" href="google.com">
+    	Google.com
+		</Button>
+  </Column>
+	<Column colWidth="content">
+		<Button variant="outline" href="google.com" disabled={true}>
+			Google.com
+		</Button>
+  </Column>
+</Columns>
+```
+
+## Theming
+
+[//]: # (GetTheming[==ButtonStyleKeys,ButtonThemeConfig,Button/index.ts==])
+
+
+
+Please check theming component document [here](/theming/component).
+ 		
+```ts
+export type ButtonStyleKeys =
+  | "root"
+  | "content"
+  | "icon"
+  | "startIcon"
+  | "endIcon"
+
+export interface ButtonThemeConfig
+  extends StandardThemeConfig<ButtonStyleKeys, ButtonProps> {}
+
+``` 
+		
+		
+
+[//]: # (EndGetTheming)
+
+## Props
+
+[//]: # (GetProps[==LocalButtonProps,Button/Button.tsx==])
+
+
+### Local Props
+
+
+| Name         | Type                                                                     | Description                                                                                                                                      |
+| ------------ | ------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ |
+| children     | `React.ReactNode`                                                        |                                                                                                                                                  |
+| className    | `string`                                                                 | Class apply to root element.                                                                                                                     |
+| colorStyle   | `"default" \| "primary" \| "negative" \| "positive" \| "warn" \| string` | Change button color. Built-in options are **"default" \| "primary" \| "negative" \| "positive" \| "warn"**.<br /><br />Default is **"default"**. |
+| contentProps | `BoxProps`                                                               | Custom props for content element                                                                                                                 |
+| endIcon      | `React.ReactNode`                                                        | Add icon to end of the button.                                                                                                                   |
+| iconProps    | `BoxProps`                                                               | Custom props for icon element                                                                                                                    |
+| sizeStyle    | `"s" \| "m" \| "l" \| string`                                            | Change button size. Built-in options are **"s" \| "m" \| "l"**.<br /><br />Default is **"m"**.                                                   |
+| startIcon    | `React.ReactNode`                                                        | Add icon to start of the button.                                                                                                                 |
+| theme        | `ThemeConfig`                                                            |                                                                                                                                                  |
+| themeExtend  | `ThemeConfig`                                                            |                                                                                                                                                  |
+| variant      | `"default" \| "outline" \| "fill" \| string`                             | Change button variant. Built-in options are **"default" \| "outline" \| "fill"**.<br /><br />Default is **"default"**.                           |
+				
+
+[//]: # (EndGetProps)
+
+[//]: # (GetPartialProps[==ButtonProps,Button/Button.tsx==])
+
+
+### Full Props
+
+```ts
+export interface ButtonProps
+	extends Omit<
+			React.AnchorHTMLAttributes<HTMLAnchorElement> &
+				React.ButtonHTMLAttributes<HTMLButtonElement>,
+			keyof BoxProps
+		>,
+		BoxProps,
+		LocalButtonProps {} 
+```
+				
+
+[//]: # (GetPartialProps)

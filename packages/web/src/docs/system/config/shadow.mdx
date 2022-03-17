@@ -1,0 +1,45 @@
+---
+title: Shadow | System
+---
+
+# Shadow
+
+```ts
+import { shadowSystem } from "@poodle/system";
+```
+
+```ts
+const theme: SystemThemeConfig = {
+	shadows: {
+					boxShadowSets: {
+						common: "6px 5px 5px 0px rgba(0,0,0,0.3)",
+					},
+					textShadowSets: {
+						yield: "12px 10px 5px 0px rgba(0,0,0,0.3)",
+					},
+				},
+};
+
+const listSystem = compose(shadowSystem);
+
+export const system = createSystem(listSystem);
+
+const styles = system({
+	theme,
+	boxShadow: "common",
+	textShadow: "yield"
+});
+
+// Styles result
+//  { boxShadow: "6px 5px 5px 0px rgba(0,0,0,0.3)" },
+//  { textShadow: "12px 10px 5px 0px rgba(0,0,0,0.3)" },
+```
+
+[//]: # (GetSystemProps[==ShadowProps,shadow.ts==])
+| Prop       | Type                                                          | Description                    |
+| ---------- | ------------------------------------------------------------- | ------------------------------ |
+| boxShadow  | `ResponsiveProp<CSS.Property.BoxShadow \| string \| number>`  | The CSS `box-shadow` property  |
+| textShadow | `ResponsiveProp<CSS.Property.TextShadow \| string \| number>` | The CSS `text-shadow` property |
+				
+
+[//]: # (EndGetSystemProps)

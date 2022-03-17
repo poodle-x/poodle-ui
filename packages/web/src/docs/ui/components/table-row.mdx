@@ -1,0 +1,63 @@
+---
+title: TableRow
+path: table-row
+---
+
+# TableRow
+
+```jsx
+import TableRow from "@poodle/ui/TableRow";
+```
+
+Please check table [document](/ui/components/table) to see the example usage.
+
+## Theming
+
+[//]: # (GetTheming[==TableRowStyleKeys,TableRowThemeConfig,TableRow/index.ts==])
+
+
+
+Please check theming component document [here](/theming/component).
+ 		
+```ts
+export type TableRowStyleKeys = "root"
+
+export interface TableRowThemeConfig
+  extends StandardThemeConfig<TableRowStyleKeys, TableRowProps> {}
+
+``` 
+		
+		
+
+[//]: # (EndGetTheming)
+
+## Props
+
+[//]: # (GetProps[==LocalTableRowProps,TableRow/TableRow.tsx==])
+
+
+### Local Props
+
+
+| Name       | Type              | Description                                                    |
+| ---------- | ----------------- | -------------------------------------------------------------- |
+| children   | `React.ReactNode` |                                                                |
+| isSelected | `boolean`         | Mark the row is selected with attribute `data-selected="true"` |
+				
+
+[//]: # (EndGetProps)
+
+[//]: # (GetPartialProps[==TableRowProps,TableRow/TableRow.tsx==])
+
+
+### Full Props
+
+```ts
+export interface TableRowProps
+	extends BoxProps,
+		StandardComponentProps,
+		LocalTableRowProps {} 
+```
+				
+
+[//]: # (GetPartialProps)

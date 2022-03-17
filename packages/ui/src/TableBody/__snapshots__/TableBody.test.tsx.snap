@@ -1,0 +1,274 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<TableBody /> ref should work 1`] = `
+.c0 {
+  box-sizing: border-box;
+}
+
+<tbody
+  class="poodle-box c0 poodle-table-body c1 c1"
+>
+  <tr>
+    <td>
+      Table
+    </td>
+  </tr>
+</tbody>
+`;
+
+exports[`<TableBody /> should render Box props correctly 1`] = `
+.c0 {
+  box-sizing: border-box;
+}
+
+.c2 {
+  margin-top: 20px;
+}
+
+<table>
+  <tbody
+    class="poodle-box c0 poodle-table-body c1 c2"
+    id="id"
+  >
+    <tr>
+      <td>
+        Table
+      </td>
+    </tr>
+  </tbody>
+</table>
+`;
+
+exports[`<TableBody /> should render TableBody correctly 1`] = `
+.c0 {
+  box-sizing: border-box;
+}
+
+<table>
+  <tbody
+    class="poodle-box c0 poodle-table-body c1 c1"
+  >
+    <tr>
+      <td>
+        Table
+      </td>
+    </tr>
+  </tbody>
+</table>
+`;
+
+exports[`<TableBody /> should send context correctly 1`] = `
+.c0 {
+  box-sizing: border-box;
+}
+
+<table>
+  <tbody
+    class="poodle-box c0 poodle-table-body c1 c1"
+  >
+    <tr>
+      <td>
+        {"level":"body"}
+      </td>
+    </tr>
+  </tbody>
+</table>
+`;
+
+exports[`<TableBody /> theming should disable classes 1`] = `
+.c0 {
+  box-sizing: border-box;
+}
+
+<table>
+  <tbody
+    class="poodle-box c0 poodle-table-body c1"
+  >
+    <tr>
+      <td>
+        Table
+      </td>
+    </tr>
+  </tbody>
+</table>
+`;
+
+exports[`<TableBody /> theming should extend size styles 1`] = `
+.c0 {
+  box-sizing: border-box;
+}
+
+.c4 {
+  width: 100%;
+  border-spacing: 0;
+  border-collapse: collapse;
+  text-align: left;
+}
+
+.c7 {
+  height: 100px;
+}
+
+<div
+  class="poodle-box c0 poodle-table c1 c2"
+>
+  <table
+    class="poodle-box c0 poodle-table__table c4 c2"
+  >
+    <tbody
+      class="poodle-box c0 poodle-table-body c7 c2"
+    >
+      <tr>
+        <td>
+          Table
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+`;
+
+exports[`<TableBody /> theming should extend size styles with mode 1`] = `
+.c0 {
+  box-sizing: border-box;
+}
+
+.c4 {
+  width: 100%;
+  border-spacing: 0;
+  border-collapse: collapse;
+  text-align: left;
+}
+
+.c7 {
+  height: 100px;
+  height: 110px;
+}
+
+<div
+  class="poodle-box c0 poodle-table c1 c2"
+>
+  <table
+    class="poodle-box c0 poodle-table__table c4 c2"
+  >
+    <tbody
+      class="poodle-box c0 poodle-table-body c7 c2"
+    >
+      <tr>
+        <td>
+          Table
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+`;
+
+exports[`<TableBody /> theming should extend styles in global 1`] = `
+.c0 {
+  box-sizing: border-box;
+}
+
+.c1 {
+  margin-top: 10px;
+  letter-spacing: 250px;
+  top: 0;
+  text-indent: 1px;
+}
+
+<table>
+  <tbody
+    class="poodle-box c0 poodle-table-body c1 c2"
+  >
+    <tr>
+      <td>
+        Table
+      </td>
+    </tr>
+  </tbody>
+</table>
+`;
+
+exports[`<TableBody /> theming should extend styles in local 1`] = `
+.c0 {
+  box-sizing: border-box;
+}
+
+.c1 {
+  margin-top: 10px;
+  letter-spacing: 250px;
+  top: 0;
+  text-indent: 1px;
+}
+
+<table>
+  <tbody
+    class="poodle-box c0 poodle-table-body c1 c2"
+  >
+    <tr>
+      <td>
+        Table
+      </td>
+    </tr>
+  </tbody>
+</table>
+`;
+
+exports[`<TableBody /> theming should override classes 1`] = `
+.c0 {
+  box-sizing: border-box;
+}
+
+<table>
+  <tbody
+    class="poodle-box c0 poodle-table-body morning c1"
+  >
+    <tr>
+      <td>
+        Table
+      </td>
+    </tr>
+  </tbody>
+</table>
+`;
+
+exports[`<TableBody /> theming should override styles 1`] = `
+.c0 {
+  box-sizing: border-box;
+}
+
+.c1 {
+  margin-top: 50px;
+}
+
+<table>
+  <tbody
+    class="poodle-box c0 poodle-table-body c1 c2"
+  >
+    <tr>
+      <td>
+        Table
+      </td>
+    </tr>
+  </tbody>
+</table>
+`;
+
+exports[`<TableBody /> theming should render with default props correctly 1`] = `
+.c0 {
+  box-sizing: border-box;
+}
+
+<table>
+  <tbody
+    class="poodle-box c0 poodle-table-body c1 hello c1"
+    id="id"
+  >
+    <tr>
+      <td>
+        Table
+      </td>
+    </tr>
+  </tbody>
+</table>
+`;

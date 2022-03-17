@@ -1,0 +1,52 @@
+---
+title: Usage
+path: usage
+---
+
+# Usage
+
+## Import
+
+We can import at the root or by a specific path. However, it's better that we should import by a specific path.
+Some build tools in your project might be outdated and does not smart about code-splitting, end up import everything
+from the UI to your app.
+
+```js
+
+import ThemeProvider from "@poodle/ui/ThemeProvider";
+
+// or
+
+import { ThemeProvider } from "@poodle/ui";
+
+```
+
+## Provider
+
+The `Poodle UI` need `ThemeProvider` to work correctly. Add `ThemeProvider` to the top level of your app.
+
+You can add the `CSSReset` to your app.
+
+Check [theming document](/ui/getting-started/theming) to see how can we use `ThemeProvider` to customize the global theme.
+
+```jsx
+
+import ThemeProvider from "@poodle/ui/ThemeProvider";
+import CSSReset from "@poodle/ui/CSSReset";
+
+export function AppProvider({ children }: { children?: React.ReactNode }) {
+	return (
+		<ThemeProvider>
+			<CSSReset />
+			{children}
+		</ThemeProvider>
+	);
+}
+
+// Your App entry
+export function App() {
+	<AppProvider>
+		...
+	</AppProvider>
+}
+```

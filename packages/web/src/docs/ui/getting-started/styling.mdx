@@ -1,0 +1,32 @@
+---
+title: Styling
+path: styling
+---
+
+# Styling
+
+The UI kit only uses `emotion` for the components. You can use any styling solution for your app. However, I encourage you to use `<Box />`
+component to build your app. If you have ever use other libs like `Charka-UI` or `Tailwind` you might understand utility first.
+Visit `<Box />` [document](/ui/getting-started/box) to learn about it.
+
+All the component structures are build on `<Box />` component, so we can customize the component style directly.
+
+If the style is common and reuse across the app please use `theme` in this case.
+
+For the example we can change style directly to the `<Button />` component because they are build on `<Box />`
+
+```tsx
+
+// id, ml are  box props and they will add to the root element.
+// Add box props to content element
+// ml = margin-left
+// pt = padding-top
+<Button
+	id="10"
+	ml="50px"
+	contentProps={{
+		pt: "20px",
+	}}
+/>
+
+```
