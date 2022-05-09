@@ -1,11 +1,11 @@
 import * as CSS from "csstype";
 import {
-	ThemeValue,
-	SystemThemeConfig,
+	getMode,
 	getThemeValue,
 	ResponsiveProp,
-	getMode,
 	SystemConfigList,
+	SystemThemeConfig,
+	ThemeValue,
 } from "./";
 
 export type ColorValue =
@@ -92,7 +92,7 @@ export interface ColorsProps {
 	/**
 	 * The CSS `background-color` property
 	 */
-	backGroundColor?: ResponsiveProp<CSS.Property.BackgroundColor>;
+	backgroundColor?: ResponsiveProp<CSS.Property.BackgroundColor>;
 	/**
 	 * The CSS `color` property
 	 */

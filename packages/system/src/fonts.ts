@@ -1,13 +1,13 @@
 import * as CSS from "csstype";
 
 import {
-	ThemeValue,
-	SystemConfigTransform,
-	SystemThemeConfig,
+	getScaling,
 	getThemeValue,
 	ResponsiveProp,
-	getScaling,
 	SystemConfigList,
+	SystemConfigTransform,
+	SystemThemeConfig,
+	ThemeValue,
 } from "./";
 
 export interface FontsThemeConfig {
@@ -204,7 +204,7 @@ export interface FontsProps {
 	/**
 	 * The CSS `font-size` property
 	 */
-	fontSize?: ResponsiveProp<CSS.Property.FontSize>;
+	fontSize?: ResponsiveProp<CSS.Property.FontSize | number>;
 	/**
 	 * The CSS `font-style` property
 	 */
