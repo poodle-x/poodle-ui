@@ -1,8 +1,8 @@
 import React from "react";
 import Box, { BoxProps } from "../Box";
+import { getCSSSystemBoxProps } from "../styled/CSSSystem";
 import { ResponsiveProp, StandardComponentProps, ThemeConfig } from "../theme";
-import useDefaultProps from "../utils/useDefaultProps";
-import { useClassNames } from "../styled";
+import useDefaultProps from "../hooks/useDefaultProps/useDefaultProps";
 import * as styles from "./styles";
 
 export interface LocalContainerProps {
@@ -29,23 +29,24 @@ function getDefaultProps(theme?: ThemeConfig) {
 export const Container: React.ForwardRefExoticComponent<
 	React.PropsWithoutRef<ContainerProps> & React.RefAttributes<HTMLElement>
 > = React.forwardRef<HTMLElement, ContainerProps>((_props, ref) => {
-	const props = useDefaultProps<ContainerProps>(_props, {
+	const { props, isLocalTheme } = useDefaultProps<ContainerProps>(_props, {
 		themeDefaultProps: getDefaultProps,
 	});
 
 	const { fixed, gutter, children, className, ...otherProps } = props;
 
-	const classes = useClassNames({
-		props,
-		lists: {
-			root: {
-				classNames: ["poodle-container", styles.Root, className],
-			},
-		},
-	});
-
 	return (
-		<Box {...otherProps} className={classes.root} ref={ref}>
+		<Box
+			{...otherProps}
+			{...getCSSSystemBoxProps({
+				isRoot: true,
+				isLocalTheme,
+				componentProps: props,
+				fnCSSSystem: styles.Root,
+				baseClassName: ["poodle-container"],
+			})}
+			ref={ref}
+		>
 			{children}
 		</Box>
 	);

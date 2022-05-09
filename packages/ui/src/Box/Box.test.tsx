@@ -1,5 +1,4 @@
 import React from "react";
-import { Stylesheet, css, useClassNames } from "../styled";
 import { ThemeConfig } from "../theme";
 import { render } from "../utils/test";
 import { Box, BoxProps } from "./Box";
@@ -30,28 +29,115 @@ describe("<Box />", () => {
 		expect(container.firstChild).toMatchSnapshot();
 	});
 
-	it("box styles should always on top", () => {
-		const styles = () => {
-			const style: Stylesheet = {
-				padding: 20,
-			};
-			return css(style);
-		};
+	it("system props should work", () => {
+		const { container } = render(
+			<Box
+				test={10}
+				p={[5, 10, 100]}
+				m={{
+					_: 15,
+					sm: 25,
+					md: 35,
+					lg: 45,
+					xl: 55,
+				}}
+				h={(p) => {
+					return p.test;
+				}}
+				_hover={{
+					color: ["red", "black"],
+					display: "inline-grid",
+					fontSize: {
+						sm: "25px",
+						md: "35px",
+						lg: "35px",
+						xl: (p) => {
+							return p.test;
+						},
+					},
+				}}
+			>
+				test
+			</Box>
+		);
 
+		expect(container.firstChild).toMatchSnapshot();
+	});
+
+	it("should parse CSSObjectSystem with sx props", () => {
+		const { container } = render(
+			<Box
+				test={5}
+				sx={{
+					h: (p) => {
+						return p.test;
+					},
+					userSelect: "none",
+					p: [5, 10, 100],
+					m: {
+						_: 15,
+						sm: 25,
+						md: 35,
+						lg: 45,
+						xl: 55,
+					},
+					_hover: {
+						color: ["red", "black"],
+						display: "inline-grid",
+						fontSize: {
+							sm: "25px",
+							md: "35px",
+							lg: "35px",
+							xl: (p) => {
+								return p.test;
+							},
+						},
+					},
+				}}
+			>
+				test
+			</Box>
+		);
+
+		expect(container.firstChild).toMatchSnapshot();
+	});
+
+	it("should inject raw css with _sx props", () => {
+		const { container } = render(
+			<Box
+				test={5}
+				_sx={
+					{
+						p: 10,
+						margin: 0,
+						"&:hover": {
+							color: "blue",
+						},
+						// Force any type to check the box should not process the padding system
+					} as any
+				}
+			>
+				test
+			</Box>
+		);
+
+		expect(container.firstChild).toMatchSnapshot();
+	});
+
+	it("box styles should always on top", () => {
 		const Hello: React.FC<BoxProps> = (props) => {
 			const { children } = props;
-
-			const classes = useClassNames({
-				props,
-				lists: {
-					root: {
-						classNames: [styles],
-					},
-				},
-			});
-
 			return (
-				<Box {...props} className={classes.root}>
+				<Box
+					{...props}
+					_sx={{
+						fontSize: "20px",
+					}}
+					sx={{
+						p: 10,
+						m: 20,
+					}}
+				>
 					{children}
 				</Box>
 			);

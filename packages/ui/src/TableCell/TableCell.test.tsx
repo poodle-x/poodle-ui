@@ -1,8 +1,8 @@
 import React from "react";
+import { Table, TableContext, TableLevelContext } from "../Table";
+import { ThemeConfig } from "../theme";
 import { render } from "../utils/test";
 import TableCell from "./";
-import { ThemeConfig } from "../theme";
-import { Table, TableContext, TableLevelContext } from "../Table";
 
 describe("<TableCell />", () => {
 	it("should render TableCell correctly", () => {
@@ -194,50 +194,6 @@ describe("<TableCell />", () => {
 							defaultProps: {
 								id: "id",
 								className: "hello",
-							},
-						},
-					},
-				}
-			);
-			expect(container.firstChild).toMatchSnapshot();
-		});
-
-		it("should disable classes", () => {
-			const { container } = render(
-				<table>
-					<tbody>
-						<tr>
-							<TableCell>TableCell</TableCell>
-						</tr>
-					</tbody>
-				</table>,
-				{
-					theme: {
-						TableCell: {
-							overrideClasses: {
-								root: true,
-							},
-						},
-					},
-				}
-			);
-			expect(container.firstChild).toMatchSnapshot();
-		});
-
-		it("should override classes", () => {
-			const { container } = render(
-				<table>
-					<tbody>
-						<tr>
-							<TableCell>TableCell</TableCell>
-						</tr>
-					</tbody>
-				</table>,
-				{
-					theme: {
-						TableCell: {
-							overrideClasses: {
-								root: "morning",
 							},
 						},
 					},

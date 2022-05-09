@@ -1,8 +1,8 @@
 import React from "react";
+import { ModalContext } from "../Modal";
+import { ThemeConfig } from "../theme";
 import { render } from "../utils/test";
 import ModalHeader from "./";
-import { ThemeConfig } from "../theme";
-import { ModalContext } from "../Modal";
 
 describe("<ModalHeader />", () => {
 	it("should render ModalHeader correctly", () => {
@@ -142,45 +142,6 @@ describe("<ModalHeader />", () => {
 							defaultProps: {
 								id: "id",
 								className: "hello",
-							},
-						},
-					},
-				}
-			);
-			expect(container.firstChild).toMatchSnapshot();
-		});
-
-		it("should disable classes", () => {
-			const { container } = render(
-				<ModalHeader withClose={true} icon={<i>Icon</i>}>
-					ModalHeader
-				</ModalHeader>,
-				{
-					theme: {
-						ModalHeader: {
-							overrideClasses: {
-								root: true,
-							},
-						},
-					},
-				}
-			);
-			expect(container.firstChild).toMatchSnapshot();
-		});
-
-		it("should override classes", () => {
-			const { container } = render(
-				<ModalHeader withClose={true} icon={<i>Icon</i>}>
-					ModalHeader
-				</ModalHeader>,
-				{
-					theme: {
-						ModalHeader: {
-							overrideClasses: {
-								root: "morning",
-								content: "hello",
-								icon: "icon",
-								close: "ok",
 							},
 						},
 					},

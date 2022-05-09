@@ -2,10 +2,6 @@
 
 exports[`<IconButton /> ref should work 1`] = `
 .c0 {
-  box-sizing: border-box;
-}
-
-.c1 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -34,19 +30,19 @@ exports[`<IconButton /> ref should work 1`] = `
   border-radius: 50%;
 }
 
-.c1:hover,
-.c1:focus {
+.c0:hover,
+.c0:focus {
   color: #282828;
   background-color: #E0E0E0;
 }
 
-.c1:disabled {
+.c0:disabled {
   color: #A6A6A6;
   cursor: not-allowed;
 }
 
 <button
-  class="poodle-box c0 c1 c2"
+  class="poodle-box poodle-icon-button c0"
 >
   IconButton
 </button>
@@ -54,10 +50,6 @@ exports[`<IconButton /> ref should work 1`] = `
 
 exports[`<IconButton /> should render Box props correctly 1`] = `
 .c0 {
-  box-sizing: border-box;
-}
-
-.c1 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -84,25 +76,22 @@ exports[`<IconButton /> should render Box props correctly 1`] = `
   -webkit-transition: background-color 220ms ease-in,color 220ms ease-in;
   transition: background-color 220ms ease-in,color 220ms ease-in;
   border-radius: 50%;
+  margin-top: 20px;
 }
 
-.c1:hover,
-.c1:focus {
+.c0:hover,
+.c0:focus {
   color: #282828;
   background-color: #E0E0E0;
 }
 
-.c1:disabled {
+.c0:disabled {
   color: #A6A6A6;
   cursor: not-allowed;
 }
 
-.c2 {
-  margin-top: 20px;
-}
-
 <button
-  class="poodle-box c0 c1 c2"
+  class="poodle-box poodle-icon-button c0"
   id="id"
 >
   IconButton
@@ -111,10 +100,6 @@ exports[`<IconButton /> should render Box props correctly 1`] = `
 
 exports[`<IconButton /> should render IconButton correctly 1`] = `
 .c0 {
-  box-sizing: border-box;
-}
-
-.c1 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -143,19 +128,19 @@ exports[`<IconButton /> should render IconButton correctly 1`] = `
   border-radius: 50%;
 }
 
-.c1:hover,
-.c1:focus {
+.c0:hover,
+.c0:focus {
   color: #282828;
   background-color: #E0E0E0;
 }
 
-.c1:disabled {
+.c0:disabled {
   color: #A6A6A6;
   cursor: not-allowed;
 }
 
 <button
-  class="poodle-box c0 c1 c2"
+  class="poodle-box poodle-icon-button c0"
 >
   IconButton
 </button>
@@ -163,10 +148,6 @@ exports[`<IconButton /> should render IconButton correctly 1`] = `
 
 exports[`<IconButton /> should render shape IconButton correctly 1`] = `
 .c0 {
-  box-sizing: border-box;
-}
-
-.c1 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -195,31 +176,19 @@ exports[`<IconButton /> should render shape IconButton correctly 1`] = `
   border-radius: 4px;
 }
 
-.c1:hover,
-.c1:focus {
+.c0:hover,
+.c0:focus {
   color: #282828;
   background-color: #E0E0E0;
 }
 
-.c1:disabled {
+.c0:disabled {
   color: #A6A6A6;
   cursor: not-allowed;
 }
 
 <button
-  class="poodle-box c0 c1 c2"
->
-  IconButton
-</button>
-`;
-
-exports[`<IconButton /> theming should disable classes 1`] = `
-.c0 {
-  box-sizing: border-box;
-}
-
-<button
-  class="poodle-box c0 c1"
+  class="poodle-box poodle-icon-button c0"
 >
   IconButton
 </button>
@@ -227,10 +196,6 @@ exports[`<IconButton /> theming should disable classes 1`] = `
 
 exports[`<IconButton /> theming should extend styles in global 1`] = `
 .c0 {
-  box-sizing: border-box;
-}
-
-.c1 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -263,19 +228,19 @@ exports[`<IconButton /> theming should extend styles in global 1`] = `
   text-indent: 1px;
 }
 
-.c1:hover,
-.c1:focus {
+.c0:hover,
+.c0:focus {
   color: #282828;
   background-color: #E0E0E0;
 }
 
-.c1:disabled {
+.c0:disabled {
   color: #A6A6A6;
   cursor: not-allowed;
 }
 
 <button
-  class="poodle-box c0 c1 c2"
+  class="poodle-box poodle-icon-button c0"
 >
   IconButton
 </button>
@@ -283,10 +248,6 @@ exports[`<IconButton /> theming should extend styles in global 1`] = `
 
 exports[`<IconButton /> theming should extend styles in local 1`] = `
 .c0 {
-  box-sizing: border-box;
-}
-
-.c1 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -319,31 +280,19 @@ exports[`<IconButton /> theming should extend styles in local 1`] = `
   text-indent: 1px;
 }
 
-.c1:hover,
-.c1:focus {
+.c0:hover,
+.c0:focus {
   color: #282828;
   background-color: #E0E0E0;
 }
 
-.c1:disabled {
+.c0:disabled {
   color: #A6A6A6;
   cursor: not-allowed;
 }
 
 <button
-  class="poodle-box c0 c1 c2"
->
-  IconButton
-</button>
-`;
-
-exports[`<IconButton /> theming should override classes 1`] = `
-.c0 {
-  box-sizing: border-box;
-}
-
-<button
-  class="poodle-box c0 morning c1"
+  class="poodle-box poodle-icon-button c0"
 >
   IconButton
 </button>
@@ -351,15 +300,11 @@ exports[`<IconButton /> theming should override classes 1`] = `
 
 exports[`<IconButton /> theming should override styles 1`] = `
 .c0 {
-  box-sizing: border-box;
-}
-
-.c1 {
   margin-top: 50px;
 }
 
 <button
-  class="poodle-box c0 c1 c2"
+  class="poodle-box poodle-icon-button c0"
 >
   IconButton
 </button>
@@ -367,10 +312,6 @@ exports[`<IconButton /> theming should override styles 1`] = `
 
 exports[`<IconButton /> theming should render with default props correctly 1`] = `
 .c0 {
-  box-sizing: border-box;
-}
-
-.c1 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -399,19 +340,19 @@ exports[`<IconButton /> theming should render with default props correctly 1`] =
   border-radius: 50%;
 }
 
-.c1:hover,
-.c1:focus {
+.c0:hover,
+.c0:focus {
   color: #282828;
   background-color: #E0E0E0;
 }
 
-.c1:disabled {
+.c0:disabled {
   color: #A6A6A6;
   cursor: not-allowed;
 }
 
 <button
-  class="poodle-box c0 c1 hello c2"
+  class="poodle-box poodle-icon-button hello c0"
   id="id"
 >
   IconButton

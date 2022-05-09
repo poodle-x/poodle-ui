@@ -1,7 +1,7 @@
 import React from "react";
+import { ThemeConfig } from "../theme";
 import { render } from "../utils/test";
 import Columns, { ColumnsContext } from "./";
-import { ThemeConfig } from "../theme";
 
 describe("<Columns />", function () {
 	it("should render columns correctly", () => {
@@ -201,32 +201,6 @@ describe("<Columns />", function () {
 							gutter: 50,
 							id: "id",
 							className: "hello",
-						},
-					},
-				},
-			});
-			expect(container.firstChild).toMatchSnapshot();
-		});
-
-		it("should disable classes", () => {
-			const { container } = render(<Columns>Columns</Columns>, {
-				theme: {
-					Columns: {
-						overrideClasses: {
-							root: true,
-						},
-					},
-				},
-			});
-			expect(container.firstChild).toMatchSnapshot();
-		});
-
-		it("should override classes", () => {
-			const { container } = render(<Columns>Columns</Columns>, {
-				theme: {
-					Columns: {
-						overrideClasses: {
-							root: "morning",
 						},
 					},
 				},

@@ -1,8 +1,8 @@
 import React from "react";
+import { Tabs } from "../Tabs";
+import { ThemeConfig } from "../theme";
 import { render } from "../utils/test";
 import TabPanel from "./";
-import { ThemeConfig } from "../theme";
-import { Tabs } from "../Tabs";
 
 describe("<TabPanel />", () => {
 	it("should render TabPanel correctly", async () => {
@@ -103,42 +103,6 @@ describe("<TabPanel />", () => {
 							defaultProps: {
 								id: "id",
 								className: "hello",
-							},
-						},
-					},
-				}
-			);
-			expect(container.firstChild).toMatchSnapshot();
-		});
-
-		it("should disable classes", () => {
-			const { container } = render(
-				<Tabs>
-					<TabPanel value="text">TabPanel</TabPanel>
-				</Tabs>,
-				{
-					theme: {
-						TabPanel: {
-							overrideClasses: {
-								root: true,
-							},
-						},
-					},
-				}
-			);
-			expect(container.firstChild).toMatchSnapshot();
-		});
-
-		it("should override classes", () => {
-			const { container } = render(
-				<Tabs>
-					<TabPanel value="text">TabPanel</TabPanel>
-				</Tabs>,
-				{
-					theme: {
-						TabPanel: {
-							overrideClasses: {
-								root: "morning",
 							},
 						},
 					},

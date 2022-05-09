@@ -2,10 +2,6 @@
 
 exports[`<ModalBody /> ref should work 1`] = `
 .c0 {
-  box-sizing: border-box;
-}
-
-.c1 {
   min-height: 200px;
   padding-top: 16px;
   padding-bottom: 16px;
@@ -14,7 +10,7 @@ exports[`<ModalBody /> ref should work 1`] = `
 }
 
 <div
-  class="poodle-box c0 c1 c2"
+  class="poodle-box poodle-modal-body c0"
 >
   ModalBody
 </div>
@@ -22,23 +18,16 @@ exports[`<ModalBody /> ref should work 1`] = `
 
 exports[`<ModalBody /> should render Box props correctly 1`] = `
 .c0 {
-  box-sizing: border-box;
-}
-
-.c1 {
   min-height: 200px;
   padding-top: 16px;
   padding-bottom: 16px;
   padding-left: 24px;
   padding-right: 24px;
-}
-
-.c2 {
   margin-top: 20px;
 }
 
 <div
-  class="poodle-box c0 c1 c2"
+  class="poodle-box poodle-modal-body c0"
   id="id"
 >
   ModalBody
@@ -47,10 +36,6 @@ exports[`<ModalBody /> should render Box props correctly 1`] = `
 
 exports[`<ModalBody /> should render ModalBody correctly 1`] = `
 .c0 {
-  box-sizing: border-box;
-}
-
-.c1 {
   min-height: 200px;
   padding-top: 16px;
   padding-bottom: 16px;
@@ -59,7 +44,7 @@ exports[`<ModalBody /> should render ModalBody correctly 1`] = `
 }
 
 <div
-  class="poodle-box c0 c1 c2"
+  class="poodle-box poodle-modal-body c0"
 >
   ModalBody
 </div>
@@ -67,10 +52,6 @@ exports[`<ModalBody /> should render ModalBody correctly 1`] = `
 
 exports[`<ModalBody /> should render ModalBody with auto id 1`] = `
 .c0 {
-  box-sizing: border-box;
-}
-
-.c1 {
   min-height: 200px;
   padding-top: 16px;
   padding-bottom: 16px;
@@ -79,20 +60,8 @@ exports[`<ModalBody /> should render ModalBody with auto id 1`] = `
 }
 
 <div
-  class="poodle-box c0 c1 c2"
+  class="poodle-box poodle-modal-body c0"
   id="id"
->
-  ModalBody
-</div>
-`;
-
-exports[`<ModalBody /> theming should disable classes 1`] = `
-.c0 {
-  box-sizing: border-box;
-}
-
-<div
-  class="poodle-box c0 c1"
 >
   ModalBody
 </div>
@@ -100,10 +69,6 @@ exports[`<ModalBody /> theming should disable classes 1`] = `
 
 exports[`<ModalBody /> theming should extend styles in global 1`] = `
 .c0 {
-  box-sizing: border-box;
-}
-
-.c1 {
   min-height: 200px;
   padding-top: 16px;
   padding-bottom: 16px;
@@ -116,7 +81,7 @@ exports[`<ModalBody /> theming should extend styles in global 1`] = `
 }
 
 <div
-  class="poodle-box c0 c1 c2"
+  class="poodle-box poodle-modal-body c0"
 >
   ModalBody
 </div>
@@ -124,10 +89,6 @@ exports[`<ModalBody /> theming should extend styles in global 1`] = `
 
 exports[`<ModalBody /> theming should extend styles in local 1`] = `
 .c0 {
-  box-sizing: border-box;
-}
-
-.c1 {
   min-height: 200px;
   padding-top: 16px;
   padding-bottom: 16px;
@@ -140,19 +101,7 @@ exports[`<ModalBody /> theming should extend styles in local 1`] = `
 }
 
 <div
-  class="poodle-box c0 c1 c2"
->
-  ModalBody
-</div>
-`;
-
-exports[`<ModalBody /> theming should override classes 1`] = `
-.c0 {
-  box-sizing: border-box;
-}
-
-<div
-  class="poodle-box c0 morning c1"
+  class="poodle-box poodle-modal-body c0"
 >
   ModalBody
 </div>
@@ -160,15 +109,11 @@ exports[`<ModalBody /> theming should override classes 1`] = `
 
 exports[`<ModalBody /> theming should override styles 1`] = `
 .c0 {
-  box-sizing: border-box;
-}
-
-.c1 {
   margin-top: 50px;
 }
 
 <div
-  class="poodle-box c0 c1 c2"
+  class="poodle-box poodle-modal-body c0"
 >
   ModalBody
 </div>
@@ -176,10 +121,6 @@ exports[`<ModalBody /> theming should override styles 1`] = `
 
 exports[`<ModalBody /> theming should render with default props correctly 1`] = `
 .c0 {
-  box-sizing: border-box;
-}
-
-.c1 {
   min-height: 200px;
   padding-top: 16px;
   padding-bottom: 16px;
@@ -188,7 +129,7 @@ exports[`<ModalBody /> theming should render with default props correctly 1`] = 
 }
 
 <div
-  class="poodle-box c0 c1 hello c2"
+  class="poodle-box poodle-modal-body hello c0"
   id="id"
 >
   ModalBody

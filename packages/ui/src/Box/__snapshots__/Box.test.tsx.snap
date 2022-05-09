@@ -2,73 +2,243 @@
 
 exports[`<Box /> box styles should always on top 1`] = `
 .c0 {
-  box-sizing: border-box;
-}
-
-.c1 {
-  padding: 20px;
-}
-
-.c2 {
+  font-size: 20px;
+  padding: 10px;
+  margin: 20px;
   padding: 50px;
 }
 
 <div
-  class="poodle-box c0 c1 c2"
+  class="poodle-box c0"
+>
+  test
+</div>
+`;
+
+exports[`<Box /> should inject raw css with _sx props 1`] = `
+.c0 {
+  p: 10px;
+  margin: 0;
+}
+
+.c0:hover {
+  color: blue;
+}
+
+<div
+  class="poodle-box c0"
+>
+  test
+</div>
+`;
+
+exports[`<Box /> should parse CSSObjectSystem with sx props 1`] = `
+.c0 {
+  height: 5px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  padding: 5px;
+  margin: 15px;
+}
+
+@media screen and (min-width: 576px) {
+  .c0 {
+    padding: 10px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .c0 {
+    padding: 100px;
+  }
+}
+
+@media screen and (min-width: 576px) {
+  .c0 {
+    margin: 25px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .c0 {
+    margin: 35px;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .c0 {
+    margin: 45px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .c0 {
+    margin: 55px;
+  }
+}
+
+.c0:hover {
+  color: red;
+  display: inline-grid;
+}
+
+@media screen and (min-width: 576px) {
+  .c0:hover {
+    color: black;
+  }
+}
+
+@media screen and (min-width: 576px) {
+  .c0:hover {
+    font-size: 25px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .c0:hover {
+    font-size: 35px;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .c0:hover {
+    font-size: 35px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .c0:hover {
+    font-size: 5px;
+  }
+}
+
+<div
+  class="poodle-box c0"
 >
   test
 </div>
 `;
 
 exports[`<Box /> should render correctly 1`] = `
-.c0 {
-  box-sizing: border-box;
-}
-
 <div
-  class="poodle-box c0 c1"
+  class="poodle-box c0"
 />
 `;
 
 exports[`<Box /> should render correctly 2`] = `
-.c0 {
-  box-sizing: border-box;
-}
-
 <div
-  class="poodle-box c0 c1"
+  class="poodle-box c0"
 >
   test
 </div>
 `;
 
 exports[`<Box /> should render correctly with aria* props 1`] = `
-.c0 {
-  box-sizing: border-box;
-}
-
 <div
   aria-label="label"
   aria-live="polite"
-  class="poodle-box c0 c1"
+  class="poodle-box c0"
 />
+`;
+
+exports[`<Box /> system props should work 1`] = `
+.c0 {
+  padding: 5px;
+  margin: 15px;
+  height: 10px;
+}
+
+@media screen and (min-width: 576px) {
+  .c0 {
+    padding: 10px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .c0 {
+    padding: 100px;
+  }
+}
+
+@media screen and (min-width: 576px) {
+  .c0 {
+    margin: 25px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .c0 {
+    margin: 35px;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .c0 {
+    margin: 45px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .c0 {
+    margin: 55px;
+  }
+}
+
+.c0:hover {
+  color: red;
+  display: inline-grid;
+}
+
+@media screen and (min-width: 576px) {
+  .c0:hover {
+    color: black;
+  }
+}
+
+@media screen and (min-width: 576px) {
+  .c0:hover {
+    font-size: 25px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .c0:hover {
+    font-size: 35px;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .c0:hover {
+    font-size: 35px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .c0:hover {
+    font-size: 10px;
+  }
+}
+
+<div
+  class="poodle-box c0"
+>
+  test
+</div>
 `;
 
 exports[`<Box /> theming should extend theme in global 1`] = `
 .c0 {
-  box-sizing: border-box;
   top: 0;
   text-indent: 1px;
   letter-spacing: 250px;
-}
-
-.c1 {
   margin: 20px;
   padding: 20px;
 }
 
 <div
-  class="poodle-box c0 c1"
+  class="poodle-box c0"
 >
   Button
 </div>
@@ -76,19 +246,15 @@ exports[`<Box /> theming should extend theme in global 1`] = `
 
 exports[`<Box /> theming should extend theme in local 1`] = `
 .c0 {
-  box-sizing: border-box;
   top: 0;
   text-indent: 1px;
   letter-spacing: 250px;
-}
-
-.c1 {
   margin: 20px;
   padding: 20px;
 }
 
 <div
-  class="poodle-box c0 c1"
+  class="poodle-box c0"
 >
   Button
 </div>
@@ -97,15 +263,12 @@ exports[`<Box /> theming should extend theme in local 1`] = `
 exports[`<Box /> theming should override styles in global 1`] = `
 .c0 {
   margin: 1px;
-}
-
-.c1 {
   margin: 20px;
   padding: 20px;
 }
 
 <div
-  class="poodle-box c0 c1"
+  class="poodle-box c0"
 >
   Button
 </div>
@@ -114,15 +277,12 @@ exports[`<Box /> theming should override styles in global 1`] = `
 exports[`<Box /> theming should override styles in local 1`] = `
 .c0 {
   margin: 2px;
-}
-
-.c1 {
   margin: 20px;
   padding: 20px;
 }
 
 <div
-  class="poodle-box c0 c1"
+  class="poodle-box c0"
 >
   Button
 </div>

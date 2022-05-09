@@ -1,7 +1,7 @@
 import React from "react";
+import { ThemeConfig } from "../theme";
 import { render } from "../utils/test";
 import ModalFooter from "./";
-import { ThemeConfig } from "../theme";
 
 describe("<ModalFooter />", () => {
 	it("should render ModalFooter correctly", () => {
@@ -72,32 +72,6 @@ describe("<ModalFooter />", () => {
 						defaultProps: {
 							id: "id",
 							className: "hello",
-						},
-					},
-				},
-			});
-			expect(container.firstChild).toMatchSnapshot();
-		});
-
-		it("should disable classes", () => {
-			const { container } = render(<ModalFooter>ModalFooter</ModalFooter>, {
-				theme: {
-					ModalFooter: {
-						overrideClasses: {
-							root: true,
-						},
-					},
-				},
-			});
-			expect(container.firstChild).toMatchSnapshot();
-		});
-
-		it("should override classes", () => {
-			const { container } = render(<ModalFooter>ModalFooter</ModalFooter>, {
-				theme: {
-					ModalFooter: {
-						overrideClasses: {
-							root: "morning",
 						},
 					},
 				},

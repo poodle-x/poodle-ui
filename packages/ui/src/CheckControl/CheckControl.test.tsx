@@ -1,7 +1,7 @@
 import React from "react";
+import { ThemeConfig } from "../theme";
 import { render } from "../utils/test";
 import CheckControl from "./";
-import { ThemeConfig } from "../theme";
 
 describe("<CheckControl />", () => {
 	it("should render CheckControl correctly", () => {
@@ -206,38 +206,6 @@ describe("<CheckControl />", () => {
 			expect(container.firstChild).toMatchSnapshot();
 		});
 
-		it("should disable classes", () => {
-			const { container } = render(
-				<CheckControl checkType="checkbox" checkLabel="label" />,
-				{
-					theme: {
-						CheckControl: {
-							overrideClasses: {
-								root: true,
-							},
-						},
-					},
-				}
-			);
-			expect(container.firstChild).toMatchSnapshot();
-		});
-
-		it("should override classes", () => {
-			const { container } = render(
-				<CheckControl checkType="checkbox" checkLabel="label" />,
-				{
-					theme: {
-						CheckControl: {
-							overrideClasses: {
-								root: "morning",
-							},
-						},
-					},
-				}
-			);
-			expect(container.firstChild).toMatchSnapshot();
-		});
-
 		it("should override styles", () => {
 			const { container } = render(
 				<CheckControl checkType="checkbox" checkLabel="label" />,
@@ -246,6 +214,21 @@ describe("<CheckControl />", () => {
 						CheckControl: {
 							overrides: {
 								root: {
+									mt: 50,
+								},
+								control: {
+									mt: 50,
+								},
+								icon: {
+									mt: 50,
+								},
+								label: {
+									mt: 50,
+								},
+								input: {
+									mt: 50,
+								},
+								labelText: {
 									mt: 50,
 								},
 							},

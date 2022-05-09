@@ -1,7 +1,7 @@
-import { render } from "../utils/test";
-import Container from "./";
 import React from "react";
 import { ThemeConfig } from "../theme";
+import { render } from "../utils/test";
+import Container from "./";
 
 describe("<Container />", () => {
 	it("should render Container correctly", () => {
@@ -84,32 +84,6 @@ describe("<Container />", () => {
 						defaultProps: {
 							id: "id",
 							className: "hello",
-						},
-					},
-				},
-			});
-			expect(container.firstChild).toMatchSnapshot();
-		});
-
-		it("should disable classes", () => {
-			const { container } = render(<Container>Container</Container>, {
-				theme: {
-					Container: {
-						overrideClasses: {
-							root: true,
-						},
-					},
-				},
-			});
-			expect(container.firstChild).toMatchSnapshot();
-		});
-
-		it("should override classes", () => {
-			const { container } = render(<Container>Container</Container>, {
-				theme: {
-					Container: {
-						overrideClasses: {
-							root: "morning",
 						},
 					},
 				},

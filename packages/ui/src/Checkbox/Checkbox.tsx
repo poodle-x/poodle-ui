@@ -1,13 +1,13 @@
 import React from "react";
-import { StandardComponentProps, ThemeConfig } from "../theme";
-import useDefaultProps from "../utils/useDefaultProps";
-import { useClassNames } from "../styled";
-import useCombineRefs from "../utils/useCombineRefs";
-import useSafeLayoutEffect from "../utils/useSafeLayoutEffect";
 import { CheckControl, CheckControlProps } from "../CheckControl";
+import useCombineRefs from "../hooks/useCombineRefs";
+import useDefaultProps from "../hooks/useDefaultProps/useDefaultProps";
+import useSafeLayoutEffect from "../hooks/useSafeLayoutEffect";
 import CheckboxButton from "../icons/CheckboxButton";
 import CheckboxCheckedButton from "../icons/CheckboxCheckedButton";
 import CheckboxIndeterminateButton from "../icons/CheckboxIndeterminateButton";
+import { getCSSSystemBoxProps } from "../styled/CSSSystem";
+import { StandardComponentProps, ThemeConfig } from "../theme";
 import * as styles from "./styles";
 
 export interface LocalCheckboxProps {
@@ -52,7 +52,7 @@ function getDefaultProps(theme?: ThemeConfig) {
 export const Checkbox: React.ForwardRefExoticComponent<
 	React.PropsWithoutRef<CheckboxProps> & React.RefAttributes<HTMLElement>
 > = React.forwardRef<HTMLElement, CheckboxProps>((_props, ref) => {
-	const props = useDefaultProps<CheckboxProps>(_props, {
+	const { props, isLocalTheme } = useDefaultProps<CheckboxProps>(_props, {
 		themeDefaultProps: getDefaultProps,
 	});
 
@@ -74,43 +74,6 @@ export const Checkbox: React.ForwardRefExoticComponent<
 	const inputRef = React.useRef<HTMLInputElement | null>(null);
 
 	const inputCombineRef = useCombineRefs([inputRef, inputProps?.ref]);
-
-	const classes = useClassNames({
-		props,
-		lists: {
-			root: {
-				classNames: ["poodle-checkbox", styles.Root, className],
-			},
-			control: {
-				classNames: [
-					"poodle-checkbox__control",
-					styles.Control,
-					controlProps?.className,
-				],
-			},
-			input: {
-				classNames: [
-					"poodle-checkbox__input",
-					styles.Input,
-					inputProps?.className,
-				],
-			},
-			icon: {
-				classNames: [
-					"poodle-checkbox__icon",
-					styles.Icon,
-					iconProps?.className,
-				],
-			},
-			label: {
-				classNames: [
-					"poodle-checkbox__label",
-					styles.Label,
-					labelProps?.className,
-				],
-			},
-		},
-	});
 
 	const CheckboxButtonIcon = props.theme?.baseIcons?.CheckboxButton
 		? props.theme?.baseIcons.CheckboxButton
@@ -134,10 +97,8 @@ export const Checkbox: React.ForwardRefExoticComponent<
 
 	return (
 		<CheckControl
-			{...otherProps}
 			ref={ref}
 			isLabelHidden={isLabelHidden}
-			className={classes.root}
 			checkType="checkbox"
 			checkLabel={label}
 			renderIcon={
@@ -151,24 +112,53 @@ export const Checkbox: React.ForwardRefExoticComponent<
 				</React.Fragment>
 			}
 			labelProps={{
-				...labelProps,
-				className: classes.label,
+				...getCSSSystemBoxProps({
+					isLocalTheme,
+					componentProps: props,
+					partProps: labelProps,
+					fnCSSSystem: styles.Label,
+					baseClassName: ["poodle-checkbox__label"],
+				}),
 			}}
 			iconProps={{
-				...iconProps,
-				className: classes.icon,
+				...getCSSSystemBoxProps({
+					isLocalTheme,
+					componentProps: props,
+					partProps: iconProps,
+					fnCSSSystem: styles.Icon,
+					baseClassName: ["poodle-checkbox__icon"],
+				}),
 			}}
 			controlProps={{
-				...controlProps,
-				className: classes.control,
+				...getCSSSystemBoxProps({
+					isLocalTheme,
+					componentProps: props,
+					partProps: controlProps,
+					fnCSSSystem: styles.Control,
+					baseClassName: ["poodle-checkbox__control"],
+				}),
 			}}
 			inputProps={{
-				...inputProps,
 				checked: isChecked,
 				disabled: isDisabled,
 				defaultChecked: defaultChecked,
 				ref: inputCombineRef,
+				...getCSSSystemBoxProps({
+					isLocalTheme,
+					componentProps: props,
+					partProps: inputProps,
+					fnCSSSystem: styles.Input,
+					baseClassName: ["poodle-checkbox__input"],
+				}),
 			}}
+			{...otherProps}
+			{...getCSSSystemBoxProps({
+				isRoot: true,
+				isLocalTheme,
+				componentProps: props,
+				fnCSSSystem: styles.Root,
+				baseClassName: ["poodle-checkbox"],
+			})}
 		/>
 	);
 });

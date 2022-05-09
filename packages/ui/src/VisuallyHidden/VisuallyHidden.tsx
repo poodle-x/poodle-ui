@@ -1,8 +1,8 @@
 import React from "react";
 import Box, { BoxProps } from "../Box";
+import { getCSSSystemBoxProps } from "../styled/CSSSystem";
 import { StandardComponentProps, ThemeConfig } from "../theme";
-import useDefaultProps from "../utils/useDefaultProps";
-import { useClassNames } from "../styled";
+import useDefaultProps from "../hooks/useDefaultProps/useDefaultProps";
 import * as styles from "./styles";
 
 export interface LocalVisuallyHiddenProps {
@@ -21,23 +21,24 @@ function getDefaultProps(theme?: ThemeConfig) {
 export const VisuallyHidden: React.ForwardRefExoticComponent<
 	React.PropsWithoutRef<VisuallyHiddenProps> & React.RefAttributes<HTMLElement>
 > = React.forwardRef<HTMLElement, VisuallyHiddenProps>((_props, ref) => {
-	const props = useDefaultProps<VisuallyHiddenProps>(_props, {
+	const { props, isLocalTheme } = useDefaultProps<VisuallyHiddenProps>(_props, {
 		themeDefaultProps: getDefaultProps,
 	});
 
 	const { children, className, ...otherProps } = props;
 
-	const classes = useClassNames({
-		props,
-		lists: {
-			root: {
-				classNames: ["poodle-visually-hidden", styles.Root, className],
-			},
-		},
-	});
-
 	return (
-		<Box {...otherProps} className={classes.root} ref={ref}>
+		<Box
+			{...otherProps}
+			{...getCSSSystemBoxProps({
+				isRoot: true,
+				isLocalTheme,
+				componentProps: props,
+				fnCSSSystem: styles.Root,
+				baseClassName: ["poodle-visually-hidden"],
+			})}
+			ref={ref}
+		>
 			{children}
 		</Box>
 	);

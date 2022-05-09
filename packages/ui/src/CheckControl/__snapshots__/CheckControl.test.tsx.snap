@@ -2,10 +2,6 @@
 
 exports[`<CheckControl /> ref should work 1`] = `
 .c0 {
-  box-sizing: border-box;
-}
-
-.c1 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -20,15 +16,15 @@ exports[`<CheckControl /> ref should work 1`] = `
   transition: color 150ms ease-in;
 }
 
-.c1:hover {
+.c0:hover {
   color: #00478A;
 }
 
-.c1:focus-within {
+.c0:focus-within {
   color: #00478A;
 }
 
-.c4 {
+.c1 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -52,11 +48,11 @@ exports[`<CheckControl /> ref should work 1`] = `
   transition: borderColor 120ms ease-in;
 }
 
-.c4:focus-within {
+.c1:focus-within {
   border-color: rgba(0,0,0,0.8);
 }
 
-.c7 {
+.c2 {
   position: absolute;
   top: 0;
   left: -99px;
@@ -67,28 +63,28 @@ exports[`<CheckControl /> ref should work 1`] = `
   padding: 0;
 }
 
-.c7~*[data-render-icon='true'] *[data-icon-checked='true'] {
+.c2~*[data-render-icon='true'] *[data-icon-checked='true'] {
   display: none;
 }
 
-.c7:checked~*[data-render-icon='true'] *[data-icon-normal='true'] {
+.c2:checked~*[data-render-icon='true'] *[data-icon-normal='true'] {
   display: none;
 }
 
-.c7:checked~*[data-render-icon='true'] *[data-icon-checked='true'] {
+.c2:checked~*[data-render-icon='true'] *[data-icon-checked='true'] {
   display: initial;
   color: #00478A;
 }
 
-.c7:disabled~*[data-render-icon='true'] *[data-icon-checked='true'] {
+.c2:disabled~*[data-render-icon='true'] *[data-icon-checked='true'] {
   color: #A6A6A6;
 }
 
-.c7:disabled~*[data-render-icon='true'] *[data-icon-normal='true'] {
+.c2:disabled~*[data-render-icon='true'] *[data-icon-normal='true'] {
   color: #A6A6A6;
 }
 
-.c10 {
+.c3 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -98,7 +94,7 @@ exports[`<CheckControl /> ref should work 1`] = `
   width: 1.5rem;
 }
 
-.c13 {
+.c4 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -113,33 +109,33 @@ exports[`<CheckControl /> ref should work 1`] = `
   padding-left: 1.5rem;
 }
 
-.c16 {
+.c5 {
   padding-left: 8px;
 }
 
 <div
-  class="poodle-box c0 poodle-check-control c1 c2"
+  class="poodle-box poodle-check-control c0"
 >
   <div
-    class="poodle-box c0 poodle-check-control__control c4 c2"
+    class="poodle-box poodle-check-control__control c1"
   >
     <input
-      class="poodle-box c0 poodle-check-control__input c7 c2"
+      class="poodle-box poodle-check-control__input c2"
       id="poodle-check-control-1"
       type="checkbox"
     />
     <div
       aria-hidden="true"
-      class="poodle-box c0 poodle-check-control__icon c10 c2"
+      class="poodle-box poodle-check-control__icon c3"
       data-render-icon="true"
     />
   </div>
   <label
-    class="poodle-box c0 poodle-check-control__label c13 c2"
+    class="poodle-box poodle-check-control__label c4"
     for="poodle-check-control-1"
   >
     <span
-      class="poodle-box c0 poodle-check-control__label-text c16 c2"
+      class="poodle-box poodle-check-control__label-text c5"
     >
       label
     </span>
@@ -149,10 +145,6 @@ exports[`<CheckControl /> ref should work 1`] = `
 
 exports[`<CheckControl /> should pass custom props 1`] = `
 .c0 {
-  box-sizing: border-box;
-}
-
-.c1 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -165,21 +157,18 @@ exports[`<CheckControl /> should pass custom props 1`] = `
   color: #282828;
   -webkit-transition: color 150ms ease-in;
   transition: color 150ms ease-in;
-}
-
-.c1:hover {
-  color: #00478A;
-}
-
-.c1:focus-within {
-  color: #00478A;
-}
-
-.c2 {
   margin-top: 20px;
 }
 
-.c4 {
+.c0:hover {
+  color: #00478A;
+}
+
+.c0:focus-within {
+  color: #00478A;
+}
+
+.c1 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -201,18 +190,15 @@ exports[`<CheckControl /> should pass custom props 1`] = `
   overflow: hidden;
   -webkit-transition: borderColor 120ms ease-in;
   transition: borderColor 120ms ease-in;
-}
-
-.c4:focus-within {
-  border-color: rgba(0,0,0,0.8);
-}
-
-.c5 {
   margin-left: 30;
   margin-right: 30;
 }
 
-.c7 {
+.c1:focus-within {
+  border-color: rgba(0,0,0,0.8);
+}
+
+.c2 {
   position: absolute;
   top: 0;
   left: -99px;
@@ -221,34 +207,31 @@ exports[`<CheckControl /> should pass custom props 1`] = `
   border: 0;
   margin: 0;
   padding: 0;
+  padding-top: 20px;
 }
 
-.c7~*[data-render-icon='true'] *[data-icon-checked='true'] {
+.c2~*[data-render-icon='true'] *[data-icon-checked='true'] {
   display: none;
 }
 
-.c7:checked~*[data-render-icon='true'] *[data-icon-normal='true'] {
+.c2:checked~*[data-render-icon='true'] *[data-icon-normal='true'] {
   display: none;
 }
 
-.c7:checked~*[data-render-icon='true'] *[data-icon-checked='true'] {
+.c2:checked~*[data-render-icon='true'] *[data-icon-checked='true'] {
   display: initial;
   color: #00478A;
 }
 
-.c7:disabled~*[data-render-icon='true'] *[data-icon-checked='true'] {
+.c2:disabled~*[data-render-icon='true'] *[data-icon-checked='true'] {
   color: #A6A6A6;
 }
 
-.c7:disabled~*[data-render-icon='true'] *[data-icon-normal='true'] {
+.c2:disabled~*[data-render-icon='true'] *[data-icon-normal='true'] {
   color: #A6A6A6;
 }
 
-.c8 {
-  padding-top: 20px;
-}
-
-.c10 {
+.c3 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -256,9 +239,11 @@ exports[`<CheckControl /> should pass custom props 1`] = `
   font-size: 1.5rem;
   height: 1.5rem;
   width: 1.5rem;
+  margin-left: 30;
+  margin-right: 30;
 }
 
-.c13 {
+.c4 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -271,40 +256,42 @@ exports[`<CheckControl /> should pass custom props 1`] = `
   cursor: pointer;
   min-height: 1.5rem;
   padding-left: 1.5rem;
+  margin-left: 30;
+  margin-right: 30;
 }
 
-.c16 {
+.c5 {
   padding-left: 8px;
 }
 
 <div
-  class="poodle-box c0 poodle-check-control c1 c2"
+  class="poodle-box poodle-check-control c0"
   id="id"
 >
   <div
     aria-required="true"
-    class="poodle-box c0 poodle-check-control__control c4 c5"
+    class="poodle-box poodle-check-control__control c1"
   >
     <input
       aria-checked="true"
-      class="poodle-box c0 poodle-check-control__input c7 c8"
+      class="poodle-box poodle-check-control__input c2"
       id="poodle-check-control-1"
       type="radio"
     />
     <div
       aria-hidden="true"
       aria-required="true"
-      class="poodle-box c0 poodle-check-control__icon c10 c5"
+      class="poodle-box poodle-check-control__icon c3"
       data-render-icon="true"
     />
   </div>
   <label
     aria-required="true"
-    class="poodle-box c0 poodle-check-control__label c13 c5"
+    class="poodle-box poodle-check-control__label c4"
     for="poodle-check-control-1"
   >
     <span
-      class="poodle-box c0 poodle-check-control__label-text c16 c17"
+      class="poodle-box poodle-check-control__label-text c5"
     >
       label
     </span>
@@ -314,10 +301,6 @@ exports[`<CheckControl /> should pass custom props 1`] = `
 
 exports[`<CheckControl /> should render CheckControl correctly 1`] = `
 .c0 {
-  box-sizing: border-box;
-}
-
-.c1 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -332,15 +315,15 @@ exports[`<CheckControl /> should render CheckControl correctly 1`] = `
   transition: color 150ms ease-in;
 }
 
-.c1:hover {
+.c0:hover {
   color: #00478A;
 }
 
-.c1:focus-within {
+.c0:focus-within {
   color: #00478A;
 }
 
-.c4 {
+.c1 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -364,11 +347,11 @@ exports[`<CheckControl /> should render CheckControl correctly 1`] = `
   transition: borderColor 120ms ease-in;
 }
 
-.c4:focus-within {
+.c1:focus-within {
   border-color: rgba(0,0,0,0.8);
 }
 
-.c7 {
+.c2 {
   position: absolute;
   top: 0;
   left: -99px;
@@ -379,28 +362,28 @@ exports[`<CheckControl /> should render CheckControl correctly 1`] = `
   padding: 0;
 }
 
-.c7~*[data-render-icon='true'] *[data-icon-checked='true'] {
+.c2~*[data-render-icon='true'] *[data-icon-checked='true'] {
   display: none;
 }
 
-.c7:checked~*[data-render-icon='true'] *[data-icon-normal='true'] {
+.c2:checked~*[data-render-icon='true'] *[data-icon-normal='true'] {
   display: none;
 }
 
-.c7:checked~*[data-render-icon='true'] *[data-icon-checked='true'] {
+.c2:checked~*[data-render-icon='true'] *[data-icon-checked='true'] {
   display: initial;
   color: #00478A;
 }
 
-.c7:disabled~*[data-render-icon='true'] *[data-icon-checked='true'] {
+.c2:disabled~*[data-render-icon='true'] *[data-icon-checked='true'] {
   color: #A6A6A6;
 }
 
-.c7:disabled~*[data-render-icon='true'] *[data-icon-normal='true'] {
+.c2:disabled~*[data-render-icon='true'] *[data-icon-normal='true'] {
   color: #A6A6A6;
 }
 
-.c10 {
+.c3 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -410,7 +393,7 @@ exports[`<CheckControl /> should render CheckControl correctly 1`] = `
   width: 1.5rem;
 }
 
-.c13 {
+.c4 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -425,33 +408,33 @@ exports[`<CheckControl /> should render CheckControl correctly 1`] = `
   padding-left: 1.5rem;
 }
 
-.c16 {
+.c5 {
   padding-left: 8px;
 }
 
 <div
-  class="poodle-box c0 poodle-check-control c1 c2"
+  class="poodle-box poodle-check-control c0"
 >
   <div
-    class="poodle-box c0 poodle-check-control__control c4 c2"
+    class="poodle-box poodle-check-control__control c1"
   >
     <input
-      class="poodle-box c0 poodle-check-control__input c7 c2"
+      class="poodle-box poodle-check-control__input c2"
       id="poodle-check-control-1"
       type="checkbox"
     />
     <div
       aria-hidden="true"
-      class="poodle-box c0 poodle-check-control__icon c10 c2"
+      class="poodle-box poodle-check-control__icon c3"
       data-render-icon="true"
     />
   </div>
   <label
-    class="poodle-box c0 poodle-check-control__label c13 c2"
+    class="poodle-box poodle-check-control__label c4"
     for="poodle-check-control-1"
   >
     <span
-      class="poodle-box c0 poodle-check-control__label-text c16 c2"
+      class="poodle-box poodle-check-control__label-text c5"
     >
       label
     </span>
@@ -461,10 +444,6 @@ exports[`<CheckControl /> should render CheckControl correctly 1`] = `
 
 exports[`<CheckControl /> should render control 1`] = `
 .c0 {
-  box-sizing: border-box;
-}
-
-.c1 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -479,15 +458,15 @@ exports[`<CheckControl /> should render control 1`] = `
   transition: color 150ms ease-in;
 }
 
-.c1:hover {
+.c0:hover {
   color: #00478A;
 }
 
-.c1:focus-within {
+.c0:focus-within {
   color: #00478A;
 }
 
-.c4 {
+.c1 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -511,11 +490,11 @@ exports[`<CheckControl /> should render control 1`] = `
   transition: borderColor 120ms ease-in;
 }
 
-.c4:focus-within {
+.c1:focus-within {
   border-color: rgba(0,0,0,0.8);
 }
 
-.c7 {
+.c2 {
   position: absolute;
   top: 0;
   left: -99px;
@@ -526,28 +505,28 @@ exports[`<CheckControl /> should render control 1`] = `
   padding: 0;
 }
 
-.c7~*[data-render-icon='true'] *[data-icon-checked='true'] {
+.c2~*[data-render-icon='true'] *[data-icon-checked='true'] {
   display: none;
 }
 
-.c7:checked~*[data-render-icon='true'] *[data-icon-normal='true'] {
+.c2:checked~*[data-render-icon='true'] *[data-icon-normal='true'] {
   display: none;
 }
 
-.c7:checked~*[data-render-icon='true'] *[data-icon-checked='true'] {
+.c2:checked~*[data-render-icon='true'] *[data-icon-checked='true'] {
   display: initial;
   color: #00478A;
 }
 
-.c7:disabled~*[data-render-icon='true'] *[data-icon-checked='true'] {
+.c2:disabled~*[data-render-icon='true'] *[data-icon-checked='true'] {
   color: #A6A6A6;
 }
 
-.c7:disabled~*[data-render-icon='true'] *[data-icon-normal='true'] {
+.c2:disabled~*[data-render-icon='true'] *[data-icon-normal='true'] {
   color: #A6A6A6;
 }
 
-.c10 {
+.c3 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -557,7 +536,7 @@ exports[`<CheckControl /> should render control 1`] = `
   width: 1.5rem;
 }
 
-.c13 {
+.c4 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -572,24 +551,24 @@ exports[`<CheckControl /> should render control 1`] = `
   padding-left: 1.5rem;
 }
 
-.c16 {
+.c5 {
   padding-left: 8px;
 }
 
 <div
-  class="poodle-box c0 poodle-check-control c1 c2"
+  class="poodle-box poodle-check-control c0"
 >
   <div
-    class="poodle-box c0 poodle-check-control__control c4 c2"
+    class="poodle-box poodle-check-control__control c1"
   >
     <input
-      class="poodle-box c0 poodle-check-control__input c7 c2"
+      class="poodle-box poodle-check-control__input c2"
       id="poodle-check-control-1"
       type="checkbox"
     />
     <div
       aria-hidden="true"
-      class="poodle-box c0 poodle-check-control__icon c10 c2"
+      class="poodle-box poodle-check-control__icon c3"
       data-render-icon="true"
     >
       <span>
@@ -598,11 +577,11 @@ exports[`<CheckControl /> should render control 1`] = `
     </div>
   </div>
   <label
-    class="poodle-box c0 poodle-check-control__label c13 c2"
+    class="poodle-box poodle-check-control__label c4"
     for="poodle-check-control-1"
   >
     <span
-      class="poodle-box c0 poodle-check-control__label-text c16 c2"
+      class="poodle-box poodle-check-control__label-text c5"
     >
       label
     </span>
@@ -612,10 +591,6 @@ exports[`<CheckControl /> should render control 1`] = `
 
 exports[`<CheckControl /> size Should render with size l correctly 1`] = `
 .c0 {
-  box-sizing: border-box;
-}
-
-.c1 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -630,15 +605,15 @@ exports[`<CheckControl /> size Should render with size l correctly 1`] = `
   transition: color 150ms ease-in;
 }
 
-.c1:hover {
+.c0:hover {
   color: #00478A;
 }
 
-.c1:focus-within {
+.c0:focus-within {
   color: #00478A;
 }
 
-.c4 {
+.c1 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -662,11 +637,11 @@ exports[`<CheckControl /> size Should render with size l correctly 1`] = `
   transition: borderColor 120ms ease-in;
 }
 
-.c4:focus-within {
+.c1:focus-within {
   border-color: rgba(0,0,0,0.8);
 }
 
-.c7 {
+.c2 {
   position: absolute;
   top: 0;
   left: -99px;
@@ -677,28 +652,28 @@ exports[`<CheckControl /> size Should render with size l correctly 1`] = `
   padding: 0;
 }
 
-.c7~*[data-render-icon='true'] *[data-icon-checked='true'] {
+.c2~*[data-render-icon='true'] *[data-icon-checked='true'] {
   display: none;
 }
 
-.c7:checked~*[data-render-icon='true'] *[data-icon-normal='true'] {
+.c2:checked~*[data-render-icon='true'] *[data-icon-normal='true'] {
   display: none;
 }
 
-.c7:checked~*[data-render-icon='true'] *[data-icon-checked='true'] {
+.c2:checked~*[data-render-icon='true'] *[data-icon-checked='true'] {
   display: initial;
   color: #00478A;
 }
 
-.c7:disabled~*[data-render-icon='true'] *[data-icon-checked='true'] {
+.c2:disabled~*[data-render-icon='true'] *[data-icon-checked='true'] {
   color: #A6A6A6;
 }
 
-.c7:disabled~*[data-render-icon='true'] *[data-icon-normal='true'] {
+.c2:disabled~*[data-render-icon='true'] *[data-icon-normal='true'] {
   color: #A6A6A6;
 }
 
-.c10 {
+.c3 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -708,7 +683,7 @@ exports[`<CheckControl /> size Should render with size l correctly 1`] = `
   width: 1.75rem;
 }
 
-.c13 {
+.c4 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -723,24 +698,24 @@ exports[`<CheckControl /> size Should render with size l correctly 1`] = `
   padding-left: 1.75rem;
 }
 
-.c16 {
+.c5 {
   padding-left: 8px;
 }
 
 <div
-  class="poodle-box c0 poodle-check-control c1 c2"
+  class="poodle-box poodle-check-control c0"
 >
   <div
-    class="poodle-box c0 poodle-check-control__control c4 c2"
+    class="poodle-box poodle-check-control__control c1"
   >
     <input
-      class="poodle-box c0 poodle-check-control__input c7 c2"
+      class="poodle-box poodle-check-control__input c2"
       id="poodle-check-control-1"
       type="checkbox"
     />
     <div
       aria-hidden="true"
-      class="poodle-box c0 poodle-check-control__icon c10 c2"
+      class="poodle-box poodle-check-control__icon c3"
       data-render-icon="true"
     >
       <span>
@@ -749,11 +724,11 @@ exports[`<CheckControl /> size Should render with size l correctly 1`] = `
     </div>
   </div>
   <label
-    class="poodle-box c0 poodle-check-control__label c13 c2"
+    class="poodle-box poodle-check-control__label c4"
     for="poodle-check-control-1"
   >
     <span
-      class="poodle-box c0 poodle-check-control__label-text c16 c2"
+      class="poodle-box poodle-check-control__label-text c5"
     >
       label
     </span>
@@ -763,10 +738,6 @@ exports[`<CheckControl /> size Should render with size l correctly 1`] = `
 
 exports[`<CheckControl /> size Should render with size m correctly 1`] = `
 .c0 {
-  box-sizing: border-box;
-}
-
-.c1 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -781,15 +752,15 @@ exports[`<CheckControl /> size Should render with size m correctly 1`] = `
   transition: color 150ms ease-in;
 }
 
-.c1:hover {
+.c0:hover {
   color: #00478A;
 }
 
-.c1:focus-within {
+.c0:focus-within {
   color: #00478A;
 }
 
-.c4 {
+.c1 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -813,11 +784,11 @@ exports[`<CheckControl /> size Should render with size m correctly 1`] = `
   transition: borderColor 120ms ease-in;
 }
 
-.c4:focus-within {
+.c1:focus-within {
   border-color: rgba(0,0,0,0.8);
 }
 
-.c7 {
+.c2 {
   position: absolute;
   top: 0;
   left: -99px;
@@ -828,28 +799,28 @@ exports[`<CheckControl /> size Should render with size m correctly 1`] = `
   padding: 0;
 }
 
-.c7~*[data-render-icon='true'] *[data-icon-checked='true'] {
+.c2~*[data-render-icon='true'] *[data-icon-checked='true'] {
   display: none;
 }
 
-.c7:checked~*[data-render-icon='true'] *[data-icon-normal='true'] {
+.c2:checked~*[data-render-icon='true'] *[data-icon-normal='true'] {
   display: none;
 }
 
-.c7:checked~*[data-render-icon='true'] *[data-icon-checked='true'] {
+.c2:checked~*[data-render-icon='true'] *[data-icon-checked='true'] {
   display: initial;
   color: #00478A;
 }
 
-.c7:disabled~*[data-render-icon='true'] *[data-icon-checked='true'] {
+.c2:disabled~*[data-render-icon='true'] *[data-icon-checked='true'] {
   color: #A6A6A6;
 }
 
-.c7:disabled~*[data-render-icon='true'] *[data-icon-normal='true'] {
+.c2:disabled~*[data-render-icon='true'] *[data-icon-normal='true'] {
   color: #A6A6A6;
 }
 
-.c10 {
+.c3 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -859,7 +830,7 @@ exports[`<CheckControl /> size Should render with size m correctly 1`] = `
   width: 1.5rem;
 }
 
-.c13 {
+.c4 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -874,24 +845,24 @@ exports[`<CheckControl /> size Should render with size m correctly 1`] = `
   padding-left: 1.5rem;
 }
 
-.c16 {
+.c5 {
   padding-left: 8px;
 }
 
 <div
-  class="poodle-box c0 poodle-check-control c1 c2"
+  class="poodle-box poodle-check-control c0"
 >
   <div
-    class="poodle-box c0 poodle-check-control__control c4 c2"
+    class="poodle-box poodle-check-control__control c1"
   >
     <input
-      class="poodle-box c0 poodle-check-control__input c7 c2"
+      class="poodle-box poodle-check-control__input c2"
       id="poodle-check-control-1"
       type="checkbox"
     />
     <div
       aria-hidden="true"
-      class="poodle-box c0 poodle-check-control__icon c10 c2"
+      class="poodle-box poodle-check-control__icon c3"
       data-render-icon="true"
     >
       <span>
@@ -900,11 +871,11 @@ exports[`<CheckControl /> size Should render with size m correctly 1`] = `
     </div>
   </div>
   <label
-    class="poodle-box c0 poodle-check-control__label c13 c2"
+    class="poodle-box poodle-check-control__label c4"
     for="poodle-check-control-1"
   >
     <span
-      class="poodle-box c0 poodle-check-control__label-text c16 c2"
+      class="poodle-box poodle-check-control__label-text c5"
     >
       label
     </span>
@@ -914,10 +885,6 @@ exports[`<CheckControl /> size Should render with size m correctly 1`] = `
 
 exports[`<CheckControl /> size Should render with size s correctly 1`] = `
 .c0 {
-  box-sizing: border-box;
-}
-
-.c1 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -932,15 +899,15 @@ exports[`<CheckControl /> size Should render with size s correctly 1`] = `
   transition: color 150ms ease-in;
 }
 
-.c1:hover {
+.c0:hover {
   color: #00478A;
 }
 
-.c1:focus-within {
+.c0:focus-within {
   color: #00478A;
 }
 
-.c4 {
+.c1 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -964,11 +931,11 @@ exports[`<CheckControl /> size Should render with size s correctly 1`] = `
   transition: borderColor 120ms ease-in;
 }
 
-.c4:focus-within {
+.c1:focus-within {
   border-color: rgba(0,0,0,0.8);
 }
 
-.c7 {
+.c2 {
   position: absolute;
   top: 0;
   left: -99px;
@@ -979,28 +946,28 @@ exports[`<CheckControl /> size Should render with size s correctly 1`] = `
   padding: 0;
 }
 
-.c7~*[data-render-icon='true'] *[data-icon-checked='true'] {
+.c2~*[data-render-icon='true'] *[data-icon-checked='true'] {
   display: none;
 }
 
-.c7:checked~*[data-render-icon='true'] *[data-icon-normal='true'] {
+.c2:checked~*[data-render-icon='true'] *[data-icon-normal='true'] {
   display: none;
 }
 
-.c7:checked~*[data-render-icon='true'] *[data-icon-checked='true'] {
+.c2:checked~*[data-render-icon='true'] *[data-icon-checked='true'] {
   display: initial;
   color: #00478A;
 }
 
-.c7:disabled~*[data-render-icon='true'] *[data-icon-checked='true'] {
+.c2:disabled~*[data-render-icon='true'] *[data-icon-checked='true'] {
   color: #A6A6A6;
 }
 
-.c7:disabled~*[data-render-icon='true'] *[data-icon-normal='true'] {
+.c2:disabled~*[data-render-icon='true'] *[data-icon-normal='true'] {
   color: #A6A6A6;
 }
 
-.c10 {
+.c3 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1010,7 +977,7 @@ exports[`<CheckControl /> size Should render with size s correctly 1`] = `
   width: 1.25rem;
 }
 
-.c13 {
+.c4 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -1025,24 +992,24 @@ exports[`<CheckControl /> size Should render with size s correctly 1`] = `
   padding-left: 1.25rem;
 }
 
-.c16 {
+.c5 {
   padding-left: 8px;
 }
 
 <div
-  class="poodle-box c0 poodle-check-control c1 c2"
+  class="poodle-box poodle-check-control c0"
 >
   <div
-    class="poodle-box c0 poodle-check-control__control c4 c2"
+    class="poodle-box poodle-check-control__control c1"
   >
     <input
-      class="poodle-box c0 poodle-check-control__input c7 c2"
+      class="poodle-box poodle-check-control__input c2"
       id="poodle-check-control-1"
       type="checkbox"
     />
     <div
       aria-hidden="true"
-      class="poodle-box c0 poodle-check-control__icon c10 c2"
+      class="poodle-box poodle-check-control__icon c3"
       data-render-icon="true"
     >
       <span>
@@ -1051,135 +1018,11 @@ exports[`<CheckControl /> size Should render with size s correctly 1`] = `
     </div>
   </div>
   <label
-    class="poodle-box c0 poodle-check-control__label c13 c2"
+    class="poodle-box poodle-check-control__label c4"
     for="poodle-check-control-1"
   >
     <span
-      class="poodle-box c0 poodle-check-control__label-text c16 c2"
-    >
-      label
-    </span>
-  </label>
-</div>
-`;
-
-exports[`<CheckControl /> theming should disable classes 1`] = `
-.c0 {
-  box-sizing: border-box;
-}
-
-.c3 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  border: 1px dotted;
-  border-color: transparent;
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 100%;
-  overflow: hidden;
-  -webkit-transition: borderColor 120ms ease-in;
-  transition: borderColor 120ms ease-in;
-}
-
-.c3:focus-within {
-  border-color: rgba(0,0,0,0.8);
-}
-
-.c6 {
-  position: absolute;
-  top: 0;
-  left: -99px;
-  width: 0;
-  height: 0;
-  border: 0;
-  margin: 0;
-  padding: 0;
-}
-
-.c6~*[data-render-icon='true'] *[data-icon-checked='true'] {
-  display: none;
-}
-
-.c6:checked~*[data-render-icon='true'] *[data-icon-normal='true'] {
-  display: none;
-}
-
-.c6:checked~*[data-render-icon='true'] *[data-icon-checked='true'] {
-  display: initial;
-  color: #00478A;
-}
-
-.c6:disabled~*[data-render-icon='true'] *[data-icon-checked='true'] {
-  color: #A6A6A6;
-}
-
-.c6:disabled~*[data-render-icon='true'] *[data-icon-normal='true'] {
-  color: #A6A6A6;
-}
-
-.c9 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  font-size: 1.5rem;
-  height: 1.5rem;
-  width: 1.5rem;
-}
-
-.c12 {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  position: relative;
-  cursor: pointer;
-  min-height: 1.5rem;
-  padding-left: 1.5rem;
-}
-
-.c15 {
-  padding-left: 8px;
-}
-
-<div
-  class="poodle-box c0 poodle-check-control c1"
->
-  <div
-    class="poodle-box c0 poodle-check-control__control c3 c1"
-  >
-    <input
-      class="poodle-box c0 poodle-check-control__input c6 c1"
-      id="poodle-check-control-1"
-      type="checkbox"
-    />
-    <div
-      aria-hidden="true"
-      class="poodle-box c0 poodle-check-control__icon c9 c1"
-      data-render-icon="true"
-    />
-  </div>
-  <label
-    class="poodle-box c0 poodle-check-control__label c12 c1"
-    for="poodle-check-control-1"
-  >
-    <span
-      class="poodle-box c0 poodle-check-control__label-text c15 c1"
+      class="poodle-box poodle-check-control__label-text c5"
     >
       label
     </span>
@@ -1189,10 +1032,6 @@ exports[`<CheckControl /> theming should disable classes 1`] = `
 
 exports[`<CheckControl /> theming should extend styles in global 1`] = `
 .c0 {
-  box-sizing: border-box;
-}
-
-.c1 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -1209,15 +1048,15 @@ exports[`<CheckControl /> theming should extend styles in global 1`] = `
   text-indent: 1px;
 }
 
-.c1:hover {
+.c0:hover {
   color: #00478A;
 }
 
-.c1:focus-within {
+.c0:focus-within {
   color: #00478A;
 }
 
-.c4 {
+.c1 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1243,11 +1082,11 @@ exports[`<CheckControl /> theming should extend styles in global 1`] = `
   text-indent: 2px;
 }
 
-.c4:focus-within {
+.c1:focus-within {
   border-color: rgba(0,0,0,0.8);
 }
 
-.c7 {
+.c2 {
   position: absolute;
   top: 0;
   left: -99px;
@@ -1260,28 +1099,28 @@ exports[`<CheckControl /> theming should extend styles in global 1`] = `
   text-indent: 4px;
 }
 
-.c7~*[data-render-icon='true'] *[data-icon-checked='true'] {
+.c2~*[data-render-icon='true'] *[data-icon-checked='true'] {
   display: none;
 }
 
-.c7:checked~*[data-render-icon='true'] *[data-icon-normal='true'] {
+.c2:checked~*[data-render-icon='true'] *[data-icon-normal='true'] {
   display: none;
 }
 
-.c7:checked~*[data-render-icon='true'] *[data-icon-checked='true'] {
+.c2:checked~*[data-render-icon='true'] *[data-icon-checked='true'] {
   display: initial;
   color: #00478A;
 }
 
-.c7:disabled~*[data-render-icon='true'] *[data-icon-checked='true'] {
+.c2:disabled~*[data-render-icon='true'] *[data-icon-checked='true'] {
   color: #A6A6A6;
 }
 
-.c7:disabled~*[data-render-icon='true'] *[data-icon-normal='true'] {
+.c2:disabled~*[data-render-icon='true'] *[data-icon-normal='true'] {
   color: #A6A6A6;
 }
 
-.c10 {
+.c3 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1293,7 +1132,7 @@ exports[`<CheckControl /> theming should extend styles in global 1`] = `
   text-indent: 3px;
 }
 
-.c13 {
+.c4 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -1310,33 +1149,33 @@ exports[`<CheckControl /> theming should extend styles in global 1`] = `
   text-indent: 5px;
 }
 
-.c16 {
+.c5 {
   padding-left: 8px;
 }
 
 <div
-  class="poodle-box c0 poodle-check-control c1 c2"
+  class="poodle-box poodle-check-control c0"
 >
   <div
-    class="poodle-box c0 poodle-check-control__control c4 c2"
+    class="poodle-box poodle-check-control__control c1"
   >
     <input
-      class="poodle-box c0 poodle-check-control__input c7 c2"
+      class="poodle-box poodle-check-control__input c2"
       id="poodle-check-control-1"
       type="checkbox"
     />
     <div
       aria-hidden="true"
-      class="poodle-box c0 poodle-check-control__icon c10 c2"
+      class="poodle-box poodle-check-control__icon c3"
       data-render-icon="true"
     />
   </div>
   <label
-    class="poodle-box c0 poodle-check-control__label c13 c2"
+    class="poodle-box poodle-check-control__label c4"
     for="poodle-check-control-1"
   >
     <span
-      class="poodle-box c0 poodle-check-control__label-text c16 c2"
+      class="poodle-box poodle-check-control__label-text c5"
     >
       label
     </span>
@@ -1346,10 +1185,6 @@ exports[`<CheckControl /> theming should extend styles in global 1`] = `
 
 exports[`<CheckControl /> theming should extend styles in local 1`] = `
 .c0 {
-  box-sizing: border-box;
-}
-
-.c1 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -1368,15 +1203,15 @@ exports[`<CheckControl /> theming should extend styles in local 1`] = `
   letter-spacing: 210px;
 }
 
-.c1:hover {
+.c0:hover {
   color: #00478A;
 }
 
-.c1:focus-within {
+.c0:focus-within {
   color: #00478A;
 }
 
-.c4 {
+.c1 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1403,11 +1238,11 @@ exports[`<CheckControl /> theming should extend styles in local 1`] = `
   bottom: 201px;
 }
 
-.c4:focus-within {
+.c1:focus-within {
   border-color: rgba(0,0,0,0.8);
 }
 
-.c7 {
+.c2 {
   position: absolute;
   top: 0;
   left: -99px;
@@ -1421,28 +1256,28 @@ exports[`<CheckControl /> theming should extend styles in local 1`] = `
   bottom: 203px;
 }
 
-.c7~*[data-render-icon='true'] *[data-icon-checked='true'] {
+.c2~*[data-render-icon='true'] *[data-icon-checked='true'] {
   display: none;
 }
 
-.c7:checked~*[data-render-icon='true'] *[data-icon-normal='true'] {
+.c2:checked~*[data-render-icon='true'] *[data-icon-normal='true'] {
   display: none;
 }
 
-.c7:checked~*[data-render-icon='true'] *[data-icon-checked='true'] {
+.c2:checked~*[data-render-icon='true'] *[data-icon-checked='true'] {
   display: initial;
   color: #00478A;
 }
 
-.c7:disabled~*[data-render-icon='true'] *[data-icon-checked='true'] {
+.c2:disabled~*[data-render-icon='true'] *[data-icon-checked='true'] {
   color: #A6A6A6;
 }
 
-.c7:disabled~*[data-render-icon='true'] *[data-icon-normal='true'] {
+.c2:disabled~*[data-render-icon='true'] *[data-icon-normal='true'] {
   color: #A6A6A6;
 }
 
-.c10 {
+.c3 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1455,7 +1290,7 @@ exports[`<CheckControl /> theming should extend styles in local 1`] = `
   bottom: 202px;
 }
 
-.c13 {
+.c4 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -1473,157 +1308,33 @@ exports[`<CheckControl /> theming should extend styles in local 1`] = `
   bottom: 204px;
 }
 
-.c16 {
+.c5 {
   padding-left: 8px;
 }
 
 <div
-  class="poodle-box c0 poodle-check-control c1 c2"
+  class="poodle-box poodle-check-control c0"
 >
   <div
-    class="poodle-box c0 poodle-check-control__control c4 c2"
+    class="poodle-box poodle-check-control__control c1"
   >
     <input
-      class="poodle-box c0 poodle-check-control__input c7 c2"
+      class="poodle-box poodle-check-control__input c2"
       id="poodle-check-control-1"
       type="checkbox"
     />
     <div
       aria-hidden="true"
-      class="poodle-box c0 poodle-check-control__icon c10 c2"
+      class="poodle-box poodle-check-control__icon c3"
       data-render-icon="true"
     />
   </div>
   <label
-    class="poodle-box c0 poodle-check-control__label c13 c2"
+    class="poodle-box poodle-check-control__label c4"
     for="poodle-check-control-1"
   >
     <span
-      class="poodle-box c0 poodle-check-control__label-text c16 c2"
-    >
-      label
-    </span>
-  </label>
-</div>
-`;
-
-exports[`<CheckControl /> theming should override classes 1`] = `
-.c0 {
-  box-sizing: border-box;
-}
-
-.c3 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  border: 1px dotted;
-  border-color: transparent;
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 100%;
-  overflow: hidden;
-  -webkit-transition: borderColor 120ms ease-in;
-  transition: borderColor 120ms ease-in;
-}
-
-.c3:focus-within {
-  border-color: rgba(0,0,0,0.8);
-}
-
-.c6 {
-  position: absolute;
-  top: 0;
-  left: -99px;
-  width: 0;
-  height: 0;
-  border: 0;
-  margin: 0;
-  padding: 0;
-}
-
-.c6~*[data-render-icon='true'] *[data-icon-checked='true'] {
-  display: none;
-}
-
-.c6:checked~*[data-render-icon='true'] *[data-icon-normal='true'] {
-  display: none;
-}
-
-.c6:checked~*[data-render-icon='true'] *[data-icon-checked='true'] {
-  display: initial;
-  color: #00478A;
-}
-
-.c6:disabled~*[data-render-icon='true'] *[data-icon-checked='true'] {
-  color: #A6A6A6;
-}
-
-.c6:disabled~*[data-render-icon='true'] *[data-icon-normal='true'] {
-  color: #A6A6A6;
-}
-
-.c9 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  font-size: 1.5rem;
-  height: 1.5rem;
-  width: 1.5rem;
-}
-
-.c12 {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  position: relative;
-  cursor: pointer;
-  min-height: 1.5rem;
-  padding-left: 1.5rem;
-}
-
-.c15 {
-  padding-left: 8px;
-}
-
-<div
-  class="poodle-box c0 poodle-check-control morning c1"
->
-  <div
-    class="poodle-box c0 poodle-check-control__control c3 c1"
-  >
-    <input
-      class="poodle-box c0 poodle-check-control__input c6 c1"
-      id="poodle-check-control-1"
-      type="checkbox"
-    />
-    <div
-      aria-hidden="true"
-      class="poodle-box c0 poodle-check-control__icon c9 c1"
-      data-render-icon="true"
-    />
-  </div>
-  <label
-    class="poodle-box c0 poodle-check-control__label c12 c1"
-    for="poodle-check-control-1"
-  >
-    <span
-      class="poodle-box c0 poodle-check-control__label-text c15 c1"
+      class="poodle-box poodle-check-control__label-text c5"
     >
       label
     </span>
@@ -1633,125 +1344,32 @@ exports[`<CheckControl /> theming should override classes 1`] = `
 
 exports[`<CheckControl /> theming should override styles 1`] = `
 .c0 {
-  box-sizing: border-box;
-}
-
-.c1 {
   margin-top: 50px;
 }
 
-.c4 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  border: 1px dotted;
-  border-color: transparent;
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 100%;
-  overflow: hidden;
-  -webkit-transition: borderColor 120ms ease-in;
-  transition: borderColor 120ms ease-in;
-}
-
-.c4:focus-within {
-  border-color: rgba(0,0,0,0.8);
-}
-
-.c7 {
-  position: absolute;
-  top: 0;
-  left: -99px;
-  width: 0;
-  height: 0;
-  border: 0;
-  margin: 0;
-  padding: 0;
-}
-
-.c7~*[data-render-icon='true'] *[data-icon-checked='true'] {
-  display: none;
-}
-
-.c7:checked~*[data-render-icon='true'] *[data-icon-normal='true'] {
-  display: none;
-}
-
-.c7:checked~*[data-render-icon='true'] *[data-icon-checked='true'] {
-  display: initial;
-  color: #00478A;
-}
-
-.c7:disabled~*[data-render-icon='true'] *[data-icon-checked='true'] {
-  color: #A6A6A6;
-}
-
-.c7:disabled~*[data-render-icon='true'] *[data-icon-normal='true'] {
-  color: #A6A6A6;
-}
-
-.c10 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  font-size: 1.5rem;
-  height: 1.5rem;
-  width: 1.5rem;
-}
-
-.c13 {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  position: relative;
-  cursor: pointer;
-  min-height: 1.5rem;
-  padding-left: 1.5rem;
-}
-
-.c16 {
-  padding-left: 8px;
-}
-
 <div
-  class="poodle-box c0 poodle-check-control c1 c2"
+  class="poodle-box poodle-check-control c0"
 >
   <div
-    class="poodle-box c0 poodle-check-control__control c4 c2"
+    class="poodle-box poodle-check-control__control c0"
   >
     <input
-      class="poodle-box c0 poodle-check-control__input c7 c2"
+      class="poodle-box poodle-check-control__input c0"
       id="poodle-check-control-1"
       type="checkbox"
     />
     <div
       aria-hidden="true"
-      class="poodle-box c0 poodle-check-control__icon c10 c2"
+      class="poodle-box poodle-check-control__icon c0"
       data-render-icon="true"
     />
   </div>
   <label
-    class="poodle-box c0 poodle-check-control__label c13 c2"
+    class="poodle-box poodle-check-control__label c0"
     for="poodle-check-control-1"
   >
     <span
-      class="poodle-box c0 poodle-check-control__label-text c16 c2"
+      class="poodle-box poodle-check-control__label-text c0"
     >
       label
     </span>
@@ -1761,10 +1379,6 @@ exports[`<CheckControl /> theming should override styles 1`] = `
 
 exports[`<CheckControl /> theming should render with default props correctly 1`] = `
 .c0 {
-  box-sizing: border-box;
-}
-
-.c1 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -1779,15 +1393,15 @@ exports[`<CheckControl /> theming should render with default props correctly 1`]
   transition: color 150ms ease-in;
 }
 
-.c1:hover {
+.c0:hover {
   color: #00478A;
 }
 
-.c1:focus-within {
+.c0:focus-within {
   color: #00478A;
 }
 
-.c4 {
+.c1 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1811,11 +1425,11 @@ exports[`<CheckControl /> theming should render with default props correctly 1`]
   transition: borderColor 120ms ease-in;
 }
 
-.c4:focus-within {
+.c1:focus-within {
   border-color: rgba(0,0,0,0.8);
 }
 
-.c7 {
+.c2 {
   position: absolute;
   top: 0;
   left: -99px;
@@ -1826,28 +1440,28 @@ exports[`<CheckControl /> theming should render with default props correctly 1`]
   padding: 0;
 }
 
-.c7~*[data-render-icon='true'] *[data-icon-checked='true'] {
+.c2~*[data-render-icon='true'] *[data-icon-checked='true'] {
   display: none;
 }
 
-.c7:checked~*[data-render-icon='true'] *[data-icon-normal='true'] {
+.c2:checked~*[data-render-icon='true'] *[data-icon-normal='true'] {
   display: none;
 }
 
-.c7:checked~*[data-render-icon='true'] *[data-icon-checked='true'] {
+.c2:checked~*[data-render-icon='true'] *[data-icon-checked='true'] {
   display: initial;
   color: #00478A;
 }
 
-.c7:disabled~*[data-render-icon='true'] *[data-icon-checked='true'] {
+.c2:disabled~*[data-render-icon='true'] *[data-icon-checked='true'] {
   color: #A6A6A6;
 }
 
-.c7:disabled~*[data-render-icon='true'] *[data-icon-normal='true'] {
+.c2:disabled~*[data-render-icon='true'] *[data-icon-normal='true'] {
   color: #A6A6A6;
 }
 
-.c10 {
+.c3 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1857,7 +1471,7 @@ exports[`<CheckControl /> theming should render with default props correctly 1`]
   width: 1.5rem;
 }
 
-.c13 {
+.c4 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -1872,34 +1486,34 @@ exports[`<CheckControl /> theming should render with default props correctly 1`]
   padding-left: 1.5rem;
 }
 
-.c16 {
+.c5 {
   padding-left: 8px;
 }
 
 <div
-  class="poodle-box c0 poodle-check-control c1 hello c2"
+  class="poodle-box poodle-check-control hello c0"
   id="id"
 >
   <div
-    class="poodle-box c0 poodle-check-control__control c4 c2"
+    class="poodle-box poodle-check-control__control c1"
   >
     <input
-      class="poodle-box c0 poodle-check-control__input c7 c2"
+      class="poodle-box poodle-check-control__input c2"
       id="poodle-check-control-1"
       type="checkbox"
     />
     <div
       aria-hidden="true"
-      class="poodle-box c0 poodle-check-control__icon c10 c2"
+      class="poodle-box poodle-check-control__icon c3"
       data-render-icon="true"
     />
   </div>
   <label
-    class="poodle-box c0 poodle-check-control__label c13 c2"
+    class="poodle-box poodle-check-control__label c4"
     for="poodle-check-control-1"
   >
     <span
-      class="poodle-box c0 poodle-check-control__label-text c16 c2"
+      class="poodle-box poodle-check-control__label-text c5"
     >
       label
     </span>

@@ -1,8 +1,8 @@
 import React from "react";
 import Box, { BoxProps } from "../Box";
+import { getCSSSystemBoxProps } from "../styled/CSSSystem";
 import { ResponsiveProp, StandardComponentProps, ThemeConfig } from "../theme";
-import { useClassNames } from "../styled";
-import useDefaultProps from "../utils/useDefaultProps";
+import useDefaultProps from "../hooks/useDefaultProps/useDefaultProps";
 import * as styles from "./styles";
 
 export interface ColumnsContextValue {
@@ -46,7 +46,7 @@ function getDefaultProps(theme?: ThemeConfig) {
 export const Columns: React.ForwardRefExoticComponent<
 	React.PropsWithoutRef<ColumnsProps> & React.RefAttributes<HTMLElement>
 > = React.forwardRef<HTMLElement, ColumnsProps>((_props, ref) => {
-	const props = useDefaultProps<ColumnsProps>(_props, {
+	const { props, isLocalTheme } = useDefaultProps<ColumnsProps>(_props, {
 		themeDefaultProps: getDefaultProps,
 	});
 
@@ -60,17 +60,18 @@ export const Columns: React.ForwardRefExoticComponent<
 		...otherProps
 	} = props;
 
-	const classes = useClassNames({
-		props,
-		lists: {
-			root: {
-				classNames: ["poodle-columns", styles.Root, className],
-			},
-		},
-	});
-
 	return (
-		<Box {...otherProps} className={classes.root} ref={ref}>
+		<Box
+			{...otherProps}
+			{...getCSSSystemBoxProps({
+				isRoot: true,
+				isLocalTheme,
+				componentProps: props,
+				fnCSSSystem: styles.Root,
+				baseClassName: ["poodle-columns"],
+			})}
+			ref={ref}
+		>
 			<ColumnsContext.Provider
 				value={{
 					wrapMode,

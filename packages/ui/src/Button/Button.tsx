@@ -1,9 +1,9 @@
 import React from "react";
-import useDefaultProps from "../utils/useDefaultProps";
+import Box, { BoxProps } from "../Box";
+import { getCSSSystemBoxProps } from "../styled/CSSSystem";
 import { ThemeConfig } from "../theme";
+import useDefaultProps from "../hooks/useDefaultProps/useDefaultProps";
 import * as styles from "./styles";
-import { Box, BoxProps } from "../Box";
-import { useClassNames } from "../styled";
 
 export interface LocalButtonProps {
 	/**
@@ -74,9 +74,10 @@ function getDefaultProps(theme?: ThemeConfig) {
 export const Button: React.ForwardRefExoticComponent<
 	React.PropsWithoutRef<ButtonProps> & React.RefAttributes<HTMLElement>
 > = React.forwardRef<HTMLElement, ButtonProps>((_props, ref) => {
-	const props = useDefaultProps<ButtonProps>(_props, {
+	const { props, isLocalTheme } = useDefaultProps<ButtonProps>(_props, {
 		themeDefaultProps: getDefaultProps,
 	});
+
 	const {
 		theme,
 		themeExtend,
@@ -93,55 +94,50 @@ export const Button: React.ForwardRefExoticComponent<
 		...otherProps
 	} = props;
 
-	const classes = useClassNames({
-		props,
-		lists: {
-			root: {
-				classNames: ["poodle-button", styles.Root, className],
-			},
-			content: {
-				classNames: [
-					"poodle-button__content",
-					styles.Content,
-					contentProps?.className,
-				],
-			},
-			iconStart: {
-				classNames: [
-					"poodle-button__icon-start",
-					styles.Icon,
-					styles.StartIcon,
-					iconProps?.className,
-				],
-			},
-			iconEnd: {
-				classNames: [
-					"poodle-button__icon-end",
-					styles.Icon,
-					styles.EndIcon,
-					iconProps?.className,
-				],
-			},
-		},
-	});
-
 	return (
 		<Box
-			theme={theme}
 			as={href ? "a" : "button"}
-			{...otherProps}
 			ref={ref}
-			className={classes.root}
+			{...otherProps}
+			{...getCSSSystemBoxProps({
+				isRoot: true,
+				isLocalTheme,
+				componentProps: props,
+				fnCSSSystem: styles.Root,
+				baseClassName: ["poodle-button"],
+			})}
 		>
-			<Box theme={theme} {...contentProps} className={classes.content}>
+			<Box
+				{...getCSSSystemBoxProps({
+					isLocalTheme,
+					componentProps: props,
+					partProps: contentProps,
+					fnCSSSystem: styles.Content,
+					baseClassName: ["poodle-button__content"],
+				})}
+			>
 				{startIcon && (
-					<Box theme={theme} {...iconProps} className={classes.iconStart}>
+					<Box
+						{...getCSSSystemBoxProps({
+							componentProps: props,
+							partProps: iconProps,
+							fnCSSSystem: [styles.Icon, styles.StartIcon],
+							baseClassName: ["poodle-button__icon-start"],
+						})}
+					>
 						{startIcon}
 					</Box>
 				)}
 				{children}
 				{endIcon && (
-					<Box theme={theme} {...iconProps} className={classes.iconEnd}>
+					<Box
+						{...getCSSSystemBoxProps({
+							componentProps: props,
+							partProps: iconProps,
+							fnCSSSystem: [styles.Icon, styles.EndIcon],
+							baseClassName: ["poodle-button__icon-end"],
+						})}
+					>
 						{endIcon}
 					</Box>
 				)}

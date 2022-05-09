@@ -1,8 +1,8 @@
 import React from "react";
 import Box, { BoxProps } from "../Box";
+import { getCSSSystemBoxProps } from "../styled/CSSSystem";
 import { StandardComponentProps, ThemeConfig } from "../theme";
-import useDefaultProps from "../utils/useDefaultProps";
-import { useClassNames } from "../styled";
+import useDefaultProps from "../hooks/useDefaultProps/useDefaultProps";
 import * as styles from "./styles";
 
 export interface LocalIconButtonProps {
@@ -27,7 +27,7 @@ function getDefaultProps(theme?: ThemeConfig) {
 export const IconButton: React.ForwardRefExoticComponent<
 	React.PropsWithoutRef<IconButtonProps> & React.RefAttributes<HTMLElement>
 > = React.forwardRef<HTMLElement, IconButtonProps>((_props, ref) => {
-	const props = useDefaultProps<IconButtonProps>(_props, {
+	const { props, isLocalTheme } = useDefaultProps<IconButtonProps>(_props, {
 		themeDefaultProps: getDefaultProps,
 	});
 
@@ -40,21 +40,18 @@ export const IconButton: React.ForwardRefExoticComponent<
 		...otherProps
 	} = props;
 
-	const classes = useClassNames({
-		props,
-		lists: {
-			root: {
-				classNames: [styles.Root, className],
-			},
-		},
-	});
-
 	return (
 		<Box
 			as={href && !disabled ? "a" : "button"}
 			disabled={disabled}
 			{...otherProps}
-			className={classes.root}
+			{...getCSSSystemBoxProps({
+				isRoot: true,
+				isLocalTheme,
+				componentProps: props,
+				fnCSSSystem: styles.Root,
+				baseClassName: ["poodle-icon-button"],
+			})}
 			ref={ref}
 		>
 			{children}

@@ -1,43 +1,43 @@
-import React from "react";
 import {
-	ThemeValue,
-	SystemThemeConfig,
+	BordersThemeConfig,
 	BreakpointsThemeConfig,
-	SpacingThemeConfig,
 	ColorsThemeConfig,
 	FontsThemeConfig,
-	BordersThemeConfig,
-	ShadowThemeConfig,
 	LayoutsThemeConfig,
+	ShadowThemeConfig,
+	SpacingThemeConfig,
+	SystemThemeConfig,
+	ThemeValue,
 } from "@poodle/system";
-
-import { CSSObjectSystem, Stylesheet } from "../styled";
+import React from "react";
 import { BoxThemeConfig } from "../Box";
 import { ButtonThemeConfig } from "../Button";
-import { ColumnsThemeConfig } from "../Columns";
-import { ColumnThemeConfig } from "../Column";
-import { ContainerThemeConfig } from "../Container";
-import { TableThemeConfig } from "../Table";
-import { TableHeadThemeConfig } from "../TableHead";
-import { TableBodyThemeConfig } from "../TableBody";
-import { TableRowThemeConfig } from "../TableRow";
-import { TableCellThemeConfig } from "../TableCell";
-import { VisuallyHiddenThemeConfig } from "../VisuallyHidden";
-import { CheckControlThemeConfig } from "../CheckControl";
 import { CheckboxThemeConfig } from "../Checkbox";
-import { RadioThemeConfig } from "../Radio";
+import { CheckControlThemeConfig } from "../CheckControl";
+import { ColumnThemeConfig } from "../Column";
+import { ColumnsThemeConfig } from "../Columns";
+import { ContainerThemeConfig } from "../Container";
+import { IconButtonThemeConfig } from "../IconButton";
 import { InputThemeConfig } from "../Input";
 import { InputAdornmentThemeConfig } from "../InputAdornment";
-import { IconButtonThemeConfig } from "../IconButton";
 import { ModalThemeConfig } from "../Modal";
-import { ModalHeaderThemeConfig } from "../ModalHeader";
 import { ModalBodyThemeConfig } from "../ModalBody";
 import { ModalFooterThemeConfig } from "../ModalFooter";
+import { ModalHeaderThemeConfig } from "../ModalHeader";
+import { RadioThemeConfig } from "../Radio";
 import { SelectThemeConfig } from "../Select";
-import { TabsThemeConfig } from "../Tabs";
+
+import { CSSObjectSystem, Stylesheet } from "../styled";
 import { TabThemeConfig } from "../Tab";
+import { TableThemeConfig } from "../Table";
+import { TableBodyThemeConfig } from "../TableBody";
+import { TableCellThemeConfig } from "../TableCell";
+import { TableHeadThemeConfig } from "../TableHead";
+import { TableRowThemeConfig } from "../TableRow";
 import { TabListThemeConfig } from "../TabList";
 import { TabPanelThemeConfig } from "../TabPanel";
+import { TabsThemeConfig } from "../Tabs";
+import { VisuallyHiddenThemeConfig } from "../VisuallyHidden";
 
 export { Stylesheet };
 
@@ -373,11 +373,6 @@ export interface StandardThemeConfig<
 		};
 	};
 	overrides?: Partial<StylesConfig<T>>;
-	overrideClasses?: Partial<
-		{
-			[K in T]: boolean | string;
-		}
-	>;
 }
 
 export * from "./system";

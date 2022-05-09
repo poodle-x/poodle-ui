@@ -1,0 +1,125 @@
+---
+title: Colors
+path: colors
+---
+
+# Colors
+
+The UI does not provide any color palettes like `red.500`, `blue.500`. Instead, the default components use color names
+that it has actually meaningful like `text`, `primary.light`, `primary.textOnDark`.
+
+Unless you are making an app like color picker then full color palettes like `red`, `blue`, `pink`...
+is not necessary and hard when maintaining with the app has light mode or dark mode.
+Idealy we will change the color like `text` or `primary.light` to the color that we want.
+
+We can custom the theme, so you can put any color palettes you want.
+But the defaults component won't use any color name with the CSS properties.
+
+## Default colors set
+
+```ts
+  text: "#282828",
+  disabledText: "#A6A6A6",
+
+  primary: {
+    light: "#D1EBFF",
+    base: "#00478A",
+    dark: "#003A70",
+    textOnLight: "#00478A",
+    textOnBase: "#fff",
+    textOnDark: "#fff",
+  },
+
+  negative: {
+    base: "#AF1308",
+    dark: "#8D1007",
+    light: "#FCF3F3",
+    textOnLight: "#AF1308",
+    textOnBase: "#fff",
+    textOnDark: "#fff",
+  },
+
+  positive: {
+    base: "#006122",
+    dark: "#004D1B",
+    light: "#E5FFEE",
+    textOnLight: "#006122",
+    textOnBase: "#fff",
+    textOnDark: "#fff",
+  },
+
+  warn: {
+    base: "#FFBB33",
+    dark: "#FAAB00",
+    light: "#FFF1DB",
+    textOnLight: "#282828",
+    textOnBase: "#282828",
+    textOnDark: "#282828",
+  },
+
+  bg: {
+    base: "#F8F8F8",
+    100: "#E0E0E0",
+    textOn100: "#282828",
+    200: "#CCCCCC",
+    textOn200: "#282828",
+  },
+
+  modal: {
+    base: "#F8F8F8",
+    footer: "#F0F0F0",
+  },
+
+  border: {
+    base: "#CCCCCC",
+  },
+
+
+```
+
+## How to edit or add more color.
+
+Use `ThemeProvider` for global changes or `theme`, `themeExtend` for local component.
+
+```jsx-live
+<ThemeProvider
+			theme={{
+				colors: {
+					sets: {
+						text: "red",
+					},
+				},
+			}}
+		>
+			<Box
+				themeExtend={{
+					mode: "dark",
+					colors: {
+						modes: {
+							dark: {
+								text: "blue",
+							},
+						},
+					},
+				}}
+				color="text"
+			>
+				Dark mode text
+			</Box>
+			<Box color="text">Default text</Box>
+			<Box
+				themeExtend={{
+					colors: {
+						sets: {
+							primary: {
+								base: "purple",
+							},
+						},
+					},
+				}}
+				color="primary.base"
+			>
+				primary.base
+			</Box>
+		</ThemeProvider>
+```

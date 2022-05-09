@@ -14,10 +14,16 @@ import Select from "@poodle/ui/Select";
 
 ## Basic
 
+Due to the styling solutions. The native select has to be hidden so we need to provide the selected value with the `valueText` prop.
+
+Your code needs to handle the selected value text. So the select component should be a controlled component.
+
+
 ```jsx-live
 <Box maxWidth="500px">
 	<Box>
 		<Select
+      valueText="Tiger"
 			inputProps={{
 				"aria-label": "Choose animal",
 			}}
@@ -30,6 +36,7 @@ import Select from "@poodle/ui/Select";
 
 	<Box>
 		<Select
+      valueText="Choose animal"
 			mt="scale-4"
 			inputProps={{
 				"aria-label": "Choose animal",
@@ -53,6 +60,7 @@ We can add prefix or suffix to the input
 <Box maxWidth="500px">
 	<Box>
 		<Select
+      valueText="Choose currency"
 			startAdornment={<InputAdornment>$</InputAdornment>}
 			inputProps={{
 				"aria-label": "Choose currency",
@@ -66,8 +74,9 @@ We can add prefix or suffix to the input
 
 	<Box>
 		<Select
+      valueText="Choose animal"
 			mt="scale-4"
-			endAdornment={<InputAdornment adornmentPosition="end" isIcon={true} color="negative.base"><Error /></InputAdornment>}
+			endAdornment={<InputAdornment adornmentPosition="end" isIcon={true} color="negative.base"><Icons.Error /></InputAdornment>}
 			inputProps={{
 				"aria-label": "Choose animal",
 			}}
@@ -116,6 +125,8 @@ export interface SelectThemeConfig
 | iconProps      | `BoxProps`        | Custom icon props                                           |
 | selectProps    | `BoxProps`        | Custom select props                                         |
 | startAdornment | `React.ReactNode` | Add prefix to the input.                                    |
+| valueText      | `React.ReactNode` | Display selected value                                      |
+| valueTextProps | `BoxProps`        | Custom value text props                                     |
 				
 
 [//]: # (EndGetProps)

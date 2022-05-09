@@ -1,10 +1,10 @@
 import React from "react";
 import Box, { BoxProps } from "../Box";
-import { StandardComponentProps, ThemeConfig } from "../theme";
-import useDefaultProps from "../utils/useDefaultProps";
-import { useClassNames } from "../styled";
-import * as styles from "./styles";
+import useDefaultProps from "../hooks/useDefaultProps/useDefaultProps";
+import { getCSSSystemBoxProps } from "../styled/CSSSystem";
 import { TableContext } from "../Table";
+import { StandardComponentProps, ThemeConfig } from "../theme";
+import * as styles from "./styles";
 
 export type LocalTableRowProps = {
 	/**
@@ -26,7 +26,7 @@ function getDefaultProps(theme?: ThemeConfig) {
 export const TableRow: React.ForwardRefExoticComponent<
 	React.PropsWithoutRef<TableRowProps> & React.RefAttributes<HTMLElement>
 > = React.forwardRef<HTMLElement, TableRowProps>((_props, ref) => {
-	const props = useDefaultProps<TableRowProps>(_props, {
+	const { props, isLocalTheme } = useDefaultProps<TableRowProps>(_props, {
 		themeDefaultProps: getDefaultProps,
 	});
 
@@ -38,21 +38,18 @@ export const TableRow: React.ForwardRefExoticComponent<
 		return { ...props, ...tableContext };
 	}, [props, tableContext]);
 
-	const classes = useClassNames({
-		props: styleProps,
-		lists: {
-			root: {
-				classNames: ["poodle-table-row", styles.Root, className],
-			},
-		},
-	});
-
 	return (
 		<Box
 			as="tr"
 			data-selected={isSelected}
 			{...otherProps}
-			className={classes.root}
+			{...getCSSSystemBoxProps({
+				isRoot: true,
+				isLocalTheme,
+				componentProps: styleProps,
+				fnCSSSystem: styles.Root,
+				baseClassName: ["poodle-table-row"],
+			})}
 			ref={ref}
 		>
 			{children}

@@ -1,6 +1,6 @@
 import React from "react";
+import { render } from "../../utils/test";
 import useCombineRefs from "./useCombineRefs";
-import { render } from "../test";
 
 const Comp = React.forwardRef<any, any>((props, ref) => {
 	const stallRef = React.useRef<HTMLElement>();

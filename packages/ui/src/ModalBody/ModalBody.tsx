@@ -1,10 +1,10 @@
 import React, { useContext } from "react";
 import Box, { BoxProps } from "../Box";
-import { StandardComponentProps, ThemeConfig } from "../theme";
-import useDefaultProps from "../utils/useDefaultProps";
-import { useClassNames } from "../styled";
-import * as styles from "./styles";
 import { ModalContext } from "../Modal";
+import { getCSSSystemBoxProps } from "../styled/CSSSystem";
+import { StandardComponentProps, ThemeConfig } from "../theme";
+import useDefaultProps from "../hooks/useDefaultProps/useDefaultProps";
+import * as styles from "./styles";
 
 export interface LocalModalBodyProps {
 	children?: React.ReactNode;
@@ -22,27 +22,24 @@ function getDefaultProps(theme?: ThemeConfig) {
 export const ModalBody: React.ForwardRefExoticComponent<
 	React.PropsWithoutRef<ModalBodyProps> & React.RefAttributes<HTMLElement>
 > = React.forwardRef<HTMLElement, ModalBodyProps>((_props, ref) => {
-	const props = useDefaultProps<ModalBodyProps>(_props, {
+	const { props, isLocalTheme } = useDefaultProps<ModalBodyProps>(_props, {
 		themeDefaultProps: getDefaultProps,
 	});
 	const { autoIdDescribedby } = useContext(ModalContext);
 
-	const { children, className, ...otherProps } = props;
-
-	const classes = useClassNames({
-		props,
-		lists: {
-			root: {
-				classNames: [styles.Root, className],
-			},
-		},
-	});
+	const { children, ...otherProps } = props;
 
 	return (
 		<Box
 			id={autoIdDescribedby}
 			{...otherProps}
-			className={classes.root}
+			{...getCSSSystemBoxProps({
+				isRoot: true,
+				isLocalTheme,
+				componentProps: props,
+				fnCSSSystem: styles.Root,
+				baseClassName: ["poodle-modal-body"],
+			})}
 			ref={ref}
 		>
 			{children}

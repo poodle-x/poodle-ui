@@ -1,9 +1,9 @@
 import React from "react";
+import { TabOrientation } from "../hooks/useTabsState";
+import { Tabs } from "../Tabs";
+import { ThemeConfig } from "../theme";
 import { render, userEvent } from "../utils/test";
 import Tab from "./";
-import { ThemeConfig } from "../theme";
-import { Tabs } from "../Tabs";
-import { TabOrientation } from "../hooks/useTabsState";
 
 describe("<Tab />", () => {
 	it("should render Tab correctly", async () => {
@@ -132,42 +132,6 @@ describe("<Tab />", () => {
 							defaultProps: {
 								id: "id",
 								className: "hello",
-							},
-						},
-					},
-				}
-			);
-			expect(await findByRole("tab")).toMatchSnapshot();
-		});
-
-		it("should disable classes", async () => {
-			const { findByRole } = render(
-				<Tabs>
-					<Tab value="text">Tab</Tab>
-				</Tabs>,
-				{
-					theme: {
-						Tab: {
-							overrideClasses: {
-								root: true,
-							},
-						},
-					},
-				}
-			);
-			expect(await findByRole("tab")).toMatchSnapshot();
-		});
-
-		it("should override classes", async () => {
-			const { findByRole } = render(
-				<Tabs>
-					<Tab value="text">Tab</Tab>
-				</Tabs>,
-				{
-					theme: {
-						Tab: {
-							overrideClasses: {
-								root: "morning",
 							},
 						},
 					},

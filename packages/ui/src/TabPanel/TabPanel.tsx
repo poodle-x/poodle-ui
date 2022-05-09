@@ -1,12 +1,12 @@
 import React from "react";
 import Box, { BoxProps } from "../Box";
-import { StandardComponentProps, ThemeConfig } from "../theme";
-import useDefaultProps from "../utils/useDefaultProps";
-import uSetRef from "../utils/setRef";
-import { useClassNames } from "../styled";
-import * as styles from "./styles";
-import { TabValue } from "../hooks/useTabsState";
 import useTabPanel from "../hooks/useTabPanel";
+import { TabValue } from "../hooks/useTabsState";
+import { getCSSSystemBoxProps } from "../styled/CSSSystem";
+import { StandardComponentProps, ThemeConfig } from "../theme";
+import uSetRef from "../utils/setRef";
+import useDefaultProps from "../hooks/useDefaultProps/useDefaultProps";
+import * as styles from "./styles";
 
 export interface LocalTabPanelProps {
 	value: TabValue;
@@ -29,7 +29,7 @@ function getDefaultProps(theme?: ThemeConfig) {
 export const TabPanel: React.ForwardRefExoticComponent<
 	React.PropsWithoutRef<TabPanelProps> & React.RefAttributes<HTMLElement>
 > = React.forwardRef<HTMLElement, TabPanelProps>((_props, ref) => {
-	const props = useDefaultProps<TabPanelProps>(_props, {
+	const { props, isLocalTheme } = useDefaultProps<TabPanelProps>(_props, {
 		themeDefaultProps: getDefaultProps,
 	});
 
@@ -44,15 +44,6 @@ export const TabPanel: React.ForwardRefExoticComponent<
 
 	const { props: htmlProps, selected, setRef } = useTabPanel({ id, value });
 
-	const classes = useClassNames({
-		props,
-		lists: {
-			root: {
-				classNames: ["poodle-tabpanel", styles.Root, className],
-			},
-		},
-	});
-
 	const composeRef = React.useCallback(
 		(node: HTMLElement) => {
 			setRef(node);
@@ -65,7 +56,13 @@ export const TabPanel: React.ForwardRefExoticComponent<
 		<Box
 			{...htmlProps}
 			{...otherProps}
-			className={classes.root}
+			{...getCSSSystemBoxProps({
+				isRoot: true,
+				isLocalTheme,
+				componentProps: props,
+				fnCSSSystem: styles.Root,
+				baseClassName: ["poodle-tab-panel"],
+			})}
 			ref={composeRef}
 		>
 			{selected || keepMountChildren ? children : null}

@@ -1,8 +1,8 @@
 import React from "react";
+import { Table, TableLevelContext } from "../Table";
+import { ThemeConfig } from "../theme";
 import { render } from "../utils/test";
 import TableBody from "./";
-import { ThemeConfig } from "../theme";
-import { Table, TableLevelContext } from "../Table";
 
 describe("<TableBody />", () => {
 	it("should render TableBody correctly", () => {
@@ -128,50 +128,6 @@ describe("<TableBody />", () => {
 							defaultProps: {
 								id: "id",
 								className: "hello",
-							},
-						},
-					},
-				}
-			);
-			expect(container.firstChild).toMatchSnapshot();
-		});
-
-		it("should disable classes", () => {
-			const { container } = render(
-				<table>
-					<TableBody>
-						<tr>
-							<td>Table</td>
-						</tr>
-					</TableBody>
-				</table>,
-				{
-					theme: {
-						TableBody: {
-							overrideClasses: {
-								root: true,
-							},
-						},
-					},
-				}
-			);
-			expect(container.firstChild).toMatchSnapshot();
-		});
-
-		it("should override classes", () => {
-			const { container } = render(
-				<table>
-					<TableBody>
-						<tr>
-							<td>Table</td>
-						</tr>
-					</TableBody>
-				</table>,
-				{
-					theme: {
-						TableBody: {
-							overrideClasses: {
-								root: "morning",
 							},
 						},
 					},

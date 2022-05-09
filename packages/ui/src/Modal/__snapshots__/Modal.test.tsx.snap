@@ -2,10 +2,6 @@
 
 exports[`<Modal /> ref should work 1`] = `
 .c0 {
-  box-sizing: border-box;
-}
-
-.c1 {
   position: fixed;
   top: 0;
   left: 0;
@@ -14,7 +10,7 @@ exports[`<Modal /> ref should work 1`] = `
   z-index: 2000;
 }
 
-.c4 {
+.c1 {
   position: fixed;
   top: 0;
   left: 0;
@@ -24,7 +20,7 @@ exports[`<Modal /> ref should work 1`] = `
   background-color: rgba(0, 0, 0, 0.25);
 }
 
-.c7 {
+.c2 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -41,7 +37,7 @@ exports[`<Modal /> ref should work 1`] = `
   outline: none;
 }
 
-.c10 {
+.c3 {
   max-height: calc(100% - 80px);
   margin-left: 16px;
   margin-right: 16px;
@@ -51,7 +47,7 @@ exports[`<Modal /> ref should work 1`] = `
   max-width: 600px;
 }
 
-.c13 {
+.c4 {
   width: 100%;
   max-height: 100%;
   border-radius: 4px;
@@ -63,22 +59,22 @@ exports[`<Modal /> ref should work 1`] = `
   data-portal="poodle-ui"
 >
   <div
-    class="poodle-box c0 poodle-modal c1 c2"
+    class="poodle-box poodle-modal c0"
   >
     <div
       aria-hidden="true"
-      class="poodle-box c0 poodle-modal__overlay c4 c2"
+      class="poodle-box poodle-modal__overlay c1"
     />
     <div
-      class="poodle-box c0 poodle-modal__inner c7 c2"
+      class="poodle-box poodle-modal__inner c2"
     >
       <div
-        class="poodle-box c0 poodle-modal__container c10 c2"
+        class="poodle-box poodle-modal__container c3"
         tabindex="-1"
       >
         <div
           aria-modal="true"
-          class="poodle-box c0 poodle-modal__modal c13 c2"
+          class="poodle-box poodle-modal__modal c4"
           role="dialog"
         >
           <button>
@@ -93,7 +89,13 @@ exports[`<Modal /> ref should work 1`] = `
 
 exports[`<Modal /> should render Box props correctly 1`] = `
 .c0 {
-  box-sizing: border-box;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 2000;
+  margin-top: 20px;
 }
 
 .c1 {
@@ -102,28 +104,12 @@ exports[`<Modal /> should render Box props correctly 1`] = `
   left: 0;
   width: 100%;
   height: 100%;
-  z-index: 2000;
-}
-
-.c2 {
-  margin-top: 20px;
-}
-
-.c4 {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
   z-index: -1;
   background-color: rgba(0, 0, 0, 0.25);
-}
-
-.c5 {
   margin-left: 20px;
 }
 
-.c7 {
+.c2 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -138,13 +124,10 @@ exports[`<Modal /> should render Box props correctly 1`] = `
   justify-content: center;
   height: 100%;
   outline: none;
-}
-
-.c8 {
   padding-left: 20px;
 }
 
-.c10 {
+.c3 {
   max-height: calc(100% - 80px);
   margin-left: 16px;
   margin-right: 16px;
@@ -152,39 +135,37 @@ exports[`<Modal /> should render Box props correctly 1`] = `
   margin-bottom: 40px;
   width: 100%;
   max-width: 600px;
+  padding-left: 20px;
 }
 
-.c13 {
+.c4 {
   width: 100%;
   max-height: 100%;
   border-radius: 4px;
   background-color: #F8F8F8;
   box-shadow: 1px 2px 2px -1px rgba(0,0,0,0.4);
-}
-
-.c14 {
   font-size: 20px;
 }
 
 <div
-  class="poodle-box c0 poodle-modal c1 c2"
+  class="poodle-box poodle-modal c0"
   data-testid="test"
   id="id"
 >
   <div
     aria-hidden="true"
-    class="poodle-box c0 poodle-modal__overlay c4 c5"
+    class="poodle-box poodle-modal__overlay c1"
   />
   <div
-    class="poodle-box c0 poodle-modal__inner c7 c8"
+    class="poodle-box poodle-modal__inner c2"
   >
     <div
-      class="poodle-box c0 poodle-modal__container c10 c8"
+      class="poodle-box poodle-modal__container c3"
       tabindex="-1"
     >
       <div
         aria-modal="true"
-        class="poodle-box c0 poodle-modal__modal c13 c14"
+        class="poodle-box poodle-modal__modal c4"
         role="dialog"
       >
         <button>
@@ -198,10 +179,6 @@ exports[`<Modal /> should render Box props correctly 1`] = `
 
 exports[`<Modal /> should render Modal correctly 1`] = `
 .c0 {
-  box-sizing: border-box;
-}
-
-.c1 {
   position: fixed;
   top: 0;
   left: 0;
@@ -210,7 +187,7 @@ exports[`<Modal /> should render Modal correctly 1`] = `
   z-index: 2000;
 }
 
-.c4 {
+.c1 {
   position: fixed;
   top: 0;
   left: 0;
@@ -220,7 +197,7 @@ exports[`<Modal /> should render Modal correctly 1`] = `
   background-color: rgba(0, 0, 0, 0.25);
 }
 
-.c7 {
+.c2 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -237,7 +214,7 @@ exports[`<Modal /> should render Modal correctly 1`] = `
   outline: none;
 }
 
-.c10 {
+.c3 {
   max-height: calc(100% - 80px);
   margin-left: 16px;
   margin-right: 16px;
@@ -247,7 +224,7 @@ exports[`<Modal /> should render Modal correctly 1`] = `
   max-width: 600px;
 }
 
-.c13 {
+.c4 {
   width: 100%;
   max-height: 100%;
   border-radius: 4px;
@@ -256,23 +233,23 @@ exports[`<Modal /> should render Modal correctly 1`] = `
 }
 
 <div
-  class="poodle-box c0 poodle-modal c1 c2"
+  class="poodle-box poodle-modal c0"
   data-testid="test"
 >
   <div
     aria-hidden="true"
-    class="poodle-box c0 poodle-modal__overlay c4 c2"
+    class="poodle-box poodle-modal__overlay c1"
   />
   <div
-    class="poodle-box c0 poodle-modal__inner c7 c2"
+    class="poodle-box poodle-modal__inner c2"
   >
     <div
-      class="poodle-box c0 poodle-modal__container c10 c2"
+      class="poodle-box poodle-modal__container c3"
       tabindex="-1"
     >
       <div
         aria-modal="true"
-        class="poodle-box c0 poodle-modal__modal c13 c2"
+        class="poodle-box poodle-modal__modal c4"
         role="dialog"
       >
         <button>
@@ -286,10 +263,6 @@ exports[`<Modal /> should render Modal correctly 1`] = `
 
 exports[`<Modal /> should render Modal withAutoId correctly 1`] = `
 .c0 {
-  box-sizing: border-box;
-}
-
-.c1 {
   position: fixed;
   top: 0;
   left: 0;
@@ -298,7 +271,7 @@ exports[`<Modal /> should render Modal withAutoId correctly 1`] = `
   z-index: 2000;
 }
 
-.c4 {
+.c1 {
   position: fixed;
   top: 0;
   left: 0;
@@ -308,7 +281,7 @@ exports[`<Modal /> should render Modal withAutoId correctly 1`] = `
   background-color: rgba(0, 0, 0, 0.25);
 }
 
-.c7 {
+.c2 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -325,7 +298,7 @@ exports[`<Modal /> should render Modal withAutoId correctly 1`] = `
   outline: none;
 }
 
-.c10 {
+.c3 {
   max-height: calc(100% - 80px);
   margin-left: 16px;
   margin-right: 16px;
@@ -335,7 +308,7 @@ exports[`<Modal /> should render Modal withAutoId correctly 1`] = `
   max-width: 600px;
 }
 
-.c13 {
+.c4 {
   width: 100%;
   max-height: 100%;
   border-radius: 4px;
@@ -344,104 +317,25 @@ exports[`<Modal /> should render Modal withAutoId correctly 1`] = `
 }
 
 <div
-  class="poodle-box c0 poodle-modal c1 c2"
+  class="poodle-box poodle-modal c0"
   data-testid="test"
 >
   <div
     aria-hidden="true"
-    class="poodle-box c0 poodle-modal__overlay c4 c2"
+    class="poodle-box poodle-modal__overlay c1"
   />
   <div
-    class="poodle-box c0 poodle-modal__inner c7 c2"
+    class="poodle-box poodle-modal__inner c2"
   >
     <div
-      class="poodle-box c0 poodle-modal__container c10 c2"
+      class="poodle-box poodle-modal__container c3"
       tabindex="-1"
     >
       <div
         aria-describedby="poodle-modal-describe-2"
         aria-labelledby="poodle-modal-label-1"
         aria-modal="true"
-        class="poodle-box c0 poodle-modal__modal c13 c2"
-        role="dialog"
-      >
-        <button>
-          Modal
-        </button>
-      </div>
-    </div>
-  </div>
-</div>
-`;
-
-exports[`<Modal /> theming should disable classes 1`] = `
-.c0 {
-  box-sizing: border-box;
-}
-
-.c3 {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: -1;
-  background-color: rgba(0, 0, 0, 0.25);
-}
-
-.c6 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  height: 100%;
-  outline: none;
-}
-
-.c9 {
-  max-height: calc(100% - 80px);
-  margin-left: 16px;
-  margin-right: 16px;
-  margin-top: 40px;
-  margin-bottom: 40px;
-  width: 100%;
-  max-width: 600px;
-}
-
-.c12 {
-  width: 100%;
-  max-height: 100%;
-  border-radius: 4px;
-  background-color: #F8F8F8;
-  box-shadow: 1px 2px 2px -1px rgba(0,0,0,0.4);
-}
-
-<div
-  class="poodle-box c0 poodle-modal c1"
-  data-testid="test"
->
-  <div
-    aria-hidden="true"
-    class="poodle-box c0 poodle-modal__overlay c3 c1"
-  />
-  <div
-    class="poodle-box c0 poodle-modal__inner c6 c1"
-  >
-    <div
-      class="poodle-box c0 poodle-modal__container c9 c1"
-      tabindex="-1"
-    >
-      <div
-        aria-modal="true"
-        class="poodle-box c0 poodle-modal__modal c12 c1"
+        class="poodle-box poodle-modal__modal c4"
         role="dialog"
       >
         <button>
@@ -455,10 +349,6 @@ exports[`<Modal /> theming should disable classes 1`] = `
 
 exports[`<Modal /> theming should extend styles in global 1`] = `
 .c0 {
-  box-sizing: border-box;
-}
-
-.c1 {
   position: fixed;
   top: 0;
   left: 0;
@@ -471,7 +361,7 @@ exports[`<Modal /> theming should extend styles in global 1`] = `
   text-indent: 1px;
 }
 
-.c4 {
+.c1 {
   position: fixed;
   top: 0;
   left: 0;
@@ -485,7 +375,7 @@ exports[`<Modal /> theming should extend styles in global 1`] = `
   text-indent: 3px;
 }
 
-.c7 {
+.c2 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -506,7 +396,7 @@ exports[`<Modal /> theming should extend styles in global 1`] = `
   text-indent: 5px;
 }
 
-.c10 {
+.c3 {
   max-height: calc(100% - 80px);
   margin-left: 16px;
   margin-right: 16px;
@@ -520,7 +410,7 @@ exports[`<Modal /> theming should extend styles in global 1`] = `
   text-indent: 4px;
 }
 
-.c13 {
+.c4 {
   width: 100%;
   max-height: 100%;
   border-radius: 4px;
@@ -533,23 +423,23 @@ exports[`<Modal /> theming should extend styles in global 1`] = `
 }
 
 <div
-  class="poodle-box c0 poodle-modal c1 c2"
+  class="poodle-box poodle-modal c0"
   data-testid="test"
 >
   <div
     aria-hidden="true"
-    class="poodle-box c0 poodle-modal__overlay c4 c2"
+    class="poodle-box poodle-modal__overlay c1"
   />
   <div
-    class="poodle-box c0 poodle-modal__inner c7 c2"
+    class="poodle-box poodle-modal__inner c2"
   >
     <div
-      class="poodle-box c0 poodle-modal__container c10 c2"
+      class="poodle-box poodle-modal__container c3"
       tabindex="-1"
     >
       <div
         aria-modal="true"
-        class="poodle-box c0 poodle-modal__modal c13 c2"
+        class="poodle-box poodle-modal__modal c4"
         role="dialog"
       >
         <button>
@@ -563,10 +453,6 @@ exports[`<Modal /> theming should extend styles in global 1`] = `
 
 exports[`<Modal /> theming should extend styles in local 1`] = `
 .c0 {
-  box-sizing: border-box;
-}
-
-.c1 {
   position: fixed;
   top: 0;
   left: 0;
@@ -579,7 +465,7 @@ exports[`<Modal /> theming should extend styles in local 1`] = `
   text-indent: 1px;
 }
 
-.c4 {
+.c1 {
   position: fixed;
   top: 0;
   left: 0;
@@ -593,7 +479,7 @@ exports[`<Modal /> theming should extend styles in local 1`] = `
   text-indent: 3px;
 }
 
-.c7 {
+.c2 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -614,7 +500,7 @@ exports[`<Modal /> theming should extend styles in local 1`] = `
   text-indent: 5px;
 }
 
-.c10 {
+.c3 {
   max-height: calc(100% - 80px);
   margin-left: 16px;
   margin-right: 16px;
@@ -628,7 +514,7 @@ exports[`<Modal /> theming should extend styles in local 1`] = `
   text-indent: 4px;
 }
 
-.c13 {
+.c4 {
   width: 100%;
   max-height: 100%;
   border-radius: 4px;
@@ -641,102 +527,23 @@ exports[`<Modal /> theming should extend styles in local 1`] = `
 }
 
 <div
-  class="poodle-box c0 poodle-modal c1 c2"
+  class="poodle-box poodle-modal c0"
   data-testid="test"
 >
   <div
     aria-hidden="true"
-    class="poodle-box c0 poodle-modal__overlay c4 c2"
+    class="poodle-box poodle-modal__overlay c1"
   />
   <div
-    class="poodle-box c0 poodle-modal__inner c7 c2"
+    class="poodle-box poodle-modal__inner c2"
   >
     <div
-      class="poodle-box c0 poodle-modal__container c10 c2"
+      class="poodle-box poodle-modal__container c3"
       tabindex="-1"
     >
       <div
         aria-modal="true"
-        class="poodle-box c0 poodle-modal__modal c13 c2"
-        role="dialog"
-      >
-        <button>
-          Modal
-        </button>
-      </div>
-    </div>
-  </div>
-</div>
-`;
-
-exports[`<Modal /> theming should override classes 1`] = `
-.c0 {
-  box-sizing: border-box;
-}
-
-.c3 {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: -1;
-  background-color: rgba(0, 0, 0, 0.25);
-}
-
-.c6 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  height: 100%;
-  outline: none;
-}
-
-.c9 {
-  max-height: calc(100% - 80px);
-  margin-left: 16px;
-  margin-right: 16px;
-  margin-top: 40px;
-  margin-bottom: 40px;
-  width: 100%;
-  max-width: 600px;
-}
-
-.c12 {
-  width: 100%;
-  max-height: 100%;
-  border-radius: 4px;
-  background-color: #F8F8F8;
-  box-shadow: 1px 2px 2px -1px rgba(0,0,0,0.4);
-}
-
-<div
-  class="poodle-box c0 poodle-modal morning c1"
-  data-testid="test"
->
-  <div
-    aria-hidden="true"
-    class="poodle-box c0 poodle-modal__overlay c3 c1"
-  />
-  <div
-    class="poodle-box c0 poodle-modal__inner c6 c1"
-  >
-    <div
-      class="poodle-box c0 poodle-modal__container c9 c1"
-      tabindex="-1"
-    >
-      <div
-        aria-modal="true"
-        class="poodle-box c0 poodle-modal__modal c12 c1"
+        class="poodle-box poodle-modal__modal c4"
         role="dialog"
       >
         <button>
@@ -750,14 +557,10 @@ exports[`<Modal /> theming should override classes 1`] = `
 
 exports[`<Modal /> theming should override styles 1`] = `
 .c0 {
-  box-sizing: border-box;
-}
-
-.c1 {
   margin-top: 50px;
 }
 
-.c4 {
+.c1 {
   position: fixed;
   top: 0;
   left: 0;
@@ -767,7 +570,7 @@ exports[`<Modal /> theming should override styles 1`] = `
   background-color: rgba(0, 0, 0, 0.25);
 }
 
-.c7 {
+.c2 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -784,7 +587,7 @@ exports[`<Modal /> theming should override styles 1`] = `
   outline: none;
 }
 
-.c10 {
+.c3 {
   max-height: calc(100% - 80px);
   margin-left: 16px;
   margin-right: 16px;
@@ -794,7 +597,7 @@ exports[`<Modal /> theming should override styles 1`] = `
   max-width: 600px;
 }
 
-.c13 {
+.c4 {
   width: 100%;
   max-height: 100%;
   border-radius: 4px;
@@ -803,23 +606,23 @@ exports[`<Modal /> theming should override styles 1`] = `
 }
 
 <div
-  class="poodle-box c0 poodle-modal c1 c2"
+  class="poodle-box poodle-modal c0"
   data-testid="test"
 >
   <div
     aria-hidden="true"
-    class="poodle-box c0 poodle-modal__overlay c4 c2"
+    class="poodle-box poodle-modal__overlay c1"
   />
   <div
-    class="poodle-box c0 poodle-modal__inner c7 c2"
+    class="poodle-box poodle-modal__inner c2"
   >
     <div
-      class="poodle-box c0 poodle-modal__container c10 c2"
+      class="poodle-box poodle-modal__container c3"
       tabindex="-1"
     >
       <div
         aria-modal="true"
-        class="poodle-box c0 poodle-modal__modal c13 c2"
+        class="poodle-box poodle-modal__modal c4"
         role="dialog"
       >
         <button>
@@ -833,10 +636,6 @@ exports[`<Modal /> theming should override styles 1`] = `
 
 exports[`<Modal /> theming should render with default props correctly 1`] = `
 .c0 {
-  box-sizing: border-box;
-}
-
-.c1 {
   position: fixed;
   top: 0;
   left: 0;
@@ -845,7 +644,7 @@ exports[`<Modal /> theming should render with default props correctly 1`] = `
   z-index: 2000;
 }
 
-.c4 {
+.c1 {
   position: fixed;
   top: 0;
   left: 0;
@@ -855,7 +654,7 @@ exports[`<Modal /> theming should render with default props correctly 1`] = `
   background-color: rgba(0, 0, 0, 0.25);
 }
 
-.c7 {
+.c2 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -872,7 +671,7 @@ exports[`<Modal /> theming should render with default props correctly 1`] = `
   outline: none;
 }
 
-.c10 {
+.c3 {
   max-height: calc(100% - 80px);
   margin-left: 16px;
   margin-right: 16px;
@@ -882,7 +681,7 @@ exports[`<Modal /> theming should render with default props correctly 1`] = `
   max-width: 600px;
 }
 
-.c13 {
+.c4 {
   width: 100%;
   max-height: 100%;
   border-radius: 4px;
@@ -891,24 +690,24 @@ exports[`<Modal /> theming should render with default props correctly 1`] = `
 }
 
 <div
-  class="poodle-box c0 poodle-modal c1 hello c2"
+  class="poodle-box poodle-modal hello c0"
   data-testid="test"
   id="id"
 >
   <div
     aria-hidden="true"
-    class="poodle-box c0 poodle-modal__overlay c4 c2"
+    class="poodle-box poodle-modal__overlay c1"
   />
   <div
-    class="poodle-box c0 poodle-modal__inner c7 c2"
+    class="poodle-box poodle-modal__inner c2"
   >
     <div
-      class="poodle-box c0 poodle-modal__container c10 c2"
+      class="poodle-box poodle-modal__container c3"
       tabindex="-1"
     >
       <div
         aria-modal="true"
-        class="poodle-box c0 poodle-modal__modal c13 c2"
+        class="poodle-box poodle-modal__modal c4"
         role="dialog"
       >
         <button>

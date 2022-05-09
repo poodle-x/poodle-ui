@@ -1,9 +1,14 @@
-import React from "react";
 import { css, Global } from "@emotion/react";
+import React from "react";
+import { CSSObjectSystem } from "../styled/";
 
-import { useTheme, ThemeConfig, getThemeValue } from "../theme";
-import { CSSObjectSystem, cssSystem } from "../styled/";
-import { getFontBase } from "@poodle/system";
+import {
+	getFontBase,
+	getThemeValue,
+	system,
+	ThemeConfig,
+	useTheme,
+} from "../theme";
 
 export interface GlobalStylesProps {
 	theme?: ThemeConfig;
@@ -15,37 +20,53 @@ function GlobalStyles(props: GlobalStylesProps) {
 
 	const { styles } = props;
 
-	const sProps = {
-		...props,
-		theme,
-	};
+	const globalStyles = React.useMemo(() => {
+		return getThemeValue(
+			{
+				theme,
+			},
+			theme?.global?.styles,
+			{}
+		);
+	}, [theme]);
 
-	const globalStyles = getThemeValue(sProps, theme?.global?.styles, {});
-
-	const base = cssSystem({
-		props: sProps,
-		base: [
+	const base = React.useMemo(() => {
+		return system(
 			{
 				body: {
 					padding: 0,
 					margin: 0,
 					bg: "bg",
-					...getFontBase()(sProps),
+					...getFontBase()({
+						theme,
+					}),
 				},
 			},
-			styles || {},
-		],
-	});
+			{
+				sendProps: {
+					styles,
+					theme,
+				},
+			}
+		);
+	}, [styles, theme]);
 
-	const extend = cssSystem({
-		props: sProps,
-		base: [
+	const extend = React.useMemo(() => {
+		return system(
 			{
 				...globalStyles,
+				...styles,
 			},
-		],
-	});
-	return <Global styles={css(base, extend)} />;
+			{
+				sendProps: {
+					styles,
+					theme,
+				},
+			}
+		);
+	}, [globalStyles, styles, theme]);
+
+	return <Global styles={css(base, extend as any)} />;
 }
 
 export default GlobalStyles;

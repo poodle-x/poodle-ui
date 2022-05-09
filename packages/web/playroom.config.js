@@ -1,5 +1,5 @@
 module.exports = {
-	components: "../ui/src/index.ts",
+	components: "../ui/src/entry.tsx",
 	outputPath: "./public/playroom",
 	frameComponent: "../ui/playroom/Frame.tsx",
 	widths: [375, 768, 1024, 1280, 1440],

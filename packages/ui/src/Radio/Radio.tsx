@@ -1,11 +1,11 @@
 import React from "react";
-import { StandardComponentProps, ThemeConfig } from "../theme";
-import useDefaultProps from "../utils/useDefaultProps";
-import { useClassNames } from "../styled";
-import useCombineRefs from "../utils/useCombineRefs";
 import { CheckControl, CheckControlProps } from "../CheckControl";
+import useCombineRefs from "../hooks/useCombineRefs";
+import useDefaultProps from "../hooks/useDefaultProps/useDefaultProps";
 import RadioButton from "../icons/RadioButton";
 import RadioCheckedButton from "../icons/RadioCheckedButton";
+import { getCSSSystemBoxProps } from "../styled/CSSSystem";
+import { StandardComponentProps, ThemeConfig } from "../theme";
 import * as styles from "./styles";
 
 export interface LocalRadioProps {
@@ -46,7 +46,7 @@ function getDefaultProps(theme?: ThemeConfig) {
 export const Radio: React.ForwardRefExoticComponent<
 	React.PropsWithoutRef<RadioProps> & React.RefAttributes<HTMLElement>
 > = React.forwardRef<HTMLElement, RadioProps>((_props, ref) => {
-	const props = useDefaultProps<RadioProps>(_props, {
+	const { props, isLocalTheme } = useDefaultProps<RadioProps>(_props, {
 		themeDefaultProps: getDefaultProps,
 	});
 
@@ -68,39 +68,6 @@ export const Radio: React.ForwardRefExoticComponent<
 
 	const inputCombineRef = useCombineRefs([inputRef, inputProps?.ref]);
 
-	const classes = useClassNames({
-		props,
-		lists: {
-			root: {
-				classNames: ["poodle-radio", styles.Root, className],
-			},
-			control: {
-				classNames: [
-					"poodle-Radio__control",
-					styles.Control,
-					controlProps?.className,
-				],
-			},
-			input: {
-				classNames: [
-					"poodle-radio__input",
-					styles.Input,
-					inputProps?.className,
-				],
-			},
-			icon: {
-				classNames: ["poodle-radio__icon", styles.Icon, iconProps?.className],
-			},
-			label: {
-				classNames: [
-					"poodle-radio__label",
-					styles.Label,
-					labelProps?.className,
-				],
-			},
-		},
-	});
-
 	const RadioButtonIcon = props.theme?.baseIcons?.RadioButton
 		? props.theme?.baseIcons.RadioButton
 		: RadioButton;
@@ -111,10 +78,8 @@ export const Radio: React.ForwardRefExoticComponent<
 
 	return (
 		<CheckControl
-			{...otherProps}
 			ref={ref}
 			isLabelHidden={isLabelHidden}
-			className={classes.root}
 			checkType="radio"
 			checkLabel={label}
 			renderIcon={
@@ -123,24 +88,53 @@ export const Radio: React.ForwardRefExoticComponent<
 					<RadioButtonIcon data-icon-normal="true" />
 				</React.Fragment>
 			}
+			{...otherProps}
+			{...getCSSSystemBoxProps({
+				isRoot: true,
+				isLocalTheme,
+				componentProps: props,
+				fnCSSSystem: styles.Root,
+				baseClassName: ["poodle-radio"],
+			})}
 			labelProps={{
-				...labelProps,
-				className: classes.label,
+				...getCSSSystemBoxProps({
+					isLocalTheme,
+					componentProps: props,
+					partProps: labelProps,
+					fnCSSSystem: styles.Label,
+					baseClassName: ["poodle-radio__label"],
+				}),
 			}}
 			iconProps={{
-				...iconProps,
-				className: classes.icon,
+				...getCSSSystemBoxProps({
+					isLocalTheme,
+					componentProps: props,
+					partProps: iconProps,
+					fnCSSSystem: styles.Icon,
+					baseClassName: ["poodle-radio__icon"],
+				}),
 			}}
 			controlProps={{
-				...controlProps,
-				className: classes.control,
+				...getCSSSystemBoxProps({
+					isLocalTheme,
+					componentProps: props,
+					partProps: controlProps,
+					fnCSSSystem: styles.Control,
+					baseClassName: ["poodle-radio__control"],
+				}),
 			}}
 			inputProps={{
-				...inputProps,
 				checked: isChecked,
 				disabled: isDisabled,
 				defaultChecked: defaultChecked,
 				ref: inputCombineRef,
+				...getCSSSystemBoxProps({
+					isLocalTheme,
+					componentProps: props,
+					partProps: inputProps,
+					fnCSSSystem: styles.Input,
+					baseClassName: ["poodle-radio__input"],
+				}),
 			}}
 		/>
 	);

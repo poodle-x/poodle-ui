@@ -2,10 +2,6 @@
 
 exports[`<TableCell /> ref should work 1`] = `
 .c0 {
-  box-sizing: border-box;
-}
-
-.c1 {
   padding-top: 16px;
   padding-bottom: 16px;
   padding-left: 16px;
@@ -13,7 +9,7 @@ exports[`<TableCell /> ref should work 1`] = `
 }
 
 <td
-  class="poodle-box c0 poodle-table-cell c1 c2"
+  class="poodle-box poodle-table-cell c0"
 >
   TableCell
 </td>
@@ -21,17 +17,10 @@ exports[`<TableCell /> ref should work 1`] = `
 
 exports[`<TableCell /> should render Box props correctly 1`] = `
 .c0 {
-  box-sizing: border-box;
-}
-
-.c1 {
   padding-top: 16px;
   padding-bottom: 16px;
   padding-left: 16px;
   padding-right: 16px;
-}
-
-.c2 {
   margin-top: 20px;
 }
 
@@ -39,7 +28,7 @@ exports[`<TableCell /> should render Box props correctly 1`] = `
   <tbody>
     <tr>
       <td
-        class="poodle-box c0 poodle-table-cell c1 c2"
+        class="poodle-box poodle-table-cell c0"
         id="id"
       >
         TableCell
@@ -51,10 +40,6 @@ exports[`<TableCell /> should render Box props correctly 1`] = `
 
 exports[`<TableCell /> should render TableCell correctly 1`] = `
 .c0 {
-  box-sizing: border-box;
-}
-
-.c1 {
   padding-top: 16px;
   padding-bottom: 16px;
   padding-left: 16px;
@@ -65,7 +50,7 @@ exports[`<TableCell /> should render TableCell correctly 1`] = `
   <tbody>
     <tr>
       <td
-        class="poodle-box c0 poodle-table-cell c1 c2"
+        class="poodle-box poodle-table-cell c0"
       >
         TableCell
       </td>
@@ -76,10 +61,6 @@ exports[`<TableCell /> should render TableCell correctly 1`] = `
 
 exports[`<TableCell /> should render with divider context correctly 1`] = `
 .c0 {
-  box-sizing: border-box;
-}
-
-.c1 {
   border-bottom: 1px solid;
   border-bottom-color: #CCCCCC;
   padding-top: 16px;
@@ -92,7 +73,7 @@ exports[`<TableCell /> should render with divider context correctly 1`] = `
   <tbody>
     <tr>
       <td
-        class="poodle-box c0 poodle-table-cell c1 c2"
+        class="poodle-box poodle-table-cell c0"
       >
         TableCell
       </td>
@@ -103,10 +84,6 @@ exports[`<TableCell /> should render with divider context correctly 1`] = `
 
 exports[`<TableCell /> should render with level head correctly 1`] = `
 .c0 {
-  box-sizing: border-box;
-}
-
-.c1 {
   border-bottom: 1px solid;
   border-bottom-color: #CCCCCC;
   font-weight: 700;
@@ -120,7 +97,7 @@ exports[`<TableCell /> should render with level head correctly 1`] = `
   <thead>
     <tr>
       <th
-        class="poodle-box c0 poodle-table-cell c1 c2"
+        class="poodle-box poodle-table-cell c0"
       >
         TableCell
       </th>
@@ -130,18 +107,14 @@ exports[`<TableCell /> should render with level head correctly 1`] = `
 `;
 
 exports[`<TableCell /> size should render with size l correctly 1`] = `
-.c0 {
-  box-sizing: border-box;
-}
-
-.c4 {
+.c1 {
   width: 100%;
   border-spacing: 0;
   border-collapse: collapse;
   text-align: left;
 }
 
-.c7 {
+.c2 {
   padding-top: 24px;
   padding-bottom: 24px;
   padding-left: 16px;
@@ -149,15 +122,15 @@ exports[`<TableCell /> size should render with size l correctly 1`] = `
 }
 
 <div
-  class="poodle-box c0 poodle-table c1 c2"
+  class="poodle-box poodle-table c0"
 >
   <table
-    class="poodle-box c0 poodle-table__table c4 c2"
+    class="poodle-box poodle-table__table c1"
   >
     <tbody>
       <tr>
         <td
-          class="poodle-box c0 poodle-table-cell c7 c2"
+          class="poodle-box poodle-table-cell c2"
         >
           TableCell
         </td>
@@ -168,18 +141,14 @@ exports[`<TableCell /> size should render with size l correctly 1`] = `
 `;
 
 exports[`<TableCell /> size should render with size m correctly 1`] = `
-.c0 {
-  box-sizing: border-box;
-}
-
-.c4 {
+.c1 {
   width: 100%;
   border-spacing: 0;
   border-collapse: collapse;
   text-align: left;
 }
 
-.c7 {
+.c2 {
   padding-top: 16px;
   padding-bottom: 16px;
   padding-left: 16px;
@@ -187,15 +156,15 @@ exports[`<TableCell /> size should render with size m correctly 1`] = `
 }
 
 <div
-  class="poodle-box c0 poodle-table c1 c2"
+  class="poodle-box poodle-table c0"
 >
   <table
-    class="poodle-box c0 poodle-table__table c4 c2"
+    class="poodle-box poodle-table__table c1"
   >
     <tbody>
       <tr>
         <td
-          class="poodle-box c0 poodle-table-cell c7 c2"
+          class="poodle-box poodle-table-cell c2"
         >
           TableCell
         </td>
@@ -206,18 +175,14 @@ exports[`<TableCell /> size should render with size m correctly 1`] = `
 `;
 
 exports[`<TableCell /> size should render with size s correctly 1`] = `
-.c0 {
-  box-sizing: border-box;
-}
-
-.c4 {
+.c1 {
   width: 100%;
   border-spacing: 0;
   border-collapse: collapse;
   text-align: left;
 }
 
-.c7 {
+.c2 {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 16px;
@@ -225,15 +190,15 @@ exports[`<TableCell /> size should render with size s correctly 1`] = `
 }
 
 <div
-  class="poodle-box c0 poodle-table c1 c2"
+  class="poodle-box poodle-table c0"
 >
   <table
-    class="poodle-box c0 poodle-table__table c4 c2"
+    class="poodle-box poodle-table__table c1"
   >
     <tbody>
       <tr>
         <td
-          class="poodle-box c0 poodle-table-cell c7 c2"
+          class="poodle-box poodle-table-cell c2"
         >
           TableCell
         </td>
@@ -243,37 +208,15 @@ exports[`<TableCell /> size should render with size s correctly 1`] = `
 </div>
 `;
 
-exports[`<TableCell /> theming should disable classes 1`] = `
-.c0 {
-  box-sizing: border-box;
-}
-
-<table>
-  <tbody>
-    <tr>
-      <td
-        class="poodle-box c0 poodle-table-cell c1"
-      >
-        TableCell
-      </td>
-    </tr>
-  </tbody>
-</table>
-`;
-
 exports[`<TableCell /> theming should extend size styles 1`] = `
-.c0 {
-  box-sizing: border-box;
-}
-
-.c4 {
+.c1 {
   width: 100%;
   border-spacing: 0;
   border-collapse: collapse;
   text-align: left;
 }
 
-.c7 {
+.c2 {
   padding-top: 16px;
   padding-bottom: 16px;
   padding-left: 16px;
@@ -282,15 +225,15 @@ exports[`<TableCell /> theming should extend size styles 1`] = `
 }
 
 <div
-  class="poodle-box c0 poodle-table c1 c2"
+  class="poodle-box poodle-table c0"
 >
   <table
-    class="poodle-box c0 poodle-table__table c4 c2"
+    class="poodle-box poodle-table__table c1"
   >
     <tbody>
       <tr>
         <td
-          class="poodle-box c0 poodle-table-cell c7 c2"
+          class="poodle-box poodle-table-cell c2"
         >
           TableCell
         </td>
@@ -301,18 +244,14 @@ exports[`<TableCell /> theming should extend size styles 1`] = `
 `;
 
 exports[`<TableCell /> theming should extend size styles with mode 1`] = `
-.c0 {
-  box-sizing: border-box;
-}
-
-.c4 {
+.c1 {
   width: 100%;
   border-spacing: 0;
   border-collapse: collapse;
   text-align: left;
 }
 
-.c7 {
+.c2 {
   padding-top: 16px;
   padding-bottom: 16px;
   padding-left: 16px;
@@ -322,15 +261,15 @@ exports[`<TableCell /> theming should extend size styles with mode 1`] = `
 }
 
 <div
-  class="poodle-box c0 poodle-table c1 c2"
+  class="poodle-box poodle-table c0"
 >
   <table
-    class="poodle-box c0 poodle-table__table c4 c2"
+    class="poodle-box poodle-table__table c1"
   >
     <tbody>
       <tr>
         <td
-          class="poodle-box c0 poodle-table-cell c7 c2"
+          class="poodle-box poodle-table-cell c2"
         >
           TableCell
         </td>
@@ -342,10 +281,6 @@ exports[`<TableCell /> theming should extend size styles with mode 1`] = `
 
 exports[`<TableCell /> theming should extend styles in global 1`] = `
 .c0 {
-  box-sizing: border-box;
-}
-
-.c1 {
   padding-top: 16px;
   padding-bottom: 16px;
   padding-left: 16px;
@@ -360,7 +295,7 @@ exports[`<TableCell /> theming should extend styles in global 1`] = `
   <tbody>
     <tr>
       <td
-        class="poodle-box c0 poodle-table-cell c1 c2"
+        class="poodle-box poodle-table-cell c0"
       >
         TableCell
       </td>
@@ -371,10 +306,6 @@ exports[`<TableCell /> theming should extend styles in global 1`] = `
 
 exports[`<TableCell /> theming should extend styles in local 1`] = `
 .c0 {
-  box-sizing: border-box;
-}
-
-.c1 {
   padding-top: 16px;
   padding-bottom: 16px;
   padding-left: 16px;
@@ -389,25 +320,7 @@ exports[`<TableCell /> theming should extend styles in local 1`] = `
   <tbody>
     <tr>
       <td
-        class="poodle-box c0 poodle-table-cell c1 c2"
-      >
-        TableCell
-      </td>
-    </tr>
-  </tbody>
-</table>
-`;
-
-exports[`<TableCell /> theming should override classes 1`] = `
-.c0 {
-  box-sizing: border-box;
-}
-
-<table>
-  <tbody>
-    <tr>
-      <td
-        class="poodle-box c0 poodle-table-cell morning c1"
+        class="poodle-box poodle-table-cell c0"
       >
         TableCell
       </td>
@@ -418,10 +331,6 @@ exports[`<TableCell /> theming should override classes 1`] = `
 
 exports[`<TableCell /> theming should override styles 1`] = `
 .c0 {
-  box-sizing: border-box;
-}
-
-.c1 {
   margin-top: 50px;
 }
 
@@ -429,7 +338,7 @@ exports[`<TableCell /> theming should override styles 1`] = `
   <tbody>
     <tr>
       <td
-        class="poodle-box c0 poodle-table-cell c1 c2"
+        class="poodle-box poodle-table-cell c0"
       >
         TableCell
       </td>
@@ -440,10 +349,6 @@ exports[`<TableCell /> theming should override styles 1`] = `
 
 exports[`<TableCell /> theming should render with default props correctly 1`] = `
 .c0 {
-  box-sizing: border-box;
-}
-
-.c1 {
   padding-top: 16px;
   padding-bottom: 16px;
   padding-left: 16px;
@@ -454,7 +359,7 @@ exports[`<TableCell /> theming should render with default props correctly 1`] = 
   <tbody>
     <tr>
       <td
-        class="poodle-box c0 poodle-table-cell c1 hello c2"
+        class="poodle-box poodle-table-cell hello c0"
         id="id"
       >
         TableCell

@@ -1,12 +1,16 @@
 import React from "react";
 import Box, { BoxProps } from "../Box";
-import { StandardComponentProps, ThemeConfig } from "../theme";
-import useDefaultProps from "../utils/useDefaultProps";
-import { useClassNames } from "../styled";
-import * as styles from "./styles";
+import useDefaultProps from "../hooks/useDefaultProps/useDefaultProps";
 import ArrowDown from "../icons/ArrowDown";
+import { getCSSSystemBoxProps } from "../styled/CSSSystem";
+import { StandardComponentProps, ThemeConfig } from "../theme";
+import * as styles from "./styles";
 
 export interface LocalSelectProps {
+	/**
+	 * Display selected value
+	 */
+	valueText?: React.ReactNode;
 	/**
 	 * Change the component style to error style when set to true.
 	 */
@@ -23,6 +27,10 @@ export interface LocalSelectProps {
 	 * Custom select props
 	 */
 	selectProps?: BoxProps;
+	/**
+	 * Custom value text props
+	 */
+	valueTextProps?: BoxProps;
 	/**
 	 * Custom icon props
 	 */
@@ -45,7 +53,7 @@ function getDefaultProps(theme?: ThemeConfig) {
 export const Select: React.ForwardRefExoticComponent<
 	React.PropsWithoutRef<SelectProps> & React.RefAttributes<HTMLElement>
 > = React.forwardRef<HTMLElement, SelectProps>((_props, ref) => {
-	const props = useDefaultProps<SelectProps>(_props, {
+	const { props, isLocalTheme } = useDefaultProps<SelectProps>(_props, {
 		themeDefaultProps: getDefaultProps,
 	});
 
@@ -58,54 +66,75 @@ export const Select: React.ForwardRefExoticComponent<
 		dividerProps,
 		startAdornment,
 		endAdornment,
+		valueTextProps,
+		valueText,
 		...otherProps
 	} = props;
-
-	const classes = useClassNames({
-		props,
-		lists: {
-			root: {
-				classNames: ["poodle-select", styles.Root, className],
-			},
-			native: {
-				classNames: [
-					"poodle-select__native",
-					styles.Native,
-					selectProps?.className,
-				],
-			},
-			icon: {
-				classNames: ["poodle-select__icon", styles.Icon, iconProps?.className],
-			},
-			divider: {
-				classNames: [
-					"poodle-select__divider",
-					styles.Divider,
-					dividerProps?.className,
-				],
-			},
-		},
-	});
 
 	const ArrowDownIcon = props.theme?.baseIcons?.ArrowDown
 		? props.theme?.baseIcons?.ArrowDown
 		: ArrowDown;
 
 	return (
-		<Box {...otherProps} className={classes.root} ref={ref}>
+		<Box
+			{...otherProps}
+			{...getCSSSystemBoxProps({
+				isRoot: true,
+				isLocalTheme,
+				componentProps: props,
+				fnCSSSystem: styles.Root,
+				baseClassName: ["poodle-select"],
+			})}
+			ref={ref}
+		>
 			{startAdornment && startAdornment}
+			<Box
+				aria-hidden={true}
+				{...getCSSSystemBoxProps({
+					isLocalTheme,
+					componentProps: props,
+					partProps: valueTextProps,
+					fnCSSSystem: styles.ValueText,
+					baseClassName: ["poodle-select__value-text"],
+				})}
+			>
+				{valueText}
+			</Box>
 			<Box
 				as="select"
 				aria-invalid={error}
-				{...selectProps}
-				className={classes.native}
+				{...getCSSSystemBoxProps({
+					isLocalTheme,
+					componentProps: props,
+					partProps: selectProps,
+					fnCSSSystem: styles.Native,
+					baseClassName: ["poodle-select__select"],
+				})}
 			>
 				{children}
 			</Box>
-			<Box {...iconProps} className={classes.icon}>
+			<Box
+				{...getCSSSystemBoxProps({
+					isLocalTheme,
+					componentProps: props,
+					partProps: iconProps,
+					fnCSSSystem: styles.Icon,
+					baseClassName: ["poodle-select__icon"],
+				})}
+			>
 				<ArrowDownIcon />
 			</Box>
-			{endAdornment && <Box {...dividerProps} className={classes.divider} />}
+			{endAdornment && (
+				<Box
+					{...getCSSSystemBoxProps({
+						isLocalTheme,
+						componentProps: props,
+						partProps: dividerProps,
+						fnCSSSystem: styles.Divider,
+						baseClassName: ["poodle-select__divider"],
+					})}
+				/>
+			)}
 			{endAdornment}
 		</Box>
 	);

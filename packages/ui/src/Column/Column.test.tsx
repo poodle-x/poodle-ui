@@ -1,8 +1,8 @@
-import { render } from "../utils/test";
-import Column from "./";
 import React from "react";
 import { ColumnsContext } from "../Columns";
 import { ThemeConfig } from "../theme";
+import { render } from "../utils/test";
+import Column from "./";
 
 describe("<Column />", () => {
 	it("should render column correctly", () => {
@@ -196,32 +196,6 @@ describe("<Column />", () => {
 							colWidth: "50%",
 							id: "id",
 							className: "hello",
-						},
-					},
-				},
-			});
-			expect(container.firstChild).toMatchSnapshot();
-		});
-
-		it("should disable classes", () => {
-			const { container } = render(<Column>Column</Column>, {
-				theme: {
-					Column: {
-						overrideClasses: {
-							root: true,
-						},
-					},
-				},
-			});
-			expect(container.firstChild).toMatchSnapshot();
-		});
-
-		it("should override classes", () => {
-			const { container } = render(<Column>Column</Column>, {
-				theme: {
-					Column: {
-						overrideClasses: {
-							root: "morning",
 						},
 					},
 				},

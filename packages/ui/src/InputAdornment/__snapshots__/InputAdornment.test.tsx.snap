@@ -2,10 +2,6 @@
 
 exports[`<InputAdornment /> ref should work 1`] = `
 .c0 {
-  box-sizing: border-box;
-}
-
-.c1 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -22,7 +18,7 @@ exports[`<InputAdornment /> ref should work 1`] = `
 }
 
 <div
-  class="poodle-box c0 poodle-input-adornment c1 c2"
+  class="poodle-box poodle-input-adornment c0"
 >
   InputAdornment
 </div>
@@ -30,10 +26,6 @@ exports[`<InputAdornment /> ref should work 1`] = `
 
 exports[`<InputAdornment /> should render Box props correctly 1`] = `
 .c0 {
-  box-sizing: border-box;
-}
-
-.c1 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -47,14 +39,11 @@ exports[`<InputAdornment /> should render Box props correctly 1`] = `
   font-weight: 400;
   line-height: 125%;
   padding-left: 8px;
-}
-
-.c2 {
   margin-top: 20px;
 }
 
 <div
-  class="poodle-box c0 poodle-input-adornment c1 c2"
+  class="poodle-box poodle-input-adornment c0"
   id="id"
 >
   InputAdornment
@@ -63,10 +52,6 @@ exports[`<InputAdornment /> should render Box props correctly 1`] = `
 
 exports[`<InputAdornment /> should render InputAdornment correctly 1`] = `
 .c0 {
-  box-sizing: border-box;
-}
-
-.c1 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -83,7 +68,7 @@ exports[`<InputAdornment /> should render InputAdornment correctly 1`] = `
 }
 
 <div
-  class="poodle-box c0 poodle-input-adornment c1 c2"
+  class="poodle-box poodle-input-adornment c0"
 >
   InputAdornment
 </div>
@@ -91,10 +76,6 @@ exports[`<InputAdornment /> should render InputAdornment correctly 1`] = `
 
 exports[`<InputAdornment /> should render InputAdornment position end correctly 1`] = `
 .c0 {
-  box-sizing: border-box;
-}
-
-.c1 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -111,19 +92,7 @@ exports[`<InputAdornment /> should render InputAdornment position end correctly 
 }
 
 <div
-  class="poodle-box c0 poodle-input-adornment c1 c2"
->
-  InputAdornment
-</div>
-`;
-
-exports[`<InputAdornment /> theming should disable classes 1`] = `
-.c0 {
-  box-sizing: border-box;
-}
-
-<div
-  class="poodle-box c0 poodle-input-adornment c1"
+  class="poodle-box poodle-input-adornment c0"
 >
   InputAdornment
 </div>
@@ -131,10 +100,6 @@ exports[`<InputAdornment /> theming should disable classes 1`] = `
 
 exports[`<InputAdornment /> theming should extend styles in global 1`] = `
 .c0 {
-  box-sizing: border-box;
-}
-
-.c1 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -155,7 +120,7 @@ exports[`<InputAdornment /> theming should extend styles in global 1`] = `
 }
 
 <div
-  class="poodle-box c0 poodle-input-adornment c1 c2"
+  class="poodle-box poodle-input-adornment c0"
 >
   InputAdornment
 </div>
@@ -163,10 +128,6 @@ exports[`<InputAdornment /> theming should extend styles in global 1`] = `
 
 exports[`<InputAdornment /> theming should extend styles in local 1`] = `
 .c0 {
-  box-sizing: border-box;
-}
-
-.c1 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -187,19 +148,7 @@ exports[`<InputAdornment /> theming should extend styles in local 1`] = `
 }
 
 <div
-  class="poodle-box c0 poodle-input-adornment c1 c2"
->
-  InputAdornment
-</div>
-`;
-
-exports[`<InputAdornment /> theming should override classes 1`] = `
-.c0 {
-  box-sizing: border-box;
-}
-
-<div
-  class="poodle-box c0 poodle-input-adornment morning c1"
+  class="poodle-box poodle-input-adornment c0"
 >
   InputAdornment
 </div>
@@ -207,15 +156,11 @@ exports[`<InputAdornment /> theming should override classes 1`] = `
 
 exports[`<InputAdornment /> theming should override styles 1`] = `
 .c0 {
-  box-sizing: border-box;
-}
-
-.c1 {
   margin-top: 50px;
 }
 
 <div
-  class="poodle-box c0 poodle-input-adornment c1 c2"
+  class="poodle-box poodle-input-adornment c0"
 >
   InputAdornment
 </div>
@@ -223,10 +168,6 @@ exports[`<InputAdornment /> theming should override styles 1`] = `
 
 exports[`<InputAdornment /> theming should render with default props correctly 1`] = `
 .c0 {
-  box-sizing: border-box;
-}
-
-.c1 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -243,7 +184,7 @@ exports[`<InputAdornment /> theming should render with default props correctly 1
 }
 
 <div
-  class="poodle-box c0 poodle-input-adornment c1 hello c2"
+  class="poodle-box poodle-input-adornment hello c0"
   id="id"
 >
   InputAdornment

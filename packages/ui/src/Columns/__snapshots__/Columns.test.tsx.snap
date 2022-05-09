@@ -2,10 +2,6 @@
 
 exports[`<Columns /> ref should work 1`] = `
 .c0 {
-  box-sizing: border-box;
-}
-
-.c1 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -13,7 +9,7 @@ exports[`<Columns /> ref should work 1`] = `
 }
 
 <div
-  class="poodle-box c0 poodle-columns c1 c2"
+  class="poodle-box poodle-columns c0"
 >
   Columns
 </div>
@@ -21,23 +17,16 @@ exports[`<Columns /> ref should work 1`] = `
 
 exports[`<Columns /> should render Box props correctly 1`] = `
 .c0 {
-  box-sizing: border-box;
-}
-
-.c1 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-}
-
-.c2 {
   padding: 10px;
 }
 
 <section
   aria-disabled="true"
-  class="poodle-box c0 poodle-columns c1 c2"
+  class="poodle-box poodle-columns c0"
   id="columns"
 >
   Columns
@@ -46,10 +35,6 @@ exports[`<Columns /> should render Box props correctly 1`] = `
 
 exports[`<Columns /> should render columns correctly 1`] = `
 .c0 {
-  box-sizing: border-box;
-}
-
-.c1 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -57,7 +42,7 @@ exports[`<Columns /> should render columns correctly 1`] = `
 }
 
 <div
-  class="poodle-box c0 poodle-columns c1 c2"
+  class="poodle-box poodle-columns c0"
 >
   Hello
 </div>
@@ -65,10 +50,6 @@ exports[`<Columns /> should render columns correctly 1`] = `
 
 exports[`<Columns /> should render with array responsive gutter correctly 1`] = `
 .c0 {
-  box-sizing: border-box;
-}
-
-.c1 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -78,55 +59,51 @@ exports[`<Columns /> should render with array responsive gutter correctly 1`] = 
 }
 
 @media screen and (min-width: 576px) {
-  .c1 {
+  .c0 {
     margin-left: -20px;
   }
 }
 
 @media screen and (min-width: 768px) {
-  .c1 {
+  .c0 {
     margin-left: -30px;
   }
 }
 
 @media screen and (min-width: 992px) {
-  .c1 {
+  .c0 {
     margin-left: -40px;
   }
 }
 
 @media screen and (min-width: 576px) {
-  .c1 {
+  .c0 {
     margin-top: -25px;
   }
 }
 
 @media screen and (min-width: 768px) {
-  .c1 {
+  .c0 {
     margin-top: -35px;
   }
 }
 
 @media screen and (min-width: 992px) {
-  .c1 {
+  .c0 {
     margin-top: -45px;
   }
 }
 
 <div
-  class="poodle-box c0 poodle-columns c1 c2"
+  class="poodle-box poodle-columns c0"
 >
   Columns
 </div>
 `;
 
 exports[`<Columns /> should render with custom collapse and gutter correctly 1`] = `
-.c0 {
-  box-sizing: border-box;
-}
-
 @media screen and (min-width: 768px) {
-  .c1 {
+  .c0 {
     display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
@@ -135,25 +112,21 @@ exports[`<Columns /> should render with custom collapse and gutter correctly 1`]
 }
 
 @media screen and (min-width: 768px) {
-  .c1 {
+  .c0 {
     margin-left: -20px;
   }
 }
 
 <div
-  class="poodle-box c0 poodle-columns c1 c2"
+  class="poodle-box poodle-columns c0"
 >
   Columns
 </div>
 `;
 
 exports[`<Columns /> should render with custom collapse and responsive gutter correctly 1`] = `
-.c0 {
-  box-sizing: border-box;
-}
-
 @media screen and (min-width: 768px) {
-  .c1 {
+  .c0 {
     display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
@@ -162,37 +135,33 @@ exports[`<Columns /> should render with custom collapse and responsive gutter co
 }
 
 @media screen and (min-width: 768px) {
-  .c1 {
+  .c0 {
     margin-left: -20px;
   }
 }
 
 @media screen and (min-width: 992px) {
-  .c1 {
+  .c0 {
     margin-left: -30px;
   }
 }
 
 @media screen and (min-width: 1200px) {
-  .c1 {
+  .c0 {
     margin-left: -40px;
   }
 }
 
 <div
-  class="poodle-box c0 poodle-columns c1 c2"
+  class="poodle-box poodle-columns c0"
 >
   Columns
 </div>
 `;
 
 exports[`<Columns /> should render with custom collapse correctly 1`] = `
-.c0 {
-  box-sizing: border-box;
-}
-
 @media screen and (min-width: 768px) {
-  .c1 {
+  .c0 {
     display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
@@ -201,7 +170,7 @@ exports[`<Columns /> should render with custom collapse correctly 1`] = `
 }
 
 <div
-  class="poodle-box c0 poodle-columns c1 c2"
+  class="poodle-box poodle-columns c0"
 >
   Columns
 </div>
@@ -209,10 +178,6 @@ exports[`<Columns /> should render with custom collapse correctly 1`] = `
 
 exports[`<Columns /> should render with custom gutter correctly 1`] = `
 .c0 {
-  box-sizing: border-box;
-}
-
-.c1 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -222,7 +187,7 @@ exports[`<Columns /> should render with custom gutter correctly 1`] = `
 }
 
 <div
-  class="poodle-box c0 poodle-columns c1 c2"
+  class="poodle-box poodle-columns c0"
 >
   Columns
 </div>
@@ -230,10 +195,6 @@ exports[`<Columns /> should render with custom gutter correctly 1`] = `
 
 exports[`<Columns /> should render with object responsive gutter correctly 1`] = `
 .c0 {
-  box-sizing: border-box;
-}
-
-.c1 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -242,55 +203,55 @@ exports[`<Columns /> should render with object responsive gutter correctly 1`] =
 }
 
 @media screen and (min-width: 576px) {
-  .c1 {
+  .c0 {
     margin-left: -10px;
   }
 }
 
 @media screen and (min-width: 768px) {
-  .c1 {
+  .c0 {
     margin-left: -20px;
   }
 }
 
 @media screen and (min-width: 992px) {
-  .c1 {
+  .c0 {
     margin-left: -30px;
   }
 }
 
 @media screen and (min-width: 1200px) {
-  .c1 {
+  .c0 {
     margin-left: -40px;
   }
 }
 
 @media screen and (min-width: 576px) {
-  .c1 {
+  .c0 {
     margin-top: -15px;
   }
 }
 
 @media screen and (min-width: 768px) {
-  .c1 {
+  .c0 {
     margin-top: -25px;
   }
 }
 
 @media screen and (min-width: 992px) {
-  .c1 {
+  .c0 {
     margin-top: -35px;
   }
 }
 
 @media screen and (min-width: 1200px) {
-  .c1 {
+  .c0 {
     margin-top: -45px;
   }
 }
 
 <div
-  class="poodle-box c0 poodle-columns c1 c2"
+  class="poodle-box poodle-columns c0"
 >
   Columns
 </div>
@@ -298,10 +259,6 @@ exports[`<Columns /> should render with object responsive gutter correctly 1`] =
 
 exports[`<Columns /> should render with wrap 1`] = `
 .c0 {
-  box-sizing: border-box;
-}
-
-.c1 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -314,19 +271,7 @@ exports[`<Columns /> should render with wrap 1`] = `
 }
 
 <div
-  class="poodle-box c0 poodle-columns c1 c2"
->
-  Columns
-</div>
-`;
-
-exports[`<Columns /> theming should disable classes 1`] = `
-.c0 {
-  box-sizing: border-box;
-}
-
-<div
-  class="poodle-box c0 poodle-columns c1"
+  class="poodle-box poodle-columns c0"
 >
   Columns
 </div>
@@ -334,10 +279,6 @@ exports[`<Columns /> theming should disable classes 1`] = `
 
 exports[`<Columns /> theming should extend styles in global 1`] = `
 .c0 {
-  box-sizing: border-box;
-}
-
-.c1 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -349,7 +290,7 @@ exports[`<Columns /> theming should extend styles in global 1`] = `
 }
 
 <div
-  class="poodle-box c0 poodle-columns c1 c2"
+  class="poodle-box poodle-columns c0"
 >
   Columns
 </div>
@@ -357,10 +298,6 @@ exports[`<Columns /> theming should extend styles in global 1`] = `
 
 exports[`<Columns /> theming should extend styles in local 1`] = `
 .c0 {
-  box-sizing: border-box;
-}
-
-.c1 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -372,19 +309,7 @@ exports[`<Columns /> theming should extend styles in local 1`] = `
 }
 
 <div
-  class="poodle-box c0 poodle-columns c1 c2"
->
-  Columns
-</div>
-`;
-
-exports[`<Columns /> theming should override classes 1`] = `
-.c0 {
-  box-sizing: border-box;
-}
-
-<div
-  class="poodle-box c0 poodle-columns morning c1"
+  class="poodle-box poodle-columns c0"
 >
   Columns
 </div>
@@ -392,15 +317,11 @@ exports[`<Columns /> theming should override classes 1`] = `
 
 exports[`<Columns /> theming should override styles 1`] = `
 .c0 {
-  box-sizing: border-box;
-}
-
-.c1 {
   margin-top: 50px;
 }
 
 <div
-  class="poodle-box c0 poodle-columns c1 c2"
+  class="poodle-box poodle-columns c0"
 >
   Columns
 </div>
@@ -408,10 +329,6 @@ exports[`<Columns /> theming should override styles 1`] = `
 
 exports[`<Columns /> theming should render with default props correctly 1`] = `
 .c0 {
-  box-sizing: border-box;
-}
-
-.c1 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -420,7 +337,7 @@ exports[`<Columns /> theming should render with default props correctly 1`] = `
 }
 
 <div
-  class="poodle-box c0 poodle-columns c1 hello c2"
+  class="poodle-box poodle-columns hello c0"
   id="id"
 >
   Columns

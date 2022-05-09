@@ -1,9 +1,9 @@
 import React from "react";
-import { TableContext, TableLevelContext } from "../Table";
 import Box, { BoxProps } from "../Box";
+import useDefaultProps from "../hooks/useDefaultProps/useDefaultProps";
+import { getCSSSystemBoxProps } from "../styled/CSSSystem";
+import { TableContext, TableLevelContext } from "../Table";
 import { StandardComponentProps, ThemeConfig } from "../theme";
-import useDefaultProps from "../utils/useDefaultProps";
-import { useClassNames } from "../styled";
 import * as styles from "./styles";
 
 export type LocalTableHeadProps = {
@@ -22,7 +22,7 @@ function getDefaultProps(theme?: ThemeConfig) {
 export const TableHead: React.ForwardRefExoticComponent<
 	React.PropsWithoutRef<TableHeadProps> & React.RefAttributes<HTMLElement>
 > = React.forwardRef<HTMLElement, TableHeadProps>((_props, ref) => {
-	const props = useDefaultProps<TableHeadProps>(_props, {
+	const { props, isLocalTheme } = useDefaultProps<TableHeadProps>(_props, {
 		themeDefaultProps: getDefaultProps,
 	});
 
@@ -34,17 +34,19 @@ export const TableHead: React.ForwardRefExoticComponent<
 
 	const { children, className, ...otherProps } = props;
 
-	const classes = useClassNames({
-		props: styleProps,
-		lists: {
-			root: {
-				classNames: ["poodle-table-head", styles.Root, className],
-			},
-		},
-	});
-
 	return (
-		<Box as="thead" {...otherProps} className={classes.root} ref={ref}>
+		<Box
+			as="thead"
+			{...otherProps}
+			{...getCSSSystemBoxProps({
+				isRoot: true,
+				isLocalTheme,
+				componentProps: styleProps,
+				fnCSSSystem: styles.Root,
+				baseClassName: ["poodle-table-head"],
+			})}
+			ref={ref}
+		>
 			<TableLevelContext.Provider value={{ level: "head" }}>
 				{children}
 			</TableLevelContext.Provider>

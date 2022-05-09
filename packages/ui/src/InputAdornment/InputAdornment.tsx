@@ -1,8 +1,8 @@
 import React from "react";
 import Box, { BoxProps } from "../Box";
+import { getCSSSystemBoxProps } from "../styled/CSSSystem";
 import { StandardComponentProps, ThemeConfig } from "../theme";
-import useDefaultProps from "../utils/useDefaultProps";
-import { useClassNames } from "../styled";
+import useDefaultProps from "../hooks/useDefaultProps/useDefaultProps";
 import * as styles from "./styles";
 
 export interface LocalInputAdornmentProps {
@@ -30,7 +30,7 @@ function getDefaultProps(theme?: ThemeConfig) {
 export const InputAdornment: React.ForwardRefExoticComponent<
 	React.PropsWithoutRef<InputAdornmentProps> & React.RefAttributes<HTMLElement>
 > = React.forwardRef<HTMLElement, InputAdornmentProps>((_props, ref) => {
-	const props = useDefaultProps<InputAdornmentProps>(_props, {
+	const { props, isLocalTheme } = useDefaultProps<InputAdornmentProps>(_props, {
 		themeDefaultProps: getDefaultProps,
 	});
 
@@ -42,17 +42,18 @@ export const InputAdornment: React.ForwardRefExoticComponent<
 		...otherProps
 	} = props;
 
-	const classes = useClassNames({
-		props,
-		lists: {
-			root: {
-				classNames: ["poodle-input-adornment", styles.Root, className],
-			},
-		},
-	});
-
 	return (
-		<Box {...otherProps} className={classes.root} ref={ref}>
+		<Box
+			{...otherProps}
+			{...getCSSSystemBoxProps({
+				isRoot: true,
+				isLocalTheme,
+				componentProps: props,
+				fnCSSSystem: styles.Root,
+				baseClassName: ["poodle-input-adornment"],
+			})}
+			ref={ref}
+		>
 			{children}
 		</Box>
 	);

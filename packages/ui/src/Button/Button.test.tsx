@@ -208,51 +208,6 @@ describe("<Button />", () => {
 			expect(container.firstChild).toMatchSnapshot();
 		});
 
-		it("should disable classes", () => {
-			const { container } = render(
-				<Button startIcon="p" endIcon="p">
-					Button
-				</Button>,
-				{
-					theme: {
-						Button: {
-							overrideClasses: {
-								content: true,
-								endIcon: true,
-								startIcon: true,
-								icon: true,
-								root: true,
-							},
-						},
-					},
-				}
-			);
-			expect(container.firstChild).toMatchSnapshot();
-		});
-
-		it("should override classes", () => {
-			const { container } = render(
-				<Button
-					startIcon="p"
-					endIcon="p"
-					theme={{
-						Button: {
-							overrideClasses: {
-								content: "content",
-								endIcon: "endIcon",
-								startIcon: "startIcon",
-								icon: "icon",
-								root: "root",
-							},
-						},
-					}}
-				>
-					Button
-				</Button>
-			);
-			expect(container.firstChild).toMatchSnapshot();
-		});
-
 		it("should extend size styles", () => {
 			const { container } = render(<Button sizeStyle="test">Hello</Button>, {
 				theme: {

@@ -1,13 +1,24 @@
 import React from "react";
+import { InputAdornment } from "../InputAdornment";
+import { ThemeConfig } from "../theme";
 import { render } from "../utils/test";
 import Select from "./";
-import { ThemeConfig } from "../theme";
-import { InputAdornment } from "../InputAdornment";
 
 describe("<Select />", () => {
 	it("should render Select correctly", () => {
 		const { container } = render(
 			<Select>
+				<option value="tiger">Tiger</option>
+				<option value="lion">Lion</option>
+				<option value="dog">Dog</option>
+			</Select>
+		);
+		expect(container.firstChild).toMatchSnapshot();
+	});
+
+	it("should render Select with value text", () => {
+		const { container } = render(
+			<Select valueText="Animals">
 				<option value="tiger">Tiger</option>
 				<option value="lion">Lion</option>
 				<option value="dog">Dog</option>
@@ -101,6 +112,10 @@ describe("<Select />", () => {
 						mt: 13,
 						letterSpacing: 251,
 					},
+					valueText: {
+						mt: 14,
+						letterSpacing: 251,
+					},
 				},
 				variants: {
 					custom: {
@@ -119,6 +134,10 @@ describe("<Select />", () => {
 						divider: {
 							top: 3,
 							textIndent: 4,
+						},
+						valueText: {
+							top: 5,
+							textIndent: 6,
 						},
 					},
 				},
@@ -171,52 +190,6 @@ describe("<Select />", () => {
 			expect(container.firstChild).toMatchSnapshot();
 		});
 
-		it("should disable classes", () => {
-			const { container } = render(
-				<Select>
-					<option value="tiger">Tiger</option>
-					<option value="lion">Lion</option>
-					<option value="dog">Dog</option>
-				</Select>,
-				{
-					theme: {
-						Select: {
-							overrideClasses: {
-								root: true,
-								divider: true,
-								native: true,
-								icon: true,
-							},
-						},
-					},
-				}
-			);
-			expect(container.firstChild).toMatchSnapshot();
-		});
-
-		it("should override classes", () => {
-			const { container } = render(
-				<Select>
-					<option value="tiger">Tiger</option>
-					<option value="lion">Lion</option>
-					<option value="dog">Dog</option>
-				</Select>,
-				{
-					theme: {
-						Select: {
-							overrideClasses: {
-								root: "morning",
-								divider: "divider",
-								icon: "icon",
-								native: "native",
-							},
-						},
-					},
-				}
-			);
-			expect(container.firstChild).toMatchSnapshot();
-		});
-
 		it("should override styles", () => {
 			const { container } = render(
 				<Select>
@@ -239,6 +212,9 @@ describe("<Select />", () => {
 								},
 								native: {
 									mt: 54,
+								},
+								valueText: {
+									mt: "55",
 								},
 							},
 						},

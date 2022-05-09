@@ -1,10 +1,10 @@
 import React from "react";
 import Box, { BoxProps } from "../Box";
-import { ResponsiveProp, StandardComponentProps, ThemeConfig } from "../theme";
-import { useClassNames } from "../styled";
-import useDefaultProps from "../utils/useDefaultProps";
-import * as styles from "./styles";
 import { ColumnsContext } from "../Columns";
+import { getCSSSystemBoxProps } from "../styled/CSSSystem";
+import { ResponsiveProp, StandardComponentProps, ThemeConfig } from "../theme";
+import useDefaultProps from "../hooks/useDefaultProps/useDefaultProps";
+import * as styles from "./styles";
 
 export interface LocalColumnProps {
 	/**
@@ -20,7 +20,7 @@ export interface ColumnProps
 		LocalColumnProps {}
 
 function getDefaultProps(theme?: ThemeConfig) {
-	return theme?.Columns?.defaultProps;
+	return theme?.Column?.defaultProps;
 }
 
 export const Column: React.ForwardRefExoticComponent<
@@ -28,28 +28,29 @@ export const Column: React.ForwardRefExoticComponent<
 > = React.forwardRef<HTMLElement, ColumnProps>((_props, ref) => {
 	const columnContext = React.useContext(ColumnsContext);
 
-	const props = useDefaultProps<ColumnProps>(_props, {
+	const { props, isLocalTheme } = useDefaultProps<ColumnProps>(_props, {
 		themeDefaultProps: getDefaultProps,
 	});
 
 	const { children, className, colWidth, ...otherProps } = props;
 
-	const classes = useClassNames({
-		props: {
-			...props,
-			gutter: columnContext.gutter,
-			collapse: columnContext.collapse,
-			wrapGutter: columnContext.wrapGutter,
-		},
-		lists: {
-			root: {
-				classNames: ["poodle-column", styles.Root, className],
-			},
-		},
-	});
-
 	return (
-		<Box {...otherProps} className={classes.root} ref={ref}>
+		<Box
+			{...otherProps}
+			{...getCSSSystemBoxProps({
+				isRoot: true,
+				isLocalTheme,
+				componentProps: {
+					...props,
+					gutter: columnContext.gutter,
+					collapse: columnContext.collapse,
+					wrapGutter: columnContext.wrapGutter,
+				},
+				fnCSSSystem: styles.Root,
+				baseClassName: ["poodle-column"],
+			})}
+			ref={ref}
+		>
 			{children}
 		</Box>
 	);

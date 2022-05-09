@@ -3,6 +3,9 @@ import GlobalStyles from "../GlobalStyles";
 import { CSSObjectSystem } from "../styled";
 
 const css: CSSObjectSystem = {
+	"*": {
+		boxSizing: "border-box",
+	},
 	"*::before": {
 		boxSizing: "border-box",
 	},

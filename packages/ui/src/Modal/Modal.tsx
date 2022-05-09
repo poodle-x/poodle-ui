@@ -1,14 +1,14 @@
-import React from "react";
-import FocusTrap from "focus-trap-react";
 import { Options as FocusTrapOptions } from "focus-trap";
-import Portal, { PortalProps } from "../Portal";
-import Box, { BoxProps } from "../Box";
-import { StandardComponentProps, ThemeConfig } from "../theme";
-import useDefaultProps from "../utils/useDefaultProps";
-import { useClassNames } from "../styled";
-import * as styles from "./styles";
-import useAutoId from "../hooks/useAutoId";
+import FocusTrap from "focus-trap-react";
+import React from "react";
 import { ModalContext } from ".";
+import Box, { BoxProps } from "../Box";
+import useAutoId from "../hooks/useAutoId";
+import Portal, { PortalProps } from "../Portal";
+import { getCSSSystemBoxProps } from "../styled/CSSSystem";
+import { StandardComponentProps, ThemeConfig } from "../theme";
+import useDefaultProps from "../hooks/useDefaultProps/useDefaultProps";
+import * as styles from "./styles";
 
 export interface LocalModalProps {
 	children?: React.ReactNode;
@@ -81,7 +81,7 @@ function getDefaultProps(theme?: ThemeConfig) {
 export const Modal: React.ForwardRefExoticComponent<
 	React.PropsWithoutRef<ModalProps> & React.RefAttributes<HTMLElement>
 > = React.forwardRef<HTMLElement, ModalProps>((_props, ref) => {
-	const props = useDefaultProps<ModalProps>(_props, {
+	const { props, isLocalTheme } = useDefaultProps<ModalProps>(_props, {
 		themeDefaultProps: getDefaultProps,
 	});
 
@@ -126,6 +126,10 @@ export const Modal: React.ForwardRefExoticComponent<
 		if (onRequestClose) {
 			onRequestClose("outside");
 		}
+
+		if (innerProps?.onClick) {
+			innerProps.onClick(e);
+		}
 	}
 
 	function handlerOverlayMouseDown(e: React.MouseEvent<HTMLElement>) {
@@ -138,66 +142,68 @@ export const Modal: React.ForwardRefExoticComponent<
 		}
 
 		e.stopPropagation();
+		e.preventDefault();
 
 		if (onRequestClose) {
 			onRequestClose("esc");
 		}
+
+		if (innerProps?.onKeyDown) {
+			innerProps.onKeyDown(e);
+		}
 	}
 
-	const classes = useClassNames({
-		props,
-		lists: {
-			root: {
-				classNames: ["poodle-modal", styles.Root, className],
-			},
-			overlay: {
-				classNames: [
-					"poodle-modal__overlay",
-					styles.Overlay,
-					overlayProps?.className,
-				],
-			},
-			inner: {
-				classNames: [
-					"poodle-modal__inner",
-					styles.Inner,
-					innerProps?.className,
-				],
-			},
-			container: {
-				classNames: [
-					"poodle-modal__container",
-					styles.Container,
-					containerProps?.className,
-				],
-			},
-			modal: {
-				classNames: [
-					"poodle-modal__modal",
-					styles.Modal,
-					modalProps?.className,
-				],
-			},
-		},
-	});
-
 	const renderChild = (
-		<Box onKeyDown={handleKeyDown} {...otherProps} className={classes.root}>
-			<Box aria-hidden={true} {...overlayProps} className={classes.overlay} />
+		<Box
+			{...otherProps}
+			{...getCSSSystemBoxProps({
+				isRoot: true,
+				isLocalTheme,
+				componentProps: props,
+				fnCSSSystem: styles.Root,
+				baseClassName: ["poodle-modal"],
+			})}
+			onKeyDown={handleKeyDown}
+		>
 			<Box
+				aria-hidden={true}
+				{...getCSSSystemBoxProps({
+					componentProps: props,
+					partProps: overlayProps,
+					fnCSSSystem: styles.Overlay,
+					baseClassName: ["poodle-modal__overlay"],
+				})}
+			/>
+			<Box
+				{...getCSSSystemBoxProps({
+					componentProps: props,
+					partProps: innerProps,
+					fnCSSSystem: styles.Inner,
+					baseClassName: ["poodle-modal__inner"],
+				})}
 				onMouseDown={handlerOverlayMouseDown}
 				onClick={handlerOverlayClick}
-				{...innerProps}
-				className={classes.inner}
 			>
-				<Box tabIndex={-1} {...containerProps} className={classes.container}>
+				<Box
+					tabIndex={-1}
+					{...getCSSSystemBoxProps({
+						componentProps: props,
+						partProps: containerProps,
+						fnCSSSystem: styles.Container,
+						baseClassName: ["poodle-modal__container"],
+					})}
+				>
 					<Box
 						role="dialog"
 						aria-modal={true}
 						aria-labelledby={withAutoId ? autoIdLabelledby : undefined}
 						aria-describedby={withAutoId ? autoIdDescribedby : undefined}
-						{...modalProps}
-						className={classes.modal}
+						{...getCSSSystemBoxProps({
+							componentProps: props,
+							partProps: modalProps,
+							fnCSSSystem: styles.Modal,
+							baseClassName: ["poodle-modal__modal"],
+						})}
 					>
 						{children}
 					</Box>

@@ -1,8 +1,8 @@
 import React from "react";
 import Box, { BoxProps } from "../Box";
+import { getCSSSystemBoxProps } from "../styled/CSSSystem";
 import { StandardComponentProps, ThemeConfig } from "../theme";
-import useDefaultProps from "../utils/useDefaultProps";
-import { useClassNames } from "../styled";
+import useDefaultProps from "../hooks/useDefaultProps/useDefaultProps";
 import * as styles from "./styles";
 
 export interface LocalInputProps {
@@ -40,7 +40,7 @@ function getDefaultProps(theme?: ThemeConfig) {
 export const Input: React.ForwardRefExoticComponent<
 	React.PropsWithoutRef<InputProps> & React.RefAttributes<HTMLElement>
 > = React.forwardRef<HTMLElement, InputProps>((_props, ref) => {
-	const props = useDefaultProps<InputProps>(_props, {
+	const { props, isLocalTheme } = useDefaultProps<InputProps>(_props, {
 		themeDefaultProps: getDefaultProps,
 	});
 
@@ -55,32 +55,30 @@ export const Input: React.ForwardRefExoticComponent<
 		...otherProps
 	} = props;
 
-	const classes = useClassNames(
-		React.useMemo(() => {
-			return {
-				props,
-				lists: {
-					root: {
-						classNames: ["poodle-input", styles.Root, className],
-					},
-					input: {
-						classNames: ["poodle-input__input", styles.Input, className],
-					},
-				},
-			};
-		}, [className, props])
-	);
-
 	const as = multiline ? "textarea" : "input";
 
 	return (
-		<Box {...otherProps} className={classes.root} ref={ref}>
+		<Box
+			{...otherProps}
+			{...getCSSSystemBoxProps({
+				isRoot: true,
+				isLocalTheme,
+				componentProps: props,
+				fnCSSSystem: styles.Root,
+				baseClassName: ["poodle-input"],
+			})}
+			ref={ref}
+		>
 			{startAdornment && startAdornment}
 			<Box
 				as={as}
 				aria-invalid={error}
-				{...inputProps}
-				className={classes.input}
+				{...getCSSSystemBoxProps({
+					componentProps: props,
+					partProps: inputProps,
+					fnCSSSystem: styles.Input,
+					baseClassName: ["poodle-input_input"],
+				})}
 			/>
 			{endAdornment && endAdornment}
 		</Box>

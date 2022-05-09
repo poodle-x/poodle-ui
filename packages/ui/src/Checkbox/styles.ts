@@ -1,7 +1,7 @@
-import { createCSSSystemStandard } from "../theme";
 import { CSSSystem } from "../styled";
-import { CheckboxProps } from "./Checkbox";
+import { createCSSSystemStandard } from "../theme";
 import { CheckboxStyleKeys } from "./";
+import { CheckboxProps } from "./Checkbox";
 
 export function Root(props: CheckboxProps): CSSSystem {
 	const { theme } = props;
@@ -51,6 +51,5 @@ export function Label(props: CheckboxProps): CSSSystem {
 		key: "label",
 		config: theme?.Checkbox,
 		props,
-		base: [],
 	});
 }

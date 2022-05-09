@@ -2,10 +2,6 @@
 
 exports[`<VisuallyHidden /> ref should work 1`] = `
 .c0 {
-  box-sizing: border-box;
-}
-
-.c1 {
   clip: rect(0 0 0 0);
   -webkit-clip-path: inset(50%);
   clip-path: inset(50%);
@@ -17,7 +13,7 @@ exports[`<VisuallyHidden /> ref should work 1`] = `
 }
 
 <div
-  class="poodle-box c0 poodle-visually-hidden c1 c2"
+  class="poodle-box poodle-visually-hidden c0"
 >
   VisuallyHidden
 </div>
@@ -25,10 +21,6 @@ exports[`<VisuallyHidden /> ref should work 1`] = `
 
 exports[`<VisuallyHidden /> should render Box props correctly 1`] = `
 .c0 {
-  box-sizing: border-box;
-}
-
-.c1 {
   clip: rect(0 0 0 0);
   -webkit-clip-path: inset(50%);
   clip-path: inset(50%);
@@ -37,14 +29,11 @@ exports[`<VisuallyHidden /> should render Box props correctly 1`] = `
   position: absolute;
   white-space: nowrap;
   width: 1px;
-}
-
-.c2 {
   margin-top: 20px;
 }
 
 <p
-  class="poodle-box c0 poodle-visually-hidden c1 c2"
+  class="poodle-box poodle-visually-hidden c0"
   id="id"
 >
   VisuallyHidden
@@ -53,10 +42,6 @@ exports[`<VisuallyHidden /> should render Box props correctly 1`] = `
 
 exports[`<VisuallyHidden /> should render VisuallyHidden correctly 1`] = `
 .c0 {
-  box-sizing: border-box;
-}
-
-.c1 {
   clip: rect(0 0 0 0);
   -webkit-clip-path: inset(50%);
   clip-path: inset(50%);
@@ -68,19 +53,7 @@ exports[`<VisuallyHidden /> should render VisuallyHidden correctly 1`] = `
 }
 
 <div
-  class="poodle-box c0 poodle-visually-hidden c1 c2"
->
-  VisuallyHidden
-</div>
-`;
-
-exports[`<VisuallyHidden /> theming should disable classes 1`] = `
-.c0 {
-  box-sizing: border-box;
-}
-
-<div
-  class="poodle-box c0 poodle-visually-hidden c1"
+  class="poodle-box poodle-visually-hidden c0"
 >
   VisuallyHidden
 </div>
@@ -88,10 +61,6 @@ exports[`<VisuallyHidden /> theming should disable classes 1`] = `
 
 exports[`<VisuallyHidden /> theming should extend styles in global 1`] = `
 .c0 {
-  box-sizing: border-box;
-}
-
-.c1 {
   clip: rect(0 0 0 0);
   -webkit-clip-path: inset(50%);
   clip-path: inset(50%);
@@ -107,7 +76,7 @@ exports[`<VisuallyHidden /> theming should extend styles in global 1`] = `
 }
 
 <div
-  class="poodle-box c0 poodle-visually-hidden c1 c2"
+  class="poodle-box poodle-visually-hidden c0"
 >
   VisuallyHidden
 </div>
@@ -115,10 +84,6 @@ exports[`<VisuallyHidden /> theming should extend styles in global 1`] = `
 
 exports[`<VisuallyHidden /> theming should extend styles in local 1`] = `
 .c0 {
-  box-sizing: border-box;
-}
-
-.c1 {
   clip: rect(0 0 0 0);
   -webkit-clip-path: inset(50%);
   clip-path: inset(50%);
@@ -134,19 +99,7 @@ exports[`<VisuallyHidden /> theming should extend styles in local 1`] = `
 }
 
 <div
-  class="poodle-box c0 poodle-visually-hidden c1 c2"
->
-  VisuallyHidden
-</div>
-`;
-
-exports[`<VisuallyHidden /> theming should override classes 1`] = `
-.c0 {
-  box-sizing: border-box;
-}
-
-<div
-  class="poodle-box c0 poodle-visually-hidden morning c1"
+  class="poodle-box poodle-visually-hidden c0"
 >
   VisuallyHidden
 </div>
@@ -154,15 +107,11 @@ exports[`<VisuallyHidden /> theming should override classes 1`] = `
 
 exports[`<VisuallyHidden /> theming should override styles 1`] = `
 .c0 {
-  box-sizing: border-box;
-}
-
-.c1 {
   margin-top: 50px;
 }
 
 <div
-  class="poodle-box c0 poodle-visually-hidden c1 c2"
+  class="poodle-box poodle-visually-hidden c0"
 >
   VisuallyHidden
 </div>
@@ -170,10 +119,6 @@ exports[`<VisuallyHidden /> theming should override styles 1`] = `
 
 exports[`<VisuallyHidden /> theming should render with default props correctly 1`] = `
 .c0 {
-  box-sizing: border-box;
-}
-
-.c1 {
   clip: rect(0 0 0 0);
   -webkit-clip-path: inset(50%);
   clip-path: inset(50%);
@@ -185,7 +130,7 @@ exports[`<VisuallyHidden /> theming should render with default props correctly 1
 }
 
 <div
-  class="poodle-box c0 poodle-visually-hidden c1 hello c2"
+  class="poodle-box poodle-visually-hidden hello c0"
   id="id"
 >
   VisuallyHidden

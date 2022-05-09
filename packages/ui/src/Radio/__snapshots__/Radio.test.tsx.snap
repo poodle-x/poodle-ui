@@ -2,10 +2,6 @@
 
 exports[`<Radio /> ref should work 1`] = `
 .c0 {
-  box-sizing: border-box;
-}
-
-.c1 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -20,15 +16,15 @@ exports[`<Radio /> ref should work 1`] = `
   transition: color 150ms ease-in;
 }
 
-.c1:hover {
+.c0:hover {
   color: #00478A;
 }
 
-.c1:focus-within {
+.c0:focus-within {
   color: #00478A;
 }
 
-.c5 {
+.c1 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -52,11 +48,11 @@ exports[`<Radio /> ref should work 1`] = `
   transition: borderColor 120ms ease-in;
 }
 
-.c5:focus-within {
+.c1:focus-within {
   border-color: rgba(0,0,0,0.8);
 }
 
-.c9 {
+.c2 {
   position: absolute;
   top: 0;
   left: -99px;
@@ -67,28 +63,28 @@ exports[`<Radio /> ref should work 1`] = `
   padding: 0;
 }
 
-.c9~*[data-render-icon='true'] *[data-icon-checked='true'] {
+.c2~*[data-render-icon='true'] *[data-icon-checked='true'] {
   display: none;
 }
 
-.c9:checked~*[data-render-icon='true'] *[data-icon-normal='true'] {
+.c2:checked~*[data-render-icon='true'] *[data-icon-normal='true'] {
   display: none;
 }
 
-.c9:checked~*[data-render-icon='true'] *[data-icon-checked='true'] {
+.c2:checked~*[data-render-icon='true'] *[data-icon-checked='true'] {
   display: initial;
   color: #00478A;
 }
 
-.c9:disabled~*[data-render-icon='true'] *[data-icon-checked='true'] {
+.c2:disabled~*[data-render-icon='true'] *[data-icon-checked='true'] {
   color: #A6A6A6;
 }
 
-.c9:disabled~*[data-render-icon='true'] *[data-icon-normal='true'] {
+.c2:disabled~*[data-render-icon='true'] *[data-icon-normal='true'] {
   color: #A6A6A6;
 }
 
-.c12 {
+.c3 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -98,7 +94,7 @@ exports[`<Radio /> ref should work 1`] = `
   width: 1.5rem;
 }
 
-.c16 {
+.c4 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -113,24 +109,24 @@ exports[`<Radio /> ref should work 1`] = `
   padding-left: 1.5rem;
 }
 
-.c20 {
+.c5 {
   padding-left: 8px;
 }
 
 <div
-  class="poodle-box c0 poodle-check-control c1 poodle-radio c2 c3"
+  class="poodle-box poodle-check-control poodle-radio c0"
 >
   <div
-    class="poodle-box c0 poodle-check-control__control c5 poodle-Radio__control c2 c3"
+    class="poodle-box poodle-check-control__control poodle-radio__control c1"
   >
     <input
-      class="poodle-box c0 poodle-check-control__input c9 c3"
+      class="poodle-box poodle-check-control__input poodle-radio__input c2"
       id="poodle-check-control-1"
       type="radio"
     />
     <div
       aria-hidden="true"
-      class="poodle-box c0 poodle-check-control__icon c12 poodle-radio__icon c2 c3"
+      class="poodle-box poodle-check-control__icon poodle-radio__icon c3"
       data-render-icon="true"
     >
       <svg
@@ -162,11 +158,11 @@ exports[`<Radio /> ref should work 1`] = `
     </div>
   </div>
   <label
-    class="poodle-box c0 poodle-check-control__label c16 poodle-radio__label c2 c3"
+    class="poodle-box poodle-check-control__label poodle-radio__label c4"
     for="poodle-check-control-1"
   >
     <span
-      class="poodle-box c0 poodle-check-control__label-text c20 poodle-radio__label c2 c3"
+      class="poodle-box poodle-check-control__label-text c5"
     >
       Hello world
     </span>
@@ -176,10 +172,6 @@ exports[`<Radio /> ref should work 1`] = `
 
 exports[`<Radio /> should render Box props correctly 1`] = `
 .c0 {
-  box-sizing: border-box;
-}
-
-.c1 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -192,21 +184,18 @@ exports[`<Radio /> should render Box props correctly 1`] = `
   color: #282828;
   -webkit-transition: color 150ms ease-in;
   transition: color 150ms ease-in;
-}
-
-.c1:hover {
-  color: #00478A;
-}
-
-.c1:focus-within {
-  color: #00478A;
-}
-
-.c3 {
   margin-top: 20px;
 }
 
-.c5 {
+.c0:hover {
+  color: #00478A;
+}
+
+.c0:focus-within {
+  color: #00478A;
+}
+
+.c1 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -230,11 +219,11 @@ exports[`<Radio /> should render Box props correctly 1`] = `
   transition: borderColor 120ms ease-in;
 }
 
-.c5:focus-within {
+.c1:focus-within {
   border-color: rgba(0,0,0,0.8);
 }
 
-.c9 {
+.c2 {
   position: absolute;
   top: 0;
   left: -99px;
@@ -245,28 +234,28 @@ exports[`<Radio /> should render Box props correctly 1`] = `
   padding: 0;
 }
 
-.c9~*[data-render-icon='true'] *[data-icon-checked='true'] {
+.c2~*[data-render-icon='true'] *[data-icon-checked='true'] {
   display: none;
 }
 
-.c9:checked~*[data-render-icon='true'] *[data-icon-normal='true'] {
+.c2:checked~*[data-render-icon='true'] *[data-icon-normal='true'] {
   display: none;
 }
 
-.c9:checked~*[data-render-icon='true'] *[data-icon-checked='true'] {
+.c2:checked~*[data-render-icon='true'] *[data-icon-checked='true'] {
   display: initial;
   color: #00478A;
 }
 
-.c9:disabled~*[data-render-icon='true'] *[data-icon-checked='true'] {
+.c2:disabled~*[data-render-icon='true'] *[data-icon-checked='true'] {
   color: #A6A6A6;
 }
 
-.c9:disabled~*[data-render-icon='true'] *[data-icon-normal='true'] {
+.c2:disabled~*[data-render-icon='true'] *[data-icon-normal='true'] {
   color: #A6A6A6;
 }
 
-.c12 {
+.c3 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -276,7 +265,7 @@ exports[`<Radio /> should render Box props correctly 1`] = `
   width: 1.5rem;
 }
 
-.c16 {
+.c4 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -291,25 +280,25 @@ exports[`<Radio /> should render Box props correctly 1`] = `
   padding-left: 1.5rem;
 }
 
-.c20 {
+.c5 {
   padding-left: 8px;
 }
 
 <div
-  class="poodle-box c0 poodle-check-control c1 poodle-radio c2 c3"
+  class="poodle-box poodle-check-control poodle-radio c0"
   id="id"
 >
   <div
-    class="poodle-box c0 poodle-check-control__control c5 poodle-Radio__control c2 c7"
+    class="poodle-box poodle-check-control__control poodle-radio__control c1"
   >
     <input
-      class="poodle-box c0 poodle-check-control__input c9 c7"
+      class="poodle-box poodle-check-control__input poodle-radio__input c2"
       id="poodle-check-control-1"
       type="radio"
     />
     <div
       aria-hidden="true"
-      class="poodle-box c0 poodle-check-control__icon c12 poodle-radio__icon c2 c7"
+      class="poodle-box poodle-check-control__icon poodle-radio__icon c3"
       data-render-icon="true"
     >
       <svg
@@ -341,11 +330,11 @@ exports[`<Radio /> should render Box props correctly 1`] = `
     </div>
   </div>
   <label
-    class="poodle-box c0 poodle-check-control__label c16 poodle-radio__label c2 c7"
+    class="poodle-box poodle-check-control__label poodle-radio__label c4"
     for="poodle-check-control-1"
   >
     <span
-      class="poodle-box c0 poodle-check-control__label-text c20 poodle-radio__label c2 c7"
+      class="poodle-box poodle-check-control__label-text c5"
     >
       Hello world
     </span>
@@ -355,10 +344,6 @@ exports[`<Radio /> should render Box props correctly 1`] = `
 
 exports[`<Radio /> should render Radio correctly 1`] = `
 .c0 {
-  box-sizing: border-box;
-}
-
-.c1 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -373,15 +358,15 @@ exports[`<Radio /> should render Radio correctly 1`] = `
   transition: color 150ms ease-in;
 }
 
-.c1:hover {
+.c0:hover {
   color: #00478A;
 }
 
-.c1:focus-within {
+.c0:focus-within {
   color: #00478A;
 }
 
-.c5 {
+.c1 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -405,11 +390,11 @@ exports[`<Radio /> should render Radio correctly 1`] = `
   transition: borderColor 120ms ease-in;
 }
 
-.c5:focus-within {
+.c1:focus-within {
   border-color: rgba(0,0,0,0.8);
 }
 
-.c9 {
+.c2 {
   position: absolute;
   top: 0;
   left: -99px;
@@ -420,28 +405,28 @@ exports[`<Radio /> should render Radio correctly 1`] = `
   padding: 0;
 }
 
-.c9~*[data-render-icon='true'] *[data-icon-checked='true'] {
+.c2~*[data-render-icon='true'] *[data-icon-checked='true'] {
   display: none;
 }
 
-.c9:checked~*[data-render-icon='true'] *[data-icon-normal='true'] {
+.c2:checked~*[data-render-icon='true'] *[data-icon-normal='true'] {
   display: none;
 }
 
-.c9:checked~*[data-render-icon='true'] *[data-icon-checked='true'] {
+.c2:checked~*[data-render-icon='true'] *[data-icon-checked='true'] {
   display: initial;
   color: #00478A;
 }
 
-.c9:disabled~*[data-render-icon='true'] *[data-icon-checked='true'] {
+.c2:disabled~*[data-render-icon='true'] *[data-icon-checked='true'] {
   color: #A6A6A6;
 }
 
-.c9:disabled~*[data-render-icon='true'] *[data-icon-normal='true'] {
+.c2:disabled~*[data-render-icon='true'] *[data-icon-normal='true'] {
   color: #A6A6A6;
 }
 
-.c12 {
+.c3 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -451,7 +436,7 @@ exports[`<Radio /> should render Radio correctly 1`] = `
   width: 1.5rem;
 }
 
-.c16 {
+.c4 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -466,24 +451,24 @@ exports[`<Radio /> should render Radio correctly 1`] = `
   padding-left: 1.5rem;
 }
 
-.c20 {
+.c5 {
   padding-left: 8px;
 }
 
 <div
-  class="poodle-box c0 poodle-check-control c1 poodle-radio c2 c3"
+  class="poodle-box poodle-check-control poodle-radio c0"
 >
   <div
-    class="poodle-box c0 poodle-check-control__control c5 poodle-Radio__control c2 c3"
+    class="poodle-box poodle-check-control__control poodle-radio__control c1"
   >
     <input
-      class="poodle-box c0 poodle-check-control__input c9 c3"
+      class="poodle-box poodle-check-control__input poodle-radio__input c2"
       id="poodle-check-control-1"
       type="radio"
     />
     <div
       aria-hidden="true"
-      class="poodle-box c0 poodle-check-control__icon c12 poodle-radio__icon c2 c3"
+      class="poodle-box poodle-check-control__icon poodle-radio__icon c3"
       data-render-icon="true"
     >
       <svg
@@ -515,11 +500,11 @@ exports[`<Radio /> should render Radio correctly 1`] = `
     </div>
   </div>
   <label
-    class="poodle-box c0 poodle-check-control__label c16 poodle-radio__label c2 c3"
+    class="poodle-box poodle-check-control__label poodle-radio__label c4"
     for="poodle-check-control-1"
   >
     <span
-      class="poodle-box c0 poodle-check-control__label-text c20 poodle-radio__label c2 c3"
+      class="poodle-box poodle-check-control__label-text c5"
     >
       Hello world
     </span>
@@ -527,186 +512,8 @@ exports[`<Radio /> should render Radio correctly 1`] = `
 </div>
 `;
 
-exports[`<Radio /> theming should disable classes 1`] = `
-.c0 {
-  box-sizing: border-box;
-}
-
-.c1 {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  position: relative;
-  color: #282828;
-  -webkit-transition: color 150ms ease-in;
-  transition: color 150ms ease-in;
-}
-
-.c1:hover {
-  color: #00478A;
-}
-
-.c1:focus-within {
-  color: #00478A;
-}
-
-.c4 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  border: 1px dotted;
-  border-color: transparent;
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 100%;
-  overflow: hidden;
-  -webkit-transition: borderColor 120ms ease-in;
-  transition: borderColor 120ms ease-in;
-}
-
-.c4:focus-within {
-  border-color: rgba(0,0,0,0.8);
-}
-
-.c8 {
-  position: absolute;
-  top: 0;
-  left: -99px;
-  width: 0;
-  height: 0;
-  border: 0;
-  margin: 0;
-  padding: 0;
-}
-
-.c8~*[data-render-icon='true'] *[data-icon-checked='true'] {
-  display: none;
-}
-
-.c8:checked~*[data-render-icon='true'] *[data-icon-normal='true'] {
-  display: none;
-}
-
-.c8:checked~*[data-render-icon='true'] *[data-icon-checked='true'] {
-  display: initial;
-  color: #00478A;
-}
-
-.c8:disabled~*[data-render-icon='true'] *[data-icon-checked='true'] {
-  color: #A6A6A6;
-}
-
-.c8:disabled~*[data-render-icon='true'] *[data-icon-normal='true'] {
-  color: #A6A6A6;
-}
-
-.c11 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  font-size: 1.5rem;
-  height: 1.5rem;
-  width: 1.5rem;
-}
-
-.c15 {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  position: relative;
-  cursor: pointer;
-  min-height: 1.5rem;
-  padding-left: 1.5rem;
-}
-
-.c19 {
-  padding-left: 8px;
-}
-
-<div
-  class="poodle-box c0 poodle-check-control c1 poodle-radio c2"
->
-  <div
-    class="poodle-box c0 poodle-check-control__control c4 poodle-Radio__control c5 c2"
-  >
-    <input
-      class="poodle-box c0 poodle-check-control__input c8 c2"
-      id="poodle-check-control-1"
-      type="radio"
-    />
-    <div
-      aria-hidden="true"
-      class="poodle-box c0 poodle-check-control__icon c11 poodle-radio__icon c5 c2"
-      data-render-icon="true"
-    >
-      <svg
-        data-icon-checked="true"
-        fill="currentColor"
-        height="1em"
-        viewBox="0 0 24 24"
-        width="1em"
-      >
-        <path
-          clip-rule="evenodd"
-          d="M22 12c0 5.523-4.477 10-10 10S2 17.523 2 12 6.477 2 12 2s10 4.477 10 10zm-1.818 0a8.182 8.182 0 1 1-16.364 0 8.182 8.182 0 0 1 16.364 0zM12 17.454a5.454 5.454 0 1 0 0-10.908 5.454 5.454 0 0 0 0 10.909z"
-          fill-rule="evenodd"
-        />
-      </svg>
-      <svg
-        data-icon-normal="true"
-        fill="currentColor"
-        height="1em"
-        viewBox="0 0 24 24"
-        width="1em"
-      >
-        <path
-          clip-rule="evenodd"
-          d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10zm0-1.818a8.182 8.182 0 1 0 0-16.364 8.182 8.182 0 0 0 0 16.364z"
-          fill-rule="evenodd"
-        />
-      </svg>
-    </div>
-  </div>
-  <label
-    class="poodle-box c0 poodle-check-control__label c15 poodle-radio__label c5 c2"
-    for="poodle-check-control-1"
-  >
-    <span
-      class="poodle-box c0 poodle-check-control__label-text c19 poodle-radio__label c5 c2"
-    >
-      Hello
-    </span>
-  </label>
-</div>
-`;
-
 exports[`<Radio /> theming should extend styles in global 1`] = `
 .c0 {
-  box-sizing: border-box;
-}
-
-.c1 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -719,24 +526,21 @@ exports[`<Radio /> theming should extend styles in global 1`] = `
   color: #282828;
   -webkit-transition: color 150ms ease-in;
   transition: color 150ms ease-in;
-}
-
-.c1:hover {
-  color: #00478A;
-}
-
-.c1:focus-within {
-  color: #00478A;
-}
-
-.c2 {
   margin-top: 10px;
   letter-spacing: 250px;
   top: 0;
   text-indent: 1px;
 }
 
-.c5 {
+.c0:hover {
+  color: #00478A;
+}
+
+.c0:focus-within {
+  color: #00478A;
+}
+
+.c1 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -760,11 +564,11 @@ exports[`<Radio /> theming should extend styles in global 1`] = `
   transition: borderColor 120ms ease-in;
 }
 
-.c5:focus-within {
+.c1:focus-within {
   border-color: rgba(0,0,0,0.8);
 }
 
-.c9 {
+.c2 {
   position: absolute;
   top: 0;
   left: -99px;
@@ -775,28 +579,28 @@ exports[`<Radio /> theming should extend styles in global 1`] = `
   padding: 0;
 }
 
-.c9~*[data-render-icon='true'] *[data-icon-checked='true'] {
+.c2~*[data-render-icon='true'] *[data-icon-checked='true'] {
   display: none;
 }
 
-.c9:checked~*[data-render-icon='true'] *[data-icon-normal='true'] {
+.c2:checked~*[data-render-icon='true'] *[data-icon-normal='true'] {
   display: none;
 }
 
-.c9:checked~*[data-render-icon='true'] *[data-icon-checked='true'] {
+.c2:checked~*[data-render-icon='true'] *[data-icon-checked='true'] {
   display: initial;
   color: #00478A;
 }
 
-.c9:disabled~*[data-render-icon='true'] *[data-icon-checked='true'] {
+.c2:disabled~*[data-render-icon='true'] *[data-icon-checked='true'] {
   color: #A6A6A6;
 }
 
-.c9:disabled~*[data-render-icon='true'] *[data-icon-normal='true'] {
+.c2:disabled~*[data-render-icon='true'] *[data-icon-normal='true'] {
   color: #A6A6A6;
 }
 
-.c12 {
+.c3 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -806,7 +610,7 @@ exports[`<Radio /> theming should extend styles in global 1`] = `
   width: 1.5rem;
 }
 
-.c16 {
+.c4 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -821,24 +625,24 @@ exports[`<Radio /> theming should extend styles in global 1`] = `
   padding-left: 1.5rem;
 }
 
-.c20 {
+.c5 {
   padding-left: 8px;
 }
 
 <div
-  class="poodle-box c0 poodle-check-control c1 poodle-radio c2 c3"
+  class="poodle-box poodle-check-control poodle-radio c0"
 >
   <div
-    class="poodle-box c0 poodle-check-control__control c5 poodle-Radio__control c6 c3"
+    class="poodle-box poodle-check-control__control poodle-radio__control c1"
   >
     <input
-      class="poodle-box c0 poodle-check-control__input c9 c3"
+      class="poodle-box poodle-check-control__input poodle-radio__input c2"
       id="poodle-check-control-1"
       type="radio"
     />
     <div
       aria-hidden="true"
-      class="poodle-box c0 poodle-check-control__icon c12 poodle-radio__icon c6 c3"
+      class="poodle-box poodle-check-control__icon poodle-radio__icon c3"
       data-render-icon="true"
     >
       <svg
@@ -870,11 +674,11 @@ exports[`<Radio /> theming should extend styles in global 1`] = `
     </div>
   </div>
   <label
-    class="poodle-box c0 poodle-check-control__label c16 poodle-radio__label c6 c3"
+    class="poodle-box poodle-check-control__label poodle-radio__label c4"
     for="poodle-check-control-1"
   >
     <span
-      class="poodle-box c0 poodle-check-control__label-text c20 poodle-radio__label c6 c3"
+      class="poodle-box poodle-check-control__label-text c5"
     >
       hello
     </span>
@@ -884,10 +688,6 @@ exports[`<Radio /> theming should extend styles in global 1`] = `
 
 exports[`<Radio /> theming should extend styles in local 1`] = `
 .c0 {
-  box-sizing: border-box;
-}
-
-.c1 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -900,198 +700,21 @@ exports[`<Radio /> theming should extend styles in local 1`] = `
   color: #282828;
   -webkit-transition: color 150ms ease-in;
   transition: color 150ms ease-in;
-}
-
-.c1:hover {
-  color: #00478A;
-}
-
-.c1:focus-within {
-  color: #00478A;
-}
-
-.c2 {
   margin-top: 10px;
   letter-spacing: 250px;
   top: 0;
   text-indent: 1px;
 }
 
-.c5 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  border: 1px dotted;
-  border-color: transparent;
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 100%;
-  overflow: hidden;
-  -webkit-transition: borderColor 120ms ease-in;
-  transition: borderColor 120ms ease-in;
-}
-
-.c5:focus-within {
-  border-color: rgba(0,0,0,0.8);
-}
-
-.c9 {
-  position: absolute;
-  top: 0;
-  left: -99px;
-  width: 0;
-  height: 0;
-  border: 0;
-  margin: 0;
-  padding: 0;
-}
-
-.c9~*[data-render-icon='true'] *[data-icon-checked='true'] {
-  display: none;
-}
-
-.c9:checked~*[data-render-icon='true'] *[data-icon-normal='true'] {
-  display: none;
-}
-
-.c9:checked~*[data-render-icon='true'] *[data-icon-checked='true'] {
-  display: initial;
+.c0:hover {
   color: #00478A;
 }
 
-.c9:disabled~*[data-render-icon='true'] *[data-icon-checked='true'] {
-  color: #A6A6A6;
-}
-
-.c9:disabled~*[data-render-icon='true'] *[data-icon-normal='true'] {
-  color: #A6A6A6;
-}
-
-.c12 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  font-size: 1.5rem;
-  height: 1.5rem;
-  width: 1.5rem;
-}
-
-.c16 {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  position: relative;
-  cursor: pointer;
-  min-height: 1.5rem;
-  padding-left: 1.5rem;
-}
-
-.c20 {
-  padding-left: 8px;
-}
-
-<div
-  class="poodle-box c0 poodle-check-control c1 poodle-radio c2 c3"
->
-  <div
-    class="poodle-box c0 poodle-check-control__control c5 poodle-Radio__control c6 c3"
-  >
-    <input
-      class="poodle-box c0 poodle-check-control__input c9 c3"
-      id="poodle-check-control-1"
-      type="radio"
-    />
-    <div
-      aria-hidden="true"
-      class="poodle-box c0 poodle-check-control__icon c12 poodle-radio__icon c6 c3"
-      data-render-icon="true"
-    >
-      <svg
-        data-icon-checked="true"
-        fill="currentColor"
-        height="1em"
-        viewBox="0 0 24 24"
-        width="1em"
-      >
-        <path
-          clip-rule="evenodd"
-          d="M22 12c0 5.523-4.477 10-10 10S2 17.523 2 12 6.477 2 12 2s10 4.477 10 10zm-1.818 0a8.182 8.182 0 1 1-16.364 0 8.182 8.182 0 0 1 16.364 0zM12 17.454a5.454 5.454 0 1 0 0-10.908 5.454 5.454 0 0 0 0 10.909z"
-          fill-rule="evenodd"
-        />
-      </svg>
-      <svg
-        data-icon-normal="true"
-        fill="currentColor"
-        height="1em"
-        viewBox="0 0 24 24"
-        width="1em"
-      >
-        <path
-          clip-rule="evenodd"
-          d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10zm0-1.818a8.182 8.182 0 1 0 0-16.364 8.182 8.182 0 0 0 0 16.364z"
-          fill-rule="evenodd"
-        />
-      </svg>
-    </div>
-  </div>
-  <label
-    class="poodle-box c0 poodle-check-control__label c16 poodle-radio__label c6 c3"
-    for="poodle-check-control-1"
-  >
-    <span
-      class="poodle-box c0 poodle-check-control__label-text c20 poodle-radio__label c6 c3"
-    >
-      Hello
-    </span>
-  </label>
-</div>
-`;
-
-exports[`<Radio /> theming should override classes 1`] = `
-.c0 {
-  box-sizing: border-box;
+.c0:focus-within {
+  color: #00478A;
 }
 
 .c1 {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  position: relative;
-  color: #282828;
-  -webkit-transition: color 150ms ease-in;
-  transition: color 150ms ease-in;
-}
-
-.c1:hover {
-  color: #00478A;
-}
-
-.c1:focus-within {
-  color: #00478A;
-}
-
-.c4 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1115,11 +738,11 @@ exports[`<Radio /> theming should override classes 1`] = `
   transition: borderColor 120ms ease-in;
 }
 
-.c4:focus-within {
+.c1:focus-within {
   border-color: rgba(0,0,0,0.8);
 }
 
-.c8 {
+.c2 {
   position: absolute;
   top: 0;
   left: -99px;
@@ -1130,28 +753,28 @@ exports[`<Radio /> theming should override classes 1`] = `
   padding: 0;
 }
 
-.c8~*[data-render-icon='true'] *[data-icon-checked='true'] {
+.c2~*[data-render-icon='true'] *[data-icon-checked='true'] {
   display: none;
 }
 
-.c8:checked~*[data-render-icon='true'] *[data-icon-normal='true'] {
+.c2:checked~*[data-render-icon='true'] *[data-icon-normal='true'] {
   display: none;
 }
 
-.c8:checked~*[data-render-icon='true'] *[data-icon-checked='true'] {
+.c2:checked~*[data-render-icon='true'] *[data-icon-checked='true'] {
   display: initial;
   color: #00478A;
 }
 
-.c8:disabled~*[data-render-icon='true'] *[data-icon-checked='true'] {
+.c2:disabled~*[data-render-icon='true'] *[data-icon-checked='true'] {
   color: #A6A6A6;
 }
 
-.c8:disabled~*[data-render-icon='true'] *[data-icon-normal='true'] {
+.c2:disabled~*[data-render-icon='true'] *[data-icon-normal='true'] {
   color: #A6A6A6;
 }
 
-.c11 {
+.c3 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1161,7 +784,7 @@ exports[`<Radio /> theming should override classes 1`] = `
   width: 1.5rem;
 }
 
-.c15 {
+.c4 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -1176,24 +799,24 @@ exports[`<Radio /> theming should override classes 1`] = `
   padding-left: 1.5rem;
 }
 
-.c19 {
+.c5 {
   padding-left: 8px;
 }
 
 <div
-  class="poodle-box c0 poodle-check-control c1 poodle-radio morning c2"
+  class="poodle-box poodle-check-control poodle-radio c0"
 >
   <div
-    class="poodle-box c0 poodle-check-control__control c4 poodle-Radio__control c5 c2"
+    class="poodle-box poodle-check-control__control poodle-radio__control c1"
   >
     <input
-      class="poodle-box c0 poodle-check-control__input c8 c2"
+      class="poodle-box poodle-check-control__input poodle-radio__input c2"
       id="poodle-check-control-1"
       type="radio"
     />
     <div
       aria-hidden="true"
-      class="poodle-box c0 poodle-check-control__icon c11 poodle-radio__icon c5 c2"
+      class="poodle-box poodle-check-control__icon poodle-radio__icon c3"
       data-render-icon="true"
     >
       <svg
@@ -1225,11 +848,11 @@ exports[`<Radio /> theming should override classes 1`] = `
     </div>
   </div>
   <label
-    class="poodle-box c0 poodle-check-control__label c15 poodle-radio__label c5 c2"
+    class="poodle-box poodle-check-control__label poodle-radio__label c4"
     for="poodle-check-control-1"
   >
     <span
-      class="poodle-box c0 poodle-check-control__label-text c19 poodle-radio__label c5 c2"
+      class="poodle-box poodle-check-control__label-text c5"
     >
       Hello
     </span>
@@ -1239,10 +862,6 @@ exports[`<Radio /> theming should override classes 1`] = `
 
 exports[`<Radio /> theming should override styles 1`] = `
 .c0 {
-  box-sizing: border-box;
-}
-
-.c1 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -1255,21 +874,18 @@ exports[`<Radio /> theming should override styles 1`] = `
   color: #282828;
   -webkit-transition: color 150ms ease-in;
   transition: color 150ms ease-in;
-}
-
-.c1:hover {
-  color: #00478A;
-}
-
-.c1:focus-within {
-  color: #00478A;
-}
-
-.c2 {
   margin-top: 50px;
 }
 
-.c5 {
+.c0:hover {
+  color: #00478A;
+}
+
+.c0:focus-within {
+  color: #00478A;
+}
+
+.c1 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1293,11 +909,11 @@ exports[`<Radio /> theming should override styles 1`] = `
   transition: borderColor 120ms ease-in;
 }
 
-.c5:focus-within {
+.c1:focus-within {
   border-color: rgba(0,0,0,0.8);
 }
 
-.c9 {
+.c2 {
   position: absolute;
   top: 0;
   left: -99px;
@@ -1308,28 +924,28 @@ exports[`<Radio /> theming should override styles 1`] = `
   padding: 0;
 }
 
-.c9~*[data-render-icon='true'] *[data-icon-checked='true'] {
+.c2~*[data-render-icon='true'] *[data-icon-checked='true'] {
   display: none;
 }
 
-.c9:checked~*[data-render-icon='true'] *[data-icon-normal='true'] {
+.c2:checked~*[data-render-icon='true'] *[data-icon-normal='true'] {
   display: none;
 }
 
-.c9:checked~*[data-render-icon='true'] *[data-icon-checked='true'] {
+.c2:checked~*[data-render-icon='true'] *[data-icon-checked='true'] {
   display: initial;
   color: #00478A;
 }
 
-.c9:disabled~*[data-render-icon='true'] *[data-icon-checked='true'] {
+.c2:disabled~*[data-render-icon='true'] *[data-icon-checked='true'] {
   color: #A6A6A6;
 }
 
-.c9:disabled~*[data-render-icon='true'] *[data-icon-normal='true'] {
+.c2:disabled~*[data-render-icon='true'] *[data-icon-normal='true'] {
   color: #A6A6A6;
 }
 
-.c12 {
+.c3 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1339,7 +955,7 @@ exports[`<Radio /> theming should override styles 1`] = `
   width: 1.5rem;
 }
 
-.c16 {
+.c4 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -1354,24 +970,24 @@ exports[`<Radio /> theming should override styles 1`] = `
   padding-left: 1.5rem;
 }
 
-.c20 {
+.c5 {
   padding-left: 8px;
 }
 
 <div
-  class="poodle-box c0 poodle-check-control c1 poodle-radio c2 c3"
+  class="poodle-box poodle-check-control poodle-radio c0"
 >
   <div
-    class="poodle-box c0 poodle-check-control__control c5 poodle-Radio__control c6 c3"
+    class="poodle-box poodle-check-control__control poodle-radio__control c1"
   >
     <input
-      class="poodle-box c0 poodle-check-control__input c9 c3"
+      class="poodle-box poodle-check-control__input poodle-radio__input c2"
       id="poodle-check-control-1"
       type="radio"
     />
     <div
       aria-hidden="true"
-      class="poodle-box c0 poodle-check-control__icon c12 poodle-radio__icon c6 c3"
+      class="poodle-box poodle-check-control__icon poodle-radio__icon c3"
       data-render-icon="true"
     >
       <svg
@@ -1403,11 +1019,11 @@ exports[`<Radio /> theming should override styles 1`] = `
     </div>
   </div>
   <label
-    class="poodle-box c0 poodle-check-control__label c16 poodle-radio__label c6 c3"
+    class="poodle-box poodle-check-control__label poodle-radio__label c4"
     for="poodle-check-control-1"
   >
     <span
-      class="poodle-box c0 poodle-check-control__label-text c20 poodle-radio__label c6 c3"
+      class="poodle-box poodle-check-control__label-text c5"
     >
       Hello
     </span>
@@ -1417,10 +1033,6 @@ exports[`<Radio /> theming should override styles 1`] = `
 
 exports[`<Radio /> theming should render with default props correctly 1`] = `
 .c0 {
-  box-sizing: border-box;
-}
-
-.c1 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -1435,15 +1047,15 @@ exports[`<Radio /> theming should render with default props correctly 1`] = `
   transition: color 150ms ease-in;
 }
 
-.c1:hover {
+.c0:hover {
   color: #00478A;
 }
 
-.c1:focus-within {
+.c0:focus-within {
   color: #00478A;
 }
 
-.c5 {
+.c1 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1467,11 +1079,11 @@ exports[`<Radio /> theming should render with default props correctly 1`] = `
   transition: borderColor 120ms ease-in;
 }
 
-.c5:focus-within {
+.c1:focus-within {
   border-color: rgba(0,0,0,0.8);
 }
 
-.c9 {
+.c2 {
   position: absolute;
   top: 0;
   left: -99px;
@@ -1482,28 +1094,28 @@ exports[`<Radio /> theming should render with default props correctly 1`] = `
   padding: 0;
 }
 
-.c9~*[data-render-icon='true'] *[data-icon-checked='true'] {
+.c2~*[data-render-icon='true'] *[data-icon-checked='true'] {
   display: none;
 }
 
-.c9:checked~*[data-render-icon='true'] *[data-icon-normal='true'] {
+.c2:checked~*[data-render-icon='true'] *[data-icon-normal='true'] {
   display: none;
 }
 
-.c9:checked~*[data-render-icon='true'] *[data-icon-checked='true'] {
+.c2:checked~*[data-render-icon='true'] *[data-icon-checked='true'] {
   display: initial;
   color: #00478A;
 }
 
-.c9:disabled~*[data-render-icon='true'] *[data-icon-checked='true'] {
+.c2:disabled~*[data-render-icon='true'] *[data-icon-checked='true'] {
   color: #A6A6A6;
 }
 
-.c9:disabled~*[data-render-icon='true'] *[data-icon-normal='true'] {
+.c2:disabled~*[data-render-icon='true'] *[data-icon-normal='true'] {
   color: #A6A6A6;
 }
 
-.c12 {
+.c3 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1513,7 +1125,7 @@ exports[`<Radio /> theming should render with default props correctly 1`] = `
   width: 1.5rem;
 }
 
-.c16 {
+.c4 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -1528,25 +1140,25 @@ exports[`<Radio /> theming should render with default props correctly 1`] = `
   padding-left: 1.5rem;
 }
 
-.c20 {
+.c5 {
   padding-left: 8px;
 }
 
 <div
-  class="poodle-box c0 poodle-check-control c1 poodle-radio c2 hello c3"
+  class="poodle-box poodle-check-control poodle-radio hello c0"
   id="id"
 >
   <div
-    class="poodle-box c0 poodle-check-control__control c5 poodle-Radio__control c2 c3"
+    class="poodle-box poodle-check-control__control poodle-radio__control c1"
   >
     <input
-      class="poodle-box c0 poodle-check-control__input c9 c3"
+      class="poodle-box poodle-check-control__input poodle-radio__input c2"
       id="poodle-check-control-1"
       type="radio"
     />
     <div
       aria-hidden="true"
-      class="poodle-box c0 poodle-check-control__icon c12 poodle-radio__icon c2 c3"
+      class="poodle-box poodle-check-control__icon poodle-radio__icon c3"
       data-render-icon="true"
     >
       <svg
@@ -1578,11 +1190,11 @@ exports[`<Radio /> theming should render with default props correctly 1`] = `
     </div>
   </div>
   <label
-    class="poodle-box c0 poodle-check-control__label c16 poodle-radio__label c2 c3"
+    class="poodle-box poodle-check-control__label poodle-radio__label c4"
     for="poodle-check-control-1"
   >
     <span
-      class="poodle-box c0 poodle-check-control__label-text c20 poodle-radio__label c2 c3"
+      class="poodle-box poodle-check-control__label-text c5"
     >
       Hello
     </span>

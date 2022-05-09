@@ -1,17 +1,17 @@
-import React from "react";
+import styled from "@emotion/styled";
+import * as icons from "@poodle/icons/react";
+import * as ui from "@poodle/ui";
 import { createUrl } from "playroom/utils";
 import Highlight, { defaultProps } from "prism-react-renderer";
 import dracula from "prism-react-renderer/themes/dracula";
+import React from "react";
 import {
-	LiveProvider,
-	LivePreview,
 	LiveEditor,
 	LiveError,
+	LivePreview,
+	LiveProvider,
 	withLive,
 } from "react-live";
-import * as ui from "@poodle/ui";
-import * as icons from "@poodle/icons/react";
-import styled from "@emotion/styled";
 
 const Pre = styled.pre`
 	text-align: left;
@@ -72,7 +72,7 @@ function DocLiveCode(props: DocLiveCodeProps) {
 	const scope = React.useMemo(
 		() => ({
 			...ui,
-			...icons,
+			Icons: icons,
 		}),
 		[]
 	);

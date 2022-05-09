@@ -1,12 +1,12 @@
-import React from "react";
 import { axe } from "jest-axe";
-import { fireEvent, render, userEvent } from "../utils/test";
-import Tabs from "./";
-import { ThemeConfig } from "../theme";
+import React from "react";
+import { TabOrientation } from "../hooks/useTabsState";
 import { Tab } from "../Tab";
 import { TabList } from "../TabList";
 import { TabPanel } from "../TabPanel";
-import { TabOrientation } from "../hooks/useTabsState";
+import { ThemeConfig } from "../theme";
+import { fireEvent, render, userEvent } from "../utils/test";
+import Tabs from "./";
 
 describe("<Tabs />", () => {
 	it("should render Tabs correctly", () => {
@@ -332,32 +332,6 @@ describe("<Tabs />", () => {
 						defaultProps: {
 							id: "id",
 							className: "hello",
-						},
-					},
-				},
-			});
-			expect(container.firstChild).toMatchSnapshot();
-		});
-
-		it("should disable classes", () => {
-			const { container } = render(<Tabs>Tabs</Tabs>, {
-				theme: {
-					Tabs: {
-						overrideClasses: {
-							root: true,
-						},
-					},
-				},
-			});
-			expect(container.firstChild).toMatchSnapshot();
-		});
-
-		it("should override classes", () => {
-			const { container } = render(<Tabs>Tabs</Tabs>, {
-				theme: {
-					Tabs: {
-						overrideClasses: {
-							root: "morning",
 						},
 					},
 				},

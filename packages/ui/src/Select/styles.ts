@@ -1,7 +1,7 @@
-import { createCSSSystemStandard } from "../theme";
 import { CSSObjectSystem, CSSSystem } from "../styled";
-import { SelectProps } from "./Select";
+import { createCSSSystemStandard } from "../theme";
 import { SelectStyleKeys } from "./index";
+import { SelectProps } from "./Select";
 
 export function Root(props: SelectProps): CSSSystem {
 	const { theme, error } = props;
@@ -59,6 +59,35 @@ export function Native(props: SelectProps): CSSSystem {
 		props,
 		base: [
 			{
+				position: "absolute",
+				opacity: 0,
+				zIndex: 1,
+				paddingY: "scale-2.5",
+				width: "100%",
+				border: "none",
+				outline: "none",
+				textStyle: "input",
+				appearance: "none",
+
+				"&:disabled": {
+					cursor: "not-allowed",
+					color: "disabledText",
+				},
+			},
+		],
+	});
+}
+
+export function ValueText(props: SelectProps): CSSSystem {
+	const { theme } = props;
+
+	return createCSSSystemStandard<SelectStyleKeys>({
+		key: "native",
+		config: theme?.Select,
+		props,
+		base: [
+			{
+				position: "relative",
 				paddingX: "scale-2",
 				paddingY: "scale-2.5",
 				width: "100%",
@@ -67,12 +96,7 @@ export function Native(props: SelectProps): CSSSystem {
 				boxSizing: "content-box",
 				background: "transparent",
 				textStyle: "input",
-				appearance: "none",
-
-				"&:disabled": {
-					cursor: "not-allowed",
-					color: "disabledText",
-				},
+				minHeight: "1.25em",
 			},
 		],
 	});

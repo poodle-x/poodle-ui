@@ -12,6 +12,7 @@ function handleDir(
 	currentIndex: number
 ) {
 	let i = -1;
+
 	switch (dir) {
 		case "next": {
 			i = currentIndex === listTabs.length - 1 ? 0 : currentIndex + 1;
@@ -70,6 +71,8 @@ export default function useTabList(): UseTabListReturn {
 
 	const handleKeyDown = React.useCallback(
 		(e: KeyboardEvent) => {
+			e.preventDefault();
+
 			function changeToIndex(index: number, listTabs: NodeListOf<Element>) {
 				if (onChange) {
 					onChange(listTab[index][0], e);

@@ -1,7 +1,7 @@
 import React from "react";
+import { ThemeConfig } from "../theme";
 import { render } from "../utils/test";
 import VisuallyHidden from "./";
-import { ThemeConfig } from "../theme";
 
 describe("<VisuallyHidden />", () => {
 	it("should render VisuallyHidden correctly", () => {
@@ -76,38 +76,6 @@ describe("<VisuallyHidden />", () => {
 							defaultProps: {
 								id: "id",
 								className: "hello",
-							},
-						},
-					},
-				}
-			);
-			expect(container.firstChild).toMatchSnapshot();
-		});
-
-		it("should disable classes", () => {
-			const { container } = render(
-				<VisuallyHidden>VisuallyHidden</VisuallyHidden>,
-				{
-					theme: {
-						VisuallyHidden: {
-							overrideClasses: {
-								root: true,
-							},
-						},
-					},
-				}
-			);
-			expect(container.firstChild).toMatchSnapshot();
-		});
-
-		it("should override classes", () => {
-			const { container } = render(
-				<VisuallyHidden>VisuallyHidden</VisuallyHidden>,
-				{
-					theme: {
-						VisuallyHidden: {
-							overrideClasses: {
-								root: "morning",
 							},
 						},
 					},

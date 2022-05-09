@@ -1,11 +1,11 @@
 import React from "react";
 import Box, { BoxProps } from "../Box";
-import { StandardComponentProps, ThemeConfig } from "../theme";
-import useDefaultProps from "../utils/useDefaultProps";
-import { useClassNames } from "../styled";
-import * as styles from "./styles";
 import useTabList from "../hooks/useTabList";
+import { getCSSSystemBoxProps } from "../styled/CSSSystem";
+import { StandardComponentProps, ThemeConfig } from "../theme";
 import uSetRef from "../utils/setRef";
+import useDefaultProps from "../hooks/useDefaultProps/useDefaultProps";
+import * as styles from "./styles";
 
 export interface LocalTabListProps {
 	children?: React.ReactNode;
@@ -23,13 +23,13 @@ function getDefaultProps(theme?: ThemeConfig) {
 export const TabList: React.ForwardRefExoticComponent<
 	React.PropsWithoutRef<TabListProps> & React.RefAttributes<HTMLElement>
 > = React.forwardRef<HTMLElement, TabListProps>((_props, ref) => {
-	const props = useDefaultProps<TabListProps>(_props, {
+	const { props, isLocalTheme } = useDefaultProps<TabListProps>(_props, {
 		themeDefaultProps: getDefaultProps,
 	});
 
 	const { props: htmlProps, setRef } = useTabList();
 
-	const { children, className, ...otherProps } = props;
+	const { children, ...otherProps } = props;
 
 	const composeRef = React.useCallback(
 		(node: HTMLElement) => {
@@ -39,22 +39,17 @@ export const TabList: React.ForwardRefExoticComponent<
 		[setRef, ref]
 	);
 
-	const classes = useClassNames({
-		props,
-		lists: React.useMemo(() => {
-			return {
-				root: {
-					classNames: ["poodle-tab-list", styles.Root, className],
-				},
-			};
-		}, [className]),
-	});
-
 	return (
 		<Box
 			{...htmlProps}
 			{...otherProps}
-			className={classes.root}
+			{...getCSSSystemBoxProps({
+				isRoot: true,
+				isLocalTheme,
+				componentProps: props,
+				fnCSSSystem: styles.Root,
+				baseClassName: ["poodle-tab-list"],
+			})}
 			ref={composeRef}
 		>
 			{children}

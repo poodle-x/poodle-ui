@@ -1,9 +1,8 @@
 import { css as cssCore, cx as cxCore } from "@emotion/css";
-import classNames from "classnames";
 import { ClassNamesArg, Interpolation } from "@emotion/react";
 import * as CSS from "csstype";
 import { SystemProps } from "../theme";
-import { cssSystem } from "./cssSystem";
+import { cssSystem } from "./CSSSystem";
 
 function css(...args: Array<Interpolation<any>>) {
 	return cssCore(...(args as any));
@@ -15,9 +14,7 @@ function cx(...classNames: Array<ClassNamesArg>) {
 
 export { cssSystem };
 
-export { css, cx, classNames };
-
-export * from "./classNames";
+export { css, cx };
 
 export type Stylesheet<MP = undefined> = Interpolation<MP>;
 
@@ -43,3 +40,10 @@ export type AllCSSPropertiesWithSystem = CSSPropertiesWithSystem &
 export type CSSObjectSystem =
 	| AllCSSPropertiesWithSystem
 	| { [key: string]: CSSObjectSystem };
+
+export type DashSX =
+	| CSSProperties
+	| CSSProperties[]
+	| Array<{ [p: string]: any }>
+	| (Array<{ [p: string]: any }> | CSSProperties | CSSProperties[])[];
+export { CSSSystem } from "./CSSSystem";

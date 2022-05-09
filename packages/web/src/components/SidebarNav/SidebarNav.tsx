@@ -1,10 +1,9 @@
-import React from "react";
-import { Link } from "gatsby";
 import Box from "@poodle/ui/Box";
+import { CSSObjectSystem } from "@poodle/ui/styled";
 import VisuallyHidden from "@poodle/ui/VisuallyHidden";
-import { CSSObjectSystem, CSSSystem } from "@poodle/ui/styled";
-import { useThemeClassNames } from "../../utils/useThemeClassNames";
 import { useLocation } from "@reach/router";
+import { Link } from "gatsby";
+import React from "react";
 
 const boxStyles: CSSObjectSystem = {
 	listStyleType: "none",
@@ -12,46 +11,8 @@ const boxStyles: CSSObjectSystem = {
 	my: 0,
 };
 
-const headStyles: CSSSystem = {
-	base: [
-		{
-			pl: "scale-2",
-			fontWeight: "bold",
-		},
-	],
-};
-
 const listStyles: CSSObjectSystem = {
 	py: "scale-2",
-};
-
-const listLinkStyles: CSSSystem = {
-	base: [{ mt: "scale-1" }],
-};
-
-const linkStyles: CSSSystem = {
-	base: [
-		{
-			display: "block",
-			color: "text",
-			textDecoration: "none",
-			py: "scale-2",
-			px: "scale-4",
-			fontWeight: 400,
-
-			"&:hover": {
-				bg: "primary.light",
-				color: "primary.textOnLight",
-			},
-
-			"&._active": {
-				bg: "primary.light",
-				color: "primary.textOnLight",
-				borderRight: "4px solid",
-				borderColor: "primary",
-			},
-		},
-	],
 };
 
 type ListLinkProps = {
@@ -62,24 +23,37 @@ type ListLinkProps = {
 function ListLink(props: ListLinkProps) {
 	const { children, href } = props;
 
-	const classes = useThemeClassNames({
-		props,
-		lists: {
-			root: {
-				classNames: [listLinkStyles],
-			},
-			link: {
-				classNames: [linkStyles],
-			},
-		},
-	});
-
 	return (
-		<Box as="li" className={classes.root}>
+		<Box
+			as="li"
+			sx={{
+				pl: "scale-2",
+				fontWeight: "bold",
+			}}
+		>
 			<Box
 				as={Link}
 				activeClassName="_active"
-				className={classes.link}
+				sx={{
+					display: "block",
+					color: "text",
+					textDecoration: "none",
+					py: "scale-2",
+					px: "scale-4",
+					fontWeight: 400,
+
+					"&:hover": {
+						bg: "primary.light",
+						color: "primary.textOnLight",
+					},
+
+					"&._active": {
+						bg: "primary.light",
+						color: "primary.textOnLight",
+						borderRight: "4px solid",
+						borderColor: "primary",
+					},
+				}}
 				to={href}
 			>
 				{children}
@@ -91,17 +65,14 @@ function ListLink(props: ListLinkProps) {
 function GroupHeading(props: { children?: React.ReactNode }) {
 	const { children } = props;
 
-	const classes = useThemeClassNames({
-		props,
-		lists: {
-			root: {
-				classNames: [headStyles],
-			},
-		},
-	});
-
 	return (
-		<Box as="li" className={classes.root}>
+		<Box
+			as="li"
+			sx={{
+				pl: "scale-2",
+				fontWeight: "bold",
+			}}
+		>
 			{children}
 		</Box>
 	);
@@ -138,6 +109,10 @@ const groupsUI: Array<Group> = [
 			{
 				title: "Theming",
 				href: "/ui/getting-started/theming",
+			},
+			{
+				title: "Colors",
+				href: "/ui/getting-started/colors",
 			},
 		],
 	},
@@ -336,7 +311,11 @@ export function SidebarNav() {
 						<GroupHeading>{g.title}</GroupHeading>
 						<Box as="ul" sx={boxStyles}>
 							{g.links.map(({ href, title }) => {
-								return <ListLink href={href}>{title}</ListLink>;
+								return (
+									<ListLink key={title} href={href}>
+										{title}
+									</ListLink>
+								);
 							})}
 						</Box>
 					</Box>

@@ -1,12 +1,8 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<TableBody /> ref should work 1`] = `
-.c0 {
-  box-sizing: border-box;
-}
-
 <tbody
-  class="poodle-box c0 poodle-table-body c1 c1"
+  class="poodle-box poodle-table-body c0"
 >
   <tr>
     <td>
@@ -18,16 +14,12 @@ exports[`<TableBody /> ref should work 1`] = `
 
 exports[`<TableBody /> should render Box props correctly 1`] = `
 .c0 {
-  box-sizing: border-box;
-}
-
-.c2 {
   margin-top: 20px;
 }
 
 <table>
   <tbody
-    class="poodle-box c0 poodle-table-body c1 c2"
+    class="poodle-box poodle-table-body c0"
     id="id"
   >
     <tr>
@@ -40,13 +32,9 @@ exports[`<TableBody /> should render Box props correctly 1`] = `
 `;
 
 exports[`<TableBody /> should render TableBody correctly 1`] = `
-.c0 {
-  box-sizing: border-box;
-}
-
 <table>
   <tbody
-    class="poodle-box c0 poodle-table-body c1 c1"
+    class="poodle-box poodle-table-body c0"
   >
     <tr>
       <td>
@@ -58,13 +46,9 @@ exports[`<TableBody /> should render TableBody correctly 1`] = `
 `;
 
 exports[`<TableBody /> should send context correctly 1`] = `
-.c0 {
-  box-sizing: border-box;
-}
-
 <table>
   <tbody
-    class="poodle-box c0 poodle-table-body c1 c1"
+    class="poodle-box poodle-table-body c0"
   >
     <tr>
       <td>
@@ -75,48 +59,26 @@ exports[`<TableBody /> should send context correctly 1`] = `
 </table>
 `;
 
-exports[`<TableBody /> theming should disable classes 1`] = `
-.c0 {
-  box-sizing: border-box;
-}
-
-<table>
-  <tbody
-    class="poodle-box c0 poodle-table-body c1"
-  >
-    <tr>
-      <td>
-        Table
-      </td>
-    </tr>
-  </tbody>
-</table>
-`;
-
 exports[`<TableBody /> theming should extend size styles 1`] = `
-.c0 {
-  box-sizing: border-box;
-}
-
-.c4 {
+.c1 {
   width: 100%;
   border-spacing: 0;
   border-collapse: collapse;
   text-align: left;
 }
 
-.c7 {
+.c2 {
   height: 100px;
 }
 
 <div
-  class="poodle-box c0 poodle-table c1 c2"
+  class="poodle-box poodle-table c0"
 >
   <table
-    class="poodle-box c0 poodle-table__table c4 c2"
+    class="poodle-box poodle-table__table c1"
   >
     <tbody
-      class="poodle-box c0 poodle-table-body c7 c2"
+      class="poodle-box poodle-table-body c2"
     >
       <tr>
         <td>
@@ -129,30 +91,26 @@ exports[`<TableBody /> theming should extend size styles 1`] = `
 `;
 
 exports[`<TableBody /> theming should extend size styles with mode 1`] = `
-.c0 {
-  box-sizing: border-box;
-}
-
-.c4 {
+.c1 {
   width: 100%;
   border-spacing: 0;
   border-collapse: collapse;
   text-align: left;
 }
 
-.c7 {
+.c2 {
   height: 100px;
   height: 110px;
 }
 
 <div
-  class="poodle-box c0 poodle-table c1 c2"
+  class="poodle-box poodle-table c0"
 >
   <table
-    class="poodle-box c0 poodle-table__table c4 c2"
+    class="poodle-box poodle-table__table c1"
   >
     <tbody
-      class="poodle-box c0 poodle-table-body c7 c2"
+      class="poodle-box poodle-table-body c2"
     >
       <tr>
         <td>
@@ -166,10 +124,6 @@ exports[`<TableBody /> theming should extend size styles with mode 1`] = `
 
 exports[`<TableBody /> theming should extend styles in global 1`] = `
 .c0 {
-  box-sizing: border-box;
-}
-
-.c1 {
   margin-top: 10px;
   letter-spacing: 250px;
   top: 0;
@@ -178,7 +132,7 @@ exports[`<TableBody /> theming should extend styles in global 1`] = `
 
 <table>
   <tbody
-    class="poodle-box c0 poodle-table-body c1 c2"
+    class="poodle-box poodle-table-body c0"
   >
     <tr>
       <td>
@@ -191,10 +145,6 @@ exports[`<TableBody /> theming should extend styles in global 1`] = `
 
 exports[`<TableBody /> theming should extend styles in local 1`] = `
 .c0 {
-  box-sizing: border-box;
-}
-
-.c1 {
   margin-top: 10px;
   letter-spacing: 250px;
   top: 0;
@@ -203,25 +153,7 @@ exports[`<TableBody /> theming should extend styles in local 1`] = `
 
 <table>
   <tbody
-    class="poodle-box c0 poodle-table-body c1 c2"
-  >
-    <tr>
-      <td>
-        Table
-      </td>
-    </tr>
-  </tbody>
-</table>
-`;
-
-exports[`<TableBody /> theming should override classes 1`] = `
-.c0 {
-  box-sizing: border-box;
-}
-
-<table>
-  <tbody
-    class="poodle-box c0 poodle-table-body morning c1"
+    class="poodle-box poodle-table-body c0"
   >
     <tr>
       <td>
@@ -234,16 +166,12 @@ exports[`<TableBody /> theming should override classes 1`] = `
 
 exports[`<TableBody /> theming should override styles 1`] = `
 .c0 {
-  box-sizing: border-box;
-}
-
-.c1 {
   margin-top: 50px;
 }
 
 <table>
   <tbody
-    class="poodle-box c0 poodle-table-body c1 c2"
+    class="poodle-box poodle-table-body c0"
   >
     <tr>
       <td>
@@ -255,13 +183,9 @@ exports[`<TableBody /> theming should override styles 1`] = `
 `;
 
 exports[`<TableBody /> theming should render with default props correctly 1`] = `
-.c0 {
-  box-sizing: border-box;
-}
-
 <table>
   <tbody
-    class="poodle-box c0 poodle-table-body c1 hello c1"
+    class="poodle-box poodle-table-body hello c0"
     id="id"
   >
     <tr>

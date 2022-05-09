@@ -1,8 +1,8 @@
 import React from "react";
+import { Table, TableLevelContext } from "../Table";
+import { ThemeConfig } from "../theme";
 import { render } from "../utils/test";
 import TableHead from "./";
-import { ThemeConfig } from "../theme";
-import { Table, TableLevelContext } from "../Table";
 
 describe("<TableHead />", () => {
 	it("should render TableHead correctly", () => {

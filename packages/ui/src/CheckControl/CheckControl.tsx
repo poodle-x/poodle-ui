@@ -1,11 +1,11 @@
 import React from "react";
 import Box, { BoxProps } from "../Box";
-import { StandardComponentProps, ThemeConfig } from "../theme";
-import useDefaultProps from "../utils/useDefaultProps";
-import { useClassNames } from "../styled";
-import * as styles from "./styles";
 import useAutoId from "../hooks/useAutoId";
+import { getCSSSystemBoxProps } from "../styled/CSSSystem";
+import { StandardComponentProps, ThemeConfig } from "../theme";
+import useDefaultProps from "../hooks/useDefaultProps/useDefaultProps";
 import { VisuallyHidden } from "../VisuallyHidden";
+import * as styles from "./styles";
 
 export interface LocalCheckControlProps {
 	checkType: "radio" | "checkbox";
@@ -64,7 +64,7 @@ function getDefaultProps(theme?: ThemeConfig) {
 export const CheckControl: React.ForwardRefExoticComponent<
 	React.PropsWithoutRef<CheckControlProps> & React.RefAttributes<HTMLElement>
 > = React.forwardRef<HTMLElement, CheckControlProps>((_props, ref) => {
-	const props = useDefaultProps<CheckControlProps>(_props, {
+	const { props, isLocalTheme } = useDefaultProps<CheckControlProps>(_props, {
 		themeDefaultProps: getDefaultProps,
 	});
 
@@ -84,78 +84,81 @@ export const CheckControl: React.ForwardRefExoticComponent<
 		...otherProps
 	} = props;
 
-	const classes = useClassNames({
-		props: props,
-		lists: {
-			root: {
-				classNames: ["poodle-check-control", styles.Root, className],
-			},
-			control: {
-				classNames: [
-					"poodle-check-control__control",
-					styles.Control,
-					controlProps?.className,
-				],
-			},
-			input: {
-				classNames: [
-					"poodle-check-control__input",
-					styles.Input,
-					inputProps?.className,
-				],
-			},
-			icon: {
-				classNames: [
-					"poodle-check-control__icon",
-					styles.Icon,
-					iconProps?.className,
-				],
-			},
-			label: {
-				classNames: [
-					"poodle-check-control__label",
-					styles.Label,
-					labelProps?.className,
-				],
-			},
-			labelText: {
-				classNames: [
-					"poodle-check-control__label-text",
-					styles.LabelText,
-					labelProps?.className,
-				],
-			},
-		},
-	});
-
 	const id = useAutoId(inputProps?.id, {
 		base: "poodle-check-control",
 	});
 
 	return (
-		<Box {...otherProps} className={classes.root} ref={ref}>
-			<Box {...controlProps} className={classes.control}>
+		<Box
+			{...otherProps}
+			{...getCSSSystemBoxProps({
+				isRoot: true,
+				isLocalTheme,
+				componentProps: props,
+				fnCSSSystem: styles.Root,
+				baseClassName: ["poodle-check-control"],
+			})}
+			ref={ref}
+		>
+			<Box
+				{...getCSSSystemBoxProps({
+					isLocalTheme,
+					componentProps: props,
+					partProps: controlProps,
+					fnCSSSystem: styles.Control,
+					baseClassName: ["poodle-check-control__control"],
+				})}
+			>
 				<Box
 					id={id}
 					type={checkType}
 					as="input"
-					{...inputProps}
-					className={classes.input}
+					{...getCSSSystemBoxProps({
+						isLocalTheme,
+						componentProps: props,
+						partProps: inputProps,
+						fnCSSSystem: styles.Input,
+						baseClassName: ["poodle-check-control__input"],
+					})}
 				/>
 				<Box
-					{...iconProps}
 					data-render-icon={true}
 					aria-hidden={true}
-					className={classes.icon}
+					{...getCSSSystemBoxProps({
+						isLocalTheme,
+						componentProps: props,
+						partProps: iconProps,
+						fnCSSSystem: styles.Icon,
+						baseClassName: ["poodle-check-control__icon"],
+					})}
 				>
 					{renderIcon}
 				</Box>
 			</Box>
-			<Box htmlFor={id} as="label" {...labelProps} className={classes.label}>
+			<Box
+				htmlFor={id}
+				as="label"
+				{...getCSSSystemBoxProps({
+					isLocalTheme,
+					componentProps: props,
+					partProps: labelProps,
+					fnCSSSystem: styles.Label,
+					baseClassName: ["poodle-check-control__label"],
+				})}
+			>
 				{isLabelHidden ? (
 					<VisuallyHidden>{checkLabel}</VisuallyHidden>
 				) : (
-					<Box as="span" {...labelTextProps} className={classes.labelText}>
+					<Box
+						as="span"
+						{...getCSSSystemBoxProps({
+							isLocalTheme,
+							componentProps: props,
+							partProps: labelTextProps,
+							fnCSSSystem: styles.LabelText,
+							baseClassName: ["poodle-check-control__label-text"],
+						})}
+					>
 						{checkLabel}
 					</Box>
 				)}

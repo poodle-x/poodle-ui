@@ -196,11 +196,6 @@ export interface StandardThemeConfig<
 		};
 	};
 	overrides?: Partial<StylesConfig<T>>;
-	overrideClasses?: Partial<
-		{
-			[K in T]: boolean | string;
-		}
-	>;
 }
 
 ```
@@ -280,13 +275,6 @@ const buttonTheme: ButtonThemeConfig = {
 			sizes: {},
 			variants: {},
 		},
-	},
-	// Remove default styling on the component
-	overrideClasses: {
-		// Remove default root styling
-		root: true,
-		// Replace default styling with class
-		content: "morning",
 	},
 	// Replace default styling on the component
 	overrides: {

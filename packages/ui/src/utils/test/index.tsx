@@ -1,15 +1,15 @@
-import React from "react";
-import userEvent from "@testing-library/user-event";
-import { renderHook } from "@testing-library/react-hooks";
 import {
-	render as testRender,
 	act,
 	fireEvent,
-	waitFor,
+	render as testRender,
 	RenderResult as RR,
+	waitFor,
 } from "@testing-library/react";
+import { act as hookAct, renderHook } from "@testing-library/react-hooks";
+import userEvent from "@testing-library/user-event";
+import React from "react";
+import { createTheme, ThemeConfig } from "../../theme";
 import Provider from "../../ThemeProvider";
-import { ThemeConfig, createTheme } from "../../theme";
 
 export type RenderResult = RR & {
 	rerender: (
@@ -76,4 +76,4 @@ function render(
 	return result;
 }
 
-export { render, act, fireEvent, waitFor, renderHook, userEvent };
+export { render, act, fireEvent, waitFor, renderHook, userEvent, hookAct };

@@ -1,7 +1,7 @@
 import React from "react";
+import { ThemeConfig } from "../theme";
 import { render } from "../utils/test";
 import Input from "./";
-import { ThemeConfig } from "../theme";
 
 describe("<Input />", () => {
 	it("should render Input correctly", () => {
@@ -132,32 +132,6 @@ describe("<Input />", () => {
 						defaultProps: {
 							id: "id",
 							className: "hello",
-						},
-					},
-				},
-			});
-			expect(container.firstChild).toMatchSnapshot();
-		});
-
-		it("should disable classes", () => {
-			const { container } = render(<Input />, {
-				theme: {
-					Input: {
-						overrideClasses: {
-							root: true,
-						},
-					},
-				},
-			});
-			expect(container.firstChild).toMatchSnapshot();
-		});
-
-		it("should override classes", () => {
-			const { container } = render(<Input />, {
-				theme: {
-					Input: {
-						overrideClasses: {
-							root: "morning",
 						},
 					},
 				},

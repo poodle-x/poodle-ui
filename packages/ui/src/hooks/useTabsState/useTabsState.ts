@@ -38,7 +38,34 @@ export const TabsContext = React.createContext<TabsContextValue>(
 	{} as TabsContextValue
 );
 
-export default function useTabsState(props: UseTabsStateOptions) {
+export default function useTabsState(
+	props: UseTabsStateOptions
+): {
+	isUncontrolled: boolean;
+	listTabPanel: [TabValue, string][];
+	setUnControlledValue: (
+		value:
+			| ((
+					prevState: string | number | undefined
+			  ) => string | number | undefined)
+			| string
+			| number
+			| undefined
+	) => void;
+	handleUnregister: (
+		type: TabRegisterType,
+		value: TabValue,
+		id: string
+	) => void;
+	handleRegister: (
+		type: TabRegisterType,
+		value: TabValue,
+		id: string,
+		index: number
+	) => void;
+	value: string | number | undefined;
+	listTab: [TabValue, string][];
+} {
 	const { propValue } = props;
 	const [unControlledValue, setUnControlledValue] = React.useState<
 		TabValue | undefined

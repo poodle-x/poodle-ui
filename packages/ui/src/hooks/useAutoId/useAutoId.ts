@@ -1,8 +1,8 @@
 // original fork from https://github.com/reach/reach-ui/blob/develop/packages/auto-id/src/index.tsx
 
 import React from "react";
-import useSafeLayoutEffect from "../../utils/useSafeLayoutEffect";
 import usePrev from "../usePrev";
+import useSafeLayoutEffect from "../useSafeLayoutEffect";
 
 let serverHandoffComplete = false;
 

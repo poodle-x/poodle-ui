@@ -2,7 +2,7 @@
 	"name": "@poodle/ui",
 	"main": "index.js",
 	"module": "mjs/index.js",
-	"version": "0.1.0-alpha.7",
+	"version": "0.1.0-alpha.8",
 	"license": "MIT",
 	"scripts": {
 		"clean": "node scriptsBuild/cleanBuild.js",
@@ -82,9 +82,8 @@
 		"ts-loader": "^8.0.17"
 	},
 	"dependencies": {
-		"@poodle/system": "0.1.0-alpha.4",
+		"@poodle/system": "0.1.0-alpha.5",
 		"@reach/auto-id": "^0.16.0",
-		"classnames": "^2.3.1",
 		"deepmerge": "^4.2.2",
 		"focus-trap-react": "^8.8.2"
 	},

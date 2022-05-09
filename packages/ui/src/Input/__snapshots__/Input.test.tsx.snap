@@ -2,10 +2,6 @@
 
 exports[`<Input /> ref should work 1`] = `
 .c0 {
-  box-sizing: border-box;
-}
-
-.c1 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -28,15 +24,15 @@ exports[`<Input /> ref should work 1`] = `
   padding-bottom: 8px;
 }
 
-.c1:focus-within {
+.c0:focus-within {
   border-color: #00478A;
 }
 
-.c1:hover {
+.c0:hover {
   border-color: #00478A;
 }
 
-.c4 {
+.c1 {
   padding: 0;
   width: 100%;
   height: 100%;
@@ -51,20 +47,16 @@ exports[`<Input /> ref should work 1`] = `
 }
 
 <div
-  class="poodle-box c0 poodle-input c1 c2"
+  class="poodle-box poodle-input c0"
 >
   <input
-    class="poodle-box c0 poodle-input__input c4 c2"
+    class="poodle-box poodle-input_input c1"
   />
 </div>
 `;
 
 exports[`<Input /> ref should work 2`] = `
 .c0 {
-  box-sizing: border-box;
-}
-
-.c1 {
   padding: 0;
   width: 100%;
   height: 100%;
@@ -79,16 +71,12 @@ exports[`<Input /> ref should work 2`] = `
 }
 
 <input
-  class="poodle-box c0 poodle-input__input c1 c2"
+  class="poodle-box poodle-input_input c0"
 />
 `;
 
 exports[`<Input /> should render Box props correctly 1`] = `
 .c0 {
-  box-sizing: border-box;
-}
-
-.c1 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -109,21 +97,18 @@ exports[`<Input /> should render Box props correctly 1`] = `
   padding-right: 8px;
   padding-top: 8px;
   padding-bottom: 8px;
-}
-
-.c1:focus-within {
-  border-color: #00478A;
-}
-
-.c1:hover {
-  border-color: #00478A;
-}
-
-.c2 {
   margin-top: 20px;
 }
 
-.c4 {
+.c0:focus-within {
+  border-color: #00478A;
+}
+
+.c0:hover {
+  border-color: #00478A;
+}
+
+.c1 {
   padding: 0;
   width: 100%;
   height: 100%;
@@ -135,29 +120,22 @@ exports[`<Input /> should render Box props correctly 1`] = `
   font-size: 1rem;
   font-weight: 400;
   line-height: 125%;
-}
-
-.c5 {
   padding-left: 10px;
   padding-right: 10px;
 }
 
 <div
-  class="poodle-box c0 poodle-input c1 c2"
+  class="poodle-box poodle-input c0"
   id="id"
 >
   <input
-    class="poodle-box c0 poodle-input__input c4 c5"
+    class="poodle-box poodle-input_input c1"
   />
 </div>
 `;
 
 exports[`<Input /> should render Input correctly 1`] = `
 .c0 {
-  box-sizing: border-box;
-}
-
-.c1 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -180,15 +158,15 @@ exports[`<Input /> should render Input correctly 1`] = `
   padding-bottom: 8px;
 }
 
-.c1:focus-within {
+.c0:focus-within {
   border-color: #00478A;
 }
 
-.c1:hover {
+.c0:hover {
   border-color: #00478A;
 }
 
-.c4 {
+.c1 {
   padding: 0;
   width: 100%;
   height: 100%;
@@ -203,22 +181,18 @@ exports[`<Input /> should render Input correctly 1`] = `
 }
 
 <div
-  class="poodle-box c0 poodle-input c1 c2"
+  class="poodle-box poodle-input c0"
   id="id"
 >
   <input
     aria-label="Simple label"
-    class="poodle-box c0 poodle-input__input c4 c2"
+    class="poodle-box poodle-input_input c1"
   />
 </div>
 `;
 
 exports[`<Input /> should render Input textarea correctly 1`] = `
 .c0 {
-  box-sizing: border-box;
-}
-
-.c1 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -241,15 +215,15 @@ exports[`<Input /> should render Input textarea correctly 1`] = `
   padding-bottom: 8px;
 }
 
-.c1:focus-within {
+.c0:focus-within {
   border-color: #00478A;
 }
 
-.c1:hover {
+.c0:hover {
   border-color: #00478A;
 }
 
-.c4 {
+.c1 {
   padding: 0;
   width: 100%;
   height: 100%;
@@ -264,11 +238,11 @@ exports[`<Input /> should render Input textarea correctly 1`] = `
 }
 
 <div
-  class="poodle-box c0 poodle-input c1 c2"
+  class="poodle-box poodle-input c0"
 >
   <textarea
     aria-label="Simple label"
-    class="poodle-box c0 poodle-input__input c4 c2"
+    class="poodle-box poodle-input_input c1"
     rows="3"
   />
 </div>
@@ -276,10 +250,6 @@ exports[`<Input /> should render Input textarea correctly 1`] = `
 
 exports[`<Input /> should render Input with adornment correctly 1`] = `
 .c0 {
-  box-sizing: border-box;
-}
-
-.c1 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -302,15 +272,15 @@ exports[`<Input /> should render Input with adornment correctly 1`] = `
   padding-bottom: 8px;
 }
 
-.c1:focus-within {
+.c0:focus-within {
   border-color: #00478A;
 }
 
-.c1:hover {
+.c0:hover {
   border-color: #00478A;
 }
 
-.c4 {
+.c1 {
   padding: 0;
   width: 100%;
   height: 100%;
@@ -325,12 +295,12 @@ exports[`<Input /> should render Input with adornment correctly 1`] = `
 }
 
 <div
-  class="poodle-box c0 poodle-input c1 c2"
+  class="poodle-box poodle-input c0"
 >
   $
   <input
     aria-label="Simple label"
-    class="poodle-box c0 poodle-input__input c4 c2"
+    class="poodle-box poodle-input_input c1"
   />
   kg
 </div>
@@ -338,10 +308,6 @@ exports[`<Input /> should render Input with adornment correctly 1`] = `
 
 exports[`<Input /> should render error Input correctly 1`] = `
 .c0 {
-  box-sizing: border-box;
-}
-
-.c1 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -364,15 +330,15 @@ exports[`<Input /> should render error Input correctly 1`] = `
   padding-bottom: 8px;
 }
 
-.c1:focus-within {
+.c0:focus-within {
   border-color: #00478A;
 }
 
-.c1:hover {
+.c0:hover {
   border-color: #00478A;
 }
 
-.c4 {
+.c1 {
   padding: 0;
   width: 100%;
   height: 100%;
@@ -387,51 +353,19 @@ exports[`<Input /> should render error Input correctly 1`] = `
 }
 
 <div
-  class="poodle-box c0 poodle-input c1 c2"
+  class="poodle-box poodle-input c0"
   id="id"
 >
   <input
     aria-invalid="true"
     aria-label="Simple label"
-    class="poodle-box c0 poodle-input__input c4 c2"
-  />
-</div>
-`;
-
-exports[`<Input /> theming should disable classes 1`] = `
-.c0 {
-  box-sizing: border-box;
-}
-
-.c3 {
-  padding: 0;
-  width: 100%;
-  height: 100%;
-  border: none;
-  outline: none;
-  resize: none;
-  box-sizing: content-box;
-  background: transparent;
-  font-size: 1rem;
-  font-weight: 400;
-  line-height: 125%;
-}
-
-<div
-  class="poodle-box c0 poodle-input c1"
->
-  <input
-    class="poodle-box c0 poodle-input__input c3 c1"
+    class="poodle-box poodle-input_input c1"
   />
 </div>
 `;
 
 exports[`<Input /> theming should extend styles in global 1`] = `
 .c0 {
-  box-sizing: border-box;
-}
-
-.c1 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -458,15 +392,15 @@ exports[`<Input /> theming should extend styles in global 1`] = `
   text-indent: 1px;
 }
 
-.c1:focus-within {
+.c0:focus-within {
   border-color: #00478A;
 }
 
-.c1:hover {
+.c0:hover {
   border-color: #00478A;
 }
 
-.c4 {
+.c1 {
   padding: 0;
   width: 100%;
   height: 100%;
@@ -483,20 +417,16 @@ exports[`<Input /> theming should extend styles in global 1`] = `
 }
 
 <div
-  class="poodle-box c0 poodle-input c1 c2"
+  class="poodle-box poodle-input c0"
 >
   <input
-    class="poodle-box c0 poodle-input__input c4 c2"
+    class="poodle-box poodle-input_input c1"
   />
 </div>
 `;
 
 exports[`<Input /> theming should extend styles in local 1`] = `
 .c0 {
-  box-sizing: border-box;
-}
-
-.c1 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -523,15 +453,15 @@ exports[`<Input /> theming should extend styles in local 1`] = `
   text-indent: 1px;
 }
 
-.c1:focus-within {
+.c0:focus-within {
   border-color: #00478A;
 }
 
-.c1:hover {
+.c0:hover {
   border-color: #00478A;
 }
 
-.c4 {
+.c1 {
   padding: 0;
   width: 100%;
   height: 100%;
@@ -548,52 +478,20 @@ exports[`<Input /> theming should extend styles in local 1`] = `
 }
 
 <div
-  class="poodle-box c0 poodle-input c1 c2"
+  class="poodle-box poodle-input c0"
 >
   <input
-    class="poodle-box c0 poodle-input__input c4 c2"
-  />
-</div>
-`;
-
-exports[`<Input /> theming should override classes 1`] = `
-.c0 {
-  box-sizing: border-box;
-}
-
-.c3 {
-  padding: 0;
-  width: 100%;
-  height: 100%;
-  border: none;
-  outline: none;
-  resize: none;
-  box-sizing: content-box;
-  background: transparent;
-  font-size: 1rem;
-  font-weight: 400;
-  line-height: 125%;
-}
-
-<div
-  class="poodle-box c0 poodle-input morning c1"
->
-  <input
-    class="poodle-box c0 poodle-input__input c3 c1"
+    class="poodle-box poodle-input_input c1"
   />
 </div>
 `;
 
 exports[`<Input /> theming should override styles 1`] = `
 .c0 {
-  box-sizing: border-box;
-}
-
-.c1 {
   margin-top: 50px;
 }
 
-.c4 {
+.c1 {
   padding: 0;
   width: 100%;
   height: 100%;
@@ -608,20 +506,16 @@ exports[`<Input /> theming should override styles 1`] = `
 }
 
 <div
-  class="poodle-box c0 poodle-input c1 c2"
+  class="poodle-box poodle-input c0"
 >
   <input
-    class="poodle-box c0 poodle-input__input c4 c2"
+    class="poodle-box poodle-input_input c1"
   />
 </div>
 `;
 
 exports[`<Input /> theming should render with default props correctly 1`] = `
 .c0 {
-  box-sizing: border-box;
-}
-
-.c1 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -644,15 +538,15 @@ exports[`<Input /> theming should render with default props correctly 1`] = `
   padding-bottom: 8px;
 }
 
-.c1:focus-within {
+.c0:focus-within {
   border-color: #00478A;
 }
 
-.c1:hover {
+.c0:hover {
   border-color: #00478A;
 }
 
-.c4 {
+.c1 {
   padding: 0;
   width: 100%;
   height: 100%;
@@ -667,11 +561,11 @@ exports[`<Input /> theming should render with default props correctly 1`] = `
 }
 
 <div
-  class="poodle-box c0 poodle-input c1 hello c2"
+  class="poodle-box poodle-input hello c0"
   id="id"
 >
   <input
-    class="poodle-box c0 poodle-input__input c4 hello c2"
+    class="poodle-box poodle-input_input c1"
   />
 </div>
 `;

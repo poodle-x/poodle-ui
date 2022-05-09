@@ -1,5 +1,5 @@
-import { createCSSSystemStandard } from "../theme";
 import { CSSSystem } from "../styled";
+import { createCSSSystemStandard } from "../theme";
 import { TabProps } from "./Tab";
 
 export function Root(props: TabProps): CSSSystem {
@@ -18,7 +18,7 @@ export function Root(props: TabProps): CSSSystem {
 				border: `2px solid transparent`,
 				cursor: "pointer",
 				color: "text",
-				backGroundColor: "transparent",
+				backgroundColor: "transparent",
 
 				"&:focus": {
 					border: `2px dotted`,

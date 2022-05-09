@@ -1,12 +1,12 @@
 import React from "react";
 import Box, { BoxProps } from "../Box";
-import { StandardComponentProps, ThemeConfig } from "../theme";
-import useDefaultProps from "../utils/useDefaultProps";
-import uSetRef from "../utils/setRef";
-import { useClassNames } from "../styled";
-import * as styles from "./styles";
-import { TabsContext } from "../hooks/useTabsState";
 import useTab from "../hooks/useTab";
+import { TabsContext } from "../hooks/useTabsState";
+import { getCSSSystemBoxProps } from "../styled/CSSSystem";
+import { StandardComponentProps, ThemeConfig } from "../theme";
+import uSetRef from "../utils/setRef";
+import useDefaultProps from "../hooks/useDefaultProps/useDefaultProps";
+import * as styles from "./styles";
 
 export interface LocalTabProps {
 	children?: React.ReactNode;
@@ -25,7 +25,7 @@ function getDefaultProps(theme?: ThemeConfig) {
 export const Tab: React.ForwardRefExoticComponent<
 	React.PropsWithoutRef<TabProps> & React.RefAttributes<HTMLElement>
 > = React.forwardRef<HTMLElement, TabProps>((_props, ref) => {
-	const props = useDefaultProps<TabProps>(_props, {
+	const { props, isLocalTheme } = useDefaultProps<TabProps>(_props, {
 		themeDefaultProps: getDefaultProps,
 	});
 
@@ -36,15 +36,6 @@ export const Tab: React.ForwardRefExoticComponent<
 	const { props: htmlProps, setRef } = useTab({
 		id,
 		value,
-	});
-
-	const classes = useClassNames({
-		props,
-		lists: {
-			root: {
-				classNames: ["poodle-tab", styles.Root, className],
-			},
-		},
 	});
 
 	function handleClick(e: React.SyntheticEvent) {
@@ -67,8 +58,14 @@ export const Tab: React.ForwardRefExoticComponent<
 			as="button"
 			{...htmlProps}
 			{...otherProps}
+			{...getCSSSystemBoxProps({
+				isRoot: true,
+				isLocalTheme,
+				componentProps: props,
+				fnCSSSystem: styles.Root,
+				baseClassName: ["poodle-tab"],
+			})}
 			onClick={handleClick}
-			className={classes.root}
 			ref={composeRef}
 		>
 			{children}

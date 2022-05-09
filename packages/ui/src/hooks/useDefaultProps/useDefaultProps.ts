@@ -1,4 +1,4 @@
-import { useTheme } from "../theme";
+import { useTheme } from "../../theme";
 
 function useDefaultProps<T>(
 	props: {
@@ -7,8 +7,10 @@ function useDefaultProps<T>(
 	config?: {
 		themeDefaultProps?: (theme?: { [key: string]: any }) => any | undefined;
 	}
-): T {
+): { props: T; isLocalTheme: boolean } {
 	const { theme: themeOverride, themeExtend } = props;
+
+	const isLocalTheme = themeOverride !== undefined || themeExtend !== undefined;
 
 	const { theme } = useTheme({
 		override: themeOverride,
@@ -18,16 +20,22 @@ function useDefaultProps<T>(
 	if (config?.themeDefaultProps) {
 		const defaultProps = config.themeDefaultProps(theme);
 		return {
-			...defaultProps,
-			...props,
-			theme,
+			props: {
+				...defaultProps,
+				...props,
+				theme,
+			},
+			isLocalTheme,
 		};
 	}
 
 	return {
-		...props,
-		theme,
-	} as any;
+		props: {
+			...props,
+			theme,
+		} as any,
+		isLocalTheme,
+	};
 }
 
 export default useDefaultProps;

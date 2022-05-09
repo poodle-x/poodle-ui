@@ -1,7 +1,7 @@
 import React from "react";
+import { ThemeConfig } from "../theme";
 import { render } from "../utils/test";
 import Table, { TableContext } from "./";
-import { ThemeConfig } from "../theme";
 
 describe("<Table />", () => {
 	it("should render Table correctly", () => {
@@ -163,52 +163,6 @@ describe("<Table />", () => {
 								tableProps: {
 									"aria-disabled": "true",
 								},
-							},
-						},
-					},
-				}
-			);
-			expect(container.firstChild).toMatchSnapshot();
-		});
-
-		it("should disable classes", () => {
-			const { container } = render(
-				<Table>
-					<tbody>
-						<tr>
-							<td>Table</td>
-						</tr>
-					</tbody>
-				</Table>,
-				{
-					theme: {
-						Table: {
-							overrideClasses: {
-								root: true,
-								table: true,
-							},
-						},
-					},
-				}
-			);
-			expect(container.firstChild).toMatchSnapshot();
-		});
-
-		it("should override classes", () => {
-			const { container } = render(
-				<Table>
-					<tbody>
-						<tr>
-							<td>Table</td>
-						</tr>
-					</tbody>
-				</Table>,
-				{
-					theme: {
-						Table: {
-							overrideClasses: {
-								root: "morning",
-								table: "yeah",
 							},
 						},
 					},

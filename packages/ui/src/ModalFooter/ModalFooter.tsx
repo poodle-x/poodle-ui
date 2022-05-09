@@ -1,8 +1,8 @@
 import React from "react";
 import Box, { BoxProps } from "../Box";
+import { getCSSSystemBoxProps } from "../styled/CSSSystem";
 import { StandardComponentProps, ThemeConfig } from "../theme";
-import useDefaultProps from "../utils/useDefaultProps";
-import { useClassNames } from "../styled";
+import useDefaultProps from "../hooks/useDefaultProps/useDefaultProps";
 import * as styles from "./styles";
 
 export interface LocalModalFooterProps {
@@ -21,23 +21,24 @@ function getDefaultProps(theme?: ThemeConfig) {
 export const ModalFooter: React.ForwardRefExoticComponent<
 	React.PropsWithoutRef<ModalFooterProps> & React.RefAttributes<HTMLElement>
 > = React.forwardRef<HTMLElement, ModalFooterProps>((_props, ref) => {
-	const props = useDefaultProps<ModalFooterProps>(_props, {
+	const { props, isLocalTheme } = useDefaultProps<ModalFooterProps>(_props, {
 		themeDefaultProps: getDefaultProps,
 	});
 
-	const { children, className, ...otherProps } = props;
-
-	const classes = useClassNames({
-		props,
-		lists: {
-			root: {
-				classNames: [styles.Root, className],
-			},
-		},
-	});
+	const { children, ...otherProps } = props;
 
 	return (
-		<Box {...otherProps} className={classes.root} ref={ref}>
+		<Box
+			{...otherProps}
+			{...getCSSSystemBoxProps({
+				isRoot: true,
+				isLocalTheme,
+				componentProps: props,
+				fnCSSSystem: styles.Root,
+				baseClassName: ["poodle-modal-footer"],
+			})}
+			ref={ref}
+		>
 			{children}
 		</Box>
 	);

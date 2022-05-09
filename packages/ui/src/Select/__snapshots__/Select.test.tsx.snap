@@ -2,10 +2,6 @@
 
 exports[`<Select /> ref should work 1`] = `
 .c0 {
-  box-sizing: border-box;
-}
-
-.c1 {
   position: relative;
   display: -webkit-box;
   display: -webkit-flex;
@@ -25,15 +21,16 @@ exports[`<Select /> ref should work 1`] = `
   transition: 125ms border-color ease-in;
 }
 
-.c1:focus-within {
+.c0:focus-within {
   border-color: #00478A;
 }
 
-.c1:hover {
+.c0:hover {
   border-color: #00478A;
 }
 
-.c4 {
+.c1 {
+  position: relative;
   padding-left: 8px;
   padding-right: 8px;
   padding-top: 10px;
@@ -46,18 +43,33 @@ exports[`<Select /> ref should work 1`] = `
   font-size: 1rem;
   font-weight: 400;
   line-height: 125%;
+  min-height: 1.25em;
+}
+
+.c2 {
+  position: absolute;
+  opacity: 0;
+  z-index: 1;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  width: 100%;
+  border: none;
+  outline: none;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 125%;
   -webkit-appearance: none;
   -moz-appearance: none;
   -ms-appearance: none;
   appearance: none;
 }
 
-.c4:disabled {
+.c2:disabled {
   cursor: not-allowed;
   color: #A6A6A6;
 }
 
-.c7 {
+.c3 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -73,10 +85,14 @@ exports[`<Select /> ref should work 1`] = `
 }
 
 <div
-  class="poodle-box c0 poodle-select c1 c2"
+  class="poodle-box poodle-select c0"
 >
+  <div
+    aria-hidden="true"
+    class="poodle-box poodle-select__value-text c1"
+  />
   <select
-    class="poodle-box c0 poodle-select__native c4 c2"
+    class="poodle-box poodle-select__select c2"
   >
     <option
       value="tiger"
@@ -95,7 +111,7 @@ exports[`<Select /> ref should work 1`] = `
     </option>
   </select>
   <div
-    class="poodle-box c0 poodle-select__icon c7 c2"
+    class="poodle-box poodle-select__icon c3"
   >
     <svg
       fill="currentColor"
@@ -113,10 +129,6 @@ exports[`<Select /> ref should work 1`] = `
 
 exports[`<Select /> should render Box props correctly 1`] = `
 .c0 {
-  box-sizing: border-box;
-}
-
-.c1 {
   position: relative;
   display: -webkit-box;
   display: -webkit-flex;
@@ -134,21 +146,19 @@ exports[`<Select /> should render Box props correctly 1`] = `
   background-color: #fff;
   -webkit-transition: 125ms border-color ease-in;
   transition: 125ms border-color ease-in;
-}
-
-.c1:focus-within {
-  border-color: #00478A;
-}
-
-.c1:hover {
-  border-color: #00478A;
-}
-
-.c2 {
   margin-top: 20px;
 }
 
-.c4 {
+.c0:focus-within {
+  border-color: #00478A;
+}
+
+.c0:hover {
+  border-color: #00478A;
+}
+
+.c1 {
+  position: relative;
   padding-left: 8px;
   padding-right: 8px;
   padding-top: 10px;
@@ -161,18 +171,33 @@ exports[`<Select /> should render Box props correctly 1`] = `
   font-size: 1rem;
   font-weight: 400;
   line-height: 125%;
+  min-height: 1.25em;
+}
+
+.c2 {
+  position: absolute;
+  opacity: 0;
+  z-index: 1;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  width: 100%;
+  border: none;
+  outline: none;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 125%;
   -webkit-appearance: none;
   -moz-appearance: none;
   -ms-appearance: none;
   appearance: none;
 }
 
-.c4:disabled {
+.c2:disabled {
   cursor: not-allowed;
   color: #A6A6A6;
 }
 
-.c7 {
+.c3 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -188,12 +213,16 @@ exports[`<Select /> should render Box props correctly 1`] = `
 }
 
 <div
-  class="poodle-box c0 poodle-select c1 c2"
+  class="poodle-box poodle-select c0"
   id="id"
 >
+  <div
+    aria-hidden="true"
+    class="poodle-box poodle-select__value-text c1"
+  />
   <select
     aria-label="name"
-    class="poodle-box c0 poodle-select__native c4 c5"
+    class="poodle-box poodle-select__select c2"
   >
     <option
       value="tiger"
@@ -212,7 +241,7 @@ exports[`<Select /> should render Box props correctly 1`] = `
     </option>
   </select>
   <div
-    class="poodle-box c0 poodle-select__icon c7 c5"
+    class="poodle-box poodle-select__icon c3"
   >
     <svg
       fill="currentColor"
@@ -230,10 +259,6 @@ exports[`<Select /> should render Box props correctly 1`] = `
 
 exports[`<Select /> should render Select correctly 1`] = `
 .c0 {
-  box-sizing: border-box;
-}
-
-.c1 {
   position: relative;
   display: -webkit-box;
   display: -webkit-flex;
@@ -253,15 +278,16 @@ exports[`<Select /> should render Select correctly 1`] = `
   transition: 125ms border-color ease-in;
 }
 
-.c1:focus-within {
+.c0:focus-within {
   border-color: #00478A;
 }
 
-.c1:hover {
+.c0:hover {
   border-color: #00478A;
 }
 
-.c4 {
+.c1 {
+  position: relative;
   padding-left: 8px;
   padding-right: 8px;
   padding-top: 10px;
@@ -274,18 +300,33 @@ exports[`<Select /> should render Select correctly 1`] = `
   font-size: 1rem;
   font-weight: 400;
   line-height: 125%;
+  min-height: 1.25em;
+}
+
+.c2 {
+  position: absolute;
+  opacity: 0;
+  z-index: 1;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  width: 100%;
+  border: none;
+  outline: none;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 125%;
   -webkit-appearance: none;
   -moz-appearance: none;
   -ms-appearance: none;
   appearance: none;
 }
 
-.c4:disabled {
+.c2:disabled {
   cursor: not-allowed;
   color: #A6A6A6;
 }
 
-.c7 {
+.c3 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -301,10 +342,14 @@ exports[`<Select /> should render Select correctly 1`] = `
 }
 
 <div
-  class="poodle-box c0 poodle-select c1 c2"
+  class="poodle-box poodle-select c0"
 >
+  <div
+    aria-hidden="true"
+    class="poodle-box poodle-select__value-text c1"
+  />
   <select
-    class="poodle-box c0 poodle-select__native c4 c2"
+    class="poodle-box poodle-select__select c2"
   >
     <option
       value="tiger"
@@ -323,7 +368,7 @@ exports[`<Select /> should render Select correctly 1`] = `
     </option>
   </select>
   <div
-    class="poodle-box c0 poodle-select__icon c7 c2"
+    class="poodle-box poodle-select__icon c3"
   >
     <svg
       fill="currentColor"
@@ -341,10 +386,6 @@ exports[`<Select /> should render Select correctly 1`] = `
 
 exports[`<Select /> should render Select with adornment correctly 1`] = `
 .c0 {
-  box-sizing: border-box;
-}
-
-.c1 {
   position: relative;
   display: -webkit-box;
   display: -webkit-flex;
@@ -365,23 +406,23 @@ exports[`<Select /> should render Select with adornment correctly 1`] = `
   border-color: #AF1308;
 }
 
-.c1:focus-within {
+.c0:focus-within {
   border-color: #00478A;
 }
 
-.c1:hover {
+.c0:hover {
   border-color: #00478A;
 }
 
-.c1:focus-within {
+.c0:focus-within {
   border-color: #AF1308;
 }
 
-.c1:hover {
+.c0:hover {
   border-color: #AF1308;
 }
 
-.c4 {
+.c1 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -397,7 +438,8 @@ exports[`<Select /> should render Select with adornment correctly 1`] = `
   padding-left: 8px;
 }
 
-.c7 {
+.c2 {
+  position: relative;
   padding-left: 8px;
   padding-right: 8px;
   padding-top: 10px;
@@ -410,18 +452,33 @@ exports[`<Select /> should render Select with adornment correctly 1`] = `
   font-size: 1rem;
   font-weight: 400;
   line-height: 125%;
+  min-height: 1.25em;
+}
+
+.c3 {
+  position: absolute;
+  opacity: 0;
+  z-index: 1;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  width: 100%;
+  border: none;
+  outline: none;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 125%;
   -webkit-appearance: none;
   -moz-appearance: none;
   -ms-appearance: none;
   appearance: none;
 }
 
-.c7:disabled {
+.c3:disabled {
   cursor: not-allowed;
   color: #A6A6A6;
 }
 
-.c10 {
+.c4 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -436,7 +493,7 @@ exports[`<Select /> should render Select with adornment correctly 1`] = `
   pointer-events: none;
 }
 
-.c13 {
+.c5 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -447,7 +504,7 @@ exports[`<Select /> should render Select with adornment correctly 1`] = `
   margin-right: 8px;
 }
 
-.c16 {
+.c6 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -462,23 +519,24 @@ exports[`<Select /> should render Select with adornment correctly 1`] = `
   line-height: 125%;
   padding-right: 8px;
   font-size: 1.5rem;
-}
-
-.c17 {
   color: #AF1308;
 }
 
 <div
-  class="poodle-box c0 poodle-select c1 c2"
+  class="poodle-box poodle-select c0"
 >
   <div
-    class="poodle-box c0 poodle-input-adornment c4 c2"
+    class="poodle-box poodle-input-adornment c1"
   >
     $
   </div>
+  <div
+    aria-hidden="true"
+    class="poodle-box poodle-select__value-text c2"
+  />
   <select
     aria-invalid="true"
-    class="poodle-box c0 poodle-select__native c7 c2"
+    class="poodle-box poodle-select__select c3"
   >
     <option
       value="tiger"
@@ -497,7 +555,7 @@ exports[`<Select /> should render Select with adornment correctly 1`] = `
     </option>
   </select>
   <div
-    class="poodle-box c0 poodle-select__icon c10 c2"
+    class="poodle-box poodle-select__icon c4"
   >
     <svg
       fill="currentColor"
@@ -511,10 +569,10 @@ exports[`<Select /> should render Select with adornment correctly 1`] = `
     </svg>
   </div>
   <div
-    class="poodle-box c0 poodle-select__divider c13 c2"
+    class="poodle-box poodle-select__divider c5"
   />
   <div
-    class="poodle-box c0 poodle-input-adornment c16 c17"
+    class="poodle-box poodle-input-adornment c6"
   >
     end
   </div>
@@ -523,10 +581,6 @@ exports[`<Select /> should render Select with adornment correctly 1`] = `
 
 exports[`<Select /> should render Select with error correctly 1`] = `
 .c0 {
-  box-sizing: border-box;
-}
-
-.c1 {
   position: relative;
   display: -webkit-box;
   display: -webkit-flex;
@@ -547,23 +601,24 @@ exports[`<Select /> should render Select with error correctly 1`] = `
   border-color: #AF1308;
 }
 
-.c1:focus-within {
+.c0:focus-within {
   border-color: #00478A;
 }
 
-.c1:hover {
+.c0:hover {
   border-color: #00478A;
 }
 
-.c1:focus-within {
+.c0:focus-within {
   border-color: #AF1308;
 }
 
-.c1:hover {
+.c0:hover {
   border-color: #AF1308;
 }
 
-.c4 {
+.c1 {
+  position: relative;
   padding-left: 8px;
   padding-right: 8px;
   padding-top: 10px;
@@ -576,18 +631,33 @@ exports[`<Select /> should render Select with error correctly 1`] = `
   font-size: 1rem;
   font-weight: 400;
   line-height: 125%;
+  min-height: 1.25em;
+}
+
+.c2 {
+  position: absolute;
+  opacity: 0;
+  z-index: 1;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  width: 100%;
+  border: none;
+  outline: none;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 125%;
   -webkit-appearance: none;
   -moz-appearance: none;
   -ms-appearance: none;
   appearance: none;
 }
 
-.c4:disabled {
+.c2:disabled {
   cursor: not-allowed;
   color: #A6A6A6;
 }
 
-.c7 {
+.c3 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -603,11 +673,15 @@ exports[`<Select /> should render Select with error correctly 1`] = `
 }
 
 <div
-  class="poodle-box c0 poodle-select c1 c2"
+  class="poodle-box poodle-select c0"
 >
+  <div
+    aria-hidden="true"
+    class="poodle-box poodle-select__value-text c1"
+  />
   <select
     aria-invalid="true"
-    class="poodle-box c0 poodle-select__native c4 c2"
+    class="poodle-box poodle-select__select c2"
   >
     <option
       value="tiger"
@@ -626,7 +700,7 @@ exports[`<Select /> should render Select with error correctly 1`] = `
     </option>
   </select>
   <div
-    class="poodle-box c0 poodle-select__icon c7 c2"
+    class="poodle-box poodle-select__icon c3"
   >
     <svg
       fill="currentColor"
@@ -642,16 +716,101 @@ exports[`<Select /> should render Select with error correctly 1`] = `
 </div>
 `;
 
-exports[`<Select /> theming should disable classes 1`] = `
+exports[`<Select /> should render Select with value text 1`] = `
 .c0 {
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  width: 100%;
   box-sizing: border-box;
+  border-radius: 4px;
+  border: 1px solid;
+  border-color: #CCCCCC;
+  background-color: #fff;
+  -webkit-transition: 125ms border-color ease-in;
+  transition: 125ms border-color ease-in;
+}
+
+.c0:focus-within {
+  border-color: #00478A;
+}
+
+.c0:hover {
+  border-color: #00478A;
+}
+
+.c1 {
+  position: relative;
+  padding-left: 8px;
+  padding-right: 8px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  width: 100%;
+  border: none;
+  outline: none;
+  box-sizing: content-box;
+  background: transparent;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 125%;
+  min-height: 1.25em;
+}
+
+.c2 {
+  position: absolute;
+  opacity: 0;
+  z-index: 1;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  width: 100%;
+  border: none;
+  outline: none;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 125%;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  appearance: none;
+}
+
+.c2:disabled {
+  cursor: not-allowed;
+  color: #A6A6A6;
+}
+
+.c3 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  padding-right: 8px;
+  height: 100%;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  font-size: 1.5rem;
+  pointer-events: none;
 }
 
 <div
-  class="poodle-box c0 poodle-select c1"
+  class="poodle-box poodle-select c0"
 >
+  <div
+    aria-hidden="true"
+    class="poodle-box poodle-select__value-text c1"
+  >
+    Animals
+  </div>
   <select
-    class="poodle-box c0 poodle-select__native c1"
+    class="poodle-box poodle-select__select c2"
   >
     <option
       value="tiger"
@@ -670,7 +829,7 @@ exports[`<Select /> theming should disable classes 1`] = `
     </option>
   </select>
   <div
-    class="poodle-box c0 poodle-select__icon c1"
+    class="poodle-box poodle-select__icon c3"
   >
     <svg
       fill="currentColor"
@@ -688,10 +847,6 @@ exports[`<Select /> theming should disable classes 1`] = `
 
 exports[`<Select /> theming should extend styles in global 1`] = `
 .c0 {
-  box-sizing: border-box;
-}
-
-.c1 {
   position: relative;
   display: -webkit-box;
   display: -webkit-flex;
@@ -715,15 +870,16 @@ exports[`<Select /> theming should extend styles in global 1`] = `
   text-indent: 1px;
 }
 
-.c1:focus-within {
+.c0:focus-within {
   border-color: #00478A;
 }
 
-.c1:hover {
+.c0:hover {
   border-color: #00478A;
 }
 
-.c4 {
+.c1 {
+  position: relative;
   padding-left: 8px;
   padding-right: 8px;
   padding-top: 10px;
@@ -733,6 +889,25 @@ exports[`<Select /> theming should extend styles in global 1`] = `
   outline: none;
   box-sizing: content-box;
   background: transparent;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 125%;
+  min-height: 1.25em;
+  margin-top: 13px;
+  letter-spacing: 251px;
+  top: 2px;
+  text-indent: 3px;
+}
+
+.c2 {
+  position: absolute;
+  opacity: 0;
+  z-index: 1;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  width: 100%;
+  border: none;
+  outline: none;
   font-size: 1rem;
   font-weight: 400;
   line-height: 125%;
@@ -746,12 +921,12 @@ exports[`<Select /> theming should extend styles in global 1`] = `
   text-indent: 3px;
 }
 
-.c4:disabled {
+.c2:disabled {
   cursor: not-allowed;
   color: #A6A6A6;
 }
 
-.c7 {
+.c3 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -771,10 +946,14 @@ exports[`<Select /> theming should extend styles in global 1`] = `
 }
 
 <div
-  class="poodle-box c0 poodle-select c1 c2"
+  class="poodle-box poodle-select c0"
 >
+  <div
+    aria-hidden="true"
+    class="poodle-box poodle-select__value-text c1"
+  />
   <select
-    class="poodle-box c0 poodle-select__native c4 c2"
+    class="poodle-box poodle-select__select c2"
   >
     <option
       value="tiger"
@@ -793,7 +972,7 @@ exports[`<Select /> theming should extend styles in global 1`] = `
     </option>
   </select>
   <div
-    class="poodle-box c0 poodle-select__icon c7 c2"
+    class="poodle-box poodle-select__icon c3"
   >
     <svg
       fill="currentColor"
@@ -811,10 +990,6 @@ exports[`<Select /> theming should extend styles in global 1`] = `
 
 exports[`<Select /> theming should extend styles in local 1`] = `
 .c0 {
-  box-sizing: border-box;
-}
-
-.c1 {
   position: relative;
   display: -webkit-box;
   display: -webkit-flex;
@@ -838,15 +1013,16 @@ exports[`<Select /> theming should extend styles in local 1`] = `
   text-indent: 1px;
 }
 
-.c1:focus-within {
+.c0:focus-within {
   border-color: #00478A;
 }
 
-.c1:hover {
+.c0:hover {
   border-color: #00478A;
 }
 
-.c4 {
+.c1 {
+  position: relative;
   padding-left: 8px;
   padding-right: 8px;
   padding-top: 10px;
@@ -856,6 +1032,25 @@ exports[`<Select /> theming should extend styles in local 1`] = `
   outline: none;
   box-sizing: content-box;
   background: transparent;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 125%;
+  min-height: 1.25em;
+  margin-top: 13px;
+  letter-spacing: 251px;
+  top: 2px;
+  text-indent: 3px;
+}
+
+.c2 {
+  position: absolute;
+  opacity: 0;
+  z-index: 1;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  width: 100%;
+  border: none;
+  outline: none;
   font-size: 1rem;
   font-weight: 400;
   line-height: 125%;
@@ -869,12 +1064,12 @@ exports[`<Select /> theming should extend styles in local 1`] = `
   text-indent: 3px;
 }
 
-.c4:disabled {
+.c2:disabled {
   cursor: not-allowed;
   color: #A6A6A6;
 }
 
-.c7 {
+.c3 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -894,10 +1089,14 @@ exports[`<Select /> theming should extend styles in local 1`] = `
 }
 
 <div
-  class="poodle-box c0 poodle-select c1 c2"
+  class="poodle-box poodle-select c0"
 >
+  <div
+    aria-hidden="true"
+    class="poodle-box poodle-select__value-text c1"
+  />
   <select
-    class="poodle-box c0 poodle-select__native c4 c2"
+    class="poodle-box poodle-select__select c2"
   >
     <option
       value="tiger"
@@ -916,51 +1115,7 @@ exports[`<Select /> theming should extend styles in local 1`] = `
     </option>
   </select>
   <div
-    class="poodle-box c0 poodle-select__icon c7 c2"
-  >
-    <svg
-      fill="currentColor"
-      height="1em"
-      viewBox="0 0 24 24"
-      width="1em"
-    >
-      <path
-        d="m12 16 6.928-6H5.072L12 16z"
-      />
-    </svg>
-  </div>
-</div>
-`;
-
-exports[`<Select /> theming should override classes 1`] = `
-.c0 {
-  box-sizing: border-box;
-}
-
-<div
-  class="poodle-box c0 poodle-select morning c1"
->
-  <select
-    class="poodle-box c0 poodle-select__native native c1"
-  >
-    <option
-      value="tiger"
-    >
-      Tiger
-    </option>
-    <option
-      value="lion"
-    >
-      Lion
-    </option>
-    <option
-      value="dog"
-    >
-      Dog
-    </option>
-  </select>
-  <div
-    class="poodle-box c0 poodle-select__icon icon c1"
+    class="poodle-box poodle-select__icon c3"
   >
     <svg
       fill="currentColor"
@@ -978,26 +1133,26 @@ exports[`<Select /> theming should override classes 1`] = `
 
 exports[`<Select /> theming should override styles 1`] = `
 .c0 {
-  box-sizing: border-box;
-}
-
-.c1 {
   margin-top: 51px;
 }
 
-.c4 {
+.c1 {
   margin-top: 54px;
 }
 
-.c7 {
+.c3 {
   margin-top: 53px;
 }
 
 <div
-  class="poodle-box c0 poodle-select c1 c2"
+  class="poodle-box poodle-select c0"
 >
+  <div
+    aria-hidden="true"
+    class="poodle-box poodle-select__value-text c1"
+  />
   <select
-    class="poodle-box c0 poodle-select__native c4 c2"
+    class="poodle-box poodle-select__select c1"
   >
     <option
       value="tiger"
@@ -1016,7 +1171,7 @@ exports[`<Select /> theming should override styles 1`] = `
     </option>
   </select>
   <div
-    class="poodle-box c0 poodle-select__icon c7 c2"
+    class="poodle-box poodle-select__icon c3"
   >
     <svg
       fill="currentColor"
@@ -1034,10 +1189,6 @@ exports[`<Select /> theming should override styles 1`] = `
 
 exports[`<Select /> theming should render with default props correctly 1`] = `
 .c0 {
-  box-sizing: border-box;
-}
-
-.c1 {
   position: relative;
   display: -webkit-box;
   display: -webkit-flex;
@@ -1057,15 +1208,16 @@ exports[`<Select /> theming should render with default props correctly 1`] = `
   transition: 125ms border-color ease-in;
 }
 
-.c1:focus-within {
+.c0:focus-within {
   border-color: #00478A;
 }
 
-.c1:hover {
+.c0:hover {
   border-color: #00478A;
 }
 
-.c4 {
+.c1 {
+  position: relative;
   padding-left: 8px;
   padding-right: 8px;
   padding-top: 10px;
@@ -1078,18 +1230,33 @@ exports[`<Select /> theming should render with default props correctly 1`] = `
   font-size: 1rem;
   font-weight: 400;
   line-height: 125%;
+  min-height: 1.25em;
+}
+
+.c2 {
+  position: absolute;
+  opacity: 0;
+  z-index: 1;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  width: 100%;
+  border: none;
+  outline: none;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 125%;
   -webkit-appearance: none;
   -moz-appearance: none;
   -ms-appearance: none;
   appearance: none;
 }
 
-.c4:disabled {
+.c2:disabled {
   cursor: not-allowed;
   color: #A6A6A6;
 }
 
-.c7 {
+.c3 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1105,11 +1272,15 @@ exports[`<Select /> theming should render with default props correctly 1`] = `
 }
 
 <div
-  class="poodle-box c0 poodle-select c1 hello c2"
+  class="poodle-box poodle-select hello c0"
   id="id"
 >
+  <div
+    aria-hidden="true"
+    class="poodle-box poodle-select__value-text c1"
+  />
   <select
-    class="poodle-box c0 poodle-select__native c4 c2"
+    class="poodle-box poodle-select__select c2"
   >
     <option
       value="tiger"
@@ -1128,7 +1299,7 @@ exports[`<Select /> theming should render with default props correctly 1`] = `
     </option>
   </select>
   <div
-    class="poodle-box c0 poodle-select__icon c7 c2"
+    class="poodle-box poodle-select__icon c3"
   >
     <svg
       fill="currentColor"

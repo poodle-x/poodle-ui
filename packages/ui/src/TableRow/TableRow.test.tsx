@@ -1,8 +1,8 @@
 import React from "react";
+import { Table } from "../Table";
+import { ThemeConfig } from "../theme";
 import { render } from "../utils/test";
 import TableRow from "./";
-import { ThemeConfig } from "../theme";
-import { Table } from "../Table";
 
 describe("<TableRow />", () => {
 	it("should render TableRow correctly", () => {
@@ -124,50 +124,6 @@ describe("<TableRow />", () => {
 							defaultProps: {
 								id: "id",
 								className: "hello",
-							},
-						},
-					},
-				}
-			);
-			expect(container.firstChild).toMatchSnapshot();
-		});
-
-		it("should disable classes", () => {
-			const { container } = render(
-				<table>
-					<tbody>
-						<TableRow>
-							<td>TableRow</td>
-						</TableRow>
-					</tbody>
-				</table>,
-				{
-					theme: {
-						TableRow: {
-							overrideClasses: {
-								root: true,
-							},
-						},
-					},
-				}
-			);
-			expect(container.firstChild).toMatchSnapshot();
-		});
-
-		it("should override classes", () => {
-			const { container } = render(
-				<table>
-					<tbody>
-						<TableRow>
-							<td>TableRow</td>
-						</TableRow>
-					</tbody>
-				</table>,
-				{
-					theme: {
-						TableRow: {
-							overrideClasses: {
-								root: "morning",
 							},
 						},
 					},

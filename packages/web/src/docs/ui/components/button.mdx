@@ -3,7 +3,7 @@ title: Button
 path: button
 ---
 
-import Button from "@poodle/ui/Button";
+
 
 # Button
 
@@ -128,12 +128,12 @@ Add icon to the button using `endIcon` and `startIcon` prop.
 ```jsx-live
 <Columns wrapGutter="scale-4" gutter="scale-2" collapse="sm">
   <Column colWidth="content">
-  	<Button colorStyle="negative" startIcon="$" variant="outline">
+  	<Button colorStyle="negative" startIcon={<Icons.Error />} variant="outline">
     	Delete
 		</Button>
   </Column>
 	<Column colWidth="content">
-		<Button colorStyle="negative" endIcon="$" variant="outline">
+		<Button colorStyle="negative" endIcon={<Icons.Error />} variant="outline">
 			Delete
 		</Button>
   </Column>

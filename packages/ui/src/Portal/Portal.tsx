@@ -1,7 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom";
+import useSafeLayoutEffect from "../hooks/useSafeLayoutEffect";
 import setRef from "../utils/setRef";
-import useSafeLayoutEffect from "../utils/useSafeLayoutEffect";
 
 export interface PortalProps {
 	/**

@@ -1,33 +1,33 @@
 import {
-	colorsSystem,
-	fontsSystem,
-	layoutSystem,
-	spacingSystem,
-	compose,
-	createSystem,
-	getMode,
-	FontsProps,
-	ColorsProps,
-	SpacingProps,
-	LayoutProps,
 	BordersProps,
 	bordersSystem,
-	flexSystem,
+	ColorsProps,
+	colorsSystem,
+	compose,
+	createSystem,
 	FlexProps,
-	pseudosSystem,
-	PseudosProps,
-	shadowSystem,
-	ShadowProps,
+	flexSystem,
+	FontsProps,
+	fontsSystem,
+	getMode,
 	GridProps,
 	gridSystem,
+	LayoutProps,
+	layoutSystem,
 	ListProps,
 	listSystem,
-	SystemConfigList,
+	PseudosProps,
+	pseudosSystem,
 	ResponsiveProp,
+	ShadowProps,
+	shadowSystem,
+	SpacingProps,
+	spacingSystem,
+	SystemConfigList,
 } from "@poodle/system";
+import * as CSS from "csstype";
 import { CSSSystem } from "../styled";
 import { StandardThemeConfig } from "./index";
-import * as CSS from "csstype";
 
 const additionalSystem: SystemConfigList = {
 	objectFit: true,
@@ -85,7 +85,8 @@ interface CssSystemProps
 		ShadowProps,
 		FlexProps,
 		GridProps,
-		ListProps {}
+		ListProps,
+		AdditionalSystemProps {}
 
 export interface SystemProps
 	extends SpacingProps,
@@ -109,15 +110,28 @@ const additionalProps = [
 	"colorStyle",
 ];
 
+// Cache to avoid unnecessary repeat loop
+// @todo maybe move to a helper func
+const finalSystem: SystemConfigList = {};
+
+for (const keys in allSystem) {
+	const keysPart = keys.split(",");
+
+	const rawConfig = allSystem[keys];
+
+	keysPart.forEach((k) => {
+		finalSystem[k] = rawConfig;
+	});
+}
+
 export function removeSystemProps(props: { [key: string]: any }) {
 	let resultProps = {};
-	Object.keys(props).forEach((prop) => {
+
+	for (const prop in props) {
 		let found = false;
-		for (const name in allSystem) {
-			if (prop === name || additionalProps.indexOf(prop) >= 0) {
-				found = true;
-				break;
-			}
+
+		if (finalSystem[prop] || additionalProps.indexOf(prop) >= 0) {
+			found = true;
 		}
 
 		if (!found && ["sx"].indexOf(prop) === -1) {
@@ -126,7 +140,7 @@ export function removeSystemProps(props: { [key: string]: any }) {
 				[prop]: props[prop],
 			};
 		}
-	});
+	}
 
 	return resultProps;
 }
@@ -143,11 +157,8 @@ export function createCSSSystemStandard<Key extends string>(data: {
 
 	const mode = getMode(props);
 
-	const overrideClassName = config?.overrideClasses?.[key];
-
 	return {
 		base,
-		overrideClassName,
 		applies: [
 			config?.styles?.[key],
 			config?.modes?.[mode]?.styles?.[key],

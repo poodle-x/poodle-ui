@@ -1,7 +1,7 @@
-import { getSpacing, createCSSSystemStandard } from "../theme";
-import { ButtonProps } from "./Button";
-import safeThemeUnitValue from "../utils/safeThemeValue";
 import { CSSObjectSystem, CSSSystem } from "../styled";
+import { createCSSSystemStandard, getSpacing } from "../theme";
+import safeThemeUnitValue from "../utils/safeThemeValue";
+import { ButtonProps } from "./Button";
 
 function getSizeStyles(props: ButtonProps) {
 	const { variant = "", sizeStyle = "" } = props;
@@ -227,7 +227,6 @@ function getButtonVariant(props: ButtonProps) {
 
 export function Root(props: ButtonProps): CSSSystem {
 	const { theme } = props;
-
 	return {
 		...createCSSSystemStandard({
 			key: "root",

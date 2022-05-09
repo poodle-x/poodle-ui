@@ -2,10 +2,6 @@
 
 exports[`<Tab /> ref should work 1`] = `
 .c0 {
-  box-sizing: border-box;
-}
-
-.c1 {
   min-width: 100px;
   padding-left: 16px;
   padding-right: 16px;
@@ -15,34 +11,34 @@ exports[`<Tab /> ref should work 1`] = `
   border: 2px solid transparent;
   cursor: pointer;
   color: #282828;
-  back-ground-color: transparent;
+  background-color: transparent;
 }
 
-.c1:focus {
+.c0:focus {
   border: 2px dotted;
   border-color: #00478A;
 }
 
-.c1[aria-selected="true"][data-orientation="vertical"] {
+.c0[aria-selected="true"][data-orientation="vertical"] {
   color: #00478A;
   border-right: 2px solid;
   border-right-color: #00478A;
 }
 
-.c1[aria-selected="true"][data-orientation="horizontal"] {
+.c0[aria-selected="true"][data-orientation="horizontal"] {
   color: #00478A;
   border-bottom: 2px solid;
   border-bottom-color: #00478A;
 }
 
-.c1:disabled {
+.c0:disabled {
   color: #A6A6A6;
   cursor: not-allowed;
 }
 
 <button
   aria-selected="true"
-  class="poodle-box c0 poodle-tab c1 c2"
+  class="poodle-box poodle-tab c0"
   data-orientation="horizontal"
   id="poodle-tab-1"
   role="tab"
@@ -54,10 +50,6 @@ exports[`<Tab /> ref should work 1`] = `
 
 exports[`<Tab /> should render Box props correctly 1`] = `
 .c0 {
-  box-sizing: border-box;
-}
-
-.c1 {
   min-width: 100px;
   padding-left: 16px;
   padding-right: 16px;
@@ -67,38 +59,35 @@ exports[`<Tab /> should render Box props correctly 1`] = `
   border: 2px solid transparent;
   cursor: pointer;
   color: #282828;
-  back-ground-color: transparent;
+  background-color: transparent;
+  margin-top: 20px;
 }
 
-.c1:focus {
+.c0:focus {
   border: 2px dotted;
   border-color: #00478A;
 }
 
-.c1[aria-selected="true"][data-orientation="vertical"] {
+.c0[aria-selected="true"][data-orientation="vertical"] {
   color: #00478A;
   border-right: 2px solid;
   border-right-color: #00478A;
 }
 
-.c1[aria-selected="true"][data-orientation="horizontal"] {
+.c0[aria-selected="true"][data-orientation="horizontal"] {
   color: #00478A;
   border-bottom: 2px solid;
   border-bottom-color: #00478A;
 }
 
-.c1:disabled {
+.c0:disabled {
   color: #A6A6A6;
   cursor: not-allowed;
 }
 
-.c2 {
-  margin-top: 20px;
-}
-
 <button
   aria-selected="true"
-  class="poodle-box c0 poodle-tab c1 c2"
+  class="poodle-box poodle-tab c0"
   data-orientation="horizontal"
   id="id"
   role="tab"
@@ -110,10 +99,6 @@ exports[`<Tab /> should render Box props correctly 1`] = `
 
 exports[`<Tab /> should render Tab correctly 1`] = `
 .c0 {
-  box-sizing: border-box;
-}
-
-.c1 {
   min-width: 100px;
   padding-left: 16px;
   padding-right: 16px;
@@ -123,34 +108,34 @@ exports[`<Tab /> should render Tab correctly 1`] = `
   border: 2px solid transparent;
   cursor: pointer;
   color: #282828;
-  back-ground-color: transparent;
+  background-color: transparent;
 }
 
-.c1:focus {
+.c0:focus {
   border: 2px dotted;
   border-color: #00478A;
 }
 
-.c1[aria-selected="true"][data-orientation="vertical"] {
+.c0[aria-selected="true"][data-orientation="vertical"] {
   color: #00478A;
   border-right: 2px solid;
   border-right-color: #00478A;
 }
 
-.c1[aria-selected="true"][data-orientation="horizontal"] {
+.c0[aria-selected="true"][data-orientation="horizontal"] {
   color: #00478A;
   border-bottom: 2px solid;
   border-bottom-color: #00478A;
 }
 
-.c1:disabled {
+.c0:disabled {
   color: #A6A6A6;
   cursor: not-allowed;
 }
 
 <button
   aria-selected="true"
-  class="poodle-box c0 poodle-tab c1 c2"
+  class="poodle-box poodle-tab c0"
   data-orientation="horizontal"
   id="poodle-tab-1"
   role="tab"
@@ -162,10 +147,6 @@ exports[`<Tab /> should render Tab correctly 1`] = `
 
 exports[`<Tab /> should render Tab correctly 2`] = `
 .c0 {
-  box-sizing: border-box;
-}
-
-.c1 {
   min-width: 100px;
   padding-left: 16px;
   padding-right: 16px;
@@ -175,34 +156,34 @@ exports[`<Tab /> should render Tab correctly 2`] = `
   border: 2px solid transparent;
   cursor: pointer;
   color: #282828;
-  back-ground-color: transparent;
+  background-color: transparent;
 }
 
-.c1:focus {
+.c0:focus {
   border: 2px dotted;
   border-color: #00478A;
 }
 
-.c1[aria-selected="true"][data-orientation="vertical"] {
+.c0[aria-selected="true"][data-orientation="vertical"] {
   color: #00478A;
   border-right: 2px solid;
   border-right-color: #00478A;
 }
 
-.c1[aria-selected="true"][data-orientation="horizontal"] {
+.c0[aria-selected="true"][data-orientation="horizontal"] {
   color: #00478A;
   border-bottom: 2px solid;
   border-bottom-color: #00478A;
 }
 
-.c1:disabled {
+.c0:disabled {
   color: #A6A6A6;
   cursor: not-allowed;
 }
 
 <button
   aria-selected="true"
-  class="poodle-box c0 poodle-tab c1 c2"
+  class="poodle-box poodle-tab c0"
   data-orientation="vertical"
   id="poodle-tab-1"
   role="tab"
@@ -215,10 +196,6 @@ exports[`<Tab /> should render Tab correctly 2`] = `
 exports[`<Tab /> should render Tab selected correctly 1`] = `
 Array [
   .c0 {
-  box-sizing: border-box;
-}
-
-.c1 {
   min-width: 100px;
   padding-left: 16px;
   padding-right: 16px;
@@ -228,34 +205,34 @@ Array [
   border: 2px solid transparent;
   cursor: pointer;
   color: #282828;
-  back-ground-color: transparent;
+  background-color: transparent;
 }
 
-.c1:focus {
+.c0:focus {
   border: 2px dotted;
   border-color: #00478A;
 }
 
-.c1[aria-selected="true"][data-orientation="vertical"] {
+.c0[aria-selected="true"][data-orientation="vertical"] {
   color: #00478A;
   border-right: 2px solid;
   border-right-color: #00478A;
 }
 
-.c1[aria-selected="true"][data-orientation="horizontal"] {
+.c0[aria-selected="true"][data-orientation="horizontal"] {
   color: #00478A;
   border-bottom: 2px solid;
   border-bottom-color: #00478A;
 }
 
-.c1:disabled {
+.c0:disabled {
   color: #A6A6A6;
   cursor: not-allowed;
 }
 
 <button
     aria-selected="false"
-    class="poodle-box c0 poodle-tab c1 c2"
+    class="poodle-box poodle-tab c0"
     data-orientation="horizontal"
     id="poodle-tab-1"
     role="tab"
@@ -264,10 +241,6 @@ Array [
     Tab
   </button>,
   .c0 {
-  box-sizing: border-box;
-}
-
-.c1 {
   min-width: 100px;
   padding-left: 16px;
   padding-right: 16px;
@@ -277,34 +250,34 @@ Array [
   border: 2px solid transparent;
   cursor: pointer;
   color: #282828;
-  back-ground-color: transparent;
+  background-color: transparent;
 }
 
-.c1:focus {
+.c0:focus {
   border: 2px dotted;
   border-color: #00478A;
 }
 
-.c1[aria-selected="true"][data-orientation="vertical"] {
+.c0[aria-selected="true"][data-orientation="vertical"] {
   color: #00478A;
   border-right: 2px solid;
   border-right-color: #00478A;
 }
 
-.c1[aria-selected="true"][data-orientation="horizontal"] {
+.c0[aria-selected="true"][data-orientation="horizontal"] {
   color: #00478A;
   border-bottom: 2px solid;
   border-bottom-color: #00478A;
 }
 
-.c1:disabled {
+.c0:disabled {
   color: #A6A6A6;
   cursor: not-allowed;
 }
 
 <button
     aria-selected="true"
-    class="poodle-box c0 poodle-tab c1 c2"
+    class="poodle-box poodle-tab c0"
     data-orientation="horizontal"
     id="poodle-tab-2"
     role="tab"
@@ -315,29 +288,8 @@ Array [
 ]
 `;
 
-exports[`<Tab /> theming should disable classes 1`] = `
-.c0 {
-  box-sizing: border-box;
-}
-
-<button
-  aria-selected="true"
-  class="poodle-box c0 poodle-tab c1"
-  data-orientation="horizontal"
-  id="poodle-tab-1"
-  role="tab"
-  tabindex="0"
->
-  Tab
-</button>
-`;
-
 exports[`<Tab /> theming should extend styles in global 1`] = `
 .c0 {
-  box-sizing: border-box;
-}
-
-.c1 {
   min-width: 100px;
   padding-left: 16px;
   padding-right: 16px;
@@ -347,38 +299,38 @@ exports[`<Tab /> theming should extend styles in global 1`] = `
   border: 2px solid transparent;
   cursor: pointer;
   color: #282828;
-  back-ground-color: transparent;
+  background-color: transparent;
   margin-top: 10px;
   letter-spacing: 250px;
   top: 0;
   text-indent: 1px;
 }
 
-.c1:focus {
+.c0:focus {
   border: 2px dotted;
   border-color: #00478A;
 }
 
-.c1[aria-selected="true"][data-orientation="vertical"] {
+.c0[aria-selected="true"][data-orientation="vertical"] {
   color: #00478A;
   border-right: 2px solid;
   border-right-color: #00478A;
 }
 
-.c1[aria-selected="true"][data-orientation="horizontal"] {
+.c0[aria-selected="true"][data-orientation="horizontal"] {
   color: #00478A;
   border-bottom: 2px solid;
   border-bottom-color: #00478A;
 }
 
-.c1:disabled {
+.c0:disabled {
   color: #A6A6A6;
   cursor: not-allowed;
 }
 
 <button
   aria-selected="true"
-  class="poodle-box c0 poodle-tab c1 c2"
+  class="poodle-box poodle-tab c0"
   data-orientation="horizontal"
   id="poodle-tab-1"
   role="tab"
@@ -390,10 +342,6 @@ exports[`<Tab /> theming should extend styles in global 1`] = `
 
 exports[`<Tab /> theming should extend styles in local 1`] = `
 .c0 {
-  box-sizing: border-box;
-}
-
-.c1 {
   min-width: 100px;
   padding-left: 16px;
   padding-right: 16px;
@@ -403,53 +351,36 @@ exports[`<Tab /> theming should extend styles in local 1`] = `
   border: 2px solid transparent;
   cursor: pointer;
   color: #282828;
-  back-ground-color: transparent;
+  background-color: transparent;
   margin-top: 10px;
   letter-spacing: 250px;
 }
 
-.c1:focus {
+.c0:focus {
   border: 2px dotted;
   border-color: #00478A;
 }
 
-.c1[aria-selected="true"][data-orientation="vertical"] {
+.c0[aria-selected="true"][data-orientation="vertical"] {
   color: #00478A;
   border-right: 2px solid;
   border-right-color: #00478A;
 }
 
-.c1[aria-selected="true"][data-orientation="horizontal"] {
+.c0[aria-selected="true"][data-orientation="horizontal"] {
   color: #00478A;
   border-bottom: 2px solid;
   border-bottom-color: #00478A;
 }
 
-.c1:disabled {
+.c0:disabled {
   color: #A6A6A6;
   cursor: not-allowed;
 }
 
 <button
   aria-selected="true"
-  class="poodle-box c0 poodle-tab c1 c2"
-  data-orientation="horizontal"
-  id="poodle-tab-1"
-  role="tab"
-  tabindex="0"
->
-  Tab
-</button>
-`;
-
-exports[`<Tab /> theming should override classes 1`] = `
-.c0 {
-  box-sizing: border-box;
-}
-
-<button
-  aria-selected="true"
-  class="poodle-box c0 poodle-tab morning c1"
+  class="poodle-box poodle-tab c0"
   data-orientation="horizontal"
   id="poodle-tab-1"
   role="tab"
@@ -461,16 +392,12 @@ exports[`<Tab /> theming should override classes 1`] = `
 
 exports[`<Tab /> theming should override styles 1`] = `
 .c0 {
-  box-sizing: border-box;
-}
-
-.c1 {
   margin-top: 50px;
 }
 
 <button
   aria-selected="true"
-  class="poodle-box c0 poodle-tab c1 c2"
+  class="poodle-box poodle-tab c0"
   data-orientation="horizontal"
   id="poodle-tab-1"
   role="tab"
@@ -482,10 +409,6 @@ exports[`<Tab /> theming should override styles 1`] = `
 
 exports[`<Tab /> theming should render with default props correctly 1`] = `
 .c0 {
-  box-sizing: border-box;
-}
-
-.c1 {
   min-width: 100px;
   padding-left: 16px;
   padding-right: 16px;
@@ -495,34 +418,34 @@ exports[`<Tab /> theming should render with default props correctly 1`] = `
   border: 2px solid transparent;
   cursor: pointer;
   color: #282828;
-  back-ground-color: transparent;
+  background-color: transparent;
 }
 
-.c1:focus {
+.c0:focus {
   border: 2px dotted;
   border-color: #00478A;
 }
 
-.c1[aria-selected="true"][data-orientation="vertical"] {
+.c0[aria-selected="true"][data-orientation="vertical"] {
   color: #00478A;
   border-right: 2px solid;
   border-right-color: #00478A;
 }
 
-.c1[aria-selected="true"][data-orientation="horizontal"] {
+.c0[aria-selected="true"][data-orientation="horizontal"] {
   color: #00478A;
   border-bottom: 2px solid;
   border-bottom-color: #00478A;
 }
 
-.c1:disabled {
+.c0:disabled {
   color: #A6A6A6;
   cursor: not-allowed;
 }
 
 <button
   aria-selected="true"
-  class="poodle-box c0 poodle-tab c1 hello c2"
+  class="poodle-box poodle-tab hello c0"
   data-orientation="horizontal"
   id="id"
   role="tab"

@@ -1,13 +1,13 @@
+import { axe } from "jest-axe";
 import React from "react";
 import Box from "../Box";
-import { axe } from "jest-axe";
-import { fireEvent, render, userEvent } from "../utils/test";
-import Modal from "./";
-import { ThemeConfig } from "../theme";
-import { ModalHeader } from "../ModalHeader";
+import { Button } from "../Button";
 import { ModalBody } from "../ModalBody";
 import { ModalFooter } from "../ModalFooter";
-import { Button } from "../Button";
+import { ModalHeader } from "../ModalHeader";
+import { ThemeConfig } from "../theme";
+import { fireEvent, render, userEvent } from "../utils/test";
+import Modal from "./";
 
 describe("<Modal />", () => {
 	it("should render Modal correctly", () => {
@@ -30,6 +30,7 @@ describe("<Modal />", () => {
 
 	it("should get callback request close with escape key", () => {
 		const mockCallback = jest.fn();
+		const mockInnerKeyDown = jest.fn();
 
 		const { getByRole } = render(
 			<Modal
@@ -37,6 +38,9 @@ describe("<Modal />", () => {
 				onRequestClose={mockCallback}
 				isOpen={true}
 				withAutoId={true}
+				innerProps={{
+					onKeyDown: mockInnerKeyDown,
+				}}
 			>
 				<button>Modal</button>
 			</Modal>
@@ -46,16 +50,19 @@ describe("<Modal />", () => {
 		fireEvent.keyDown(dialog, { key: "Escape", code: "Escape" });
 
 		expect(mockCallback).toHaveBeenCalledWith("esc");
+		expect(mockInnerKeyDown).toHaveBeenCalled();
 	});
 
 	it("should get call request close with click on modal backdrop", () => {
 		const mockCallback = jest.fn();
+		const mockInnerClick = jest.fn();
 
 		const { getByTestId } = render(
 			<Modal
 				data-testid="1"
 				innerProps={{
 					"data-testid": "test",
+					onClick: mockInnerClick,
 				}}
 				onRequestClose={mockCallback}
 				isOpen={true}
@@ -69,6 +76,7 @@ describe("<Modal />", () => {
 		userEvent.click(inner);
 
 		expect(mockCallback).toHaveBeenCalledWith("outside");
+		expect(mockInnerClick).toHaveBeenCalled();
 	});
 
 	it("ref should work", () => {
@@ -208,42 +216,6 @@ describe("<Modal />", () => {
 							defaultProps: {
 								id: "id",
 								className: "hello",
-							},
-						},
-					},
-				}
-			);
-			expect(getByTestId("test")).toMatchSnapshot();
-		});
-
-		it("should disable classes", () => {
-			const { getByTestId } = render(
-				<Modal data-testid="test" isOpen={true}>
-					<button>Modal</button>
-				</Modal>,
-				{
-					theme: {
-						Modal: {
-							overrideClasses: {
-								root: true,
-							},
-						},
-					},
-				}
-			);
-			expect(getByTestId("test")).toMatchSnapshot();
-		});
-
-		it("should override classes", () => {
-			const { getByTestId } = render(
-				<Modal data-testid="test" isOpen={true}>
-					<button>Modal</button>
-				</Modal>,
-				{
-					theme: {
-						Modal: {
-							overrideClasses: {
-								root: "morning",
 							},
 						},
 					},

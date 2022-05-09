@@ -1,12 +1,8 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<TableHead /> ref should work 1`] = `
-.c0 {
-  box-sizing: border-box;
-}
-
 <thead
-  class="poodle-box c0 poodle-table-head c1 c1"
+  class="poodle-box poodle-table-head c0"
 >
   <tr>
     <td>
@@ -18,16 +14,12 @@ exports[`<TableHead /> ref should work 1`] = `
 
 exports[`<TableHead /> should render Box props correctly 1`] = `
 .c0 {
-  box-sizing: border-box;
-}
-
-.c2 {
   margin-top: 20px;
 }
 
 <table>
   <thead
-    class="poodle-box c0 poodle-table-head c1 c2"
+    class="poodle-box poodle-table-head c0"
     id="id"
   >
     <tr>
@@ -40,13 +32,9 @@ exports[`<TableHead /> should render Box props correctly 1`] = `
 `;
 
 exports[`<TableHead /> should render TableHead correctly 1`] = `
-.c0 {
-  box-sizing: border-box;
-}
-
 <table>
   <thead
-    class="poodle-box c0 poodle-table-head c1 c1"
+    class="poodle-box poodle-table-head c0"
   >
     <tr>
       <td>
@@ -58,13 +46,9 @@ exports[`<TableHead /> should render TableHead correctly 1`] = `
 `;
 
 exports[`<TableHead /> should send context correctly 1`] = `
-.c0 {
-  box-sizing: border-box;
-}
-
 <table>
   <thead
-    class="poodle-box c0 poodle-table-head c1 c1"
+    class="poodle-box poodle-table-head c0"
   >
     <tr>
       <td>
@@ -76,13 +60,9 @@ exports[`<TableHead /> should send context correctly 1`] = `
 `;
 
 exports[`<TableHead /> theming should disable classes 1`] = `
-.c0 {
-  box-sizing: border-box;
-}
-
 <table>
   <thead
-    class="poodle-box c0 poodle-table-head c1"
+    class="poodle-box poodle-table-head c0"
   >
     <tr>
       <td>
@@ -94,29 +74,25 @@ exports[`<TableHead /> theming should disable classes 1`] = `
 `;
 
 exports[`<TableHead /> theming should extend size styles 1`] = `
-.c0 {
-  box-sizing: border-box;
-}
-
-.c4 {
+.c1 {
   width: 100%;
   border-spacing: 0;
   border-collapse: collapse;
   text-align: left;
 }
 
-.c7 {
+.c2 {
   height: 100px;
 }
 
 <div
-  class="poodle-box c0 poodle-table c1 c2"
+  class="poodle-box poodle-table c0"
 >
   <table
-    class="poodle-box c0 poodle-table__table c4 c2"
+    class="poodle-box poodle-table__table c1"
   >
     <thead
-      class="poodle-box c0 poodle-table-head c7 c2"
+      class="poodle-box poodle-table-head c2"
     >
       <tr>
         <td>
@@ -129,30 +105,26 @@ exports[`<TableHead /> theming should extend size styles 1`] = `
 `;
 
 exports[`<TableHead /> theming should extend size styles with mode 1`] = `
-.c0 {
-  box-sizing: border-box;
-}
-
-.c4 {
+.c1 {
   width: 100%;
   border-spacing: 0;
   border-collapse: collapse;
   text-align: left;
 }
 
-.c7 {
+.c2 {
   height: 100px;
   height: 110px;
 }
 
 <div
-  class="poodle-box c0 poodle-table c1 c2"
+  class="poodle-box poodle-table c0"
 >
   <table
-    class="poodle-box c0 poodle-table__table c4 c2"
+    class="poodle-box poodle-table__table c1"
   >
     <thead
-      class="poodle-box c0 poodle-table-head c7 c2"
+      class="poodle-box poodle-table-head c2"
     >
       <tr>
         <td>
@@ -166,10 +138,6 @@ exports[`<TableHead /> theming should extend size styles with mode 1`] = `
 
 exports[`<TableHead /> theming should extend styles in global 1`] = `
 .c0 {
-  box-sizing: border-box;
-}
-
-.c1 {
   margin-top: 10px;
   letter-spacing: 250px;
   top: 0;
@@ -178,7 +146,7 @@ exports[`<TableHead /> theming should extend styles in global 1`] = `
 
 <table>
   <thead
-    class="poodle-box c0 poodle-table-head c1 c2"
+    class="poodle-box poodle-table-head c0"
   >
     <tr>
       <td>
@@ -191,10 +159,6 @@ exports[`<TableHead /> theming should extend styles in global 1`] = `
 
 exports[`<TableHead /> theming should extend styles in local 1`] = `
 .c0 {
-  box-sizing: border-box;
-}
-
-.c1 {
   margin-top: 10px;
   letter-spacing: 250px;
   top: 0;
@@ -203,7 +167,7 @@ exports[`<TableHead /> theming should extend styles in local 1`] = `
 
 <table>
   <thead
-    class="poodle-box c0 poodle-table-head c1 c2"
+    class="poodle-box poodle-table-head c0"
   >
     <tr>
       <td>
@@ -215,13 +179,9 @@ exports[`<TableHead /> theming should extend styles in local 1`] = `
 `;
 
 exports[`<TableHead /> theming should override classes 1`] = `
-.c0 {
-  box-sizing: border-box;
-}
-
 <table>
   <thead
-    class="poodle-box c0 poodle-table-head morning c1"
+    class="poodle-box poodle-table-head c0"
   >
     <tr>
       <td>
@@ -234,16 +194,12 @@ exports[`<TableHead /> theming should override classes 1`] = `
 
 exports[`<TableHead /> theming should override styles 1`] = `
 .c0 {
-  box-sizing: border-box;
-}
-
-.c1 {
   margin-top: 50px;
 }
 
 <table>
   <thead
-    class="poodle-box c0 poodle-table-head c1 c2"
+    class="poodle-box poodle-table-head c0"
   >
     <tr>
       <td>
@@ -255,13 +211,9 @@ exports[`<TableHead /> theming should override styles 1`] = `
 `;
 
 exports[`<TableHead /> theming should render with default props correctly 1`] = `
-.c0 {
-  box-sizing: border-box;
-}
-
 <table>
   <thead
-    class="poodle-box c0 poodle-table-head c1 hello c1"
+    class="poodle-box poodle-table-head hello c0"
     id="id"
   >
     <tr>

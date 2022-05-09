@@ -1,15 +1,15 @@
 import React from "react";
-import { StandardComponentProps, ThemeConfig } from "../theme";
-import useDefaultProps from "../utils/useDefaultProps";
-import { useClassNames } from "../styled";
-import * as styles from "./styles";
+import Box, { BoxProps } from "../Box";
 import useTabsState, {
 	TabOrientation,
 	TabsContext,
 	TabsContextValue,
 	TabValue,
 } from "../hooks/useTabsState";
-import Box, { BoxProps } from "../Box";
+import { getCSSSystemBoxProps } from "../styled/CSSSystem";
+import { StandardComponentProps, ThemeConfig } from "../theme";
+import useDefaultProps from "../hooks/useDefaultProps/useDefaultProps";
+import * as styles from "./styles";
 
 export { TabOrientation, TabsContext, TabsContextValue, TabValue };
 
@@ -43,7 +43,7 @@ function getDefaultProps(theme?: ThemeConfig) {
 export const Tabs: React.ForwardRefExoticComponent<
 	React.PropsWithoutRef<TabsProps> & React.RefAttributes<HTMLElement>
 > = React.forwardRef<HTMLElement, TabsProps>((_props, ref) => {
-	const props = useDefaultProps<TabsProps>(_props, {
+	const { props, isLocalTheme } = useDefaultProps<TabsProps>(_props, {
 		themeDefaultProps: getDefaultProps,
 	});
 
@@ -65,17 +65,6 @@ export const Tabs: React.ForwardRefExoticComponent<
 		listTabPanel,
 		listTab,
 	} = useTabsState({ propValue: value });
-
-	const classes = useClassNames({
-		props,
-		lists: React.useMemo(() => {
-			return {
-				root: {
-					classNames: ["poodle-tabs", styles.Root, className],
-				},
-			};
-		}, [className]),
-	});
 
 	const handleChangeValue: TabsContextValue["onChange"] = React.useCallback(
 		(v, e) => {
@@ -99,7 +88,17 @@ export const Tabs: React.ForwardRefExoticComponent<
 				orientation: orientation || TabOrientation.HORIZONTAL,
 			}}
 		>
-			<Box {...otherProps} className={classes.root} ref={ref}>
+			<Box
+				{...otherProps}
+				{...getCSSSystemBoxProps({
+					isRoot: true,
+					isLocalTheme,
+					componentProps: props,
+					fnCSSSystem: styles.Root,
+					baseClassName: ["poodle-tabs"],
+				})}
+				ref={ref}
+			>
 				{children}
 			</Box>
 		</TabsContext.Provider>

@@ -1,7 +1,7 @@
 import React from "react";
-import { TabRegisterType, TabsContext, TabValue } from "../useTabsState";
 import useAutoId from "../useAutoId";
-import useSafeLayoutEffect from "../../utils/useSafeLayoutEffect";
+import useSafeLayoutEffect from "../useSafeLayoutEffect";
+import { TabRegisterType, TabsContext, TabValue } from "../useTabsState";
 
 export interface UseTabOptions {
 	id?: string;

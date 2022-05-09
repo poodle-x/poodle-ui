@@ -1,12 +1,12 @@
 import React from "react";
 import Box, { BoxProps } from "../Box";
-import { StandardComponentProps, ThemeConfig } from "../theme";
-import useDefaultProps from "../utils/useDefaultProps";
-import { useClassNames } from "../styled";
-import * as styles from "./styles";
-import Clear from "../icons/Clear";
 import { IconButton } from "../IconButton";
+import Clear from "../icons/Clear";
 import { ModalContext } from "../Modal";
+import { getCSSSystemBoxProps } from "../styled/CSSSystem";
+import { StandardComponentProps, ThemeConfig } from "../theme";
+import useDefaultProps from "../hooks/useDefaultProps/useDefaultProps";
+import * as styles from "./styles";
 
 export interface LocalModalHeaderProps {
 	children?: React.ReactNode;
@@ -44,7 +44,7 @@ function getDefaultProps(theme?: ThemeConfig) {
 export const ModalHeader: React.ForwardRefExoticComponent<
 	React.PropsWithoutRef<ModalHeaderProps> & React.RefAttributes<HTMLElement>
 > = React.forwardRef<HTMLElement, ModalHeaderProps>((_props, ref) => {
-	const props = useDefaultProps<ModalHeaderProps>(_props, {
+	const { props, isLocalTheme } = useDefaultProps<ModalHeaderProps>(_props, {
 		themeDefaultProps: getDefaultProps,
 	});
 
@@ -61,35 +61,40 @@ export const ModalHeader: React.ForwardRefExoticComponent<
 
 	const { autoIdLabelledby } = React.useContext(ModalContext);
 
-	const classes = useClassNames({
-		props,
-		lists: {
-			root: {
-				classNames: ["poodle-modal-header", styles.Root, className],
-			},
-			content: {
-				classNames: ["poodle-modal-header__content", styles.Content, className],
-			},
-			close: {
-				classNames: ["poodle-modal-header__close", styles.Close, className],
-			},
-			icon: {
-				classNames: ["poodle-modal-header__icon", styles.Icon, className],
-			},
-		},
-	});
-
 	return (
 		<Box
 			textStyle="modalTitle"
 			id={autoIdLabelledby}
 			{...otherProps}
-			className={classes.root}
+			{...getCSSSystemBoxProps({
+				isRoot: true,
+				isLocalTheme,
+				componentProps: props,
+				fnCSSSystem: styles.Root,
+				baseClassName: ["poodle-modal-header"],
+			})}
 			ref={ref}
 		>
-			<Box as="h2" {...contentProps} className={classes.content}>
+			<Box
+				as="h2"
+				{...getCSSSystemBoxProps({
+					isLocalTheme,
+					componentProps: props,
+					partProps: contentProps,
+					fnCSSSystem: styles.Content,
+					baseClassName: ["poodle-modal-header__content"],
+				})}
+			>
 				{icon && (
-					<Box {...iconProps} className={classes.icon}>
+					<Box
+						{...getCSSSystemBoxProps({
+							isLocalTheme,
+							componentProps: props,
+							partProps: iconProps,
+							fnCSSSystem: styles.Icon,
+							baseClassName: ["poodle-modal-header__icon"],
+						})}
+					>
 						{icon}
 					</Box>
 				)}
@@ -98,8 +103,13 @@ export const ModalHeader: React.ForwardRefExoticComponent<
 			{withClose && (
 				<IconButton
 					aria-label="Close"
-					{...closeProps}
-					className={classes.close}
+					{...getCSSSystemBoxProps({
+						isLocalTheme,
+						componentProps: props,
+						partProps: closeProps,
+						fnCSSSystem: styles.Close,
+						baseClassName: ["poodle-modal-header__close"],
+					})}
 				>
 					<Clear />
 				</IconButton>
