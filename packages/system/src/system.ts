@@ -1,5 +1,5 @@
-import { getBreakpoint, getBreakpointsScale } from "./breakpoints";
 import { getThemeValue } from "./";
+import { getBreakpoint, getBreakpointsScale } from "./breakpoints";
 
 /**
  * Custom function to override get media query function when the value passing
@@ -151,6 +151,7 @@ function getKeyStyles(data: {
 		customGetBreakpointsScale,
 		sendProps,
 	} = data;
+
 	const styles: Array<{ [key: string]: any }> = [];
 	const currentValue = props[key];
 	const currentMediaFn = config.customMediaFn || customMediaFn || mediaFn;
@@ -261,6 +262,18 @@ export function createSystem(
 	systems: SystemConfigList,
 	options?: CreateSystemOptions
 ): SystemOperation {
+	const finalSystem: SystemConfigList = {};
+
+	for (const keys in systems) {
+		const keysPart = keys.split(",");
+
+		const rawConfig = systems[keys];
+
+		keysPart.forEach((k) => {
+			finalSystem[k] = rawConfig;
+		});
+	}
+
 	const operation: SystemOperation = (props, runOptions = {}) => {
 		const { returnOnlySystemProps, sendProps } = runOptions;
 		const { customMediaFn, customGetBreakpointsScale } = options || {};
@@ -269,82 +282,69 @@ export function createSystem(
 		Object.keys(props)
 			.filter((p) => p !== "theme")
 			.forEach((p) => {
-				let foundedInSystem = false;
-				for (const keys in systems) {
-					const keysPart = keys.split(",");
+				const rawConfig = finalSystem[p];
 
-					const rawConfig = systems[keys];
+				const foundedInSystem = Boolean(finalSystem[p]);
 
-					const key = keysPart.find((k) => k === p);
-
-					foundedInSystem = Boolean(key);
-
+				if (foundedInSystem) {
 					let config: SystemConfig;
 
 					if (rawConfig === true) {
 						config = {
-							properties: [keys],
+							properties: [p],
 						};
 					} else {
 						config = rawConfig;
 					}
 
-					if (key) {
-						if (config.isMultipleValue) {
-							let rawProperties: string[] | undefined;
+					if (config.isMultipleValue) {
+						let rawProperties: string[] | undefined;
 
-							if (typeof config.properties === "function") {
-								rawProperties = config.properties({
-									props,
-									key,
-								});
-							} else {
-								rawProperties = config.properties;
-							}
-
-							const properties = rawProperties || [key];
-
-							properties.forEach((property) => {
-								let value: { [key: string]: any } = props[key];
-
-								if (config.transform) {
-									const resovle = config.transform(
-										props,
-										props[key],
-										key,
-										property
-									);
-
-									if (
-										resovle &&
-										typeof resovle !== "number" &&
-										typeof resovle !== "string"
-									) {
-										value = resovle;
-									}
-								}
-
-								styles.push({
-									[property]: operation(
-										{ ...value, theme: props.theme },
-										runOptions
-									),
-								});
+						if (typeof config.properties === "function") {
+							rawProperties = config.properties({
+								props,
+								key: p,
 							});
 						} else {
-							styles = [
-								...styles,
-								...getKeyStyles({
-									key,
-									config,
-									props,
-									sendProps,
-									customMediaFn,
-									customGetBreakpointsScale,
-								}),
-							];
+							rawProperties = config.properties;
 						}
-						break;
+
+						const properties = rawProperties || [p];
+
+						properties.forEach((property) => {
+							let value: { [key: string]: any } = props[p];
+
+							if (config.transform) {
+								const resovle = config.transform(props, props[p], p, property);
+
+								if (
+									resovle &&
+									typeof resovle !== "number" &&
+									typeof resovle !== "string"
+								) {
+									value = resovle;
+								}
+							}
+
+							styles.push({
+								[property]: operation(
+									{ ...value, theme: props.theme },
+									runOptions
+								),
+							});
+						});
+					} else {
+						styles = [
+							...styles,
+							...getKeyStyles({
+								key: p,
+								config,
+								props,
+								sendProps,
+								customMediaFn,
+								customGetBreakpointsScale,
+							}),
+						];
 					}
 				}
 
