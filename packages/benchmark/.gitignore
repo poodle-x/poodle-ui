@@ -1,0 +1,13 @@
+# List build files
+/lib/
+/mjs/
+/tmp/
+
+# Misc
+/coverage/
+node_modules
+.cache/
+/scriptsBuild/
+.DS_Store
+yarn-error.log
+/browser/dist/
