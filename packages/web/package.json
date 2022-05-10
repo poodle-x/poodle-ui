@@ -13,7 +13,7 @@
 		"@emotion/css": "^11.9.0",
 		"@mdx-js/react": "^1.6.16",
 		"@poodle/icons": "0.1.0-alpha.6",
-		"@poodle/ui": "0.1.0-alpha.8",
+		"@poodle/ui": "0.1.0-alpha.9",
 		"@types/mdx-js__react": "^1.5.3",
 		"@types/node": "^14.0.27",
 		"@types/react": "^17.0.3",
