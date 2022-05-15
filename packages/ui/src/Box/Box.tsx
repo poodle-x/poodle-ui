@@ -56,11 +56,15 @@ type Component<T extends As, O> = {
 	displayName?: string;
 };
 
+const excludeProps = ["css", "as"];
+
 const BoxCore: StyledComponent<
 	{ theme?: Theme; as?: React.ElementType },
 	JSX.IntrinsicElements["div"],
 	{ css?: any }
-> = emotionStyled("div")((props) => {
+> = emotionStyled("div", {
+	shouldForwardProp: (prop) => excludeProps.indexOf(prop.toString()) === -1,
+})((props) => {
 	const { css } = props as any;
 	return css;
 });

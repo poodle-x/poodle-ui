@@ -32,6 +32,18 @@ exports[`<Box /> should inject raw css with _sx props 1`] = `
 </div>
 `;
 
+exports[`<Box /> should not forward css prop when using as 1`] = `
+.c0 {
+  padding: 10px;
+}
+
+<p
+  class="poodle-box c0"
+>
+  Hello
+</p>
+`;
+
 exports[`<Box /> should parse CSSObjectSystem with sx props 1`] = `
 .c0 {
   height: 5px;
@@ -116,6 +128,7 @@ exports[`<Box /> should parse CSSObjectSystem with sx props 1`] = `
 
 <div
   class="poodle-box c0"
+  test="5"
 >
   test
 </div>
@@ -223,6 +236,7 @@ exports[`<Box /> system props should work 1`] = `
 
 <div
   class="poodle-box c0"
+  test="10"
 >
   test
 </div>

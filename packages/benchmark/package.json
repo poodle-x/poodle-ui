@@ -27,7 +27,7 @@
 		"@mui/material": "^5.6.4",
 		"@mui/styles": "^5.6.2",
 		"@mui/system": "^5.6.4",
-		"@poodle/ui": "^0.1.0-alpha.9",
+		"@poodle/ui": "^0.1.0-alpha.10",
 		"@styled-system/css": "^5.1.5",
 		"babel-loader": "^8.2.5",
 		"babel-plugin-optimize-clsx": "^2.6.2",

@@ -14,6 +14,20 @@ describe("<Box />", () => {
 		expect(container.firstChild).toMatchSnapshot();
 	});
 
+	it("should not forward css prop when using as", () => {
+		function Test(props: any) {
+			return <p {...props}></p>;
+		}
+
+		const { container } = render(
+			<Box p="10px" as={Test}>
+				Hello
+			</Box>
+		);
+
+		expect(container.firstChild).toMatchSnapshot();
+	});
+
 	it("`ref` and `as` props should work", () => {
 		const mockRef: React.RefObject<HTMLParagraphElement> = { current: null };
 
@@ -105,7 +119,6 @@ describe("<Box />", () => {
 	it("should inject raw css with _sx props", () => {
 		const { container } = render(
 			<Box
-				test={5}
 				_sx={
 					{
 						p: 10,
