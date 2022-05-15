@@ -2,6 +2,7 @@ import ArrowDown from "./ArrowDown";
 import ArrowLeft from "./ArrowLeft";
 import ArrowRight from "./ArrowRight";
 import ArrowTop from "./ArrowTop";
+import Back from "./Back";
 import Check from "./Check";
 import CheckboxButton from "./CheckboxButton";
 import CheckboxCheckedButton from "./CheckboxCheckedButton";
@@ -35,6 +36,7 @@ export {
 	ArrowLeft,
 	ArrowRight,
 	ArrowTop,
+	Back,
 	Check,
 	CheckboxButton,
 	CheckboxCheckedButton,

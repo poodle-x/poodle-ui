@@ -1,7 +1,8 @@
-import { rename, readdir, readFile, writeFile } from "fs/promises";
+import { readdir, readFile, rename, writeFile } from "fs/promises";
 import path from "path";
-import * as svgo from "svgo";
 import prettier from "prettier";
+import * as svgo from "svgo";
+import { OptimizedSvg } from "svgo";
 
 const basePath = path.join(".", "src", "svg");
 const reactPath = path.join(".", "src", "react");
@@ -35,7 +36,7 @@ function toReactComponent(svgPath: string, fileName: string) {
 		.replace(/(\w)(\w*)/g, function (g0, g1, g2) {
 			return g1.toUpperCase() + g2.toLowerCase();
 		})
-		.replaceAll("-", "");
+		.replace(/-/g, "");
 
 	return {
 		name,
@@ -68,14 +69,14 @@ async function createIndexFile(successComponents: string[]) {
 		.sort()
 		.map((c) => `import ${c} from "./${c}"`)
 		.toString()
-		.replaceAll(",", "; ")}
+		.replace(/,/g, "; ")}
 	
 	export {
 		${successComponents
 			.sort()
 			.map((c) => c)
 			.toString()
-			.replaceAll(",", ", ")}
+			.replace(/,/g, ", ")}
 	}
 	`,
 		{
@@ -117,7 +118,11 @@ async function action() {
 
 					const optimizedSVG = svgo.optimize(data);
 
-					const replacedData = optimizedSVG.data.replaceAll(
+					if (optimizedSVG.error) {
+						throw optimizedSVG.error;
+					}
+
+					const replacedData = (optimizedSVG as OptimizedSvg).data.replace(
 						/fill=\"([^"]*)\"/gm,
 						""
 					);

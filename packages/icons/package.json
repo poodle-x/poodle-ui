@@ -4,7 +4,7 @@
 	"module": "mjs/index.js",
 	"license": "MIT",
 	"author": "Giang Nguyen <giang.nguyen.dev@gmail.com>",
-	"version": "0.1.0-alpha.6",
+	"version": "0.1.0-alpha.7",
 	"scripts": {
 		"clean": "node scriptsBuild/cleanBuild.js",
 		"build": "yarn run scripts:compile && yarn run clean && yarn run build:compile",
@@ -55,7 +55,7 @@
 		"@types/react": "^17.0.2",
 		"@types/react-dom": "^17.0.1",
 		"@types/react-test-renderer": "^17.0.1",
-		"@types/svgo": "^2.3.0",
+		"@types/svgo": "^2.6.3",
 		"babel-jest": "^26.2.2",
 		"babel-polyfill": "^6.26.0",
 		"jest": "^26.2.2",
@@ -67,7 +67,7 @@
 		"react-dom": "^17.0.1",
 		"react-test-renderer": "^17.0.1",
 		"ts-loader": "^8.0.17",
-		"svgo": "^2.3.0"
+		"svgo": "^2.8.0"
 	},
 	"publishConfig": {
 		"access": "public"
