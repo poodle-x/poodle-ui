@@ -53,10 +53,10 @@ describe("<Modal />", () => {
 		expect(mockInnerKeyDown).toHaveBeenCalled();
 	});
 
-	it("should get call request close with click on modal backdrop", () => {
+	it("should get call request close with click on modal backdrop", async () => {
 		const mockCallback = jest.fn();
 		const mockInnerClick = jest.fn();
-
+		const user = userEvent.setup();
 		const { getByTestId } = render(
 			<Modal
 				data-testid="1"
@@ -73,7 +73,7 @@ describe("<Modal />", () => {
 		);
 		const inner = getByTestId("test");
 
-		userEvent.click(inner);
+		await user.click(inner);
 
 		expect(mockCallback).toHaveBeenCalledWith("outside");
 		expect(mockInnerClick).toHaveBeenCalled();

@@ -1,5 +1,6 @@
 import React from "react";
 import Box, { BoxProps } from "../Box";
+import useDefaultProps from "../hooks/useDefaultProps/useDefaultProps";
 import useTabsState, {
 	TabOrientation,
 	TabsContext,
@@ -8,7 +9,6 @@ import useTabsState, {
 } from "../hooks/useTabsState";
 import { getCSSSystemBoxProps } from "../styled/CSSSystem";
 import { StandardComponentProps, ThemeConfig } from "../theme";
-import useDefaultProps from "../hooks/useDefaultProps/useDefaultProps";
 import * as styles from "./styles";
 
 export { TabOrientation, TabsContext, TabsContextValue, TabValue };
@@ -67,7 +67,7 @@ export const Tabs: React.ForwardRefExoticComponent<
 	} = useTabsState({ propValue: value });
 
 	const handleChangeValue: TabsContextValue["onChange"] = React.useCallback(
-		(v, e) => {
+		(v: TabValue, e: React.SyntheticEvent<Element, Event> | KeyboardEvent) => {
 			onChangeValue && onChangeValue(v, e);
 			if (isUncontrolled) {
 				setUnControlledValue(v);

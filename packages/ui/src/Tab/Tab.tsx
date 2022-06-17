@@ -1,11 +1,11 @@
 import React from "react";
 import Box, { BoxProps } from "../Box";
+import useDefaultProps from "../hooks/useDefaultProps/useDefaultProps";
 import useTab from "../hooks/useTab";
 import { TabsContext } from "../hooks/useTabsState";
 import { getCSSSystemBoxProps } from "../styled/CSSSystem";
 import { StandardComponentProps, ThemeConfig } from "../theme";
 import uSetRef from "../utils/setRef";
-import useDefaultProps from "../hooks/useDefaultProps/useDefaultProps";
 import * as styles from "./styles";
 
 export interface LocalTabProps {

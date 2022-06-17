@@ -35,6 +35,7 @@ describe("<Tab />", () => {
 
 	it("should preserve onClick", async () => {
 		const mock = jest.fn();
+		const user = userEvent.setup();
 		const { getByTestId } = render(
 			<Tabs>
 				<Tab data-testid="test" onClick={mock} value="text">
@@ -46,7 +47,7 @@ describe("<Tab />", () => {
 
 		const tab = getByTestId("test");
 
-		userEvent.click(tab);
+		await user.click(tab);
 
 		expect(mock).toHaveBeenCalled();
 	});

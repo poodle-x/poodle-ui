@@ -4,10 +4,10 @@ import React from "react";
 import { ModalContext } from ".";
 import Box, { BoxProps } from "../Box";
 import useAutoId from "../hooks/useAutoId";
+import useDefaultProps from "../hooks/useDefaultProps/useDefaultProps";
 import Portal, { PortalProps } from "../Portal";
 import { getCSSSystemBoxProps } from "../styled/CSSSystem";
 import { StandardComponentProps, ThemeConfig } from "../theme";
-import useDefaultProps from "../hooks/useDefaultProps/useDefaultProps";
 import * as styles from "./styles";
 
 export interface LocalModalProps {

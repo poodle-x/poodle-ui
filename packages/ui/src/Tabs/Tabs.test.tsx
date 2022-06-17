@@ -5,7 +5,7 @@ import { Tab } from "../Tab";
 import { TabList } from "../TabList";
 import { TabPanel } from "../TabPanel";
 import { ThemeConfig } from "../theme";
-import { fireEvent, render, userEvent } from "../utils/test";
+import { fireEvent, render } from "../utils/test";
 import Tabs from "./";
 
 describe("<Tabs />", () => {
@@ -95,11 +95,11 @@ describe("<Tabs />", () => {
 
 		checkTabs(tabs, tabPanels, 0, [1, 2]);
 
-		userEvent.click(tabs[1]);
+		fireEvent.click(tabs[1]);
 
 		checkTabs(tabs, tabPanels, 1, [0, 2]);
 
-		userEvent.click(tabs[2]);
+		fireEvent.click(tabs[2]);
 
 		checkTabs(tabs, tabPanels, 2, [0, 1]);
 	});
