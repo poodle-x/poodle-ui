@@ -18,7 +18,8 @@
 		"lint:css": "stylelint 'src/**/*.{ts,tsx,css}'",
 		"dev:watch": "yarn run build && concurrently \"yarn run build:watch\"",
 		"scripts:watch": "tsc -w --p tsconfig.scripts.json",
-		"scripts:compile": "tsc -d --p tsconfig.scripts.json"
+		"scripts:compile": "tsc -d --p tsconfig.scripts.json",
+		"check": "yarn run scripts:compile && yarn run lint && yarn run test:ci && yarn run build"
 	},
 	"browserslist": {
 		"production": [

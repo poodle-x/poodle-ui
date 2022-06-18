@@ -11,7 +11,7 @@
 	],
 	"scripts": {
 		"clean": "node scriptsBuild/cleanBuild.js",
-		"lint": "eslint src --ext .ts,.tsx",
+		"lint": "tsc --noEmit && eslint src --ext .ts,.tsx",
 		"build": "yarn run scripts:compile && yarn run clean && yarn run build:compile",
 		"build:compile": "tsc -d && tsc -d --project tsconfig.mjs.json",
 		"build:watch": "tsc -d -w",
@@ -19,7 +19,8 @@
 		"test:ci": "CI=true jest --coverage",
 		"dev:watch": "yarn run build && concurrently \"yarn run build:watch\"",
 		"scripts:watch": "tsc -w --p tsconfig.scripts.json",
-		"scripts:compile": "tsc -d --p tsconfig.scripts.json"
+		"scripts:compile": "tsc -d --p tsconfig.scripts.json",
+		"check": "yarn run scripts:compile && yarn run lint && yarn run test:ci && yarn run build"
 	},
 	"dependencies": {
 		"csstype": "^3.1.0",

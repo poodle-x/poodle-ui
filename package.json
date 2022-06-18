@@ -9,7 +9,8 @@
 		"prettier:check": "prettier -c \"./packages/**/*.{ts,tsx,css,json}\"",
 		"prettier:fix": "prettier --write \"./packages/**/*.{ts,tsx,css,json}\"",
 		"dev:web": "lerna run start --stream --scope=@poodle/ui-web",
-		"postinstall": "husky install"
+		"postinstall": "husky install",
+		"check": "lerna run check --stream --scope=@poodle/system && lerna run check --stream --scope=@poodle/ui && lerna run check --stream --scope=@poodle/icons && lerna run check --stream --scope=@poodle/ui-web"
 	},
 	"workspaces": {
 		"packages": [

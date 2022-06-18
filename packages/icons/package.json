@@ -12,12 +12,13 @@
 		"build:watch": "tsc -d -w",
 		"test": "jest --watchAll",
 		"test:ci": "CI=true jest --coverage",
-		"lint": "yarn run lint:js && yarn run lint:css",
+		"lint": "tsc --noEmit && yarn run lint:js && yarn run lint:css",
 		"lint:js": "eslint src --ext .ts,.tsx,.js,.jsx",
 		"lint:css": "stylelint 'src/**/*.{ts,tsx,css}'",
 		"scripts:watch": "tsc -w --p tsconfig.scripts.json",
 		"scripts:compile": "tsc -d --p tsconfig.scripts.json",
-		"dev:watch": "yarn run build && concurrently \"yarn run build:watch\""
+		"dev:watch": "yarn run build && concurrently \"yarn run build:watch\"",
+		"check": "yarn run scripts:compile && yarn run lint && yarn run test:ci && yarn run build"
 	},
 	"browserslist": {
 		"production": [

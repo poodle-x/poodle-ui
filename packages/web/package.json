@@ -49,7 +49,8 @@
 		"scripts:compile": "tsc -d --p tsconfig.scripts.json",
 		"dev:watch": "yarn run scripts:compile && concurrently \"yarn run scripts:watch\"",
 		"playroom:start": "PLAYROOM=true playroom start",
-		"playroom:build": "PLAYROOM=true playroom build"
+		"playroom:build": "PLAYROOM=true playroom build",
+		"check": "yarn run scripts:compile && yarn run lint && yarn run build"
 	},
 	"devDependencies": {
 		"@mdx-js/mdx": "^1.6.22",
