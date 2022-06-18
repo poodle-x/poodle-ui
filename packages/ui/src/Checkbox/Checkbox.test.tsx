@@ -1,7 +1,7 @@
 import React from "react";
+import { ThemeConfig } from "../theme";
 import { render } from "../utils/test";
 import Checkbox from "./";
-import { ThemeConfig } from "../theme";
 
 describe("<Checkbox />", () => {
 	it("should render Checkbox correctly", () => {
@@ -78,32 +78,6 @@ describe("<Checkbox />", () => {
 						defaultProps: {
 							id: "id",
 							className: "hello",
-						},
-					},
-				},
-			});
-			expect(container.firstChild).toMatchSnapshot();
-		});
-
-		it("should disable classes", () => {
-			const { container } = render(<Checkbox label="Hello" />, {
-				theme: {
-					Checkbox: {
-						overrideClasses: {
-							root: true,
-						},
-					},
-				},
-			});
-			expect(container.firstChild).toMatchSnapshot();
-		});
-
-		it("should override classes", () => {
-			const { container } = render(<Checkbox label="Hello" />, {
-				theme: {
-					Checkbox: {
-						overrideClasses: {
-							root: "morning",
 						},
 					},
 				},

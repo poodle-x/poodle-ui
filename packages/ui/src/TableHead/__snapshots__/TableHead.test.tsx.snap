@@ -59,20 +59,6 @@ exports[`<TableHead /> should send context correctly 1`] = `
 </table>
 `;
 
-exports[`<TableHead /> theming should disable classes 1`] = `
-<table>
-  <thead
-    class="poodle-box poodle-table-head c0"
-  >
-    <tr>
-      <td>
-        Table
-      </td>
-    </tr>
-  </thead>
-</table>
-`;
-
 exports[`<TableHead /> theming should extend size styles 1`] = `
 .c1 {
   width: 100%;
@@ -165,20 +151,6 @@ exports[`<TableHead /> theming should extend styles in local 1`] = `
   text-indent: 1px;
 }
 
-<table>
-  <thead
-    class="poodle-box poodle-table-head c0"
-  >
-    <tr>
-      <td>
-        Table
-      </td>
-    </tr>
-  </thead>
-</table>
-`;
-
-exports[`<TableHead /> theming should override classes 1`] = `
 <table>
   <thead
     class="poodle-box poodle-table-head c0"

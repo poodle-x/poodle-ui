@@ -1,6 +1,6 @@
 {
 	"name": "@poodle/system",
-	"version": "0.1.0-alpha.5",
+	"version": "0.1.0-alpha.6",
 	"author": "Giang Nguyen <giang.nguyen.dev@gmail.com>",
 	"license": "MIT",
 	"main": "lib/index.js",
@@ -22,8 +22,8 @@
 		"scripts:compile": "tsc -d --p tsconfig.scripts.json"
 	},
 	"dependencies": {
-		"csstype": "^3.0.3",
-		"polished": "^4.0.3"
+		"csstype": "^3.1.0",
+		"polished": "^4.2.2"
 	},
 	"publishConfig": {
 		"access": "public"

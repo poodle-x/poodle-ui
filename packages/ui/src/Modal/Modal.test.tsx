@@ -12,7 +12,7 @@ import Modal from "./";
 describe("<Modal />", () => {
 	it("should render Modal correctly", () => {
 		const { getByTestId } = render(
-			<Modal data-testid="test" isOpen={true}>
+			<Modal disableFocusTrap={true} data-testid="test" isOpen={true}>
 				<button>Modal</button>
 			</Modal>
 		);
@@ -21,7 +21,12 @@ describe("<Modal />", () => {
 
 	it("should render Modal withAutoId correctly", () => {
 		const { getByTestId } = render(
-			<Modal data-testid="test" isOpen={true} withAutoId={true}>
+			<Modal
+				disableFocusTrap={true}
+				data-testid="test"
+				isOpen={true}
+				withAutoId={true}
+			>
 				<button>Modal</button>
 			</Modal>
 		);
@@ -34,6 +39,7 @@ describe("<Modal />", () => {
 
 		const { getByRole } = render(
 			<Modal
+				disableFocusTrap={true}
 				data-testid="test"
 				onRequestClose={mockCallback}
 				isOpen={true}
@@ -59,6 +65,7 @@ describe("<Modal />", () => {
 		const user = userEvent.setup();
 		const { getByTestId } = render(
 			<Modal
+				disableFocusTrap={true}
 				data-testid="1"
 				innerProps={{
 					"data-testid": "test",
@@ -83,7 +90,7 @@ describe("<Modal />", () => {
 		const ref = React.createRef<HTMLDivElement>();
 
 		render(
-			<Modal isOpen={true} ref={ref}>
+			<Modal disableFocusTrap={true} isOpen={true} ref={ref}>
 				<button>Modal</button>
 			</Modal>
 		);
@@ -92,7 +99,7 @@ describe("<Modal />", () => {
 
 	it("should pass axe", async () => {
 		const { getByRole } = render(
-			<Modal isOpen={true} withAutoId={true}>
+			<Modal disableFocusTrap={true} isOpen={true} withAutoId={true}>
 				<ModalHeader withClose={true}>Modal title</ModalHeader>
 				<ModalBody>
 					The selected document <Box as="strong">“price.docx”</Box> will be
@@ -111,6 +118,7 @@ describe("<Modal />", () => {
 	it("should render Box props correctly", () => {
 		const { getByTestId } = render(
 			<Modal
+				disableFocusTrap={true}
 				isOpen={true}
 				data-testid="test"
 				id="id"
@@ -181,7 +189,12 @@ describe("<Modal />", () => {
 
 		it("should extend styles in global", () => {
 			const { getByTestId } = render(
-				<Modal data-testid="test" isOpen={true} variant="custom">
+				<Modal
+					disableFocusTrap={true}
+					data-testid="test"
+					isOpen={true}
+					variant="custom"
+				>
 					<button>Modal</button>
 				</Modal>,
 				{
@@ -194,6 +207,7 @@ describe("<Modal />", () => {
 		it("should extend styles in local", () => {
 			const { getByTestId } = render(
 				<Modal
+					disableFocusTrap={true}
 					data-testid="test"
 					isOpen={true}
 					variant="custom"
@@ -207,7 +221,7 @@ describe("<Modal />", () => {
 
 		it("should render with default props correctly", () => {
 			const { getByTestId } = render(
-				<Modal data-testid="test" isOpen={true}>
+				<Modal disableFocusTrap={true} data-testid="test" isOpen={true}>
 					<button>Modal</button>
 				</Modal>,
 				{
@@ -226,7 +240,7 @@ describe("<Modal />", () => {
 
 		it("should override styles", () => {
 			const { getByTestId } = render(
-				<Modal data-testid="test" isOpen={true}>
+				<Modal disableFocusTrap={true} data-testid="test" isOpen={true}>
 					<button>Modal</button>
 				</Modal>,
 				{

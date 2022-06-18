@@ -4,7 +4,7 @@
 	"module": "mjs/index.js",
 	"license": "MIT",
 	"author": "Giang Nguyen <giang.nguyen.dev@gmail.com>",
-	"version": "0.1.0-alpha.7",
+	"version": "0.1.0-alpha.8",
 	"scripts": {
 		"clean": "node scriptsBuild/cleanBuild.js",
 		"build": "yarn run scripts:compile && yarn run clean && yarn run build:compile",
@@ -32,8 +32,8 @@
 		]
 	},
 	"peerDependencies": {
-		"react": "^16.9.0 || ^17",
-		"react-dom": "^16.9.0 || ^17"
+		"react": "^16.9.0 || ^17 || ^18",
+		"react-dom": "^16.9.0 || ^17 || ^18"
 	},
 	"devDependencies": {
 		"@babel/plugin-proposal-class-properties": "^7.10.4",

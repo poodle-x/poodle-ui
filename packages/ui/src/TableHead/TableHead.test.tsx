@@ -136,50 +136,6 @@ describe("<TableHead />", () => {
 			expect(container.firstChild).toMatchSnapshot();
 		});
 
-		it("should disable classes", () => {
-			const { container } = render(
-				<table>
-					<TableHead>
-						<tr>
-							<td>Table</td>
-						</tr>
-					</TableHead>
-				</table>,
-				{
-					theme: {
-						TableHead: {
-							overrideClasses: {
-								root: true,
-							},
-						},
-					},
-				}
-			);
-			expect(container.firstChild).toMatchSnapshot();
-		});
-
-		it("should override classes", () => {
-			const { container } = render(
-				<table>
-					<TableHead>
-						<tr>
-							<td>Table</td>
-						</tr>
-					</TableHead>
-				</table>,
-				{
-					theme: {
-						TableHead: {
-							overrideClasses: {
-								root: "morning",
-							},
-						},
-					},
-				}
-			);
-			expect(container.firstChild).toMatchSnapshot();
-		});
-
 		it("should override styles", () => {
 			const { container } = render(
 				<table>
