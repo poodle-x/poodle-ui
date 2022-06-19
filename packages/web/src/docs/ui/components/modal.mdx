@@ -144,7 +144,7 @@ By default, some modal components support color style `primary`, `negative`, `wa
 			<Modal colorStyle="negative" isOpen={open} onRequestClose={handleClose}>
 				<ModalHeader
 					colorStyle="negative"
-					icon={<Error />}
+					icon={<Icons.Error />}
 					withClose={true}
 					closeProps={{
 						onClick: handleClose,
@@ -172,7 +172,7 @@ By default, some modal components support color style `primary`, `negative`, `wa
 
 
 Please check theming component document [here](/theming/component).
- 		
+
 ```ts
 export type ModalStyleKeys =
   | "root"
@@ -184,9 +184,9 @@ export type ModalStyleKeys =
 export interface ModalThemeConfig
   extends StandardThemeConfig<ModalStyleKeys, ModalProps> {}
 
-``` 
-		
-		
+```
+
+
 
 [//]: # (EndGetTheming)
 
@@ -214,7 +214,7 @@ export interface ModalThemeConfig
 | portalProps                | `Omit<PortalProps, "mount">`          | Custom props for **`<Portal />`**.                                                                                                     |
 | rootProps                  | `BoxProps`                            | Custom props for root element.                                                                                                         |
 | withAutoId                 | `boolean`                             | Add autoId                                                                                                                             |
-				
+
 
 [//]: # (EndGetProps)
 [//]: # (GetPartialProps[==ModalProps,Modal/Modal.tsx==])
@@ -226,8 +226,8 @@ export interface ModalThemeConfig
 export interface ModalProps
 	extends BoxProps,
 		StandardComponentProps,
-		LocalModalProps {} 
+		LocalModalProps {}
 ```
-				
+
 
 [//]: # (GetPartialProps)
