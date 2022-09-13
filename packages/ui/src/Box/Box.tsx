@@ -11,6 +11,28 @@ import {
 } from "../theme";
 import * as styles from "./styles";
 
+type AsProp<C extends React.ElementType> = {
+	as?: C;
+};
+
+type PropsToOmit<C extends React.ElementType, P> = keyof (AsProp<C> & P);
+
+type PolymorphicComponentProp<
+	C extends React.ElementType,
+	Props = any
+> = React.PropsWithChildren<Props & AsProp<C>> &
+	Omit<React.ComponentPropsWithoutRef<C>, PropsToOmit<C, Props>>;
+
+type PolymorphicComponentPropWithRef<
+	C extends React.ElementType,
+	// eslint-disable-next-line @typescript-eslint/ban-types
+	Props = {}
+> = PolymorphicComponentProp<C, Props> & { ref?: PolymorphicRef<C> };
+
+type PolymorphicRef<
+	C extends React.ElementType
+> = React.ComponentPropsWithRef<C>["ref"];
+
 export interface LocalBoxProps {
 	/**
 	 * Class apply to root element.
@@ -30,31 +52,16 @@ export interface LocalBoxProps {
 	_sx?: DashSX;
 }
 
-export interface BoxProps
-	extends Omit<React.AllHTMLAttributes<HTMLElement>, keyof SystemProps | "as">,
-		React.RefAttributes<HTMLElement>,
-		SystemProps,
-		StandardComponentProps,
-		LocalBoxProps {
-	[key: string]: any;
-}
+export type BoxProps<
+	C extends React.ElementType = "div"
+> = PolymorphicComponentPropWithRef<
+	C,
+	SystemProps & StandardComponentProps & LocalBoxProps
+>;
 
-type As<P = any> = React.ElementType<P> | string;
-
-type PropsWithAs<P, T extends As<P>> = P &
-	Omit<
-		React.ComponentProps<T extends string ? React.ElementType<T> : T>,
-		"as" | keyof P
-	> & {
-		as?: T;
-		children?: React.ReactNode;
-	};
-
-type Component<T extends As, O> = {
-	<TT extends As>(props: PropsWithAs<O, TT> & { as: TT }): JSX.Element;
-	(props: PropsWithAs<O, T>): JSX.Element;
-	displayName?: string;
-};
+export type BoxComponent = <C extends React.ElementType = "div">(
+	props: BoxProps<C>
+) => React.ReactElement | null;
 
 const excludeProps = ["css", "as"];
 
@@ -69,47 +76,52 @@ const BoxCore: StyledComponent<
 	return css;
 });
 
-export const Box = React.forwardRef<HTMLElement, BoxProps>((_props, ref) => {
-	const { props } = useDefaultProps<BoxProps>(_props, {
-		themeDefaultProps: (t) => {
-			return t?.Box?.defaultProps;
-		},
-	});
+export const Box: BoxComponent = React.forwardRef(
+	<C extends React.ElementType = "div">(
+		_props: BoxProps<C>,
+		ref?: PolymorphicRef<C>
+	) => {
+		const { props } = useDefaultProps<BoxProps<C>>(_props, {
+			themeDefaultProps: (t) => {
+				return t?.Box?.defaultProps;
+			},
+		});
 
-	const {
-		themeExtend,
-		theme: themeOverride,
-		className,
-		children,
-		as = "div",
-		sx,
-		_sx,
-		...otherProps
-	} = props;
+		const {
+			themeExtend,
+			theme: themeOverride,
+			className,
+			children,
+			sx,
+			as,
+			_sx,
+			...otherProps
+		} = props;
 
-	const htmlProps = React.useMemo(() => {
-		return removeSystemProps(otherProps);
-	}, [otherProps]);
+		const htmlProps = React.useMemo(() => {
+			return removeSystemProps(otherProps);
+		}, [otherProps]);
 
-	return (
-		<BoxCore
-			{...htmlProps}
-			as={as as any}
-			css={[
-				cssSystem({ props, ...styles.Root(props) }),
-				_sx,
-				...(sx ? system(sx, { sendProps: props }) : []),
-				system(
-					{ ...otherProps },
-					{ sendProps: props, returnOnlySystemProps: true }
-				),
-			]}
-			className={cx("poodle-box", className)}
-			ref={ref as any}
-		>
-			{children}
-		</BoxCore>
-	);
-}) as Component<As, BoxProps>;
+		return (
+			<BoxCore
+				{...htmlProps}
+				as={as as any}
+				css={[
+					cssSystem({ props, ...styles.Root(props) }),
+					_sx,
+					...(sx ? system(sx, { sendProps: props }) : []),
+					system(
+						{ ...otherProps },
+						{ sendProps: props, returnOnlySystemProps: true }
+					),
+				]}
+				className={cx("poodle-box", className)}
+				ref={ref as any}
+			>
+				{children}
+			</BoxCore>
+		);
+	}
+);
 
-Box.displayName = "PoodleBox";
+(Box as any).displayName = "PoodleBox";

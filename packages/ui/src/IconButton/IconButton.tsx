@@ -1,8 +1,8 @@
 import React from "react";
 import Box, { BoxProps } from "../Box";
+import useDefaultProps from "../hooks/useDefaultProps/useDefaultProps";
 import { getCSSSystemBoxProps } from "../styled/CSSSystem";
 import { StandardComponentProps, ThemeConfig } from "../theme";
-import useDefaultProps from "../hooks/useDefaultProps/useDefaultProps";
 import * as styles from "./styles";
 
 export interface LocalIconButtonProps {
@@ -13,10 +13,15 @@ export interface LocalIconButtonProps {
 	 * Square shape is useful to create button group.
 	 */
 	shapeStyle?: "round" | "square";
+	/**
+	 * Render `<a>` tag instead button
+	 *
+	 */
+	href?: string;
 }
 
 export interface IconButtonProps
-	extends BoxProps,
+	extends BoxProps<"button">,
 		StandardComponentProps,
 		LocalIconButtonProps {}
 

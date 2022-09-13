@@ -1,9 +1,9 @@
 import React from "react";
 import Box, { BoxProps } from "../Box";
+import useDefaultProps from "../hooks/useDefaultProps/useDefaultProps";
 import { getCSSSystemBoxProps } from "../styled/CSSSystem";
 import { TableContext, TableLevelContext } from "../Table";
 import { StandardComponentProps, ThemeConfig } from "../theme";
-import useDefaultProps from "../hooks/useDefaultProps/useDefaultProps";
 import * as styles from "./styles";
 
 export interface LocalTableCellProps {
@@ -11,7 +11,7 @@ export interface LocalTableCellProps {
 }
 
 export interface TableCellProps
-	extends BoxProps,
+	extends BoxProps<"td" | "th">,
 		StandardComponentProps,
 		LocalTableCellProps {}
 

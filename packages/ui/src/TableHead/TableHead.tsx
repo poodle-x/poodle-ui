@@ -11,7 +11,7 @@ export type LocalTableHeadProps = {
 };
 
 export interface TableHeadProps
-	extends BoxProps,
+	extends BoxProps<"thead">,
 		StandardComponentProps,
 		LocalTableHeadProps {}
 

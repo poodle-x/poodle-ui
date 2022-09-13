@@ -1,8 +1,8 @@
 import React from "react";
 import Box, { BoxProps } from "../Box";
+import useDefaultProps from "../hooks/useDefaultProps/useDefaultProps";
 import { getCSSSystemBoxProps } from "../styled/CSSSystem";
 import { StandardComponentProps, ThemeConfig } from "../theme";
-import useDefaultProps from "../hooks/useDefaultProps/useDefaultProps";
 import * as styles from "./styles";
 
 const op = {};
@@ -51,7 +51,7 @@ export interface LocalTableProps {
 }
 
 export interface TableProps
-	extends BoxProps,
+	extends BoxProps<"table">,
 		StandardComponentProps,
 		LocalTableProps {}
 

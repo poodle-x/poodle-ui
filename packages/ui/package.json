@@ -2,7 +2,7 @@
 	"name": "@poodle/ui",
 	"main": "index.js",
 	"module": "mjs/index.js",
-	"version": "0.1.0-alpha.11",
+	"version": "0.1.0-alpha.12",
 	"license": "MIT",
 	"scripts": {
 		"clean": "node scriptsBuild/cleanBuild.js",

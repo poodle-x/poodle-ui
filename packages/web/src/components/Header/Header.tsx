@@ -1,10 +1,10 @@
-import React from "react";
-import Box, { BoxProps } from "@poodle/ui/Box";
-import { Link } from "gatsby";
-import { useLocation } from "@reach/router";
-import logo from "../../assets/logo.svg";
-import IconButton from "@poodle/ui/IconButton";
 import MenuIcon from "@poodle/icons/react/Menu";
+import Box, { BoxProps } from "@poodle/ui/Box";
+import IconButton from "@poodle/ui/IconButton";
+import { useLocation } from "@reach/router";
+import { Link } from "gatsby";
+import React from "react";
+import logo from "../../assets/logo.svg";
 
 function LinkSection(
 	props: BoxProps & {

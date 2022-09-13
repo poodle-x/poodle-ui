@@ -53,7 +53,7 @@ export interface TableCellThemeConfig
 
 ```ts
 export interface TableCellProps
-	extends BoxProps,
+	extends BoxProps<"td" | "th">,
 		StandardComponentProps,
 		LocalTableCellProps {} 
 ```

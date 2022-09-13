@@ -14,7 +14,7 @@ export interface LocalTabProps {
 }
 
 export interface TabProps
-	extends Omit<BoxProps, "value">,
+	extends Omit<BoxProps<"button">, "value">,
 		StandardComponentProps,
 		LocalTabProps {}
 

@@ -139,6 +139,7 @@ export interface IconButtonThemeConfig
 | Name       | Type                  | Description                                                                       |
 | ---------- | --------------------- | --------------------------------------------------------------------------------- |
 | children   | `React.ReactNode`     |                                                                                   |
+| href       | `string`              | Render `<a>` tag instead button                                                   |
 | shapeStyle | `"round" \| "square"` | Change component shape.<br /><br />Square shape is useful to create button group. |
 				
 
@@ -150,7 +151,7 @@ export interface IconButtonThemeConfig
 
 ```ts
 export interface IconButtonProps
-	extends BoxProps,
+	extends BoxProps<"button">,
 		StandardComponentProps,
 		LocalIconButtonProps {} 
 ```

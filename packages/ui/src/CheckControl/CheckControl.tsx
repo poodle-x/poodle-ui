@@ -1,9 +1,9 @@
 import React from "react";
 import Box, { BoxProps } from "../Box";
 import useAutoId from "../hooks/useAutoId";
+import useDefaultProps from "../hooks/useDefaultProps/useDefaultProps";
 import { getCSSSystemBoxProps } from "../styled/CSSSystem";
 import { StandardComponentProps, ThemeConfig } from "../theme";
-import useDefaultProps from "../hooks/useDefaultProps/useDefaultProps";
 import { VisuallyHidden } from "../VisuallyHidden";
 import * as styles from "./styles";
 
@@ -21,7 +21,7 @@ export interface LocalCheckControlProps {
 	/**
 	 * Customize real input props.
 	 */
-	inputProps?: BoxProps;
+	inputProps?: BoxProps<"input">;
 	/**
 	 * Customize render icon props.
 	 */
@@ -29,7 +29,7 @@ export interface LocalCheckControlProps {
 	/**
 	 * Customize label props.
 	 */
-	labelProps?: BoxProps;
+	labelProps?: BoxProps<"label">;
 	/**
 	 * Customize label text props.
 	 */

@@ -26,7 +26,7 @@ export interface LocalSelectProps {
 	/**
 	 * Custom select props
 	 */
-	selectProps?: BoxProps;
+	selectProps?: BoxProps<"select">;
 	/**
 	 * Custom value text props
 	 */

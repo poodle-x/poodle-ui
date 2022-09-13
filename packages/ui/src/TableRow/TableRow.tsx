@@ -15,7 +15,7 @@ export type LocalTableRowProps = {
 };
 
 export interface TableRowProps
-	extends BoxProps,
+	extends BoxProps<"tr">,
 		StandardComponentProps,
 		LocalTableRowProps {}
 

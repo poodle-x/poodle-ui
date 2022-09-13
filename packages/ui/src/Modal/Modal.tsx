@@ -112,7 +112,7 @@ export const Modal: React.ForwardRefExoticComponent<
 
 	const mouseDownTarget = React.useRef<HTMLElement | null>(null);
 
-	function handlerOverlayClick(e: React.MouseEvent<HTMLElement>) {
+	function handlerOverlayClick(e: React.MouseEvent<HTMLDivElement>) {
 		if (e.target !== e.currentTarget) {
 			return;
 		}
@@ -136,7 +136,7 @@ export const Modal: React.ForwardRefExoticComponent<
 		mouseDownTarget.current = e.target as HTMLElement;
 	}
 
-	function handleKeyDown(e: React.KeyboardEvent<HTMLElement>) {
+	function handleKeyDown(e: React.KeyboardEvent<HTMLDivElement>) {
 		if (e.key !== "Escape") {
 			return;
 		}
