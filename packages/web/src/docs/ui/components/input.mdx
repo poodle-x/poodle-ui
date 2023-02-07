@@ -139,13 +139,13 @@ export interface InputThemeConfig
 ### Local Props
 
 
-| Name           | Type              | Description                                                 |
-| -------------- | ----------------- | ----------------------------------------------------------- |
-| endAdornment   | `React.ReactNode` | Add suffix to the input.                                    |
-| error          | `boolean`         | Change the component style to error style when set to true. |
-| inputProps     | `BoxProps`        | Input props                                                 |
-| multiline      | `boolean`         | Change input to textarea element.                           |
-| startAdornment | `React.ReactNode` | Add prefix to the input.                                    |
+| Name           | Type                                       | Description                                                 |
+| -------------- | ------------------------------------------ | ----------------------------------------------------------- |
+| endAdornment   | `React.ReactNode`                          | Add suffix to the input.                                    |
+| error          | `boolean`                                  | Change the component style to error style when set to true. |
+| inputProps     | `BoxProps<"textarea"> & BoxProps<"input">` | Input props                                                 |
+| multiline      | `boolean`                                  | Change input to textarea element.                           |
+| startAdornment | `React.ReactNode`                          | Add prefix to the input.                                    |
 				
 
 [//]: # (EndGetProps)
