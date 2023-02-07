@@ -1,4 +1,4 @@
-name: Documment workflow
+name: Document workflow
 
 on:
   push:
@@ -16,13 +16,28 @@ jobs:
       - name: Install node
         uses: actions/setup-node@v3
         with:
-          cache: "npm"
+          cache: "yarn"
           node-version: 16
 
-      - run: npm install -g yarn
       - run: yarn install
-      - run: yarn run build
+
+      - name: Build @system
+        working-directory: ./packages/system
+        run: "yarn run build"
+
+      - name: Build @icons
+        working-directory: ./packages/icons
+        run: "yarn run build"
+
+      - name: Build @ui
+        working-directory: ./packages/ui
+        run: "yarn run build"
+
       - run: yarn run test:ci
+
+      - name: Build docs
+        working-directory: ./packages/web
+        run: "yarn run build"
 
       - name: Deploy to netlify
         uses: netlify/actions/cli@master
