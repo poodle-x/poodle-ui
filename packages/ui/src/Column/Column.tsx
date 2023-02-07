@@ -1,7 +1,7 @@
 import React from "react";
 import Box, { BoxProps } from "../Box";
 import { ColumnsContext } from "../Columns";
-import { getCSSSystemBoxProps } from "../styled/CSSSystem";
+import { getCSSSystemBoxProps } from "../styled/system";
 import { ResponsiveProp, StandardComponentProps, ThemeConfig } from "../theme";
 import useDefaultProps from "../hooks/useDefaultProps/useDefaultProps";
 import * as styles from "./styles";

@@ -2,7 +2,7 @@ import { css as cssCore, cx as cxCore } from "@emotion/css";
 import { ClassNamesArg, Interpolation } from "@emotion/react";
 import * as CSS from "csstype";
 import { SystemProps } from "../theme";
-import { cssSystem } from "./CSSSystem";
+import { cssSystem } from "./system";
 
 function css(...args: Array<Interpolation<any>>) {
 	return cssCore(...(args as any));
@@ -46,4 +46,4 @@ export type DashSX =
 	| CSSProperties[]
 	| Array<{ [p: string]: any }>
 	| (Array<{ [p: string]: any }> | CSSProperties | CSSProperties[])[];
-export { CSSSystem } from "./CSSSystem";
+export { CSSSystem } from "./system";

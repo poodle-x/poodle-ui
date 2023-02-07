@@ -1,7 +1,7 @@
 import { ClassNamesArg } from "@emotion/react";
 import { BoxProps } from "../Box";
 import { getThemeValue, system, ThemeValue } from "../theme";
-import { CSSObjectSystem, CSSProperties, cx, DashSX } from "./";
+import { CSSObjectSystem, CSSProperties, cx, DashSX } from ".";
 
 export function joinDashSX(...agr: (DashSX | undefined)[]): DashSX[] {
 	const result: DashSX[] = [];

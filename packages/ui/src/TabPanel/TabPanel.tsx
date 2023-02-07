@@ -2,7 +2,7 @@ import React from "react";
 import Box, { BoxProps } from "../Box";
 import useTabPanel from "../hooks/useTabPanel";
 import { TabValue } from "../hooks/useTabsState";
-import { getCSSSystemBoxProps } from "../styled/CSSSystem";
+import { getCSSSystemBoxProps } from "../styled/system";
 import { StandardComponentProps, ThemeConfig } from "../theme";
 import uSetRef from "../utils/setRef";
 import useDefaultProps from "../hooks/useDefaultProps/useDefaultProps";

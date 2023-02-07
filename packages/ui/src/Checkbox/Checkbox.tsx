@@ -6,7 +6,7 @@ import useSafeLayoutEffect from "../hooks/useSafeLayoutEffect";
 import CheckboxButton from "../icons/CheckboxButton";
 import CheckboxCheckedButton from "../icons/CheckboxCheckedButton";
 import CheckboxIndeterminateButton from "../icons/CheckboxIndeterminateButton";
-import { getCSSSystemBoxProps } from "../styled/CSSSystem";
+import { getCSSSystemBoxProps } from "../styled/system";
 import { StandardComponentProps, ThemeConfig } from "../theme";
 import * as styles from "./styles";
 

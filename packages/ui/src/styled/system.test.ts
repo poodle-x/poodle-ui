@@ -1,6 +1,6 @@
 import { ModalStyleKeys } from "../Modal";
 import { createCSSSystemStandard } from "../theme";
-import { cssSystem, getCSSSystemBoxProps } from "./CSSSystem";
+import { cssSystem, getCSSSystemBoxProps } from "./system";
 
 describe("cssSystem", () => {
 	it("should merge base styles", () => {

@@ -6,7 +6,7 @@ import Box, { BoxProps } from "../Box";
 import useAutoId from "../hooks/useAutoId";
 import useDefaultProps from "../hooks/useDefaultProps/useDefaultProps";
 import Portal, { PortalProps } from "../Portal";
-import { getCSSSystemBoxProps } from "../styled/CSSSystem";
+import { getCSSSystemBoxProps } from "../styled/system";
 import { StandardComponentProps, ThemeConfig } from "../theme";
 import * as styles from "./styles";
 

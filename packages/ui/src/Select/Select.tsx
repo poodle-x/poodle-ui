@@ -2,7 +2,7 @@ import React from "react";
 import Box, { BoxProps } from "../Box";
 import useDefaultProps from "../hooks/useDefaultProps/useDefaultProps";
 import ArrowDown from "../icons/ArrowDown";
-import { getCSSSystemBoxProps } from "../styled/CSSSystem";
+import { getCSSSystemBoxProps } from "../styled/system";
 import { StandardComponentProps, ThemeConfig } from "../theme";
 import * as styles from "./styles";
 

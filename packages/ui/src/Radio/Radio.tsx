@@ -4,7 +4,7 @@ import useCombineRefs from "../hooks/useCombineRefs";
 import useDefaultProps from "../hooks/useDefaultProps/useDefaultProps";
 import RadioButton from "../icons/RadioButton";
 import RadioCheckedButton from "../icons/RadioCheckedButton";
-import { getCSSSystemBoxProps } from "../styled/CSSSystem";
+import { getCSSSystemBoxProps } from "../styled/system";
 import { StandardComponentProps, ThemeConfig } from "../theme";
 import * as styles from "./styles";
 

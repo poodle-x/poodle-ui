@@ -3,7 +3,7 @@ import Box, { BoxProps } from "../Box";
 import { IconButton } from "../IconButton";
 import Clear from "../icons/Clear";
 import { ModalContext } from "../Modal";
-import { getCSSSystemBoxProps } from "../styled/CSSSystem";
+import { getCSSSystemBoxProps } from "../styled/system";
 import { StandardComponentProps, ThemeConfig } from "../theme";
 import useDefaultProps from "../hooks/useDefaultProps/useDefaultProps";
 import * as styles from "./styles";

@@ -7,7 +7,7 @@ import useTabsState, {
 	TabsContextValue,
 	TabValue,
 } from "../hooks/useTabsState";
-import { getCSSSystemBoxProps } from "../styled/CSSSystem";
+import { getCSSSystemBoxProps } from "../styled/system";
 import { StandardComponentProps, ThemeConfig } from "../theme";
 import * as styles from "./styles";
 
