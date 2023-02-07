@@ -2,13 +2,7 @@ import { css, Global } from "@emotion/react";
 import React from "react";
 import { CSSObjectSystem } from "../styled/";
 
-import {
-	getFontBase,
-	getThemeValue,
-	system,
-	ThemeConfig,
-	useTheme,
-} from "../theme";
+import { getFontBase, system, ThemeConfig, useTheme } from "../theme";
 
 export interface GlobalStylesProps {
 	theme?: ThemeConfig;
@@ -19,16 +13,6 @@ function GlobalStyles(props: GlobalStylesProps) {
 	const { theme } = useTheme();
 
 	const { styles } = props;
-
-	const globalStyles = React.useMemo(() => {
-		return getThemeValue(
-			{
-				theme,
-			},
-			theme?.global?.styles,
-			{}
-		);
-	}, [theme]);
 
 	const base = React.useMemo(() => {
 		return system(
@@ -54,7 +38,6 @@ function GlobalStyles(props: GlobalStylesProps) {
 	const extend = React.useMemo(() => {
 		return system(
 			{
-				...globalStyles,
 				...styles,
 			},
 			{
@@ -64,7 +47,7 @@ function GlobalStyles(props: GlobalStylesProps) {
 				},
 			}
 		);
-	}, [globalStyles, styles, theme]);
+	}, [styles, theme]);
 
 	return <Global styles={css(base, extend as any)} />;
 }

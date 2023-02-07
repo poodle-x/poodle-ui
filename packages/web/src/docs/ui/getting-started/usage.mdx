@@ -25,19 +25,17 @@ import { ThemeProvider } from "@poodle/ui";
 
 The `Poodle UI` need `ThemeProvider` to work correctly. Add `ThemeProvider` to the top level of your app.
 
-You can add the `CSSReset` to your app.
+You can add the `CSSReset` to your app by using prop `withCSSReset`.
 
 Check [theming document](/ui/getting-started/theming) to see how can we use `ThemeProvider` to customize the global theme.
 
 ```jsx
 
 import ThemeProvider from "@poodle/ui/ThemeProvider";
-import CSSReset from "@poodle/ui/CSSReset";
 
 export function AppProvider({ children }: { children?: React.ReactNode }) {
 	return (
-		<ThemeProvider>
-			<CSSReset />
+		<ThemeProvide withCSSReset={true}>
 			{children}
 		</ThemeProvider>
 	);

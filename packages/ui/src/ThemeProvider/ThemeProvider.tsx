@@ -1,13 +1,17 @@
 import React from "react";
 import { ThemeProvider as BaseThemeProvider } from "@emotion/react";
-import { createTheme } from "../theme";
+import { createTheme, getThemeValue } from "../theme";
 import { PortalContext } from "../Portal";
+import useSafeLayoutEffect from "../hooks/useSafeLayoutEffect";
+import CSSReset from "../CSSReset";
+import GlobalStyles from "../GlobalStyles";
 
 export interface ThemeProviderProps {
 	noDefaultTheme?: boolean;
 	theme?: any;
 	children?: React.ReactNode;
 	disablePortalContext?: boolean;
+	withCSSReset?: boolean;
 }
 
 export const ThemeProvider: React.FC<ThemeProviderProps> = (
@@ -16,7 +20,13 @@ export const ThemeProvider: React.FC<ThemeProviderProps> = (
 	const [savedPortal, setSavedPortal] = React.useState<
 		HTMLElement | undefined
 	>();
-	const { theme, children, noDefaultTheme, disablePortalContext } = props;
+	const {
+		theme,
+		children,
+		noDefaultTheme,
+		disablePortalContext,
+		withCSSReset,
+	} = props;
 
 	const memoTheme = React.useMemo(() => {
 		if (noDefaultTheme && theme) {
@@ -26,7 +36,19 @@ export const ThemeProvider: React.FC<ThemeProviderProps> = (
 		return createTheme(theme);
 	}, [theme, noDefaultTheme]);
 
-	React.useLayoutEffect(() => {
+	const globalStyles = React.useMemo(() => {
+		if (theme?.global?.styles) {
+			return getThemeValue(
+				{
+					memoTheme,
+				},
+				theme.global.styles,
+				{}
+			);
+		}
+	}, [memoTheme, theme?.global?.styles]);
+
+	useSafeLayoutEffect(() => {
 		if (!disablePortalContext) {
 			const currentPortal = document.body.querySelector(
 				'*[data-portal="poodle-ui"]'
@@ -42,7 +64,7 @@ export const ThemeProvider: React.FC<ThemeProviderProps> = (
 		}
 	}, [disablePortalContext]);
 
-	React.useLayoutEffect(() => {
+	useSafeLayoutEffect(() => {
 		if (disablePortalContext && savedPortal) {
 			document.body.removeChild(savedPortal);
 		}
@@ -58,7 +80,11 @@ export const ThemeProvider: React.FC<ThemeProviderProps> = (
 				defaultMount: savedPortal,
 			}}
 		>
-			<BaseThemeProvider theme={memoTheme}>{children}</BaseThemeProvider>
+			<BaseThemeProvider theme={memoTheme}>
+				{withCSSReset && <CSSReset />}
+				{globalStyles && <GlobalStyles styles={globalStyles} />}
+				{children}
+			</BaseThemeProvider>
 		</PortalContext.Provider>
 	);
 };

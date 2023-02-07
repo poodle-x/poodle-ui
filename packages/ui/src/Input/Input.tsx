@@ -9,7 +9,7 @@ export interface LocalInputProps {
 	/**
 	 * Input props
 	 */
-	inputProps?: BoxProps;
+	inputProps?: BoxProps<"textarea"> & BoxProps<"input">;
 	/**
 	 * Change the component style to error style when set to true.
 	 */
